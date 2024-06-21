@@ -1,0 +1,59 @@
+ {
+	"responsive": true,
+	"glyph-icons": true,
+	"description": "Redux is an edgy theme that gives your site a customized look with bright colors that pop over sleek black and white palettes. With modern features like a full screen menu, search bar, and shopping cart, Redux gives your site that extra spark.",
+	"enableEditorJS": true,
+	"plugins": [
+		{
+			"name": "navpane",
+			"condense": 1024,
+			"defaults": {
+				"forced": true
+			}
+		}
+	],
+	"features": [
+		"responsive",
+		"css-buttons",
+		"social-icons",
+		"full-width-header",
+		"navigation-fixed",
+		"navigation-collapsible",
+		"color-palettes"
+	],
+	"variations": [
+		{
+			"value": "v1",
+			"sample": "#00d8cb",
+			"is-dark": false
+		},
+		{
+			"value": "v2",
+			"sample": "#f6b647",
+			"is-dark": false
+		},
+		{
+			"value": "v3",
+			"sample": "#ff4f9a",
+			"is-dark": false
+		},
+		{
+			"value": "v4",
+			"sample": "#6cce3b",
+			"is-dark": false
+		},		{
+			"value": "v5",
+			"sample": "#38b2ff",
+			"is-dark": false
+		},		{
+			"value": "v6",
+			"sample": "#f4d556",
+			"is-dark": false
+		},
+		{
+			"value": "v7",
+			"sample": "#825589",
+			"is-dark": false
+		}
+	]
+}

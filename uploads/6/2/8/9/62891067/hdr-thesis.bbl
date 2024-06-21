@@ -1,0 +1,1623 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\def\cprime{$'$} \newcommand{\SortNoop}[1]{}
+\begin{thebibliography}{ADML{\etalchar{+}}07b}
+
+\bibitem[AA07]{MR2292904}
+Noga Alon and Vera Asodi.
+\newblock Tracing many users with almost no rate penalty.
+\newblock {\em IEEE Trans. Inform. Theory}, 53(1):437--439, 2007.
+
+\bibitem[{AAC}a]{AACS}
+{AACS~LA}.
+\newblock {AACS Specifications}.
+\newblock At {\small\tt http://www.aacsla.com/specifications/}.
+
+\bibitem[{AAC}b]{AACSmb}
+{AACS~LA}.
+\newblock {Introduction and Common Cryptographic Elements}.
+\newblock At {\small\tt http://www.aacsla.com/specifications/specs091/AACS}.
+
+\bibitem[{AAC}09]{AACS09}
+{AACS Consortium}.
+\newblock {Advanced Access Content System (AACS)} - introduction and common
+  cryptographic elements book.
+\newblock \url{http://www.aacsla.com/specifications/}, September 2009.
+\newblock Revision 0.951.
+
+\bibitem[ABB10a]{ABB1}
+S.~Agrawal, D.~Boneh, and X.~Boyen.
+\newblock Efficient lattice {(H)IBE} in the standard model.
+\newblock In {\em Proc.\ of {EUROCRYPT}}, volume 6110 of {\em LNCS}, pages
+  553--572. Springer, 2010.
+\newblock Full version available from the authors upon request.
+
+\bibitem[ABB10b]{ABB2}
+S.~Agrawal, D.~Boneh, and X.~Boyen.
+\newblock Lattice basis delegation in fixed dimension and shorter-ciphertext
+  hierarchical {IBE}.
+\newblock In {\em Proc.\ of {CRYPTO}}, volume 6223 of {\em LNCS}, pages
+  98--115. Springer, 2010.
+
+\bibitem[ABC{\etalchar{+}}11]{JC:ABCDMN11}
+Michel Abdalla, James Birkett, Dario Catalano, Alexander~W. Dent, John
+  Malone-Lee, Gregory Neven, Jacob C.~N. Schuldt, and Nigel~P. Smart.
+\newblock Wildcarded identity-based encryption.
+\newblock {\em Journal of Cryptology}, 24(1):42--82, January 2011.
+
+\bibitem[ABN10]{ABN10Robust}
+Michel Abdalla, Mihir Bellare, and Gregory Neven.
+\newblock Robust encryption.
+\newblock In Daniele Micciancio, editor, {\em TCC 2010}, volume 5978 of {\em
+  LNCS}, pages 480--497. Springer, 2010.
+
+\bibitem[ABR01]{RSA:AbdBelRog01}
+Michel Abdalla, Mihir Bellare, and Phillip Rogaway.
+\newblock The oracle {Diffie}-{Hellman} assumptions and an analysis of {DHIES}.
+\newblock In David Naccache, editor, {\em Topics in Cryptology -- CT-RSA~2001},
+  volume 2020 of {\em Lecture Notes in Computer Science}, pages 143--158, San
+  Francisco, CA, USA, April~8--12, 2001. Springer, Berlin, Germany.
+
+\bibitem[ACD{\etalchar{+}}06]{ICALP:ACDMNS06}
+Michel Abdalla, Dario Catalano, Alex Dent, John Malone-Lee, Gregory Neven, and
+  Nigel Smart.
+\newblock Identity-based encryption gone wild.
+\newblock In Michele Bugliesi, Bart Preneel, Vladimiro Sassone, and Ingo
+  Wegener, editors, {\em ICALP 2006: 33rd International Colloquium on Automata,
+  Languages and Programming, Part II}, volume 4052 of {\em Lecture Notes in
+  Computer Science}, pages 300--311, Venice, Italy, July~10--14, 2006.
+  Springer, Berlin, Germany.
+
+\bibitem[ACMP10]{AFRICACRYPT:ACMP10}
+Michel Abdalla, C{\'e}line Chevalier, Mark Manulis, and David Pointcheval.
+\newblock Flexible group key exchange with on-demand computation of subgroup
+  keys.
+\newblock In Daniel~J. Bernstein and Tanja Lange, editors, {\em AFRICACRYPT 10:
+  3rd International Conference on Cryptology in Africa}, volume 6055 of {\em
+  Lecture Notes in Computer Science}, pages 351--368, Stellenbosch, South
+  Africa, May~3--6, 2010. Springer, Berlin, Germany.
+
+\bibitem[ADML{\etalchar{+}}07a]{ADMNPS07}
+M.~Abdalla, A.~W. Dent, J.~Malone-Lee, G.~Neven, D.~H. Phan, and N.~P. Smart.
+\newblock Identity-based traitor tracing.
+\newblock In {\em Proceedings of {PKC}}, volume 4450 of {\em LNCS}, pages
+  361--376. Springer, 2007.
+
+\bibitem[ADML{\etalchar{+}}07b]{PKC:ADMNPS07}
+Michel Abdalla, Alexander~W. Dent, John Malone-Lee, Gregory Neven, Duong~Hieu
+  Phan, and Nigel~P. Smart.
+\newblock Identity-based traitor tracing.
+\newblock In Tatsuaki Okamoto and Xiaoyun Wang, editors, {\em PKC~2007: 10th
+  International Conference on Theory and Practice of Public Key Cryptography},
+  volume 4450 of {\em Lecture Notes in Computer Science}, pages 361--376,
+  Beijing, China, April~16--20, 2007. Springer, Berlin, Germany.
+
+\bibitem[AF07]{TCC:AbeFeh07}
+Masayuki Abe and Serge Fehr.
+\newblock Perfect {NIZK} with adaptive soundness.
+\newblock In Salil~P. Vadhan, editor, {\em TCC~2007: 4th Theory of Cryptography
+  Conference}, volume 4392 of {\em Lecture Notes in Computer Science}, pages
+  118--136, Amsterdam, The Netherlands, February~21--24, 2007. Springer,
+  Berlin, Germany.
+
+\bibitem[AFP05]{PKC:AbdFouPoi05}
+Michel Abdalla, Pierre-Alain Fouque, and David Pointcheval.
+\newblock Password-based authenticated key exchange in the three-party setting.
+\newblock In Serge Vaudenay, editor, {\em PKC~2005: 8th International Workshop
+  on Theory and Practice in Public Key Cryptography}, volume 3386 of {\em
+  Lecture Notes in Computer Science}, pages 65--84, Les Diablerets,
+  Switzerland, January~23--26, 2005. Springer, Berlin, Germany.
+
+\bibitem[AGHS13]{AGHS12}
+S.~Agrawal, C.~Gentry, S.~Halevi, and A.~Sahai.
+\newblock Sampling discrete gaussians efficiently and obliviously.
+\newblock In {\em Proc.\ of {ASIACRYPT} (1)}, volume 8269 of {\em LNCS}, pages
+  97--116. Springer, 2013.
+
+\bibitem[Ajt96a]{Ajtai96}
+M.~Ajtai.
+\newblock Generating hard instances of lattice problems (extended abstract).
+\newblock In {\em Proc.\ of {STOC}}, pages 99--108. ACM, 1996.
+
+\bibitem[Ajt96b]{STOC:Ajtai96}
+Mikl{\'o}s Ajtai.
+\newblock Generating hard instances of lattice problems (extended abstract).
+\newblock In {\em 28th Annual {ACM} Symposium on Theory of Computing}, pages
+  99--108, Philadephia, Pennsylvania, USA, May~22--24, 1996. {ACM} Press.
+
+\bibitem[Ajt99]{Ajtai99}
+M.~Ajtai.
+\newblock Generating hard instances of the short basis problem.
+\newblock In {\em Proc.\ of {ICALP}}, volume 1644 of {\em LNCS}, pages 1--9.
+  Springer, 1999.
+
+\bibitem[AK05]{ACISP:AsaKam05}
+Tomoyuki Asano and Kazuya Kamio.
+\newblock A tree based one-key broadcast encryption scheme with low
+  computational overhead.
+\newblock In Colin Boyd and Juan Manuel~Gonz{\'a}lez Nieto, editors, {\em ACISP
+  05: 10th Australasian Conference on Information Security and Privacy}, volume
+  3574 of {\em Lecture Notes in Computer Science}, pages 89--100, Brisbane,
+  Queensland, Australia, July~4--6, 2005. Springer, Berlin, Germany.
+
+\bibitem[ALO98]{C:AieLodOst98}
+William Aiello, Sachin Lodha, and Rafail Ostrovsky.
+\newblock Fast digital identity revocation (extended abstract).
+\newblock In Hugo Krawczyk, editor, {\em Advances in Cryptology --
+  {CRYPTO}'98}, volume 1462 of {\em Lecture Notes in Computer Science}, pages
+  137--152, Santa Barbara, CA, USA, August~23--27, 1998. Springer, Berlin,
+  Germany.
+
+\bibitem[AP11]{AlPe11}
+J.~Alwen and C.~Peikert.
+\newblock Generating shorter bases for hard random lattices.
+\newblock {\em Theor.\ Comput.\ Science}, 48(3):535--553, 2011.
+
+\bibitem[AR13]{AgRe13}
+D.~Aggarwal and O.~Regev.
+\newblock A note on discrete gaussian combinations of lattice vectors, 2013.
+\newblock Draft. Available at \url{http://arxiv.org/pdf/1308.2405v1.pdf}.
+
+\bibitem[Asa02]{AC:Asano02}
+Tomoyuki Asano.
+\newblock A revocation scheme with minimal storage at receivers.
+\newblock In Yuliang Zheng, editor, {\em Advances in Cryptology --
+  {ASIACRYPT}~2002}, volume 2501 of {\em Lecture Notes in Computer Science},
+  pages 433--450, Queenstown, New Zealand, December~1--5, 2002. Springer,
+  Berlin, Germany.
+
+\bibitem[AVL62]{AVL62}
+Georgii~M. Adelson-Velskii and Evgenii~M. Landis.
+\newblock An algorithm for the organization of information.
+\newblock {\em Proc. USSR Academy of Sciences}, 146:263--266, 1962.
+
+\bibitem[BBG05]{EC:BonBoyGoh05}
+Dan Boneh, Xavier Boyen, and Eu-Jin Goh.
+\newblock Hierarchical identity based encryption with constant size ciphertext.
+\newblock In Ronald Cramer, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2005}, volume 3494 of {\em Lecture Notes in Computer Science},
+  pages 440--456, Aarhus, Denmark, May~22--26, 2005. Springer, Berlin, Germany.
+
+\bibitem[BBKS07]{BBKS07Multi}
+Mihir Bellare, Alexandra Boldyreva, Kaoru Kurosawa, and Jessica Staddon.
+\newblock Multirecipient encryption schemes: How to save on bandwidth and
+  computation without sacrificing security.
+\newblock {\em IEEE Trans. Inf. Th.}, 53(11):3927--3943, November 2007.
+
+\bibitem[BBS04]{C:BonBoySha04}
+Dan Boneh, Xavier Boyen, and Hovav Shacham.
+\newblock Short group signatures.
+\newblock In Matthew Franklin, editor, {\em Advances in Cryptology --
+  {CRYPTO}~2004}, volume 3152 of {\em Lecture Notes in Computer Science}, pages
+  41--55, Santa Barbara, CA, USA, August~15--19, 2004. Springer, Berlin,
+  Germany.
+
+\bibitem[BD05]{BD05GKE}
+Mike Burmester and Yvo Desmedt.
+\newblock A secure and scalable group key exchange system.
+\newblock {\em Inf. Proc. Letters}, 94(3):137--143, May 2005.
+
+\bibitem[BDJR97]{FOCS:BDJR97}
+Mihir Bellare, Anand Desai, Eric Jokipii, and Phillip Rogaway.
+\newblock A concrete security treatment of symmetric encryption.
+\newblock In {\em 38th Annual Symposium on Foundations of Computer Science},
+  pages 394--403, Miami Beach, Florida, October~19--22, 1997. {IEEE} Computer
+  Society Press.
+
+\bibitem[Ber70]{Berlekamp70}
+Elwyn~R. Berlekamp.
+\newblock Factoring polynomials over large finite fields.
+\newblock {\em Mathematics of Computation}, 24(111):pp. 713--735, 1970.
+
+\bibitem[Ber91]{EC:Berkovits91}
+Shimshon Berkovits.
+\newblock How to broadcast a secret (rump session).
+\newblock In Donald~W. Davies, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}'91}, volume 547 of {\em Lecture Notes in Computer Science}, pages
+  535--541, Brighton, UK, April~8--11, 1991. Springer, Berlin, Germany.
+
+\bibitem[BF99a]{BoFr99}
+D.~Boneh and M.~K. Franklin.
+\newblock An efficient public key traitor tracing scheme.
+\newblock In {\em Proc.\ of {CRYPTO}}, volume 1666 of {\em LNCS}, pages
+  338--353. Springer, 1999.
+
+\bibitem[BF99b]{C:BonFra99}
+Dan Boneh and Matthew~K. Franklin.
+\newblock An efficient public key traitor tracing scheme.
+\newblock In Michael~J. Wiener, editor, {\em Advances in Cryptology --
+  {CRYPTO}'99}, volume 1666 of {\em Lecture Notes in Computer Science}, pages
+  338--353, Santa Barbara, CA, USA, August~15--19, 1999. Springer, Berlin,
+  Germany.
+
+\bibitem[BF01]{C:BonFra01}
+Dan Boneh and Matthew~K. Franklin.
+\newblock Identity-based encryption from the {Weil} pairing.
+\newblock In Joe Kilian, editor, {\em Advances in Cryptology -- {CRYPTO}~2001},
+  volume 2139 of {\em Lecture Notes in Computer Science}, pages 213--229, Santa
+  Barbara, CA, USA, August~19--23, 2001. Springer, Berlin, Germany.
+
+\bibitem[BF11]{BoFr11a}
+D.~Boneh and D.~M. Freeman.
+\newblock Linearly homomorphic signatures over binary fields and new tools for
+  lattice-based signatures.
+\newblock In {\em Proc.\ of {PKC}}, volume 6571 of {\em LNCS}, pages 1--16.
+  Springer, 2011.
+\newblock Full version available at \url{http://eprint.iacr.org/2010/453.pdf}.
+
+\bibitem[BGdMM05]{BGMM05}
+Lucas Ballard, Matthew Green, Breno de~Medeiros, and Fabian Monrose.
+\newblock Correlation-resistant storage via keyword-searchable encryption.
+\newblock Cryptology ePrint Archive, Report 2005/417, 2005.
+\newblock \url{http://eprint.iacr.org/}.
+
+\bibitem[BGhCS04]{BGES04}
+P.~Barreto, S.~Galbraith, hEigeartaigh C., and M.~Scott.
+\newblock {E}fficient {P}airing {C}omputation on {S}upersingular {A}belian
+  {V}arieties.
+\newblock Available at {\tt http://eprint.iacr.org/2004/375}, 2004.
+
+\bibitem[BGW05]{C:BonGenWat05}
+Dan Boneh, Craig Gentry, and Brent Waters.
+\newblock Collusion resistant broadcast encryption with short ciphertexts and
+  private keys.
+\newblock In Victor Shoup, editor, {\em Advances in Cryptology --
+  {CRYPTO}~2005}, volume 3621 of {\em Lecture Notes in Computer Science}, pages
+  258--275, Santa Barbara, CA, USA, August~14--18, 2005. Springer, Berlin,
+  Germany.
+
+\bibitem[BK05]{RSA:BonKat05}
+Dan Boneh and Jonathan Katz.
+\newblock Improved efficiency for {CCA}-secure cryptosystems built using
+  identity-based encryption.
+\newblock In Alfred Menezes, editor, {\em Topics in Cryptology -- CT-RSA~2005},
+  volume 3376 of {\em Lecture Notes in Computer Science}, pages 87--103, San
+  Francisco, CA, USA, February~14--18, 2005. Springer, Berlin, Germany.
+
+\bibitem[BKM10]{BonKiaMon10}
+Dan Boneh, Aggelos Kiayias, and Hart~William Montgomery.
+\newblock Robust fingerprinting codes: a near pptimal construction.
+\newblock In {\em Proceedings of ACM DRM '10}, pages 3--12, New York, NY, USA,
+  2010. ACM.
+
+\bibitem[BLP{\etalchar{+}}13]{BLPRS13}
+Z.~Brakerski, A.~Langlois, C.~Peikert, O.~Regev, and D.~Stehl{\'e}.
+\newblock Classical hardness of learning with errors.
+\newblock In {\em STOC}, pages 575--584. ACM, 2013.
+
+\bibitem[BLS04]{JC:BarLynSco04}
+Paulo S. L.~M. Barreto, Ben Lynn, and Michael Scott.
+\newblock Efficient implementation of pairing-based cryptosystems.
+\newblock {\em Journal of Cryptology}, 17(4):321--334, September 2004.
+
+\bibitem[BM84]{BluMic84}
+Manuel Blum and Silvio Micali.
+\newblock How to generate cryptographically strong sequences of pseudorandom
+  bits.
+\newblock {\em {SIAM} Journal on Computing}, 13(4):850--864, 1984.
+
+\bibitem[BM08]{MR2368647}
+J.~A. Bondy and U.~S.~R. Murty.
+\newblock {\em Graph theory}, volume 244 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer, New York, 2008.
+
+\bibitem[BMW05]{CCS:BoyMeiWat05}
+Xavier Boyen, Qixiang Mei, and Brent Waters.
+\newblock Direct chosen ciphertext security from identity-based techniques.
+\newblock In Vijayalakshmi Atluri, Catherine Meadows, and Ari Juels, editors,
+  {\em ACM CCS 05: 12th Conference on Computer and Communications Security},
+  pages 320--329, Alexandria, Virginia, USA, November~7--11, 2005. {ACM} Press.
+
+\bibitem[BN08a]{BoNa08}
+D.~Boneh and M.~Naor.
+\newblock Traitor tracing with constant size ciphertext.
+\newblock In {\em Proc.\ of {ACM CCS}}, pages 501--510. ACM, 2008.
+
+\bibitem[BN08b]{CCS:BonNao08}
+Dan Boneh and Moni Naor.
+\newblock Traitor tracing with constant size ciphertext.
+\newblock In Peng Ning, Paul~F. Syverson, and Somesh Jha, editors, {\em ACM CCS
+  08: 15th Conference on Computer and Communications Security}, pages 501--510,
+  Alexandria, Virginia, USA, October~27--31, 2008. {ACM} Press.
+
+\bibitem[Boy99]{C:Boyko99}
+Victor Boyko.
+\newblock On the security properties of {OAEP} as an all-or-nothing transform.
+\newblock In Michael~J. Wiener, editor, {\em Advances in Cryptology --
+  {CRYPTO}'99}, volume 1666 of {\em Lecture Notes in Computer Science}, pages
+  503--518, Santa Barbara, CA, USA, August~15--19, 1999. Springer, Berlin,
+  Germany.
+
+\bibitem[BP04]{C:BelPal04}
+Mihir Bellare and Adriana Palacio.
+\newblock The knowledge-of-exponent assumptions and 3-round zero-knowledge
+  protocols.
+\newblock In Matthew Franklin, editor, {\em Advances in Cryptology --
+  {CRYPTO}~2004}, volume 3152 of {\em Lecture Notes in Computer Science}, pages
+  273--289, Santa Barbara, CA, USA, August~15--19, 2004. Springer, Berlin,
+  Germany.
+
+\bibitem[BP08]{ICITS:BilPha08}
+Olivier Billet and Duong~Hieu Phan.
+\newblock Efficient traitor tracing from collusion secure codes.
+\newblock In Reihaneh Safavi-Naini, editor, {\em ICITS 08: 3rd International
+  Conference on Information Theoretic Security}, volume 5155 of {\em Lecture
+  Notes in Computer Science}, pages 171--182, Calgary, Canada, August~10--13,
+  2008. Springer, Berlin, Germany.
+
+\bibitem[BP09]{EC:BilPha09}
+Olivier Billet and Duong~Hieu Phan.
+\newblock Traitors collaborating in public: Pirates 2.0.
+\newblock In Antoine Joux, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2009}, volume 5479 of {\em Lecture Notes in Computer Science},
+  pages 189--205, Cologne, Germany, April~26--30, 2009. Springer, Berlin,
+  Germany.
+
+\bibitem[BPS00]{BPS00}
+O.~Berkman, M.~Parnas, and J.~Sgall.
+\newblock {E}fficient {D}ynamic {T}raitor {T}racing.
+\newblock In {\em Proceedings of the 11th Symposium on Discrete Algorithms},
+  pages 586--595, 2000.
+
+\bibitem[BR93]{CCS:BelRog93}
+Mihir Bellare and Phillip Rogaway.
+\newblock Random oracles are practical: {A} paradigm for designing efficient
+  protocols.
+\newblock In V.~Ashby, editor, {\em ACM CCS 93: 1st Conference on Computer and
+  Communications Security}, pages 62--73, Fairfax, Virginia, USA,
+  November~3--5, 1993. {ACM} Press.
+
+\bibitem[BR94]{EC:BelRog94}
+Mihir Bellare and Phillip Rogaway.
+\newblock Optimal asymmetric encryption.
+\newblock In Alfredo~De Santis, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}'94}, volume 950 of {\em Lecture Notes in Computer Science}, pages
+  92--111, Perugia, Italy, May~9--12, 1994. Springer, Berlin, Germany.
+
+\bibitem[BS95]{C:BonSha95}
+Dan Boneh and James Shaw.
+\newblock Collusion-secure fingerprinting for digital data (extended abstract).
+\newblock In Don Coppersmith, editor, {\em Advances in Cryptology --
+  {CRYPTO}'95}, volume 963 of {\em Lecture Notes in Computer Science}, pages
+  452--465, Santa Barbara, CA, USA, August~27--31, 1995. Springer, Berlin,
+  Germany.
+
+\bibitem[BS98]{BS98Finger}
+Dan Boneh and James Shaw.
+\newblock Collusion-secure fingerprinting for digital data.
+\newblock {\em IEEE Trans. Inf. Th.}, 44(5):1897--1905, 1998.
+\newblock A preliminary version appeared in Crypto '95.
+
+\bibitem[BSW06a]{BoSaWa06}
+D.~Boneh, A.~Sahai, and B.~Waters.
+\newblock Fully collusion resistant traitor tracing with short ciphertexts and
+  private keys.
+\newblock In {\em Proc.\ of {EUROCRYPT}}, volume 4004 of {\em LNCS}, pages
+  573--592. Springer, 2006.
+
+\bibitem[BSW06b]{EC:BonSahWat06}
+Dan Boneh, Amit Sahai, and Brent Waters.
+\newblock Fully collusion resistant traitor tracing with short ciphertexts and
+  private keys.
+\newblock In Serge Vaudenay, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2006}, volume 4004 of {\em Lecture Notes in Computer Science},
+  pages 573--592, St. Petersburg, Russia, May~28~--~June~1, 2006. Springer,
+  Berlin, Germany.
+
+\bibitem[BW06a]{BonWat06}
+D.~Boneh and B.~Waters.
+\newblock A fully collusion resistant broadcast, trace, and revoke system.
+\newblock In {\em Proc.\ of {ACM CCS}}, pages 211--220. ACM, 2006.
+
+\bibitem[BW06b]{CCS:BonWat06}
+Dan Boneh and Brent Waters.
+\newblock A fully collusion resistant broadcast, trace, and revoke system.
+\newblock In Ari Juels, Rebecca~N. Wright, and {Sabrina De Capitani di}
+  Vimercati, editors, {\em ACM CCS 06: 13th Conference on Computer and
+  Communications Security}, pages 211--220, Alexandria, Virginia, USA,
+  October~30~--~November~3, 2006. {ACM} Press.
+
+\bibitem[BZ14]{C:BonZha14}
+Dan Boneh and Mark Zhandry.
+\newblock Multiparty key exchange, efficient traitor tracing, and more from
+  indistinguishability obfuscation.
+\newblock In Juan~A. Garay and Rosario Gennaro, editors, {\em Advances in
+  Cryptology -- {CRYPTO}~2014, Part I}, volume 8616 of {\em Lecture Notes in
+  Computer Science}, pages 480--499, Santa Barbara, CA, USA, August~17--21,
+  2014. Springer, Berlin, Germany.
+
+\bibitem[CDH{\etalchar{+}}00]{EC:CDHKS00}
+Ran Canetti, Yevgeniy Dodis, Shai Halevi, Eyal Kushilevitz, and Amit Sahai.
+\newblock Exposure-resilient functions and all-or-nothing transforms.
+\newblock In Bart Preneel, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2000}, volume 1807 of {\em Lecture Notes in Computer Science},
+  pages 453--469, Bruges, Belgium, May~14--18, 2000. Springer, Berlin, Germany.
+
+\bibitem[CFGP06]{CFGP06Twist}
+Olivier Chevassut, Pierre-Alain Fouque, Pierrick Gaudry, and David Pointcheval.
+\newblock The twist-augmented technique for key exchange.
+\newblock In M.~Yung, editor, {\em PKC 2006}, volume 3958 of {\em LNCS}, pages
+  410--426. Springer, 2006.
+\newblock Full version at \url{http://eprint.iacr.org/2005/061}.
+
+\bibitem[CFN94a]{ChFiNa94}
+B.~Chor, A.~Fiat, and M.~Naor.
+\newblock Tracing traitors.
+\newblock In {\em Proc.\ of {CRYPTO}}, volume 839 of {\em LNCS}, pages
+  257--270. Springer, 1994.
+
+\bibitem[CFN94b]{C:ChoFiaNao94}
+Benny Chor, Amos Fiat, and Moni Naor.
+\newblock Tracing traitors.
+\newblock In Yvo Desmedt, editor, {\em Advances in Cryptology -- {CRYPTO}'94},
+  volume 839 of {\em Lecture Notes in Computer Science}, pages 257--270, Santa
+  Barbara, CA, USA, August~21--25, 1994. Springer, Berlin, Germany.
+
+\bibitem[CFNP00]{CFNP00}
+Benny Chor, Amos Fiat, Moni Naor, and Benny Pinkas.
+\newblock {Tracing Traitors}.
+\newblock {\em IEEE Transactions on Information Theory}, 46(3):893--910, 2000.
+
+\bibitem[CHK04]{EC:CanHalKat04}
+Ran Canetti, Shai Halevi, and Jonathan Katz.
+\newblock Chosen-ciphertext security from identity-based encryption.
+\newblock In Christian Cachin and Jan Camenisch, editors, {\em Advances in
+  Cryptology -- {EUROCRYPT}~2004}, volume 3027 of {\em Lecture Notes in
+  Computer Science}, pages 207--222, Interlaken, Switzerland, May~2--6, 2004.
+  Springer, Berlin, Germany.
+
+\bibitem[CHKP10]{CaHoKiPe10}
+D.~Cash, D.~Hofheinz, E.~Kiltz, and C.~Peikert.
+\newblock Bonsai trees, or how to delegate a lattice basis.
+\newblock In {\em Proc.\ of {EUROCRYPT}}, volume 6110 of {\em LNCS}, pages
+  523--552. Springer, 2010.
+
+\bibitem[Chv79]{MR80g:90082}
+V.~Chv{\'a}tal.
+\newblock A greedy heuristic for the set-covering problem.
+\newblock {\em Math. Oper. Res.}, 4(3):233--235, 1979.
+
+\bibitem[Coc01]{Cocks01}
+Clifford Cocks.
+\newblock An identity based encryption scheme based on quadratic residues.
+\newblock In Bahram Honary, editor, {\em Cryptography and Coding, 8th IMA
+  International Conference}, volume 2260 of {\em Lecture Notes in Computer
+  Science}, pages 360--363, Cirencester, UK, December~17--19, 2001. Springer,
+  Berlin, Germany.
+
+\bibitem[CPP05a]{EC:ChaPhaPoi05}
+Herv{\'e} Chabanne, Duong~Hieu Phan, and David Pointcheval.
+\newblock Public traceability in traitor tracing schemes.
+\newblock In Ronald Cramer, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2005}, volume 3494 of {\em Lecture Notes in Computer Science},
+  pages 542--558, Aarhus, Denmark, May~22--26, 2005. Springer, Berlin, Germany.
+
+\bibitem[CPP05b]{CPP05}
+Herv{\'e} Chabanne, Duong~Hieu Phan, and David Pointcheval.
+\newblock {Public Traceability in Traitor Tracing Schemes}.
+\newblock In Ronald Cramer, editor, {\em Advances in
+  Cryptology---EUROCRYPT~2005}, volume 3494 of {\em Lecture Notes in Computer
+  Science}, pages 542--558. Springer, 2005.
+
+\bibitem[CS98]{CS98CCA}
+Ronald Cramer and Victor Shoup.
+\newblock A practical public key cryptosystem provably secure against adaptive
+  chosen ciphertext attack.
+\newblock In Hugo Krawczyk, editor, {\em Crypto '98}, volume 1462 of {\em
+  LNCS}, pages 13--25. Springer, 1998.
+
+\bibitem[CS02]{EC:CraSho02}
+Ronald Cramer and Victor Shoup.
+\newblock Universal hash proofs and a paradigm for adaptive chosen ciphertext
+  secure public-key encryption.
+\newblock In Lars~R. Knudsen, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2002}, volume 2332 of {\em Lecture Notes in Computer Science},
+  pages 45--64, Amsterdam, The Netherlands, April~28~--~May~2, 2002. Springer,
+  Berlin, Germany.
+
+\bibitem[CS03]{CraSho03}
+Ronald Cramer and Victor Shoup.
+\newblock Design and analysis of practical public-key encryption schemes secure
+  against adaptive chosen ciphertext attack.
+\newblock {\em {SIAM} Journal on Computing}, 33(1):167--226, 2003.
+
+\bibitem[Dam87]{EC:Damgaard87}
+Ivan Damg{\aa}rd.
+\newblock Collision free hash functions and public key signature schemes.
+\newblock In David Chaum and Wyn~L. Price, editors, {\em Advances in Cryptology
+  -- {EUROCRYPT}'87}, volume 304 of {\em Lecture Notes in Computer Science},
+  pages 203--216, Amsterdam, The Netherlands, April~13--15, 1987. Springer,
+  Berlin, Germany.
+
+\bibitem[Dam91]{C:Damgaard91}
+Ivan Damg{\aa}rd.
+\newblock Towards practical public key systems secure against chosen ciphertext
+  attacks.
+\newblock In Joan Feigenbaum, editor, {\em Advances in Cryptology --
+  {CRYPTO}'91}, volume 576 of {\em Lecture Notes in Computer Science}, pages
+  445--456, Santa Barbara, CA, USA, August~11--15, 1991. Springer, Berlin,
+  Germany.
+
+\bibitem[Dd11]{ACNS:DArDel11}
+Paolo D'Arco and Angel L.~P{\'e}rez {del Pozo}.
+\newblock Fighting pirates 2.0.
+\newblock In Javier Lopez and Gene Tsudik, editors, {\em ACNS 11: 9th
+  International Conference on Applied Cryptography and Network Security},
+  volume 6715 of {\em Lecture Notes in Computer Science}, pages 359--376,
+  Nerja, Spain, June~7--10, 2011. Springer, Berlin, Germany.
+
+\bibitem[DDG13]{EPRINT:DubDugGui13}
+Renaud Dubois, Margaux Dugardin, and Aurore Guillevic.
+\newblock Golden sequence for the {PPSS} broadcast encryption scheme with an
+  asymmetric pairing.
+\newblock Cryptology ePrint Archive, Report 2013/477, 2013.
+\newblock \url{http://eprint.iacr.org/2013/477}.
+
+\bibitem[DDN00]{DolDwoNao00}
+Danny Dolev, Cynthia Dwork, and Moni Naor.
+\newblock Nonmalleable cryptography.
+\newblock {\em {SIAM} Journal on Computing}, 30(2):391--437, 2000.
+
+\bibitem[{Def}]{DRMa}
+{DefectiveByDesign}.
+\newblock {\tt http://www.defectivebydesign.org/}.
+
+\bibitem[Del07]{AC:Delerablee07}
+C{\'e}cile Delerabl{\'e}e.
+\newblock Identity-based broadcast encryption with constant size ciphertexts
+  and private keys.
+\newblock In Kaoru Kurosawa, editor, {\em Advances in Cryptology --
+  {ASIACRYPT}~2007}, volume 4833 of {\em Lecture Notes in Computer Science},
+  pages 200--215, Kuching, Malaysia, December~2--6, 2007. Springer, Berlin,
+  Germany.
+
+\bibitem[Del08]{Del07IDbased}
+Cécile Delerablée.
+\newblock Identity-based broadcast encryption with constant size ciphertexts
+  and private keys.
+\newblock In K.~Kurosawa, editor, {\em Asiacrypt 2007}, volume 4833 of {\em
+  LNCS}, pages 200--215. Springer, 2008.
+
+\bibitem[Den06]{Den06}
+Alexander~W.\ Dent.
+\newblock The hardness of the dhk problem in the generic group model.
+\newblock Cryptology ePrint Archive, Report 2006/156, 2006.
+\newblock \texttt{http://eprint.iacr.org/2006/156}.
+
+\bibitem[DF02]{DoFa02}
+Yevgeniy Dodis and Nelly Fazio.
+\newblock Public-key broadcast encryption for stateless receivers.
+\newblock In {\em ACM Digital Rights Management---DRM '02}, pages 61--80,
+  Heidelberg, 2002. Springer.
+\newblock LNCS 2696.
+
+\bibitem[DF03]{PKC:DodFaz03}
+Yevgeniy Dodis and Nelly Fazio.
+\newblock Public key trace and revoke scheme secure against adaptive chosen
+  ciphertext attack.
+\newblock In Yvo Desmedt, editor, {\em PKC~2003: 6th International Workshop on
+  Theory and Practice in Public Key Cryptography}, volume 2567 of {\em Lecture
+  Notes in Computer Science}, pages 100--115, Miami, USA, January~6--8, 2003.
+  Springer, Berlin, Germany.
+
+\bibitem[DFKY05]{DFKY05}
+Y.~Dodis, N.~Fazio, A.~Kiayias, and M.~Yung.
+\newblock {S}calable {P}ublic-{K}ey {T}racing and {R}evoking.
+\newblock {\em Journal of Distributed Computing}, 17(4):323--347, 2005.
+
+\bibitem[DH76]{DH76}
+Whitfield Diffie and Martin Hellman.
+\newblock New directions in cryptography.
+\newblock {\em IEEE Trans. Inf. Th.}, 22(6):644--654, November 1976.
+
+\bibitem[DH00]{MR1742957}
+Ding-Zhu Du and Frank~K. Hwang.
+\newblock {\em Combinatorial group testing and its applications}, volume~12 of
+  {\em Series on Applied Mathematics}.
+\newblock World Scientific Publishing Co. Inc., River Edge, NJ, second edition,
+  2000.
+
+\bibitem[DK05]{DK05CCA}
+Yevgeniy Dodis and Jonathan Katz.
+\newblock Chosen-ciphertext security of multiple encryption.
+\newblock In J.~Kilian, editor, {\em TCC 2005}, volume 3378 of {\em LNCS},
+  pages 188--209. Springer, 2005.
+
+\bibitem[Dor43]{dorfman}
+R.~Dorfman.
+\newblock The detection of defective members of large populations.
+\newblock {\em The Annals of Mathematical Statistics}, 14(4):436--440, 1943.
+
+\bibitem[DP08]{PROVSEC:DesPha08}
+Yvo Desmedt and Duong~Hieu Phan.
+\newblock A {CCA} secure hybrid {Damg{\aa}rd}'s {ElGamal} encryption.
+\newblock In Joonsang Baek, Feng Bao, Kefei Chen, and Xuejia Lai, editors, {\em
+  ProvSec 2008: 2nd International Conference on Provable Security}, volume 5324
+  of {\em Lecture Notes in Computer Science}, pages 68--82, Shanghai, China,
+  October~31~--~November~1, 2008. Springer, Berlin, Germany.
+
+\bibitem[DPP07]{PAIRING:DelPaiPoi07}
+C{\'e}cile Delerabl{\'e}e, Pascal Paillier, and David Pointcheval.
+\newblock Fully collusion secure dynamic broadcast encryption with
+  constant-size ciphertexts or decryption keys.
+\newblock In Tsuyoshi Takagi, Tatsuaki Okamoto, Eiji Okamoto, and Takeshi
+  Okamoto, editors, {\em PAIRING 2007: 1st International Conference on
+  Pairing-based Cryptography}, volume 4575 of {\em Lecture Notes in Computer
+  Science}, pages 39--59, Tokyo, Japan, July~2--4, 2007. Springer, Berlin,
+  Germany.
+
+\bibitem[EFF85]{MR87a:05008}
+P.~Erd{{o}}s, P.~Frankl, and Z.~F{\"u}redi.
+\newblock Families of finite sets in which no set is covered by the union of
+  $r$ others.
+\newblock {\em Israel J. Math.}, 51(1-2):79--89, 1985.
+
+\bibitem[{Ele}]{EFF}
+{Electronic~Frontier~Foundation}.
+\newblock {\tt http://www.eff.org/}.
+
+\bibitem[{ElG}85]{Elgamal85}
+Taher {ElGamal}.
+\newblock A public key cryptosystem and a signature scheme based on discrete
+  logarithms.
+\newblock {\em {IEEE} Transactions on Information Theory}, 31:469--472, 1985.
+
+\bibitem[Fei98]{MR1675095}
+Uriel Feige.
+\newblock A threshold of {$\ln n$} for approximating set cover.
+\newblock {\em J. ACM}, 45(4):634--652, 1998.
+
+\bibitem[FN93]{C:FiaNao93}
+Amos Fiat and Moni Naor.
+\newblock Broadcast encryption.
+\newblock In Douglas~R. Stinson, editor, {\em Advances in Cryptology --
+  {CRYPTO}'93}, volume 773 of {\em Lecture Notes in Computer Science}, pages
+  480--491, Santa Barbara, CA, USA, August~22--26, 1993. Springer, Berlin,
+  Germany.
+
+\bibitem[FNP07a]{FaNiPh07}
+N.~Fazio, A.~Nicolosi, and D.~H. Phan.
+\newblock Traitor tracing with optimal transmission rate.
+\newblock In {\em Proc.\ of {ISC}}, volume 4779 of {\em LNCS}, pages 71--88.
+  Springer, 2007.
+
+\bibitem[FNP07b]{ISC:FazNicPha07}
+Nelly Fazio, Antonio Nicolosi, and Duong~Hieu Phan.
+\newblock Traitor tracing with optimal transmission rate.
+\newblock In Juan~A. Garay, Arjen~K. Lenstra, Masahiro Mambo, and Ren{\'e}
+  Peralta, editors, {\em ISC~2007: 10th International Conference on Information
+  Security}, volume 4779 of {\em Lecture Notes in Computer Science}, pages
+  71--88, Valpara{\'\i}so, Chile, October~9--12, 2007. Springer, Berlin,
+  Germany.
+
+\bibitem[FT99]{C:FiaTas99}
+Amos Fiat and Tamir Tassa.
+\newblock Dynamic traitor training.
+\newblock In Michael~J. Wiener, editor, {\em Advances in Cryptology --
+  {CRYPTO}'99}, volume 1666 of {\em Lecture Notes in Computer Science}, pages
+  354--371, Santa Barbara, CA, USA, August~15--19, 1999. Springer, Berlin,
+  Germany.
+
+\bibitem[FT01]{JC:FiaTas01}
+Amos Fiat and Tamir Tassa.
+\newblock Dynamic traitor tracing.
+\newblock {\em Journal of Cryptology}, 14(3):211--223, 2001.
+
+\bibitem[GGH96]{ePrint:GGH96}
+Oded Goldreich, Shafi Goldwasser, and Shai Halevi.
+\newblock Collision-free hashing from lattice problems.
+\newblock Cryptology ePrint Archive, Report 1996/009, 1996.
+\newblock \texttt{http://eprint.iacr.org/1996/009}.
+
+\bibitem[GGH13a]{GGH13}
+S.~Garg, C.~Gentry, and S.~Halevi.
+\newblock Candidate multilinear maps from ideal lattices.
+\newblock In {\em EUROCRYPT}, volume 7881 of {\em LNCS}, pages 1--17, 2013.
+
+\bibitem[GGH{\etalchar{+}}13b]{GGHRSW13}
+S.~Garg, C.~Gentry, S.~Halevi, M.~Raykova, A.~Sahai, and B.~Waters.
+\newblock Candidate indistinguishability obfuscation and functional encryption
+  for all circuits.
+\newblock In {\em Proc.\ of {FOCS}}, pages 40--49. IEEE Computer Society Press,
+  2013.
+
+\bibitem[GGH{\etalchar{+}}13c]{FOCS:GGHRSW13}
+Sanjam Garg, Craig Gentry, Shai Halevi, Mariana Raykova, Amit Sahai, and Brent
+  Waters.
+\newblock Candidate indistinguishability obfuscation and functional encryption
+  for all circuits.
+\newblock In {\em 54th Annual Symposium on Foundations of Computer Science},
+  pages 40--49, Berkeley, CA, USA, October~26--29, 2013. {IEEE} Computer
+  Society Press.
+
+\bibitem[GGM84]{ggm}
+Oded Goldreich, Shafi Goldwasser, and Silvio Micali.
+\newblock How to construct random functions (extended abstract).
+\newblock In {\em Symposium on Foundations of Computer Science---FOCS~84},
+  pages 464--479. IEEE, 1984.
+
+\bibitem[GJ79]{MR80g:68056}
+Michael~R. Garey and David~S. Johnson.
+\newblock {\em Computers and intractability}.
+\newblock W. H. Freeman and Co., San Francisco, Calif., 1979.
+\newblock A guide to the theory of NP-completeness, A Series of Books in the
+  Mathematical Sciences.
+
+\bibitem[GKV10]{GKV10}
+S.~D. Gordon, J.~Katz, and V.~Vaikuntanathan.
+\newblock A group signature scheme from lattice assumptions.
+\newblock In {\em Proc.\ of {ASIACRYPT}}, volume 2647 of {\em LNCS}, pages
+  395--412. Springer, 2010.
+
+\bibitem[GM84]{GolMic84}
+Shafi Goldwasser and Silvio Micali.
+\newblock Probabilistic encryption.
+\newblock {\em Journal of Computer and System Sciences}, 28(2):270--299, 1984.
+
+\bibitem[GPV08]{GePeVa08}
+C.~Gentry, C.~Peikert, and V.~Vaikuntanathan.
+\newblock Trapdoors for hard lattices and new cryptographic constructions.
+\newblock In {\em Proc.\ of {STOC}}, pages 197--206. ACM, 2008.
+\newblock Full version available at \url{http://eprint.iacr.org/2007/432.pdf}.
+
+\bibitem[GRW06]{FOCS:GenRamWoo06}
+Craig Gentry, Zulfikar Ramzan, and David~P. Woodruff.
+\newblock Explicit exclusive set systems with applications to broadcast
+  encryption.
+\newblock In {\em 47th Annual Symposium on Foundations of Computer Science},
+  pages 27--38, Berkeley, CA, USA, October~21--24, 2006. {IEEE} Computer
+  Society Press.
+
+\bibitem[GS08]{EC:GroSah08}
+Jens Groth and Amit Sahai.
+\newblock Efficient non-interactive proof systems for bilinear groups.
+\newblock In Nigel~P. Smart, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2008}, volume 4965 of {\em Lecture Notes in Computer Science},
+  pages 415--432, Istanbul, Turkey, April~13--17, 2008. Springer, Berlin,
+  Germany.
+
+\bibitem[GST04]{C:GooSunTam04}
+Michael~T. Goodrich, Jonathan~Z. Sun, and Roberto Tamassia.
+\newblock Efficient tree-based revocation in groups of low-state devices.
+\newblock In Matthew Franklin, editor, {\em Advances in Cryptology --
+  {CRYPTO}~2004}, volume 3152 of {\em Lecture Notes in Computer Science}, pages
+  511--527, Santa Barbara, CA, USA, August~15--19, 2004. Springer, Berlin,
+  Germany.
+
+\bibitem[GSY99]{C:GafStaYin99}
+Eli Gafni, Jessica Staddon, and Yiqun~Lisa Yin.
+\newblock Efficient methods for integrating traceability and broadcast
+  encryption.
+\newblock In Michael~J. Wiener, editor, {\em Advances in Cryptology --
+  {CRYPTO}'99}, volume 1666 of {\em Lecture Notes in Computer Science}, pages
+  372--387, Santa Barbara, CA, USA, August~15--19, 1999. Springer, Berlin,
+  Germany.
+
+\bibitem[GW09]{EC:GenWat09}
+Craig Gentry and Brent Waters.
+\newblock Adaptive security in broadcast encryption systems (with short
+  ciphertexts).
+\newblock In Antoine Joux, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2009}, volume 5479 of {\em Lecture Notes in Computer Science},
+  pages 171--188, Cologne, Germany, April~26--30, 2009. Springer, Berlin,
+  Germany.
+
+\bibitem[HS02]{C:HalSha02}
+Dani Halevy and Adi Shamir.
+\newblock The {LSD} broadcast encryption scheme.
+\newblock In Moti Yung, editor, {\em Advances in Cryptology -- {CRYPTO}~2002},
+  volume 2442 of {\em Lecture Notes in Computer Science}, pages 47--60, Santa
+  Barbara, CA, USA, August~18--22, 2002. Springer, Berlin, Germany.
+
+\bibitem[HT98]{C:HadTan98}
+Satoshi Hada and Toshiaki Tanaka.
+\newblock On the existence of 3-round zero-knowledge protocols.
+\newblock In Hugo Krawczyk, editor, {\em Advances in Cryptology --
+  {CRYPTO}'98}, volume 1462 of {\em Lecture Notes in Computer Science}, pages
+  408--423, Santa Barbara, CA, USA, August~23--27, 1998. Springer, Berlin,
+  Germany.
+
+\bibitem[HvLLT98]{ippA}
+Henk D.~L. Hollmann, Jack~H. van Lint, Jean-Paul M.~G. Linnartz, and Ludo M.
+  G.~M. Tolhuizen.
+\newblock {On Codes with the Identifiable Parent Property}.
+\newblock {\em J. Comb. Theory, Ser. A}, 82(2):121--133, 1998.
+
+\bibitem[JHC{\etalchar{+}}05]{EC:JHCKLY05}
+Nam-Su Jho, Jung~Yeon Hwang, Jung~Hee Cheon, Myung-Hwan Kim, Dong~Hoon Lee, and
+  Eun~Sun Yoo.
+\newblock One-way chain based broadcast encryption schemes.
+\newblock In Ronald Cramer, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2005}, volume 3494 of {\em Lecture Notes in Computer Science},
+  pages 559--574, Aarhus, Denmark, May~22--26, 2005. Springer, Berlin, Germany.
+
+\bibitem[JL07]{JL07Renewable}
+Hongxia Jin and Jeffery Lotspiech.
+\newblock Renewable traitor tracing: A trace-revoke-trace system for anonymous
+  attack.
+\newblock In {\em ESORICS}, volume 4734 of {\em LNCS}, pages 563--577.
+  Springer, 2007.
+
+\bibitem[JL09]{HonLot09}
+Hongxia Jin and Jeffrey Lotspiech.
+\newblock Defending against the pirate evolution attack.
+\newblock In {\em ISPEC '09: Proceedings of the 5th International Conference on
+  Information Security Practice and Experience}, pages 147--158, Berlin,
+  Heidelberg, 2009. Springer-Verlag.
+
+\bibitem[KD98a]{KuDe98}
+K.~Kurosawa and Y.~Desmedt.
+\newblock Optimum traitor tracing and asymmetric schemes.
+\newblock In {\em Proc.\ of {EUROCRYPT}}, LNCS, pages 145--157. Springer, 1998.
+
+\bibitem[KD98b]{EC:KurDes98}
+Kaoru Kurosawa and Yvo Desmedt.
+\newblock Optimum traitor tracing and asymmetric schemes.
+\newblock In Kaisa Nyberg, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}'98}, volume 1403 of {\em Lecture Notes in Computer Science},
+  pages 145--157, Espoo, Finland, May~31~--~June~4, 1998. Springer, Berlin,
+  Germany.
+
+\bibitem[KHL03]{AC:KimHwaLee03}
+Chong~Hee Kim, Yong~Ho Hwang, and Pil~Joong Lee.
+\newblock An efficient public key trace and revoke scheme secure against
+  adaptive chosen ciphertext attack.
+\newblock In Chi-Sung Laih, editor, {\em Advances in Cryptology --
+  {ASIACRYPT}~2003}, volume 2894 of {\em Lecture Notes in Computer Science},
+  pages 359--373, Taipei, Taiwan, November~30~--~December~4, 2003. Springer,
+  Berlin, Germany.
+
+\bibitem[Kil06]{TCC:Kiltz06}
+Eike Kiltz.
+\newblock Chosen-ciphertext security from tag-based encryption.
+\newblock In Shai Halevi and Tal Rabin, editors, {\em TCC~2006: 3rd Theory of
+  Cryptography Conference}, volume 3876 of {\em Lecture Notes in Computer
+  Science}, pages 581--600, New York, NY, USA, March~4--7, 2006. Springer,
+  Berlin, Germany.
+
+\bibitem[Kle00]{Klein00}
+P.~N. Klein.
+\newblock Finding the closest lattice vector when it's unusually close.
+\newblock In {\em Proc.\ of {SODA}}, pages 937--941. ACM, 2000.
+
+\bibitem[KMPB05]{CHES:KPPB05}
+Tim Kerins, William~P. Marnane, Emanuel~M. Popovici, and Paulo S. L.~M.
+  Barreto.
+\newblock Efficient hardware for the {Tate} pairing calculation in
+  characteristic three.
+\newblock In Josyula~R. Rao and Berk Sunar, editors, {\em Cryptographic
+  Hardware and Embedded Systems -- {CHES}~2005}, volume 3659 of {\em Lecture
+  Notes in Computer Science}, pages 412--426, Edinburgh, UK,
+  August~29~--~September~1, 2005. Springer, Berlin, Germany.
+
+\bibitem[KP07]{C:KiaPeh07}
+Aggelos Kiayias and Serdar Pehlivanoglu.
+\newblock Pirate evolution: How to make the most of your traitor keys.
+\newblock In Alfred Menezes, editor, {\em Advances in Cryptology --
+  {CRYPTO}~2007}, volume 4622 of {\em Lecture Notes in Computer Science}, pages
+  448--465, Santa Barbara, CA, USA, August~19--23, 2007. Springer, Berlin,
+  Germany.
+
+\bibitem[KP09]{KP09Pirate}
+Aggelos Kiayias and Serdar Pehlivanoglu.
+\newblock Tracing and revoking pirate rebroadcasts.
+\newblock In {\em ACNS 2009}, volume 5536 of {\em LNCS}, pages 253--271.
+  Springer, 2009.
+
+\bibitem[KP10]{KiPe10}
+A.~Kiayias and S.~Pehlivanglu.
+\newblock {\em Encryption For Digital Content}.
+\newblock Springer, 2010.
+
+\bibitem[KPT04]{KPT04TreeGKA}
+Yongdae Kim, Adrian Perrig, and Gene Tsudik.
+\newblock Tree-based group key agreement.
+\newblock {\em ACM Trans. Inf. Syst. Sec.}, 7(1):60--96, May 2004.
+
+\bibitem[KR03]{SODA:KumRus03}
+Ravi Kumar and Alexander Russell.
+\newblock A note on the set systems used for broadcast encryption.
+\newblock In {\em 14th Annual {ACM}-{SIAM} Symposium on Discrete Algorithms},
+  pages 470--471, Baltimore, Maryland, USA, January~12--14, 2003. {ACM-SIAM}.
+
+\bibitem[KRS99]{C:KumRajSah99}
+Ravi Kumar, Sridhar Rajagopalan, and Amit Sahai.
+\newblock Coding constructions for blacklisting problems without computational
+  assumptions.
+\newblock In Michael~J. Wiener, editor, {\em Advances in Cryptology --
+  {CRYPTO}'99}, volume 1666 of {\em Lecture Notes in Computer Science}, pages
+  609--623, Santa Barbara, CA, USA, August~15--19, 1999. Springer, Berlin,
+  Germany.
+
+\bibitem[KSNW03]{KSW03GKE}
+Hartono Kurnio, Rei Safavi-Naini, and Huaxiong Wang.
+\newblock A group key distribution scheme with decentralised user join.
+\newblock In {\em SCN 2003}, volume 2576 of {\em LNCS}, pages 146--163.
+  Springer, 2003.
+
+\bibitem[KWHI01]{PKC:KWHI01}
+Hirotaka Komaki, Yuji Watanabe, Goichiro Hanaoka, and Hideki Imai.
+\newblock Efficient asymmetric self-enforcement scheme with public
+  traceability.
+\newblock In Kwangjo Kim, editor, {\em PKC~2001: 4th International Workshop on
+  Theory and Practice in Public Key Cryptography}, volume 1992 of {\em Lecture
+  Notes in Computer Science}, pages 225--239, Cheju Island, South Korea,
+  February~13--15, 2001. Springer, Berlin, Germany.
+
+\bibitem[KY01a]{KiYu01b}
+A.~Kiayias and M.~Yung.
+\newblock On crafty pirates and foxy tracers.
+\newblock In {\em Proc.\ of {DRM} Workshop}, volume 2320 of {\em LNCS}, pages
+  22--39. Springer, 2001.
+
+\bibitem[KY01b]{KiYu01}
+A.~Kiayias and M.~Yung.
+\newblock Self protecting pirates and black-box traitor tracing.
+\newblock In {\em Proc.\ of {CRYPTO}}, volume 2139 of {\em LNCS}, pages 63--79.
+  Springer, 2001.
+
+\bibitem[KY01c]{C:KiaYun01}
+Aggelos Kiayias and Moti Yung.
+\newblock Self protecting pirates and black-box traitor tracing.
+\newblock In Joe Kilian, editor, {\em Advances in Cryptology -- {CRYPTO}~2001},
+  volume 2139 of {\em Lecture Notes in Computer Science}, pages 63--79, Santa
+  Barbara, CA, USA, August~19--23, 2001. Springer, Berlin, Germany.
+
+\bibitem[KY02a]{KiYu02:asymmetric}
+A.~Kiayias and M.~Yung.
+\newblock {B}reaking and {R}epairing {A}symmetric {P}ublic-{K}ey {T}raitor
+  {T}racing.
+\newblock In {\em Digital Rights Management---DRM '02}, pages 32--50,
+  Heidelberg, 2002. Springer.
+\newblock LNCS 2696.
+
+\bibitem[KY02b]{KYfox}
+Aggelos Kiayias and Moti Yung.
+\newblock {On Crafty Pirates and Foxy Tracers}.
+\newblock In Tomas Sander, editor, {\em Security and Privacy in Digital Rights
+  Management---DRM~2001}, volume 2320 of {\em Lecture Notes in Computer
+  Science}, pages 22--39. Springer, 2002.
+
+\bibitem[KY02c]{EC:KiaYun02}
+Aggelos Kiayias and Moti Yung.
+\newblock Traitor tracing with constant transmission rate.
+\newblock In Lars~R. Knudsen, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2002}, volume 2332 of {\em Lecture Notes in Computer Science},
+  pages 450--465, Amsterdam, The Netherlands, April~28~--~May~2, 2002.
+  Springer, Berlin, Germany.
+
+\bibitem[KY02d]{PKC:KurYos02}
+Kaoru Kurosawa and Takuya Yoshida.
+\newblock Linear code implies public-key traitor tracing.
+\newblock In David Naccache and Pascal Paillier, editors, {\em PKC~2002: 5th
+  International Workshop on Theory and Practice in Public Key Cryptography},
+  volume 2274 of {\em Lecture Notes in Computer Science}, pages 172--187,
+  Paris, France, February~12--14, 2002. Springer, Berlin, Germany.
+
+\bibitem[KY03]{EC:KiaYun03}
+Aggelos Kiayias and Moti Yung.
+\newblock Extracting group signatures from traitor tracing schemes.
+\newblock In Eli Biham, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2003}, volume 2656 of {\em Lecture Notes in Computer Science},
+  pages 630--648, Warsaw, Poland, May~4--8, 2003. Springer, Berlin, Germany.
+
+\bibitem[KY06]{KiYu06}
+A.~Kiayias and M.~Yung.
+\newblock {C}opyrighting {P}ublic-key {F}unctions and {A}pplications to
+  {B}lack-box {T}raitor {T}racing.
+\newblock Full revised version of \cite{EC:KiaYun02}. Available at: {\tt
+  http://eprint.iacr.org/2006/458/}, 2006.
+
+\bibitem[KY07]{JC:KatYun07}
+Jonathan Katz and Moti Yung.
+\newblock Scalable protocols for authenticated group key exchange.
+\newblock {\em Journal of Cryptology}, 20(1):85--113, January 2007.
+
+\bibitem[Lin03]{EC:Lindell03}
+Yehuda Lindell.
+\newblock A simpler construction of cca2-secure public-key encryption under
+  general assumptions.
+\newblock In Eli Biham, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2003}, volume 2656 of {\em Lecture Notes in Computer Science},
+  pages 241--254, Warsaw, Poland, May~4--8, 2003. Springer, Berlin, Germany.
+
+\bibitem[Lov75]{MR52:5452}
+L.~Lov{\'a}sz.
+\newblock On the ratio of optimal integral and fractional covers.
+\newblock {\em Discrete Math.}, 13(4):383--390, 1975.
+
+\bibitem[LPQ12]{LPQ11Anonymous}
+Beno\^it Libert, Kenneth~G. Paterson, and Elizabeth~A. Quaglia.
+\newblock Anonymous broadcast encryption: Adaptive security and efficient
+  constructions in the standard model.
+\newblock In {\em PKC 2012}, volume 7293 of {\em LNCS}, pages 206--224.
+  Springer, 2012.
+
+\bibitem[LPR13]{LPR13}
+V.~Lyubashevsky, C.~Peikert, and O.~Regev.
+\newblock On ideal lattices and learning with errors over rings.
+\newblock {\em J. ACM}, 60(6):43, 2013.
+
+\bibitem[LPSS14]{C:LPSS14}
+San Ling, Duong~Hieu Phan, Damien Stehl{\'e}, and Ron Steinfeld.
+\newblock Hardness of k-{LWE} and applications in traitor tracing.
+\newblock In Juan~A. Garay and Rosario Gennaro, editors, {\em Advances in
+  Cryptology -- {CRYPTO}~2014, Part I}, volume 8616 of {\em Lecture Notes in
+  Computer Science}, pages 315--334, Santa Barbara, CA, USA, August~17--21,
+  2014. Springer, Berlin, Germany.
+
+\bibitem[LSS14a]{LSS14}
+A.~Langlois, D.~Stehl\'e, and R.~Steinfeld.
+\newblock {GGHLite}: More efficient multilinear maps from ideal lattices.
+\newblock In {\em Proc.\ of {EUROCRYPT}}, LNCS, pages 239--256. Springer, 2014.
+
+\bibitem[LSS14b]{RenApp14}
+A.~Langlois, D.~Stehl\'e, and R.~Steinfeld.
+\newblock Improved and simplified security proofs in lattice-based
+  cryptography: using the {R\'enyi} divergence rather than the statistical
+  distance, 2014.
+\newblock Available on the webpages of the authors.
+
+\bibitem[LSW10]{SP:LewSahWat10}
+Allison~B. Lewko, Amit Sahai, and Brent Waters.
+\newblock Revocation systems with very small private keys.
+\newblock In {\em 2010 {IEEE} Symposium on Security and Privacy}, pages
+  273--285, Berkeley/Oakland, California, USA, May~16--19, 2010. {IEEE}
+  Computer Society Press.
+
+\bibitem[Lyn]{Lynn}
+B.~Lynn.
+\newblock {PBC} {L}ibrary.
+\newblock Available at {\tt http://crypto.stanford.edu/pbc/}.
+
+\bibitem[Man09]{Manu09GKE}
+Mark Manulis.
+\newblock Group key exchange enabling on-demand derivation of peer-to-peer
+  keys.
+\newblock In {\em ACNS 2009}, volume 5536 of {\em LNCS}, pages 1--19. Springer,
+  2009.
+\newblock Full version at \url{http://www.manulis.eu/pub.html}.
+
+\bibitem[MP12]{MiPe12}
+D.~Micciancio and C.~Peikert.
+\newblock Trapdoors for lattices: Simpler, tighter, faster, smaller.
+\newblock In {\em Proc.\ of {EUROCRYPT}}, volume 7237 of {\em LNCS}, pages
+  700--718. Springer, 2012.
+
+\bibitem[MR95]{MoRa95}
+Rajeev Motwani and Prabhakar Raghavan.
+\newblock {\em Randomized Algorithms}.
+\newblock Cambridge University Press, 1995.
+
+\bibitem[MR07]{MiRe07}
+D.~Micciancio and O.~Regev.
+\newblock Worst-case to average-case reductions based on gaussian measures.
+\newblock {\em {SIAM} J.\ Comput}, 37(1):267--302, 2007.
+
+\bibitem[MR09]{MiRe09}
+D.~Micciancio and O.~Regev.
+\newblock Lattice-based cryptography.
+\newblock In {\em {Post-Quantum Cryptography}, D.~J.~Bernstein, J.~Buchmann,
+  E.~Dahmen (Eds)}, pages 147--191. Springer, 2009.
+
+\bibitem[Nie02]{C:Nielsen02a}
+Jesper~Buus Nielsen.
+\newblock Separating random oracle proofs from complexity theoretic proofs: The
+  non-committing encryption case.
+\newblock In Moti Yung, editor, {\em Advances in Cryptology -- {CRYPTO}~2002},
+  volume 2442 of {\em Lecture Notes in Computer Science}, pages 111--126, Santa
+  Barbara, CA, USA, August~18--22, 2002. Springer, Berlin, Germany.
+
+\bibitem[NNL01]{C:NaoNaoLot01}
+Dalit Naor, Moni Naor, and Jeffery Lotspiech.
+\newblock Revocation and tracing schemes for stateless receivers.
+\newblock In Joe Kilian, editor, {\em Advances in Cryptology -- {CRYPTO}~2001},
+  volume 2139 of {\em Lecture Notes in Computer Science}, pages 41--62, Santa
+  Barbara, CA, USA, August~19--23, 2001. Springer, Berlin, Germany.
+
+\bibitem[NP98]{C:NaoPin98}
+Moni Naor and Benny Pinkas.
+\newblock Threshold traitor tracing.
+\newblock In Hugo Krawczyk, editor, {\em Advances in Cryptology --
+  {CRYPTO}'98}, volume 1462 of {\em Lecture Notes in Computer Science}, pages
+  502--517, Santa Barbara, CA, USA, August~23--27, 1998. Springer, Berlin,
+  Germany.
+
+\bibitem[NP00]{FC:NaoPin00}
+Moni Naor and Benny Pinkas.
+\newblock Efficient trace and revoke schemes.
+\newblock In Yair Frankel, editor, {\em FC 2000: 4th International Conference
+  on Financial Cryptography}, volume 1962 of {\em Lecture Notes in Computer
+  Science}, pages 1--20, Anguilla, British West Indies, February~20--24, 2000.
+  Springer, Berlin, Germany.
+
+\bibitem[NPP13]{Algorithmica:NgoPhaPoi13}
+Hung~Q. Ngo, Duong~Hieu Phan, and David Pointcheval.
+\newblock Black-box trace{\&}revoke codes.
+\newblock {\em Algorithmica}, 67(3):418--448, 2013.
+
+\bibitem[NPR12]{NPR12}
+Hung~Q. Ngo, Ely Porat, and Atri Rudra.
+\newblock Efficiently decodable compressed sensing by list-recoverable codes
+  and recursion.
+\newblock In {\em STACS}, pages 230--241, 2012.
+
+\bibitem[NSS99]{NSS99Copyright}
+David Naccache, Adi Shamir, and Julien~P. Stern.
+\newblock How to copyright a function?
+\newblock In {\em PKC '99}, volume 1560 of {\em LNCS}, pages 188--196.
+  Springer, 1999.
+
+\bibitem[Nui09]{ICITS:Nuida09}
+Koji Nuida.
+\newblock A general conversion method of fingerprint codes to (more) robust
+  fingerprint codes against bit erasure.
+\newblock In Kaoru Kurosawa, editor, {\em ICITS 09: 4th International
+  Conference on Information Theoretic Security}, volume 5973 of {\em Lecture
+  Notes in Computer Science}, pages 194--212, Shizuoka, Japan, December~3--6,
+  2009. Springer, Berlin, Germany.
+
+\bibitem[NY89]{STOC:NaoYun89}
+Moni Naor and Moti Yung.
+\newblock Universal one-way hash functions and their cryptographic
+  applications.
+\newblock In {\em 21st Annual {ACM} Symposium on Theory of Computing}, pages
+  33--43, Seattle, Washington, USA, May~15--17, 1989. {ACM} Press.
+
+\bibitem[NY90]{STOC:NaoYun90}
+Moni Naor and Moti Yung.
+\newblock Public-key cryptosystems provably secure against chosen ciphertext
+  attacks.
+\newblock In {\em 22nd Annual {ACM} Symposium on Theory of Computing}, pages
+  427--437, Baltimore, Maryland, USA, May~14--16, 1990. {ACM} Press.
+
+\bibitem[OPW11]{OPW11}
+A.~O'Neill, C.~Peikert, and B.~Waters.
+\newblock Bi-deniable public-key encryption.
+\newblock In {\em Proc.\ of {CRYPTO}}, volume 6841 of {\em LNCS}, pages
+  525--542. Springer, 2011.
+
+\bibitem[Pei09]{Peikert09}
+C.~Peikert.
+\newblock Public-key cryptosystems from the worst-case shortest vector problem.
+\newblock In {\em Proc.\ of {STOC}}, pages 333--342. ACM, 2009.
+
+\bibitem[Pei10]{Peikert10}
+C.~Peikert.
+\newblock An efficient and parallel {Gaussian} sampler for lattices.
+\newblock In {\em Proc.\ of {CRYPTO}}, volume 6223 of {\em LNCS}, pages 80--97.
+  Springer, 2010.
+
+\bibitem[Pfi96]{Pfitzmann96}
+B.~Pfitzmann.
+\newblock Trials of traced traitors.
+\newblock In {\em Information Hiding}, volume 1174 of {\em LNCS}, pages 49--64.
+  Springer, 1996.
+
+\bibitem[Pha06]{P06}
+Duong~Hieu Phan.
+\newblock Traitor tracing for stateful pirate decoders with constant ciphertext
+  rate.
+\newblock In Phong~Q. Nguyen, editor, {\em Progress in
+  Cryptology---VIETCRYPT~2006}, volume 4341 of {\em Lecture Notes in Computer
+  Science}, pages 354--365. Springer, 2006.
+
+\bibitem[PPS11]{ACNS:PhaPoiStr11}
+Duong~Hieu Phan, David Pointcheval, and Mario Strefler.
+\newblock Security notions for broadcast encryption.
+\newblock In Javier Lopez and Gene Tsudik, editors, {\em ACNS 11: 9th
+  International Conference on Applied Cryptography and Network Security},
+  volume 6715 of {\em Lecture Notes in Computer Science}, pages 377--394,
+  Nerja, Spain, June~7--10, 2011. Springer, Berlin, Germany.
+
+\bibitem[PPS12a]{SCN:PhaPoiStr12}
+Duong~Hieu Phan, David Pointcheval, and Mario Strefler.
+\newblock Decentralized dynamic broadcast encryption.
+\newblock In Ivan Visconti and Roberto~De Prisco, editors, {\em SCN 12: 8th
+  International Conference on Security in Communication Networks}, volume 7485
+  of {\em Lecture Notes in Computer Science}, pages 166--183, Amalfi, Italy,
+  September~5--7, 2012. Springer, Berlin, Germany.
+
+\bibitem[PPS12b]{LC:PhaPoiStr12}
+Duong~Hieu Phan, David Pointcheval, and Mario Strefler.
+\newblock Message-based traitor tracing with optimal ciphertext rate.
+\newblock In Alejandro Hevia and Gregory Neven, editors, {\em Progress in
+  Cryptology - LATINCRYPT~2012: 2nd International Conference on Cryptology and
+  Information Security in Latin America}, volume 7533 of {\em Lecture Notes in
+  Computer Science}, pages 56--77, Santiago, Chile, October~7--10, 2012.
+  Springer, Berlin, Germany.
+
+\bibitem[PPSS12]{ACISP:PPSS12}
+Duong~Hieu Phan, David Pointcheval, Siamak~Fayyaz Shahandashti, and Mario
+  Strefler.
+\newblock Adaptive {CCA} broadcast encryption with constant-size secret keys
+  and ciphertexts.
+\newblock In Willy Susilo, Yi~Mu, and Jennifer Seberry, editors, {\em ACISP 12:
+  17th Australasian Conference on Information Security and Privacy}, volume
+  7372 of {\em Lecture Notes in Computer Science}, pages 308--321, Wollongong,
+  NSW, Australia, July~9--11, 2012. Springer, Berlin, Germany.
+
+\bibitem[PPSS13]{PPSS13}
+Duong~Hieu Phan, David Pointcheval, Siamak~Fayyaz Shahandashti, and Mario
+  Strefler.
+\newblock Adaptive cca broadcast encryption with constant-size secret keys and
+  ciphertexts.
+\newblock {\em Int. J. Inf. Sec.}, 12(4):251--265, 2013.
+
+\bibitem[PPT13]{ASIACCS:PhaPoiTri13}
+Duong~Hieu Phan, David Pointcheval, and Viet~Cuong Trinh.
+\newblock Multi-channel broadcast encryption.
+\newblock In Kefei Chen, Qi~Xie, Weidong Qiu, Ninghui Li, and Wen-Guey Tzeng,
+  editors, {\em ASIACCS 13: 8th Conference on Computer and Communications
+  Security}, pages 277--286, Hangzhou, China, May~8--10, 2013. {ACM} Press.
+
+\bibitem[PS00]{PS00Forking}
+David Pointcheval and Jacques Stern.
+\newblock Security arguments for digital signatures and blind signatures.
+\newblock {\em J.~Crypto}, 13(3):361--396, 2000.
+
+\bibitem[PSNT06a]{PhSNTo06}
+D.~H. Phan, R.~Safavi-Naini, and D.~Tonien.
+\newblock Generic construction of hybrid public key traitor tracing with
+  full-public-traceability.
+\newblock In {\em Proc.\ of {ICALP (2)}}, volume 4052 of {\em LNCS}, pages
+  264--275. Springer, 2006.
+
+\bibitem[PSNT06b]{ICALP:PhaSafTon06}
+Duong Phan, Reihaneh Safavi-Naini, and Dongvu Tonien.
+\newblock Generic construction of hybrid public key traitor tracing with
+  full-public-traceability.
+\newblock In Michele Bugliesi, Bart Preneel, Vladimiro Sassone, and Ingo
+  Wegener, editors, {\em ICALP 2006: 33rd International Colloquium on Automata,
+  Languages and Programming, Part II}, volume 4052 of {\em Lecture Notes in
+  Computer Science}, pages 264--275, Venice, Italy, July~10--14, 2006.
+  Springer, Berlin, Germany.
+
+\bibitem[PSNT06c]{PST06}
+Duong~Hieu Phan, Reihaneh Safavi-Naini, and Dongvu Tonien.
+\newblock {Generic Construction of Hybrid Public Key Traitor Tracing with
+  Full-Public-Traceability}.
+\newblock In Michele Bugliesi, Bart Preneel, Vladimiro Sassone, and Ingo
+  Wegener, editors, {\em Automata, Languages and Programming---ICALP~2006},
+  volume 4052 of {\em Lecture Notes in Computer Science}, pages 264--275.
+  Springer, 2006.
+
+\bibitem[PSS03]{PeShSm03}
+C.~Peikert, A.~Shelat, and A.~Smith.
+\newblock Lower bounds for collusion-secure fingerprinting.
+\newblock In {\em Proc.\ of {SODA}}, pages 472--479, 2003.
+
+\bibitem[PT11]{PROVSEC:PhaTri11}
+Duong~Hieu Phan and Viet~Cuong Trinh.
+\newblock Identity-based trace and revoke schemes.
+\newblock In Xavier Boyen and Xiaofeng Chen, editors, {\em ProvSec 2011: 5th
+  International Conference on Provable Security}, volume 6980 of {\em Lecture
+  Notes in Computer Science}, pages 204--221, Xi'an, China, October~16--18,
+  2011. Springer, Berlin, Germany.
+
+\bibitem[PT13]{AFRICACRYPT:PhaTri13}
+Duong~Hieu Phan and Viet~Cuong Trinh.
+\newblock Key-leakage resilient revoke scheme resisting pirates 2.0 in bounded
+  leakage model.
+\newblock In Amr Youssef, Abderrahmane Nitaj, and Aboul~Ella Hassanien,
+  editors, {\em AFRICACRYPT 13: 6th International Conference on Cryptology in
+  Africa}, volume 7918 of {\em Lecture Notes in Computer Science}, pages
+  342--358, Cairo, Egypt, June~22--24, 2013. Springer, Berlin, Germany.
+
+\bibitem[PW97]{CCS:PfiWai97}
+Birgit Pfitzmann and Michael Waidner.
+\newblock Asymmetric fingerprinting for larger collusions.
+\newblock In {\em ACM CCS 97: 4th Conference on Computer and Communications
+  Security}, pages 151--160, Zurich, Switzerland, April~1--4, 1997. {ACM}
+  Press.
+
+\bibitem[PW08]{PeWa08}
+C.~Peikert and B.~Waters.
+\newblock Lossy trapdoor functions and their applications.
+\newblock In {\em Proc.\ of {STOC}}, pages 187--196. ACM, 2008.
+
+\bibitem[Reg05]{Regev05}
+O.~Regev.
+\newblock On lattices, learning with errors, random linear codes, and
+  cryptography.
+\newblock In {\em Proc.\ of {STOC}}, pages 84--93. ACM, 2005.
+
+\bibitem[Reg09]{Regev09}
+O.~Regev.
+\newblock On lattices, learning with errors, random linear codes, and
+  cryptography.
+\newblock {\em J.\ {ACM}}, 56(6), 2009.
+
+\bibitem[Reg10]{Regev10}
+O.~Regev.
+\newblock The learning with errors problem, 2010.
+\newblock Invited survey in {CCC~2010}, available
+  at~\url{http://www.cims.nyu.edu/~regev/}.
+
+\bibitem[Riv97]{FSE:Rivest97}
+Ronald~L. Rivest.
+\newblock All-or-nothing encryption and the package transform.
+\newblock In Eli Biham, editor, {\em Fast Software Encryption -- {FSE}'97},
+  volume 1267 of {\em Lecture Notes in Computer Science}, pages 210--218,
+  Haifa, Israel, January~20--22, 1997. Springer, Berlin, Germany.
+
+\bibitem[Rom90]{STOC:Rompel90}
+John Rompel.
+\newblock One-way functions are necessary and sufficient for secure signatures.
+\newblock In {\em 22nd Annual {ACM} Symposium on Theory of Computing}, pages
+  387--394, Baltimore, Maryland, USA, May~14--16, 1990. {ACM} Press.
+
+\bibitem[RS91]{C:RacSim91}
+Charles Rackoff and Daniel~R. Simon.
+\newblock Non-interactive zero-knowledge proof of knowledge and chosen
+  ciphertext attack.
+\newblock In Joan Feigenbaum, editor, {\em Advances in Cryptology --
+  {CRYPTO}'91}, volume 576 of {\em Lecture Notes in Computer Science}, pages
+  433--444, Santa Barbara, CA, USA, August~11--15, 1991. Springer, Berlin,
+  Germany.
+
+\bibitem[RS04]{FSE:RogShr04}
+Phillip Rogaway and Thomas Shrimpton.
+\newblock Cryptographic hash-function basics: {Definitions}, implications, and
+  separations for preimage resistance, second-preimage resistance, and
+  collision resistance.
+\newblock In Bimal~K. Roy and Willi Meier, editors, {\em Fast Software
+  Encryption -- {FSE}~2004}, volume 3017 of {\em Lecture Notes in Computer
+  Science}, pages 371--388, New Delhi, India, February~5--7, 2004. Springer,
+  Berlin, Germany.
+
+\bibitem[Sah99]{FOCS:Sahai99}
+Amit Sahai.
+\newblock Non-malleable non-interactive zero knowledge and adaptive
+  chosen-ciphertext security.
+\newblock In {\em 40th Annual Symposium on Foundations of Computer Science},
+  pages 543--553, New York, New York, USA, October~17--19, 1999. {IEEE}
+  Computer Society Press.
+
+\bibitem[Sco02]{Scott02}
+Mike Scott.
+\newblock Authenticated id-based key exchange and remote log-in with simple
+  token and pin number.
+\newblock Cryptology ePrint Archive, Report 2002/164, 2002.
+\newblock \url{http://eprint.iacr.org/}.
+
+\bibitem[Sha49]{Shannon49}
+Claude~E. Shannon.
+\newblock Communication theory of secrecy systems.
+\newblock {\em Bell Systems Technical Journal}, 28(4):656--715, 1949.
+
+\bibitem[Sha84]{C:Shamir84}
+Adi Shamir.
+\newblock Identity-based cryptosystems and signature schemes.
+\newblock In G.~R. Blakley and David Chaum, editors, {\em Advances in
+  Cryptology -- {CRYPTO}'84}, volume 196 of {\em Lecture Notes in Computer
+  Science}, pages 47--53, Santa Barbara, CA, USA, August~19--23, 1984.
+  Springer, Berlin, Germany.
+
+\bibitem[Sho90]{Shoup90}
+Victor Shoup.
+\newblock On the deterministic complexity of factoring polynomials over finite
+  fields.
+\newblock {\em Information Processing Letters}, 33(5):261 -- 267, 1990.
+
+\bibitem[Sho97]{EC:Shoup97}
+Victor Shoup.
+\newblock Lower bounds for discrete logarithms and related problems.
+\newblock In Walter Fumy, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}'97}, volume 1233 of {\em Lecture Notes in Computer Science},
+  pages 256--266, Konstanz, Germany, May~11--15, 1997. Springer, Berlin,
+  Germany.
+
+\bibitem[Sho00]{Sh00Hybrid}
+Victor Shoup.
+\newblock Using hash functions as a hedge against chosen ciphertext attack.
+\newblock In B.~Preneel, editor, {\em Eurocrypt 2000}, volume 1807 of {\em
+  LNCS}, pages 275--288. Springer, 2000.
+
+\bibitem[Sho04]{Sho04}
+V.~Shoup.
+\newblock {S}equences of {G}ames: {A} {T}ool for {T}aming {C}omplexity in
+  {S}ecurity {P}roofs.
+\newblock Manuscript. Available at {\tt shoup.net/papers/games.pdf}, 2004.
+
+\bibitem[Sim98]{EC:Simon98}
+Daniel~R. Simon.
+\newblock Finding collisions on a one-way street: Can secure hash functions be
+  based on general assumptions?
+\newblock In Kaisa Nyberg, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}'98}, volume 1403 of {\em Lecture Notes in Computer Science},
+  pages 334--345, Espoo, Finland, May~31~--~June~4, 1998. Springer, Berlin,
+  Germany.
+
+\bibitem[Sir07a]{Sirvent07}
+Thomas Sirvent.
+\newblock Traitor tracing scheme with constant ciphertext rate against powerful
+  pirates.
+\newblock In {\em Proc. of Workshop on Coding and Cryptography (WCC'07)}, pages
+  379--388, 2007.
+\newblock Full version at \url{http://eprint.iacr.org/2006/383}.
+
+\bibitem[Sir07b]{S07}
+Thomas Sirvent.
+\newblock Traitor tracing scheme with constant ciphertext rate against powerful
+  pirates.
+\newblock In Daniel Augot, Nicolas Sendrier, and Jean-Pierre Tillich, editors,
+  {\em Workshop on Coding and Cryptography---WCC~'07}, pages 379--388, April
+  2007.
+
+\bibitem[SNW03a]{SW00Sequential}
+Reihaneh Safavi-Naini and Yejing Wang.
+\newblock Sequential traitor tracing.
+\newblock {\em IEEE Trans. Inf. Th.}, 49(5):1319--1326, May 2003.
+\newblock A preliminary version appeared at Crypto 2000.
+
+\bibitem[SNW03b]{SW03Finger}
+Reihaneh Safavi-Naini and Yejing Wang.
+\newblock Traitor tracing for shortened and corrupted fingerprints.
+\newblock In {\em DRM 2003}, volume 2696 of {\em LNCS}, pages 81--100.
+  Springer, 2003.
+
+\bibitem[SOK00]{SakOhgKas00}
+Ryuichi Sakai, Kiyoshi Ohgishi, and Masao Kasahara.
+\newblock Cryptosystems based on pairing.
+\newblock In {\em SCIS 2000}, Okinawa, Japan, January 2000.
+
+\bibitem[SS01]{ippB}
+Palash Sarkar and Douglas~R. Stinson.
+\newblock {Frameproof and IPP Codes}.
+\newblock In C.~Pandu Rangan and Cunsheng Ding, editors, {\em Progress in
+  Cryptology---INDOCRYPT~2001}, volume 2247 of {\em Lecture Notes in Computer
+  Science}, pages 117--126. Springer, 2001.
+
+\bibitem[SSW00]{SSW00}
+J.N. Staddon, D.R. Stinson, and Ruizhong Wei.
+\newblock {Combinatorial properties of frameproof and traceability codes}.
+\newblock {\em IEEE Transactions on Information Theory}, 47:1042--1049, 2000.
+
+\bibitem[SSW01a]{SiStWa01}
+A.~Silverberg, J.~Staddon, and J.~L. Walker.
+\newblock Efficient traitor tracing algorithms using list decoding.
+\newblock In {\em Proc.\ of {ASIACRYPT}}, volume 2248 of {\em LNCS}, pages
+  175--192. Springer, 2001.
+
+\bibitem[SSW01b]{AC:SilStaWal01}
+Alice Silverberg, Jessica Staddon, and Judy~L. Walker.
+\newblock Efficient traitor tracing algorithms using list decoding.
+\newblock In Colin Boyd, editor, {\em Advances in Cryptology --
+  {ASIACRYPT}~2001}, volume 2248 of {\em Lecture Notes in Computer Science},
+  pages 175--192, Gold Coast, Australia, December~9--13, 2001. Springer,
+  Berlin, Germany.
+
+\bibitem[{Sto}]{DRMb}
+{Stop~DRM~Now!}
+\newblock {\tt http://stopdrmnow.org/}.
+
+\bibitem[SW98a]{StWe98-2}
+D.~R. Stinson and R.~Wei.
+\newblock {C}ombinatorial {P}roperties and {C}onstructions of {T}raceability
+  {S}chemes and {F}rameproof {C}odes.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 11(1):41--53, 1998.
+
+\bibitem[SW98b]{StWe98}
+D.~R. Stinson and R.~Wei.
+\newblock Combinatorial properties and constructions of traceability schemes
+  and frameproof codes.
+\newblock {\em SIAM J. Discrete Math.}, 11(1):41--53, 1998.
+
+\bibitem[SW98c]{StWe98b}
+D.~R. Stinson and R.~Wei.
+\newblock Key preassigned traceability schemes for broadcast encryption.
+\newblock In {\em Proc.\ of {SAC}}, volume 1556 of {\em LNCS}, pages 144--156.
+  Springer, 1998.
+
+\bibitem[SW98d]{SAC:StiWei98}
+Douglas~R. Stinson and Ruizhong Wei.
+\newblock Key preassigned traceability schemes for broadcast encryption.
+\newblock In Stafford~E. Tavares and Henk Meijer, editors, {\em SAC 1998: 5th
+  Annual International Workshop on Selected Areas in Cryptography}, volume 1556
+  of {\em Lecture Notes in Computer Science}, pages 144--156, Kingston,
+  Ontario, Canada, August~17--18, 1998. Springer, Berlin, Germany.
+
+\bibitem[SW03]{SaWa03}
+R.~Safavi{-Naini} and Y.~Wang.
+\newblock {S}equential {T}raitor {T}racing.
+\newblock {\em {IEEE} Transactions on Information Theory}, 49(5):1319--1326,
+  2003.
+
+\bibitem[Tar03]{STOC:Tardos03}
+G{\'a}bor Tardos.
+\newblock Optimal probabilistic fingerprint codes.
+\newblock In {\em 35th Annual {ACM} Symposium on Theory of Computing}, pages
+  116--125, San Diego, California, USA, June~9--11, 2003. {ACM} Press.
+
+\bibitem[Tar08a]{Tardos08}
+G.~Tardos.
+\newblock Optimal probabilistic fingerprint codes.
+\newblock {\em J.\ {ACM}}, 55(2), 2008.
+
+\bibitem[Tar08b]{Tard08Finger}
+G\'abor Tardos.
+\newblock Optimal probabilistic fingerprint codes.
+\newblock {\em J. ACM}, 55(2), May 2008.
+\newblock A preliminary version appeared in STOC '03.
+
+\bibitem[TM05]{TM05}
+Tran~Van Trung and Sosina Martirosyan.
+\newblock {New Constructions for IPP Codes}.
+\newblock {\em Des. Codes Cryptography}, 35(2):227--239, 2005.
+
+\bibitem[TSN06]{ACNS:TonSaf06}
+Dongvu Tonien and Reihaneh Safavi-Naini.
+\newblock An efficient single-key pirates tracing scheme using cover-free
+  families.
+\newblock In Jianying Zhou, Moti Yung, and Feng Bao, editors, {\em ACNS 06: 4th
+  International Conference on Applied Cryptography and Network Security},
+  volume 3989 of {\em Lecture Notes in Computer Science}, pages 82--97,
+  Singapore, June~6--9, 2006. Springer, Berlin, Germany.
+
+\bibitem[TT01]{PKC:TzeTze01a}
+Wen-Guey Tzeng and Zhi-Jia Tzeng.
+\newblock A public-key traitor tracing scheme with revocation using dynamic
+  shares.
+\newblock In Kwangjo Kim, editor, {\em PKC~2001: 4th International Workshop on
+  Theory and Practice in Public Key Cryptography}, volume 1992 of {\em Lecture
+  Notes in Computer Science}, pages 207--224, Cheju Island, South Korea,
+  February~13--15, 2001. Springer, Berlin, Germany.
+
+\bibitem[Wat05]{EC:Waters05}
+Brent~R. Waters.
+\newblock Efficient identity-based encryption without random oracles.
+\newblock In Ronald Cramer, editor, {\em Advances in Cryptology --
+  {EUROCRYPT}~2005}, volume 3494 of {\em Lecture Notes in Computer Science},
+  pages 114--127, Aarhus, Denmark, May~22--26, 2005. Springer, Berlin, Germany.
+
+\bibitem[Wat09]{C:Waters09}
+Brent Waters.
+\newblock Dual system encryption: Realizing fully secure {IBE} and {HIBE} under
+  simple assumptions.
+\newblock In Shai Halevi, editor, {\em Advances in Cryptology --
+  {CRYPTO}~2009}, volume 5677 of {\em Lecture Notes in Computer Science}, pages
+  619--636, Santa Barbara, CA, USA, August~16--20, 2009. Springer, Berlin,
+  Germany.
+
+\bibitem[WHI01]{RSA:WatHanIma01}
+Yuji Watanabe, Goichiro Hanaoka, and Hideki Imai.
+\newblock Efficient asymmetric public-key traitor tracing without trusted
+  agents.
+\newblock In David Naccache, editor, {\em Topics in Cryptology -- CT-RSA~2001},
+  volume 2020 of {\em Lecture Notes in Computer Science}, pages 392--407, San
+  Francisco, CA, USA, April~8--12, 2001. Springer, Berlin, Germany.
+
+\bibitem[WMS{\etalchar{+}}09]{WMS+09ASGKA}
+Qianhong Wu, Yi~Mu, Willy Susilo, Bo~Qin, and Josep Domingo-Ferrer.
+\newblock Asymmetric group key agreement.
+\newblock In Antoine Joux, editor, {\em Eurocrypt 2009}, volume 5479 of {\em
+  LNCS}, pages 153--170. Springer, 2009.
+
+\bibitem[WQZ{\etalchar{+}}11]{WQZ+11Bridging}
+Qianhong Wu, Bo~Qin, Lei Zhang, Josep Domingo-Ferrer, and Oriol Farras.
+\newblock Bridging broadcast encryption and group key agreement.
+\newblock In D.H. Lee and X.~Wang, editors, {\em Asiacrypt 2011}, volume 7073
+  of {\em LNCS}, pages 143--160. Springer, 2011.
+
+\bibitem[Yao82]{FOCS:Yao82a}
+Andrew Chi-Chih Yao.
+\newblock Theory and applications of trapdoor functions (extended abstract).
+\newblock In {\em 23rd Annual Symposium on Foundations of Computer Science},
+  pages 80--91, Chicago, Illinois, November~3--5, 1982. {IEEE} Computer Society
+  Press.
+
+\bibitem[YFDL04]{YFDL04fsBE}
+Danfeng Yao, Nelly Fazio, Yevgeniy Dodis, and Anna Lysyanskaya.
+\newblock {ID}-based encryption for complex hierarchies with applications to
+  forward security and broadcast encryption.
+\newblock In {\em ACM CCS '04}. ACM Press, 2004.
+\newblock Full version at \url{http://www.cs.brown.edu/~anna/research.html}.
+
+\bibitem[ZZ11]{ISPEC:ZhaZha11}
+Xingwen Zhao and Fangguo Zhang.
+\newblock Traitor tracing against public collaboration.
+\newblock In {\em ISPEC '11: The 7th International Conference on Information
+  Security Practice and Experience}, Guangzhou / China, 2011.
+
+\end{thebibliography}
