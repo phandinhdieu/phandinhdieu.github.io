@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Góp ý kiến về dự thảo Hiến pháp – Phan Đình Diệu (1992)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #0f152b;
+      --card: #111936;
+      --text: #e7ecff;
+      --muted: #9aa3c0;
+      --accent: #5b8cff;
+      --line: #1d274c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f1530;
+        --muted: #55607a;
+        --accent: #3957ff;
+        --line: #e7e9f4;
+      }
+    }
+    * { box-sizing: border-box; min-width: 0; }
+    html, body { margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; }
+    nav.toc {
+      position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto;
+      padding: 18px; border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    nav.toc h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+    nav.toc ol { list-style: none; padding: 0 0 0 4px; margin: 0; }
+    nav.toc > details > summary { cursor: pointer; list-style: none; font-weight: 700; }
+    nav.toc > details[open] { background: color-mix(in srgb, var(--accent), transparent 92%); border-radius: 10px; padding: 6px 8px; }
+    nav.toc li { margin: 6px 0; }
+    nav.toc a { color: var(--text); display: inline-block; padding: 6px 8px; border-radius: 8px; }
+    nav.toc a:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    nav.toc ol ol { margin-left: 10px; border-left: 2px solid var(--line); padding-left: 10px; }
+    nav.toc a { overflow-wrap: anywhere; word-break: break-word; }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.06); padding: 28px; }
+    header.page { padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px; text-align: center; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 30px; margin: 0 0 6px; line-height: 1.3; text-transform: uppercase; }
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; text-align: right; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 26px 0 6px; line-height: 1.35; }
+    h3 { font-weight: 700; margin: 18px 0 8px; }
+    p { margin: 10px 0; }
+    .muted { color: var(--muted); }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+              background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+
+    /* Mobile / iPhone webview */
+    @media (max-width: 1024px) {
+      .grid { grid-template-columns: 1fr; gap: 18px; }
+      nav.toc { position: relative; top: auto; height: auto; max-height: none; width: auto; }
+      header.page h1 { font-size: 26px; }
+      .topbar-inner { padding: 10px 16px; }
+    }
+    /* Print */
+    @media print {
+      .topbar, nav.toc, .btn { display: none !important; }
+      .grid { display: block !important; }
+      body { background: #ffffff !important; color: #000 !important; }
+      .content { border: 0 !important; box-shadow: none !important; }
+      a { color: inherit !important; text-decoration: none !important; }
+      h1, h2, h3, p { break-inside: avoid; }
+    }
+    #buttich img {
+      max-width: 100%;   /* Không vượt quá chiều ngang khung cha */
+      height: auto;      /* Giữ đúng tỉ lệ ảnh */
+      display: block;    /* Loại bỏ khoảng trống thừa dưới ảnh */
+      margin: 0 auto;    /* Canh giữa */
+    }
+
+    #buttich {
+      max-width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center; 
+    }
+
+    #buttich figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+        <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+        <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <nav aria-label="Mục lục" class="toc" id="toc">
+        <h2>Mục lục</h2>
+        <details open>
+          <summary><a href="#title">Góp ý kiến về dự thảo Hiến pháp – 1992</a></summary>
+          <ol>
+            <li><a href="#yk1">Ý KIẾN THỨ NHẤT</a></li>
+            <li><a href="#yk2">Ý KIẾN THỨ HAI</a></li>
+            <li><a href="#yk3">Ý KIẾN THỨ BA</a></li>
+            <li><a href="#yk4">Ý KIẾN THỨ TƯ</a></li>
+            <li><a href="#yk5">Ý KIẾN THỨ NĂM</a></li>
+            <li><a href="#yk6">Ý KIẾN THỨ SÁU</a></li>
+            <li><a href="#yk7">Ý KIẾN THỨ BẢY</a></li>
+            <li><a href="#ket">Kết </a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <main class="content">
+        <header class="page">
+          <a id="title"></a>
+          <h1>Góp ý kiến về dự thảo Hiến pháp </h1>
+          <h2>Phan Đình Diệu (1992)</h2>
+        </header>
+
+        <section id="meta" class="note">
+         <h2>Lời Ban biên tập Cùng viết Hiến pháp</h2>
+          <p>Hiến pháp hiện hành được thông qua năm 1992, được sửa đổi, bổ sung một số điều vào năm 2001 và hiện đang được thảo luận để tiếp tục sửa đổi, bổ sung.</p>
+          <p>Được sự đồng ý của thân nhân Giáo sư Phan Đình Diệu, chúng tôi trân trọng giới thiệu ý kiến của Giáo sư tại Hội nghị góp ý kiến về sửa đổi Hiến pháp năm 1992 do Trung ương MTTQ Việt Nam tổ chức ngày 12/3/1992. Qua thời gian 21 năm, những ý kiến mang tính vạch đường, đầy trí tuệ và tinh thần trách nhiệm này không hề cũ đi mà càng có tính thời sự sâu sắc đối với việc sửa đổi Hiến pháp hiện nay. Nhiều khiếm khuyết của Hiến pháp hiện hành lẽ ra đã tránh được, nếu như những ý kiến và khuyến nghị đúng đắn của Giáo sư cũng như của nhiều người khác được lắng nghe và tiếp thu.</p>
+        <p>Bài trên trang Cùng Viết Hiến Pháp: <a href="https://hienphap.wordpress.com/2013/02/24/gop-y-kien-ve-du-thao-hien-phap-phan-dinh-dieu-1992/">Góp ý kiến về dự thảo Hiến pháp – 1992</a></p>
+
+        </section>
+
+      
+      <section id="buttich">
+        <figure>
+          <picture>
+            <img src="Viettay_gopyhienphap.png" alt="Buttich" />
+          </picture>
+          <figcaption class="muted">Bút tích dàn bài viết tay cho bài phát biểu</figcaption>
+        </figure>
+        
+        </section>
+
+
+        <div class="divider"></div>
+
+        <section id="phat-bieu">
+          <h2>Phát biểu ngày 12/3/1992</h2>
+          <p><em>Phát biểu của ông Phan Đình Diệu tại Hội nghị Ủy ban Trung ương Mặt trận Tổ quốc Việt nam ngày 12 tháng 3 năm 1992.</em></p>
+          <p>Kính thưa Đoàn chủ tịch,<br/>Kính thưa tất cả các vị đại biểu,</p>
+          <p>Tôi xin phép có một số ý kiến tham gia cuộc thảo luận kỳ này – tức là về dự thảo Hiến pháp.</p>
+        </section>
+
+        <section id="yk1">
+          <h2>Ý KIẾN THỨ NHẤT</h2>
+          <p>Chúng ta đang sống trong một tình hình mà đất nước và thế giới có rất nhiều vấn đề cần được nhận thức và lý giải một cách tỉnh táo. Về những khó khăn của đất nước, tôi xin không phải nói lại. Nhưng vấn đề cốt lõi là hiện nay đất nước đòi hỏi gì? Theo tôi nghĩ, cái lớn nhất mà đất nước đòi hỏi là phải phát huy được tất cả mọi năng lực của tất cả các thành viên cùa dân tộc trong tinh thần đoàn kết, hòa hợp, tự cường để đưa đất nước thoát ra khỏi cuộc khủng hoảng và tiến kịp với thế giới. Phải trên cơ sở phát huy thật sự mọi năng lực của dân tộc thì mới có thể tận dụng được những thành tựu của thế giới hiện đại, tận dụng được những khả năng hợp tác với bên ngoài, và do đó, mới có thể sử dụng được mọi thuận lợi để xây dựng một nước Việt Nam giàu mạnh, có cuộc sống no ấm hạnh phúc trong cộng đồng thế giới đang bước sang một giai đoạn văn minh mới. Tôi nói điều đó bởi vì hiện nay, trong điều kiện mở cửa, nhiều khi ta hy vọng quá nhiều vào những quan hệ với nước ngoài, đầu tư của nước ngoài, v.v… Điều đó là hết sức quan trọng, nhưng cái quan trọng hơn nữa, cái cốt lõi nhất là phài làm sao phát huy được mọi năng lực của chính bản thân chúng ta. Bởi vì dân tộc ta, nếu không phát huy được năng lực của chính mình, thì dù người nước ngoài có ồ ạt đầu tư vào, chúng ta cũng chỉ đóng vai trò của những kẻ đầy tớ hèn mọn mà thôi. Cho nên vấn đề làm chủ, vấn đề phát huy thật sự năng lực của mọi thành phần của dân tộc, không phân biệt đối xử, không có hận thù, hòa giải, hòa hợp, mới là cái cốt lõi, cái cơ bản nhất. Năng lực ấy chúng ta có. Còn thi hành bất kỳ một chính sách phân biệt nào, bất kỳ sự chia rẽ nào, bất kỳ sự duy trì tình trạng đối địch thù hận nào, cũng đều nguy hiểm cho quá trình đoàn kết để chấn hưng đất nước. Vì vậy, Hiến pháp, theo tôi nghĩ, cần phải được bàn trên tinh thần đó, tạo điều kiện cho xã hội Việt nam tiến theo hướng đó. Và cũng cần nói thêm rằng với tư cách một bộ luật cơ bản, cao nhất, thì hiến pháp phải thực sự là bộ luật cơ bản và cao nhất, không có bất kỳ một thứ luật nào khác, thành văn hay không thành văn, cao hơn nó.</p>
+        </section>
+
+        <section id="yk2">
+          <h2>Ý KIẾN THỨ HAI</h2>
+          <p>Vậy những đòi hỏi đó của đất nước hiện nay cần được phản ánh trong thể chế xây dựng nhà nước, tức là được phản ảnh trong Hiến pháp, như thế nào? Như chúng ta đã biết, qua sự vận động của đất nước ta cũng như trên thế giới vừa qua, thì điều đã rõ là chúng ta phải từ bỏ mô hình chủ nghĩa xã hội kiểu cũ để xây dựng một đất nước, một thể chế có nền kinh tế thị trường thật sự (dĩ nhiên là có sự điều tiết của nhà nước) và một chế độ chính trị dân chủ đoàn kết dân tộc, có nghĩa là một xã hội dân sự và một nhà nước dân chủ pháp quyền. Vì thế, ở đây có nhiều vấn đề cần phải dứt khoát và phải có những quan điểm rõ ràng. Bởi vì, nếu theo hướng đó thì rõ ràng chế độ xã hội chủ nghĩa với tư cách là một thể chế xã hội, tức là một hình thái tổ chức xã hội trong đó chế độ sở hữu công cộng là cơ bản hay gần như là duy nhất, trong đó nền kinh tế được quản lý tập trung bằng kế hoạch thống nhất của nhà nước, trong đó có một chế độ chính trị do một đảng lãnh đạo theo mô hình chuyên chính vô sản, đã chứng tỏ là không thể duy trì được nữa và là sự cản trở cho mọi tiến bộ của dân tộc. Và cũng như đã được chứng tỏ, nó là sự cản trở và đã bị phá bỏ ở nhiều nơi trên thế giới. Vì vậy, chúng ta phải dũng cảm để nhận thấy rằng chế độ xã hội chủ nghĩa theo mô hình đó, tức là theo chủ nghĩa Mác – Lênin, không còn đáp ứng được mục tiêu phát triển của dân tộc trong giai đoạn hiện nay. Một vấn đề đặt ra là có thể chăng cố gắng kết hợp một nhu cầu không thể bác bỏ được là phát triển nền kinh tế thị trường với một ý đồ duy trì thể chế chính trị “xã hội chủ nghĩa” kiểu chuyên chính vô sản do một đảng lãnh đạo? Tôi nghĩ, ở đây mỗi thể chế, mỗi cách tổ chức xã hội có logic của nó và trong mỗi logic đó có những yêu cầu về tính nhất quán của nó. Không thể dễ dàng từ bỏ một số yếu tố này mà lại giữ nguyên một số yếu tố khác. Thực tế mấy năm qua cho thấy trong điều kiện phát triển kinh tế thị trường, nhưng vẫn giữ sự độc quyền lãnh đạo, thì không phải chúng ta phát huy được tính tích cực của cả hai thể chế đó, mà thật ra xã hội đồng thời chịu tác động tiêu cực của cả hai thể chể. Bởi vì, trong một nền kinh tế không có hàng hóa thì người ta không thể dùng quyền để bán đi được. Nhưng một nền kinh tế thị trường vẫn mà vẫn giữ độc quyền thì quyền cũng là một thứ hàng hóa. Và trong mấy năm qua, nạn tham nhũng không thể trị được chính là hình thức kết hợp sự độc quyền và nền kinh tế hàng hóa. Vì không có thứ hàng hóa nào lại dễ ăn dễ lãi như quyền lực. Tham nhũng về thực chất là việc biến một cách phi pháp quyền lực thành hàng hóa. Cho nên không thể kết hợp những yếu tố không thể dung hòa được của hai thể chế để hy vọng tạo ra một hình thái tích cực được. Chúng ta cần nhanh chóng khắc phục những yếu tố cộng lại cái tiêu cực như vậy. Thật ra, kinh tế thị trường không phải cái gì cũng tốt cả. Kinh tế thị trường cũng có nhiều mặt tiêu cực của nó. Chính vì vậy, để phát triển được nền kinh tế thị trường và để nó có thể phát huy được mặt tích cực và hạn chế được mặt tiêu cực, thì đòi hỏi phải tăng cường luật pháp, đòi hỏi phải có một hệ thống luật pháp thật đầy đủ và có khả năng điều chỉnh mọi mối quan hệ phức tạp trong một xã hội có kinh tế thị trường. Do đó, phải tăng cường luật pháp, tăng cường dân chủ, phải xóa bỏ độc quyền. Để làm được như vậy phải bảo đảm quyền tự do dân chủ, đặc biệt những quyền tự do ngôn luận, tự do báo chí, tự do tư tưởng, tự do phê phán của nhân dân. Trong điều kiện đó, tôi đề nghị phải dũng cảm nhìn vào sự thật và có sự lựa chọn khoa học và logic. Trong sự lựa chọn này, tôi hoàn toàn đồng ý với nhiều ý kiến đã được phát biểu là: khi khái niệm chủ nghĩa xã hội theo kiểu cũ không còn thích hợp nữa, còn theo một kiểu mới nào đó thì chúng ta chưa hề định hình được, thì không nên ghi những từ như vậy trong một văn bản pháp luật có tính chất bắt buộc đối với toàn dân trên đất nước này. Chúng tôi đề nghị những thuật ngữ “chủ nghĩa xã hội”, “chủ nghĩa Mác – Lênin”, v.v… trong Hiến pháp đều nên tạm gác lại. Có bỏ vĩnh viễn hay không, chuyện đó ta hãy xét sau, nhưng ít nhất là nên tạm gác lại. Tổ quốc này chưa phải là “Tổ quốc xã hội chủ nghĩa”, tài sản công cộng cũng không phải là “tài sản xã hội chủ nghĩa”, những chữ ấy không mang một nội dung gì cả. Vì vậy chỉ cần nói chúng ta bảo vệ Tổ quốc Việt Nam, chúng ta xây dựng đất nước Việt Nam, chúng ta bảo vệ tài sản công cộng trên đất nước này, thế là đủ. Ban nãy, Linh mục Vương Đình Bích có nói: vì có sự khác biệt tư tưởng giữa chủ nghĩa Mác – Lênin và tôn giáo, do đó nếu ghi chủ nghĩa Mác – Lênin vào Hiến pháp thì rất khó xử đối với đồng bào tôn giáo. Tôi không theo một tôn giáo nào, tôi là một người làm khoa học, nhưng vì là một người làm khoa học, tôi hiểu rằng trong học thuyết của Mác và cả trong sự phát triển về sau của Lênin có những yếu tố tích cực cần giữ, đồng thời có rất nhiều yếu tố mà thời đại chúng ta đã vượt qua, khoa học đã bác bỏ. Với tư cách là một nhà khoa học, tôi cũng không thể đội lên đầu một chủ nghĩa, xem như nó là một thứ ánh sáng bất biến, một ánh sáng vạn năng chiếu rọi cho mọi tư duy của mình. Chúng ta cũng không nên bắt cả dân tộc ta phải đội lên đầu bất kỳ một chủ nghĩa nào, bất kỳ một cá nhân nào. Dân tộc phải trên hết.</p>
+          <p>Trên tinh thần đó, tôi nghĩ rằng nếu đặt vấn đề đổi tên nước, thì tôi hoàn toàn đồng ý với anh Lê Đình Hoan phát biểu ban sáng là nên lấy một cái tên cực kỳ đơn giản, nhưng phản ánh mọi tình cảm tha thiết nhất của mọi người dân đất nước này, dù ở bất kỳ góc trời nào, đó là tên NƯỚC VIỆT NAM. Việt nam thôi, không cần có mĩ từ nào bên cạnh cả.</p>
+        </section>
+
+        <section id="yk3">
+          <h2>Ý KIẾN THỨ BA</h2>
+          <p>Dẫu biết rằng nhiều người không muốn nói đến một vấn đề khá tế nhị và không phải dễ phát biểu, tôi cũng xin mạnh dạn đề cập. Đó là vấn đề đảng lãnh đạo. Chúng tôi nghĩ đã đến lúc cần lựa chọn: Một Hiến pháp theo mô hình chuyên chính vô sản, do Đảng cộng sản lãnh đạo, hay một Hiến pháp dân chủ pháp quyền? Nửa vời thì sẽ tự mâu thuẫn. Tôi không có thì giờ phân tích kĩ ở đây, nhưng rõ ràng có rất nhiều mâu thuẫn trong bản dự thảo Hiến pháp hiện nay. Không chỉ là mâu thuẫn, mà còn có nhiều chỗ phản ảnh không thật và nhiều điều bị che giấu đằng sau những ngôn từ của văn bản. Vì, nếu đã giữ điều 4, tức là giữ điều nói đảng là lực lượng lãnh đạo của Nhà nước và xã hội, thì cần có một chương qui định rõ ràng về đảng lãnh đạo. Để trung thực với dân tộc thì cần nói rõ đảng lãnh đạo là như thế nào? Trong điều kiện đó, quốc hội có còn là cơ quan quyền lực cao nhất nữa không? Hay đảng là cơ quan quyền lực cao nhất, còn quốc hội chỉ là cơ quan thể chế hóa các nghị quyết của đảng? Những điều như vậy cần được ghi rõ thành những điều trong Hiến pháp, có vậy mới sòng phẳng và trung thực với nhân dân. Nếu không làm như vậy, thì Hiến pháp sẽ là hình thức và sự chuyên quyền tùy tiện sẽ thực tế ngự trị như ta đã biết từ trước đến nay. Còn nếu quả thực đã thừa nhận Quốc hội là cơ quan quyền lực cao nhất thì để không mâu thuẫn, phải không có điều 4. Trong trường hợp đó đảng phải giành quyền lãnh đạo bằng sự tín nhiệm, bằng cách ra ứng cử Quốc hội trong cuộc bầu cử thực sự tự do và bình đẳng, và giành đa số trong Quốc hội. Đảng lãnh đạo, như vậy, là phải đứng trong dân tộc, nằm trong dân tộc, cùng với dân tộc để tranh quyền lãnh đạo, chứ không phải tự đặt mình đứng trên dân tộc, đứng ngoài dân tộc, đứng trên Nhà nước để tự áp đặt quyền lãnh đạo của mình. Thế là công minh và minh bạch. Như thế, tôi chắc rằng uy tín của đảng sẽ cao hơn. Biết bao thời kỳ trước đây, làm gì có điều qui định trong Hiến pháp là đảng lãnh đạo, mà đảng vẫn được nhân dân thừa nhận, và rõ ràng uy tín của đảng hồi đó cao hơn cả thời kỳ mà sự lãnh đạo được ghi vào Hiến pháp. Tôi không chống lại sự lãnh đạo của đảng. Tôi mong muốn có một đảng với tư cách là một lực lượng chính trị có tổ chức và có kinh nghiệm, có trí tuệ và có năng lực tập họp, giành được sự tín nhiệm của nhân dân và lãnh đạo đất nước trong một thể chế dân chủ. Nhưng tôi cũng không mong có một đảng tự áp đặt quyền lãnh đạo tối cao, bất chấp mọi luật pháp, đứng trên Nhà nước. Điều đó chỉ làm giảm uy tín của đảng và đưa thiệt thòi đến cho dân tộc mà thôi.</p>
+        </section>
+
+        <section id="yk4">
+          <h2>Ý KIẾN THỨ TƯ</h2>
+          <p>Vấn đề quyền con người và quyền công dân. Trong bản dự thảo có một chương dài, nhưng sắp xếp chưa thỏa đáng lắm. Mỗi chúng ta ở trong xã hội đều có quyền con người và quyền công dân, bởi vì mỗi cá nhân sống trong xã hội với hai tư cách: tư cách là một cá nhân cần được bảo vệ, cần được tôn trọng để tồn tại như một con người cá thể và tư cách thứ hai là như một thành viên của cộng đồng dân tộc. Quyền con người là quyền để tồn tại như một cá thể, quyền công dân là quyền để tồn tại và để góp phần như một thành viên của cộng đồng dân tộc. Những quyền như bất khả xâm phạm, tự do cư trú, tự do tư tưởng, tự do đi lại, v.v… là những quyền con người. Còn quyền công dân cơ bản là quyền tham gia công việc của cộng đồng: tham gia lựa chọn những người xứng đáng vào bộ máy cai quản cộng đồng, tức là quyền bầu cử, ứng cử, quyền hội họp, quyền lập hội. Nhưng nên nhớ rằng nhân dân không chỉ thực hiện quyền dân chủ thông qua các cơ quan dân cử, nghĩa là cứ 4-5 năm đi bầu một lần là xong. Nhân dân còn có quyền tham gia quản lý nhà nước trong quá trình hoạt động hàng ngày và thường xuyên của nhà nước và của xã hội. Nhưng tham gia bằng cách nào? Dĩ nhiên không phải lúc nào cũng tập hợp dân lại để lấy phiếu về từng vấn đề. Cũng không phải lúc nào cũng có thể tập họp dân lại để bàn chuyện này, chuyện khác. Vì vậy, quyền cơ bản của dân trong việc thường xuyên phê phán và góp phần vào việc quản lý Nhà nước là thông qua dư luận, tức là quyền tự do ngôn luận, tự do báo chí. Quyền này cực kỳ quan trọng. Quyền tự do ngôn luận và tự do báo chí không chỉ nằm trong phạm vi quyền con người, mà đây là quyền của nhân dân góp phần vào công việc của cộng đồng. Cho nên chúng tôi đề nghị phải thật sự tôn trọng những quyền này và tạo điều kiện cho những quyền này có vị trí thích đáng. Một xã hội sẽ hoàn toàn tê liệt nếu như không có quyền tự do ngôn luận, quyền tự do báo chí, tức là những quyền mà danh từ khoa học gọi là tạo ra những “feedback”, những liên hệ ngược. Trong hệ điều khiển của xã hội, không có nó thì xã hội bị tê liệt và sự thao túng của quyền lực là điều không thể tránh khỏi. Những chuyện tham nhũng, những chuyện đặc quyền, đặc lợi, trong đó có những chuyện tày đình như đã xảy ra trong thời gian vừa qua, sẽ không thể nào khắc phục được, là bởi vì nếu chỉ giao cho những cơ quan quyền lực thì làm sao chống được những tệ nạn mà nguồn gốc chính là từ quyền lực? Những chuyện như hóa giá nhà ở thành phố Hồ Chí Minh chẳng hạn,tại sao không công bố trên báo chí danh sách những người được hưởng nhà hóa giá? Nếu công bố như thế thì sẽ rõ ra ai là người tham nhũng và cần phải chống tham nhũng như thế nào. Cho nên, mối liên hệ ngược, quyền tự do ngôn luận, tự do báo chí, quyền tự do phát biểu của nhân dân trong đời sống hàng ngày, quyền tạo ra dư luận là quyền cơ bản, rất cơ bản, nằm trong các quyền công dân của chúng ta. Tôi đề nghị trong Hiến pháp các quyền công dân đó được ghi thành một nhóm, còn các quyền con người thì ghi thành một nhóm khác.</p>
+        </section>
+
+        <section id="yk5">
+          <h2>Ý KIẾN THỨ NĂM</h2>
+          <p>Về Quốc hội. Muốn quốc hội trở thành cơ quan quyền lực cao nhất, phải có hai điều kiện: 1) đại biểu quốc hội phải có năng lực thật sự để hiểu được quyền lực cao nhất đó và có khả năng thực hành quyền lực đó. 2) đại biểu phải có thì giờ để làm công việc đại biểu của mình. Còn nếu quốc hội chỉ gồm cho đủ thành phần, kể cả những người không hiểu gì về công việc Nhà nước, xuân thu nhị kỳ ngồi với nhau để gọi là có ý kiến về những vấn đề trọng đại của đất nước thì làm sao có “ý kiến” được. Tôi đồng ý đại biểu quốc hội phải có những tiêu chuẩn về kiến thức, năng lực, nhưng cũng phải có tiêu chuẩn này nữa: đại biểu quốc hội phải bảo đảm dành hoàn toàn thì giờ lo việc của quốc hội trong nhiệm kỳ cùa mình. Nếu tự xét thấy không đủ điều kiện đó, thì không nên ứng cử đại biểu. Một Quốc hội làm việc thường xuyên thật sự đại diện cho trí tuệ của dân tộc là hết sức cần thiết để bảo đảm cho Quốc hội là cơ quan quyền lực cao nhất của Nhà nước. Hiện nay, khi chuyển sang kinh tế thị trường, cần có hệ thống luật pháp thật đầy đủ và hoàn chỉnh, nếu cứ như hiện nay, mỗi năm Quốc hội họp hai lần, mỗi lần chỉ thông qua vài ba luật một cách không đầy đủ trí tuệ lắm, tất nhiên sẽ không bao giờ có đủ luật cho một nền kinh tế phát triển lành mạnh. Mà không có luật đầy đủ và hoàn chỉnh thì chỉ có thể có một nền kinh tế què quặt, chứa đựng rất nhiều tiêu cực hoành hành mà thôi.</p>
+          <p>Do đó, tôi đề nghị cần thực sự đổi mới việc bầu cử đại biểu Quốc hội, đặc biệt là việc tôn trọng quyền tự do và bình đẳng trong ứng cử. Quyền ứng cử là quyền bình đẳng của mọi công dân. Chỉ cần thỏa mãn một số điều kiện qui định là đều có quyền ứng cử. Điều kiện đó có thể là người ứng cử phải hội đủ một số chữ ký đề cử của cử tri (có thể là 5 nghìn chữ ký chẳng hạn). Những chữ ký đó có thể là của cử tri trong một đoàn thể hay trên địa bàn dân cư. Việc hiệp thương có thể được tiến hành giữa các đoàn thể để giới thiệu các ứng cử viên chung. Sau đó, cần nộp đơn ứng cử cho ban bầu cử, chứ không phải nộp đơn cho Ủy ban trung ương Mặt trận Tổ quốc. Mặt trận là một tổ chức của các đoàn thể, không phải là một cơ quan nhà nước để tổ chức bầu cử. Việc lập danh sách bầu cử là của cơ quan Nhà nước về bầu cử ở trung ương và địa phương.</p>
+        </section>
+
+        <section id="yk6">
+          <h2>Ý KIẾN THỨ SÁU</h2>
+          <p>Về tổ chức Nhà nước. Đó là vấn đề phức tạp. Chúng ta dường như thích phê phán cái gọi là “tam quyền phân lập” (tức quyền lập pháp, quyền hành pháp và quyền tư pháp) như là một cái gì đó của chế độ tư bản. Thật ra đó là một hình thức tổ chức nhà nước tiến bộ của loài ngườỉ. Dĩ nhiên, chúng ta có thể theo hoặc không theo, có thể chế biến theo cách này hay cách khác. Theo tôi, trong điều kiện thực tế của chúng ta hiện nay, cần tôn trọng tính chất độc lập của các quyền đó, nhưng có thể không theo một hình thức tổ chức hoàn toàn phân lập. Về quyền hành pháp nên có qui định trách nhiệm cá nhân thật rõ ràng và đầy đủ của thủ tướng. Còn về Quốc hội, tôi đồng ý với những ý kiến như của giáo sư Lý Chánh Trung vừa rồi. Nếu Quốc hội làm việc thường xuyên thì không cần có Ủy ban thường vụ Quốc hội, mà chỉ cần có chủ tịch và các phó chủ tịch. Các kỳ họp không nên cách nhau sáu tháng mà phải ngắn hơn. Do đó, cũng không cần Ủy ban thường vụ Quốc hội. Chức chủ tịch nước như bản dự thảo trình bày là hoàn toàn cần thiết. Hệ thống hành pháp thì rõ ràng cần phải có sự chỉ đạo tập trung và thống nhất. Do đó, phải bổ nhiệm những viên chức chịu trách nhiệm hành pháp tại các địa phương. Có thể tham gia ý kiến người này, người khác, nhưng phải bổ nhiệm. Và người được bổ nhiệm phải chịu trách nhiệm trước cấp bổ nhiệm mình.</p>
+        </section>
+
+        <section id="yk7">
+          <h2>Ý KIẾN THỨ BẢY</h2>
+          <p>Về vai trò của Mặt trận và các đoàn thể. Tôi đề nghị cần xem xét nghiêm túc là có nên tiếp tục nhà nước hóa các đoàn thể như hiện nay không ? Bởi vì hiện nay, chúng ta cái gì cũng dựa vào nhà nước cả. Thật đau lòng là mỗi khi Mặt trận làm gì, cũng nghe kêu Nhà nước đối xử với Mặt trận như thế này, như thế kia, nhà nước cần có chế độ thế này, thế kia, v.v… Nếu chúng ta là tổ chức quần chúng, tức là một tổ chức được thành lập trên cơ sở tự nguyện của quần chúng, thì cái rễ của chúng ta là quần chúng, chứ không phải nhà nước. Và như vậy, sức mạnh của chúng ta là sức mạnh phản ảnh nguyện vọng, tâm tư, đề nghị của quần chúng, chứ không phải là cái đuôi nhạt nhẽo của bộ máy nhà nước. Tôi đề nghị: trong việc chuyển biến nhà nước thành một nhà nước dân chủ pháp quyền, các tầng lớp nhân dân, các thành phần nhân dân có quyền thành lập các đoàn thể, các hội đoàn của mình một cách hoàn toàn tự nguyện, và điều đó cần được bảo đảm trong hiến pháp về quyền lập hội, thế là đủ. Cũng không cần nêu trong Hiến pháp là có những đoàn thể nào. Đặc biệt, không nên xem các đoàn thể của nhân dân là nằm trong cơ cấu của hệ thống nhà nước, là những thành phần của một hệ thống chính trị chịu sự điều khiển của Đảng và Nhà nước. Dĩ nhiên, như vậy thì các đoàn thể chúng ta cũng phải dũng cảm không ăn lương của Nhà nước. Tôi đề nghị ngân sách Nhà nước chỉ chi cho bộ máy Nhà nước, không chi cho bất kỳ đoàn thể nào. Vì vậy, các cơ quan đảng, các cơ quan đoàn thể không ăn lương từ ngân sách nhà nước.</p>
+        </section>
+
+        <section id="ket">
+          <h2>Kết</h2>
+          <p>Cuối cùng, tôi không hy vọng những điều trình bày nói trên sẽ được xem xét phân tích trong một thời gian ngắn, cũng như ý kiến của nhiều vị đã trình bày trong hội nghị này chắc chắn sẽ còn được nghiên cứu kĩ. Như nhiều vị đã phản ảnh, việc thảo luận dự thảo Hiến pháp lần này quá vội vàng, nhân dân chưa có điều kiện góp ý đầy đủ. Do đó, nên chăng lần này chỉ nên đưa ra một số điều sửa đổi Hiến pháp 1980 để tạo thuận lợi cho những công việc trước mắt, ví dụ như những điều khoản về chế độ kinh tế, những điều khoản về vấn đề bầu cử quốc hội, v.v… Còn việc sửa đổi toàn diện để xây dựng một Hiến pháp mới thì giao cho Quốc hội mới tiến hành trong cả nhiệm kỳ sắp tới./.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

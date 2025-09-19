@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Phỏng vấn Phan Đình Diệu – Ứng dụng toán học và dân chủ (1992–1993)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #0f152b;
+      --card: #111936;
+      --text: #e7ecff;
+      --muted: #9aa3c0;
+      --accent: #5b8cff;
+      --line: #1d274c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f1530;
+        --muted: #55607a;
+        --accent: #3957ff;
+        --line: #e7e9f4;
+      }
+    }
+    * { box-sizing: border-box; min-width: 0; }
+    html, body { margin: 0; padding: 0; max-width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; }
+    nav.toc {
+      position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto;
+      padding: 18px; border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    nav.toc h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+    nav.toc ol { list-style: none; padding: 0 0 0 4px; margin: 0; }
+    nav.toc > details > summary { cursor: pointer; list-style: none; font-weight: 700; }
+    nav.toc > details[open] { background: color-mix(in srgb, var(--accent), transparent 92%); border-radius: 10px; padding: 6px 8px; }
+    nav.toc li { margin: 6px 0; }
+    nav.toc a { color: var(--text); display: inline-block; padding: 6px 8px; border-radius: 8px; }
+    nav.toc a:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    nav.toc ol ol { margin-left: 10px; border-left: 2px solid var(--line); padding-left: 10px; }
+    nav.toc a { overflow-wrap: anywhere; word-break: break-word; }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.06); padding: 28px; }
+    header.page { padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px; text-align: center; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 30px; margin: 0 0 6px; line-height: 1.3; text-transform: uppercase; }
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; text-align: right; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 26px 0 6px; line-height: 1.35; }
+    h3 { font-weight: 700; margin: 18px 0 8px; }
+    p { margin: 10px 0; }
+    .muted { color: var(--muted); }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+              background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+
+    /* Mobile / iPhone webview */
+    @media (max-width: 1024px) {
+      .grid { grid-template-columns: 1fr; gap: 18px; }
+      nav.toc { position: relative; top: auto; height: auto; max-height: none; width: auto; }
+      header.page h1 { font-size: 26px; }
+      .topbar-inner { padding: 10px 16px; }
+    }
+    /* Print */
+    @media print {
+      .topbar, nav.toc, .btn { display: none !important; }
+      .grid { display: block !important; }
+      body { background: #ffffff !important; color: #000 !important; }
+      .content { border: 0 !important; box-shadow: none !important; }
+      a { color: inherit !important; text-decoration: none !important; }
+      h1, h2, h3, p { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+        <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+        <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <nav aria-label="Mục lục" class="toc" id="toc">
+        <h2>Mục lục</h2>
+        <details open>
+          <summary><a href="#title">Phỏng vấn Phan Đình Diệu – Ứng dụng toán học và dân chủ</a></summary>
+          <ol>
+            <li><a href="#q1">Câu hỏi 1 – Vì sao một nhà toán học bàn về dân chủ?</a></li>
+            <li><a href="#q2">Câu hỏi 2 – Việt Nam đã rời mô hình XHCN trong kinh tế?</a></li>
+            <li><a href="#q3">Câu hỏi 3 – Dân chủ Á – Âu có khác?</a></li>
+            <li><a href="#q4">Câu hỏi 4 – Đa đảng ở Việt Nam?</a></li>
+            <li><a href="#q5">Câu hỏi 5 – Ổn định &amp; nguy cơ hỗn loạn; lưỡng cực</a></li>
+            <li><a href="#q6">Câu hỏi 6 – Tự do ý kiến &amp; phát biểu</a></li>
+            <li><a href="#q7">Câu hỏi 7 – Vai trò báo chí chống tham nhũng</a></li>
+            <li><a href="#q8">Câu hỏi 8 – “Đối cực” có thể xuất hiện trong Quốc hội?</a></li>
+            <li><a href="#q9">Câu hỏi 9 – Vai trò &amp; thực trạng giới trí thức</a></li>
+            <li><a href="#q10">Câu hỏi 10 – Bi quan hay hy vọng?</a></li>
+            <li><a href="#q11">Câu hỏi 11 – Làm thế nào đạt thế lưỡng cực?</a></li>
+            <li><a href="#q12">Câu hỏi 12 – Vai trò cá nhân của PĐD?</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <main class="content">
+        <header class="page">
+          <a id="title"></a>
+          <h1>Ứng dụng toán học và dân chủ</h1>
+          <p class="author"><strong>Phỏng vấn Phan Đình Diệu– Stein TØNNESSON</strong></p>
+        </header>
+
+        <section id="meta" class="note">
+          <h2>Lời dẫn (trích báo Diễn Đàn, 1993)</h2>
+          <p>Bài phỏng vấn dưới đây vừa được công bố trên tạp chí Nordic Newsletter of Asian Studies (số 2, năm 1993, xuất bản tại Copenhagen, Đan Mạch).</p>
+          <p>Người phỏng vấn là một nhà sử học Na Uy, ông <strong>Stein Tønnesson</strong>, tác giả luận án tiến sĩ có giá trị <em>Sự bùng nổ chiến tranh Đông Dương 1946</em> bảo vệ năm 1982 tại Oslo (bản tiếng Pháp: “1946: Déclenchement de la guerre d’Indochine”, L'Harmattan, Paris 1987).</p>
+          <p>Cuộc phỏng vấn được tiến hành vào tháng 9.1992 tại Nghĩa Đô (ngoại ô Hà Nội), trụ sở của Viện Khoa học Việt Nam, mà Phan Đình Diệu là một trong những phó viện trưởng.</p>
+          <p>Từ mùa thu 1992 đến nay, Phan Đình Diệu đã công khai trả lời các phóng viên Reuter và Far Eastern &amp; Economic Review, song các bản tin và bài báo này chủ yếu nói về đương sự hơn là đưa lại lời ông phát biểu. Như vậy, đây là bài phát biểu đầu tiên của ông được công bố từ khi ông gửi bản “Kiến nghị về một chương trình cấp bách” (mùa xuân 1991, xem Đoàn Kết số 434, 5.1991).</p>
+          <p><em>Bản trên báo Diễn Đàn:</em> <a href="https://www.diendan.org/tai-lieu/bao-cu/so-020/phong-van-pdd">https://www.diendan.org/tai-lieu/bao-cu/so-020/phong-van-pdd</a></p>
+        </section>
+
+      
+
+        <div class="divider"></div>
+
+        <section id="q1">
+          <h2>Câu hỏi 1 – Vì sao một nhà toán học lại trở thành “chính khách”?</h2>
+          <h3>Stein TØNNESSON:</h3>
+          <p>Năm 1982, ông công bố trên tạp chí <em>Nghiên cứu Việt Nam</em> một bài báo nhan đề “ứng dụng toán học và máy tính điện tử”. Nay dường như ông muốn ứng dụng toán học vào cả vấn đề dân chủ. Vì sao một nhà toán học lại trở thành chính khách?</p>
+          <h3>Phan Đình Diệu:</h3>
+          <p>Tôi không phải là chính khách, mà tôi chỉ muốn tham gia vào việc nước như một công dân. Là một người yêu nước, thiết tha với nhân dân nghèo khó, tôi muốn đóng góp vào công cuộc phát triển đất nước. Là một người làm khoa học, đã từ khá lâu tôi phát hiện ra rằng chủ nghĩa Mác-Lê khó có thể mang lại điều gì hữu ích cho một nước muốn thoát ra khỏi nghèo nàn. Nghiên cứu khoa học điện toán, thuyết hệ thống và các vấn đề quản lý hiện đại, tôi nhận ra rằng mô hình xã hội chủ nghĩa như học thuyết Mác-Lê xác định không phù hợp với một nước muốn phát triển về xã hội, kinh tế và khoa học. Vì những lý do hiển nhiên, Marx và Lenin không có điều kiện tìm hiểu xã hội hiện đại. Song đảng cộng sản ở Việt Nam cũng như ở các nước khác đã ngây thơ tìm cách áp dụng học thuyết của họ vào xã hội hiện đại. Sự thất bại của họ đã được minh chứng rõ rệt nhất trong cuộc cách mạng điện toán, đặc trưng của thế giới trong thập niên 1980. Sự thất bại của hệ thống kinh tế xã hội chủ nghĩa ngày nay hầu như mọi người đều thấy rõ. Vấn đề còn lại là biết rút ra kết luận một cách đầy đủ và từ bỏ chủ nghĩa Mác-Lê.</p>
+        </section>
+
+        <section id="q2">
+          <h2>Câu hỏi 2 – Việt Nam đã từ bỏ mô hình XHCN trong kinh tế?</h2>
+          <h3>ST:</h3>
+          <p>Tôi có cảm tưởng là trong lãnh vực kinh tế, thực ra Việt Nam đã từ bỏ mô hình xã hội chủ nghĩa rồi.</p>
+          <h3>PĐD:</h3>
+          <p>Nét nổi bật trong tình hình hiện nay là sự mâu thuẫn giữa một mặt là ý muốn duy trì sự chuyên chế của đảng, và mặt khác, phát triển thị trường tự do. Đây là một sự kết hợp mới. Chưa hề có một nhà lý luận cộng sản nào nghiên cứu tình thế này trên một cơ sở có thể coi là thường trực.</p>
+        </section>
+
+        <section id="q3">
+          <h2>Câu hỏi 3 – Dân chủ Á – Âu có khác nhau?</h2>
+          <h3>ST:</h3>
+          <p>Phải chăng hệ thống chính trị hiện nay phản ánh một quan niệm Á châu về dân chủ, khác với quan niệm dân chủ Tây phương?</p>
+          <h3>PĐD:</h3>
+          <p>Có thể có sự khác biệt về thực tế chính trị giữa châu Á và phương Tây, chứ không có quan niệm khác nhau về dân chủ. Dân chủ thì ở đâu cũng là dân chủ. Một hệ thống dân chủ đòi hỏi trước hết phải tôn trọng các quyền con người và quyền công dân. Điều này đặt ra ở mọi nơi. Và quyền công dân phải được tôn trọng bằng cách tổ chức bầu cử tự do. Nhân tố then chốt của một chế độ dân chủ là cách bầu ra người lãnh đạo. Bầu cử dân chủ nghĩa là bầu cử tự do, bỏ phiếu kín, và mọi người đều có quyền ra ứng cử. Không có những điều đó, không thể gọi là dân chủ. Cũng cần nói thêm: tất nhiên có những mức độ khác nhau về dân chủ. Theo tôi nghĩ, không có nơi nào nền dân chủ có thể coi là hoàn thiện, kể cả ở nước ông, hay ở Đức, Pháp hoặc Hoa Kỳ. Chất lượng một chế độ dân chủ có thể đo bằng hai tiêu chuẩn. Thứ nhất là cách vận hành của thể chế bầu cử: cử tri có thực sự được chọn lựa hay không, kết quả cuộc bầu cử phản ánh dân ý tới đâu? Thứ nhì là khả năng của nhân dân tác động vào quá trình quyết định thông qua thảo luận trên các media, trong các cuộc hội họp, gặp gỡ ở địa phương, cũng như ở cấp vùng, và cấp toàn quốc.</p>
+        </section>
+
+        <section id="q4">
+          <h2>Câu hỏi 4 – Ông có chủ trương đa đảng?</h2>
+          <h3>ST:</h3>
+          <p>Phải chăng ông chủ trương thiết lập một chế độ đa đảng ở Việt Nam?</p>
+          <h3>PĐD:</h3>
+          <p>Điều cốt yếu không phải là có nhiều đảng, không phải là có một chế độ đa đảng, mà là có sự chọn lựa thật sự. Muốn chọn lựa thật sự, hai đảng có thể cũng đủ, với điều kiện là hai đảng ấy thực sự khác nhau.</p>
+        </section>
+
+        <section id="q5">
+          <h2>Câu hỏi 5 – Ổn định, nguy cơ hỗn loạn và “lưỡng cực”</h2>
+          <h3>ST:</h3>
+          <p>Ông có ngại rằng đặt ra những đảng đối lập có thể tác hại tới sự ổn định xã hội và sự tăng trưởng kinh tế hiện nay ở Việt Nam, thậm chí gây ra hỗn loạn chăng?</p>
+          <h3>PĐD:</h3>
+          <p>Vâng, tôi nghĩ có nguy cơ đó; bởi vậy tôi mới nói hai đảng cũng đủ. Trong toán học có một định lý cơ bản: một biểu đồ định hướng là cân bằng nếu như và chỉ nếu như nó có hai nhánh (<em>bipartite</em> còn có nghĩa là hai bên, hai đảng). Nhiều đảng quá có thể dẫn tới hỗn loạn – trừ phi các đảng liên kết chung quanh hai cực. Hệ thống lưỡng đảng ở Hoa Kỳ hay ở Vương quốc Anh xem ra ổn định hơn là hệ thống nhiều đảng như ở Pháp dưới thời đệ tứ cộng hoà. Còn ở Việt Nam hiện nay là hệ thống chính trị độc đảng. Ngày nào chế độ còn trấn áp được mọi sự đối lập thì hệ thống còn ổn định, nhưng đó chỉ là một sự ổn định tĩnh. Còn sự ổn định động, hàm ý phát triển tích cực, chỉ có thể thực hiện bằng cách lập ra một “đối cực”. Xin hiểu đối cực theo nghĩa xây dựng của nó, chứ không phải phá hoại.</p>
+        </section>
+
+        <section id="q6">
+          <h2>Câu hỏi 6 – Tự do ý kiến &amp; phát biểu hiện nay?</h2>
+          <h3>ST:</h3>
+          <p>Các nhà lãnh đạo hiện nay của Việt Nam dường như đã tiến một bước khá dài trong việc thừa nhận quyền tự do ý kiến và tự do phát biểu.</p>
+          <h3>PĐD:</h3>
+          <p>Sự chuyên chế của đảng không còn toàn diện như trước kia. Có một thời, ngay cả khẩu phần lương thực cũng được quyết định trên cơ sở lòng trung thành đối với đảng. Bây giờ đã tự do hơn, nhưng theo ý tôi, 1987 và 1988 là những năm tự do hơn là từ đó đến nay. Trong hai năm ấy, chúng tôi đã bước đầu thể nghiệm thảo luận về chính trị và lý luận, sau đó bị dẹp.</p>
+        </section>
+
+        <section id="q7">
+          <h2>Câu hỏi 7 – Báo chí và chống tham nhũng</h2>
+          <h3>ST:</h3>
+          <p>Người ta vẫn khuyến khích báo chí tố cáo tham nhũng, lạm quyền.</p>
+          <h3>PĐD:</h3>
+          <p>Đúng thế, nhưng với những hạn chế rất rõ ràng. Điều cấm kỵ chủ yếu liên quan tới sự chuyên chế của đảng. Không ai được quyền phê bình đảng, cho dù ở cấp huyện. Tham nhũng thì được phép phê phán, vì tham nhũng không phải là vấn đề hệ thống chính trị. Đó là một vấn đề chung. Tham nhũng chung quy có nghĩa là bán quyền lực. Có lẽ ở đâu cũng có sự bán quyền lực, khác nhau là ở quy mô. Tình hình làm ăn hiện nay ở Việt Nam đang làm cho tham nhũng phát triển. Trong một xã hội cộng sản tập trung, sự tham nhũng chừng nào bị lệch dòng vì thiếu vắng thị trường. Các đặc lợi phát sinh từ các đặc quyền hơn là do buôn bán quyền thế. Trong những xã hội dân chủ, do không giữ được (hoặc ít giữ được) bí mật, nên ở chừng mực nào đó, sự tham nhũng bị ngăn chặn, hay hạn chế; người ta không (hoặc ít) dám buôn bán quyền lực vì sợ bị tố cáo hoặc truy tố. Còn ở Việt Nam hiện nay, chúng tôi gặp cả hai cái nạn ấy cộng lại: một thị trường mặc sức phát triển trong đó quyền lực là một thứ hàng hoá buôn đi bán lại, song song tồn tại với một giới cầm quyền giữ bí mật cao độ. Vừa qua có vụ hoá giá nhà ở thành phố Hồ Chí Minh, cán bộ cấp cao được mua nhà công với giá rẻ, và bán lại với giá thật cao, chúng tôi đòi công bố danh sách, song người ta lờ đi. Hệ thống chính trị này không cho phép công bố đầy đủ thông tin về tham nhũng trong những vụ việc có quy mô quá lớn như vậy.</p>
+        </section>
+
+        <section id="q8">
+          <h2>Câu hỏi 8 – “Đối cực” có thể phát triển trong Quốc hội?</h2>
+          <h3>ST:</h3>
+          <p>Tôi muốn trở lại vấn đề dân chủ: ông có cho rằng “đối cực”, hay ít nhất, là cái cực kia, có thể phát triển ngay trong quốc hội hiện nay không?</p>
+          <h3>PĐD:</h3>
+          <p>Tôi không mấy tin tưởng vào Quốc hội mới được bầu (7/1992). Cuộc bầu cử quốc hội vừa rồi là chọn giữa vài ứng cử viên đã được đảng và Mặt trận Tổ quốc lựa ra từ trước. Khoảng 40 người ra ứng cử độc lập, nhưng người ta chỉ chấp nhận cho 2 người ứng cử, và cả hai đều thất cử. Trình độ học vấn của các đại biểu khoá này cao hơn khoá trước, nhưng tôi không thấy ai có thể đóng một vai trò độc lập. Các cuộc thảo luận ở Quốc hội vẫn diễn ra trong lằn ranh do đảng vạch ra.</p>
+        </section>
+
+        <section id="q9">
+          <h2>Câu hỏi 9 – Trí thức Việt Nam: thực trạng và vai trò</h2>
+          <h3>ST:</h3>
+          <p>Thế thì ông đặt hy vọng vào đâu? Vào giới trí thức? Trong đại hội Đảng vừa qua, vai trò của trí thức đã được nâng cấp một cách đáng kể?</p>
+          <h3>PĐD:</h3>
+          <p>Trước khi bàn về vai trò trí thức, thử hỏi: trí thức là ai? Ở Việt Nam có hay không có một giới trí thức, một lực lượng trí thức độc lập về xã hội và chính trị? Đó là vấn đề quan trọng đặt ra cho mọi xã hội muốn thiết lập hay cải thiện chế độ dân chủ. Trước tiên, tôi muốn nói tới lớp những nhà trí thức đã được đào tạo dưới thời Pháp thuộc. Trong lớp này, có những nhân vật dũng cảm và đáng kính. Một vài vị còn sống nhưng không còn mấy ảnh hưởng. Thật ra, chỉ còn lại một số rất nhỏ. Chúng tôi quý trọng công lao của họ đối với dân tộc. Lớp thứ hai là một số đông những chuyên gia được đào tạo trong giai đoạn xã hội chủ nghĩa. Trái ngược với nền giáo dục thời Pháp, chế độ xã hội chủ nghĩa đào tạo ra những chuyên viên hơn là những trí thức. Chúng tôi có nhiều nhà toán học, nhà vật lý học, nhà sinh học, kỹ sư... và bây giờ thêm nhiều nhà kinh tế. Nhưng chưa bao giờ họ được học để suy nghĩ về các vấn đề của xã hội. Đảng nghĩ hộ cho mọi người. Ý thức chính trị của các chuyên viên nói chung là yếu. Những người giỏi tham gia chính quyền, và tự nhiên là đảng viên. Rất có thể nhiều chuyên viên, trong cuộc sống riêng, cũng có tư tưởng dân chủ, nhưng không có cách gì kiểm nghiệm điều đó cả. Thành phần thứ ba là những trí thức được đào tạo trước đây ở miền Nam. Phần đông đã bỏ đi. Tất nhiên có thể họ sẽ trở về giúp nước bằng cách này hay cách khác, nhưng muốn đóng một vai trò chính trị có ý nghĩa, thì người trí thức phải gần gụi nhân dân. Cuộc sống kéo dài ở hải ngoại không phải là mảnh đất thuận lợi cho một lực lượng trí thức tích cực. Cuối cùng là thanh niên, những người vừa được hay còn đang được đào tạo trong những năm gọi là đổi mới. Những năm gần đây, quả đã có một nền văn nghệ độc lập khởi sắc. Nhưng còn phải có thời gian thì các xu hướng nói trên mới có thể hình thành một lực lượng xã hội chính trị thực sự. Nói tóm lại, kết luận của tôi là hiện nay Việt Nam chưa có một giai cấp trí thức.</p>
+        </section>
+
+        <section id="q10">
+          <h2>Câu hỏi 10 – Bi quan hay hy vọng?</h2>
+          <h3>ST:</h3>
+          <p>Nghĩa là nhìn về toàn cục thì ông bi quan? Hay ông còn thấy có hy vọng ở đâu đó?</p>
+          <h3>PĐD:</h3>
+          <p>Tôi nói điều này chắc ông ngạc nhiên: mặc dầu tôi đã nói như ở trên về sự chuyên chế của đảng cộng sản, song tôi vẫn hy vọng là đảng cộng sản tự nó sẽ thay đổi. Những ai suy nghĩ một cách có trách nhiệm về tiền đồ dân tộc tất phải tán thành sự thay đổi trong ổn định. Cách tốt nhất để thực hiện việc này là thuyết phục đảng cộng sản phải biết nhìn nhận thực tế và từ bỏ con đường cũ. Tôi đã soạn những bản kiến nghị và nói với những nhà lãnh đạo đảng. Ít nhất họ đã nghe tôi nói. Theo tôi, đảng cộng sản Việt Nam có hai mặt, mặt cộng sản và mặt yêu nước. Nó nên giữ mặt thứ nhì và bỏ mặt thứ nhất, nó có thể tự biến đổi thành một lực lượng yêu nước chân chính. Theo chỗ tôi biết, có những nhà lãnh đạo cấp cao là những người rất chân thành.</p>
+        </section>
+
+        <section id="q11">
+          <h2>Câu hỏi 11 – Làm thế nào đạt thế lưỡng cực?</h2>
+          <h3>ST:</h3>
+          <p>Nhưng làm thế nào đi tới cái thế lưỡng cực?</p>
+          <h3>PĐD:</h3>
+          <p>Đây chính là sự thử thách lớn về tinh thần trách nhiệm và sự dũng cảm của giới lãnh đạo. Nếu họ thực sự yêu nước thương dân thì họ phải chấp nhận biến đảng trở thành một đảng dân tộc, tôn trọng đầy đủ các quyền tự do cơ bản và tổ chức bầu cử tự do. Trong điều kiện đó, những tổ chức chính trị khác sẽ xuất hiện, từng bước triển khai thành một lực lượng đối lập xây dựng. Nếu đảng cộng sản tự cải tạo trong quá trình đó, thì trong suốt một thời gian dài, nó có thể thắng cử.</p>
+        </section>
+
+        <section id="q12">
+          <h2>Câu hỏi 12 – Vai trò cá nhân của Phan Đình Diệu?</h2>
+          <h3>ST:</h3>
+          <p>Ông có nghĩ rằng ông có thể đóng một vai trò trong tiến trình biến đổi đó hay không? Phan Đình Diệu phải chăng là Sakharov của Việt Nam?</p>
+          <h3>PĐD:</h3>
+          <p>Như tôi đã nói ở trên, tôi không phải là một chính khách và tôi không có tham vọng (chính trị). Song, với tư cách một nhà khoa học và một công dân yêu nước, tôi muốn tham gia việc nước. Dân chủ là tham gia việc nước.</p>
+          <p class="muted" style="text-align:right;margin-top:8px;">— <strong>Stein TØNNESSON</strong></p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

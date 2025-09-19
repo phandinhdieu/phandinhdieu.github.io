@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>KIẾN NGHỊ VỀ MỘT  CHƯƠNG TRÌNH CẤP BÁCH – Toàn văn có mục lục</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=Merriweather:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #0b1220;
+      --surface: #0f172a;
+      --card: #0b1220;
+      --text: #e5e7eb;
+      --muted: #a1a1aa;
+      --accent: #60a5fa;
+      --line: rgba(255,255,255,.08);
+      --ring: rgba(0,0,0,.25);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #2563eb;
+        --line: rgba(0,0,0,.08);
+        --ring: rgba(0,0,0,.06);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: radial-gradient(1600px 800px at 20% -10%, rgba(96,165,250,.08), transparent 40%),
+                          radial-gradient(1400px 700px at 120% 10%, rgba(59,130,246,.08), transparent 35%),
+                          var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Noto Sans';
+      line-height: 1.75;
+    }
+    .layout { display: grid; grid-template-columns: 280px 1fr; gap: 28px; max-width: 1200px; margin: 32px auto; padding: 0 20px; }
+    nav { position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto; padding: 18px; border-radius: 16px; background: var(--surface); box-shadow: 0 10px 30px var(--ring); border: 1px solid var(--line); }
+    nav h2 { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 4px 0 12px; }
+    nav ol { list-style: none; padding: 0; margin: 0; }
+    nav li { margin: 6px 0; }
+    nav a { color: var(--text); text-decoration: none; display: block; padding: 6px 10px; border-radius: 10px; }
+    nav a:hover { background: var(--line); }
+    nav ol ol { margin-left: 10px; border-left: 2px solid var(--line); padding-left: 10px; }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px var(--ring); padding: 28px; }
+    header.page { padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 28px; margin: 0 0 6px; }
+    header.page p.sub { margin: 4px 0; color: var(--muted); font-size: 18px; font-weight: 500; }
+    section { padding: 8px 0 4px; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 24px 0 6px; }
+    h3 { font-weight: 700; font-size: 18px; margin: 18px 0 4px; }
+    p { margin: 10px 0; }
+    .muted { color: var(--muted); }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 5; backdrop-filter: saturate(1.2) blur(8px); background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    .sr { position: absolute; left: -9999px; }
+    a.anchor { text-decoration: none; color: inherit; }
+  
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; }
+    /* Styles for DOCX tables */
+    .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+    table.docx-table { width: 100%; border-collapse: collapse; border: 1px solid var(--line); }
+    table.docx-table td, table.docx-table th { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top; }
+    table.docx-table tr:nth-child(odd) { background: color-mix(in srgb, var(--surface), white 3%); }
+
+/* === Added: Mobile-friendly tweaks (non-destructive) === */
+@media (max-width: 960px) {
+  .layout, .grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  nav, nav.toc { position: relative !important; top: auto !important; height: auto !important; max-height: none !important; }
+  .content { padding: 20px !important; }
+  header.page h1 { font-size: 26px !important; line-height: 1.3 !important; text-align: center !important; }
+  .topbar-inner { padding: 10px 16px !important; }
+}
+/* Images and tables scale to viewport */
+img, video, svg { max-width: 100% !important; height: auto !important; }
+.table-wrap { overflow-x: auto; }
+/* Print cleanup */
+@media print {
+  .topbar, nav .sticky, .btn { display: none !important; }
+  .layout { display: block !important; }
+  body { background: #ffffff !important; color: #000 !important; }
+  .content { border: 0 !important; box-shadow: none !important; }
+}
+/* === iPhone/Messenger fit fixes === */
+html, body { max-width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+* { min-width: 0; }
+nav, .toc, .content { max-width: 100%; }
+nav ol, nav li, nav a { overflow-wrap: anywhere; word-break: break-word; }
+@media (max-width: 1024px) {
+  .layout, .grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  nav, nav.toc { position: relative !important; top: auto !important; height: auto !important; max-height: none !important; width: auto !important; }
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+</head>
+<body>
+<div class="topbar">
+<div class="topbar-inner"><a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+<button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+<button class="btn" onclick="window.print()">In / Lưu PDF</button>
+</div>
+</div>
+<div class="layout">
+<nav aria-label="Mục lục">
+<h2>Mục lục</h2>
+<ol>
+<li><a href="#title">KIẾN NGHỊ VỀ MỘT  CHƯƠNG TRÌNH CẤP BÁCH</a></li>
+<li><a href="#loimoidau">Lời mời đầu</a></li>
+<li><a href="#i">I. Tình hình khủng hoảng toàn diện</a>
+<ol>
+<li><a href="#i-1">1. Thực trạng xã hội</a></li>
+<li><a href="#i-2">2. Quá trình đổi mới</a></li>
+<li><a href="#i-3">3. Yêu cầu cấp thiết</a></li>
+</ol>
+</li>
+<li><a href="#ii">II. Mục tiêu</a>
+<ol>
+<li><a href="#ii-1">1. Quan niệm về mục tiêu</a></li>
+<li><a href="#ii-2">2. Kinh tế thị trường &amp; điều tiết vĩ mô</a></li>
+<li><a href="#ii-3">3. Chế độ chính trị dân chủ...</a></li>
+<li><a href="#ii-4">4. Nhà nước</a></li>
+</ol>
+</li>
+<li><a href="#iii">III. Những giải pháp cấp bách</a>
+<ol>
+<li><a href="#iii-1">1. Yêu cầu &amp; mục tiêu</a></li>
+<li><a href="#iii-2">2. Các giải pháp kinh tế - xã hội</a></li>
+<li><a href="#iii-3">3. Cải cách chính trị</a></li>
+<li><a href="#iii-4">4. Chuẩn bị chiến lược</a></li>
+</ol>
+</li>
+<li><a href="#iv">IV. Đảng CSVN và công cuộc cải cách</a></li>
+<li><a href="#sign">Ký tên</a></li>
+<li><a href="#appendix1">Phụ lục 1 (toàn văn)</a></li><li><a href="#appendix2">Phụ lục 2 (toàn văn)</a></li></ol>
+</nav>
+<div class="content">
+<header class="page">
+<a class="anchor" id="title"></a>
+<h1>KIẾN NGHỊ VỀ MỘT  CHƯƠNG TRÌNH CẤP BÁCH</h1>
+<p class="sub">Nhằm khắc phục khủng hoảng và tạo điều kiện lành mạnh cho sự phát triển đất nước</p><p class="author">Phan Đình Diệu (02/1991)</p>
+</header>
+<section id="loimoidau">
+<h2>Lời mời đầu.</h2>
+<p>Đất nước vẫn tiếp tục trong tình trong tình trạng khủng hoảng. Những biện pháp cải cách ngập ngừng và chưa đủ kiên quyết trong mấy năm qua có làm cho bộ mặt xã hội thay đổi ít nhiều, nhưng không đủ sức đưa đất nước thoát ra khỏi khủng hoảng. Chưa thể thực hiện có kết quả bất kỳ một kế hoạch phát triển bình thường nào trong tình trạng khủng hoảng toàn diện đó. Do đó, cần có một sự phân tích cặn kẽ thực chất và các đặc điểm của khủng hoảng, cần xác định một cách khoa học một mục tiêu hiện thực đáp ứng một nhu cầu thực sự của phát triển đất nước trong thời đại ngày nay, rồi từ đó tìm kiếm các giải pháp kiên quyết khắc phục khủng hoảng và tạo điều kiện lành mạnh cần thiết cho sự phát triển theo hướng mục tiêu đó. Bản chương trình này trình bày tóm tắt một số kiến nghị về các vấn đề đó.</p>
+</section>
+<div class="divider"></div>
+<section id="i">
+<h2>I. Tình hình khủng hoảng toàn diện của đất nước ta hiện nay</h2>
+<section id="i-1">
+<h3>1. Thực trạng xã hội.</h3>
+<p>Sau mấy chục năm chiến tranh liên tiếp, chiến thắng năm 1975 và sự thống nhất đất nước đã tạo một cơ hội hiếm có cho sự thống nhất và sự hòa hợp của toàn dân tộc để động viên và phát huy tất cả mọi năng lực trong xã hội nhằm xây dựng lại và phát triển đất nước phồn vinh trong sự hòa nhập vào thế giới đang trên đà phát triển hết sức nhanh chóng.</p>
+<p>Đáng tiếc là cơ hội đó đã không được tận dụng. Sau khi thống nhất, một mô hình chủ nghĩa xã hội đã được vội vã áp đặt lên toàn đất nước. Tác dụng đầu tiên là đã đặt vào thế đối địch một bộ phận to lớn những năng lực thật sự có thể góp phần làm giàu đất nước và gạt bỏ khả năng hòa giải và hòa hợp dân tộc. Và trong mười mấy năm qua, sự áp đặt này đã tạo dựng một chế độ quyền lực tập trung điểu khiển toàn bộ mọi mặt hoạt động kinh tế, chính trị, tư tưởng, văn hóa, xã hội của đất nước. Bộ máy quyền lực tập trung này, một mặt do chậm được bổ sung những nhận thức mới của thời đại và những năng lực tương xứng với đòi hỏi của cuộc sống, mặt khác do bị thoái hóa dần bởi những căn bệnh đặc quyền đặc lợi, quan liêu tham nhũng, ..., đã trở thành bất lực trong tổ chức và quản lý sự phát triển lành mạnh của đất nước. Với sự quản lý độc quyền nhưng bất lực đó, thì một mặt, Nhà nước luôn đưa ra những kế hoạch chủ quan phi thực tế gây nên những thiệt hại và lãng phí to lớn, mặt khác, xã hội tự phát vận động theo xu thế hỗn loạn bằng mọi kiểu “phá phách“ hợp pháp và phi pháp, làm ăn gian dối trở thành một hiện tượng phổ biến.</p>
+<p>Như vậy sự quản lý tập trung nhưng bất lực làm tê liệt một phần lớn những năng lực thật sự của đất nước, đồng thời tạo ra sự hỗn loạn và dối trá trong mọi mặt hoạt động kinh tế và xã hội. Nền kinh tế triền miên trong tình trạng lạm phát, có nhiều lúc là lạm phát phi mã, sản xuất đình đốn, đời sống của nhân dân lao động sa sút nghiêm trọng, đồng lương thảm hại không đảm bảo cuộc sống tối thiểu đã làm thoái mái bộ máy Nhà nước và toàn bộ xã hội, sự nghiệp y tế và giáo dục xuống cấp, tệ nạn xã hội lan tràn, nạn cường hào và tham nhũng hoành hành..... đó là những đặc điểm của thực trạng khủng hoảng toàn diện mà đất nước ta trải qua trong nhiều năm qua.</p>
+</section>
+<section id="i-2">
+<h3>2. Quá trình đổi mới.</h3>
+<p>Từ sau đại hội VI của đảng CSVN, trên đất nước ta công cuộc đổi mới đã được thực hiện với nhiều diễn biến phức tạp. Nội dung đổi mới được Đại hội xác định trên những nét đại thể: chuyển nền kinh tế từ chế độ tập trung quan liêu bao cấp sang nền kinh tế hàng hóa nhiều thành phần với sự điều tiết của Nhà nước, mở rộng dân chủ “dưới sự lãnh đạo của Đảng”. Quá trình đổi mới đã mang lại nhiều nét khởi sắc cho bộ mặt sinh hoạt xã hội, đặc biệt trong vài năm đầu. Tuy nhiên, do chưa được nhận thức trên một cơ sở lý luận khoa học nhất quán, lại vấp phải phản ứng bảo thủ của thế lực bám giữ đặc quyền, nhất là trước các biến chuyển tại Đông Âu và Liên Xô, quá trình đổi mới trên nhiều mặt đã bị chựng lại. Đổi mới về kinh tế được thực hiện nửa vời, khi buông ra khi xiết lại, không tạo được sự tin cậy cho những phát triển lành mạnh, trong khi đó xu thế hỗn loạn vẫn không được khắc phục. Về chính trị, mọi quyền tự do dân chủ, kể cả các quyền tự do tư tưởng, tự do ngôn luận và báo chí, lại bị cấm đoán nghiêm khắc.</p>
+<p>Đổi mới là yêu cầu cấp bách. Quá trình đổi mớ rõ ràng đã có mang lại những kết quả làm cho cuộc sống đỡ bị trói buộc và dễ thở hơn. Nhưng đồng thời, những chính sách và biện pháp đổi mới ngập ngừng, nửa vời cũng rõ ràng chưa đủ sức khơi dậy và phát huy đầy đủ những yếu tố tích cực, trong khi những yếu tố tiêu cực cũ lại có cơ hội được bổ sung thêm bởi nhiều yếu tố tiêu cực mới. Những nhà tư sản làm ăn chân chính chưa xuất hiện nhiều, nhưng đã nẩy nở nhanh chóng một tầng lớp “tư sản lưu manh” cấu kết với đủ loại đặc quyền đặc lợi trong bộ máy quyền lực thao túng và phá phách thêm nền kinh tế của đất nước. Tính chất nửa vời cũng làm cho nhiều biện pháp đúng đắn không phát huy được hiệu quả, thí dụ những biện pháp tình thế chống lạm phát năm 1989 là cần thiết và đã mang lại một số kết quả tức thời, nhưng “tình thế“ đó đã không được tận dụng cho việc thực hiện những biện pháp kiên quyết và cơ bản hơn, nên khi tình thế qua, nạn lạm phát lại có nguy cơ trở lại trầm trọng.</p>
+</section>
+<section id="i-3">
+<h3>3. Yêu cầu cấp thiết.</h3>
+<p>Để đưa đất nước thoát khỏi tình trạng khủng hoảng trầm trọng hiện nay thì rõ ràng những biện pháp đổi mới nửa vời là không đủ. Công cuộc đổi mới cần được tiến hành kiên quyết và nhất quán hơn. Kiên quyết và nhất quán trong việc xác định một mục tiêu hiện thực cho sự phát triển của đất nước, và cũng kiên quyết nhất quán trong việc thực hiện những biện pháp cần thiết có thể là quyết liệt, để khắc phục khủng hoảng, gạt bỏ mọi cản trở, tạo lập một môi trường lành mạnh cho sự phát triển theo hướng mục tiêu đó.</p>
+</section>
+</section>
+<div class="divider"></div>
+<section id="ii">
+<h2>II.  Mục tiêu:  một nền kinh tế thị trường phát triển và một chế độ chính trị dân chủ, đoàn kết và hòa hợp dân tộc.</h2>
+<section id="ii-1">
+<h3>1.  Quan niệm về mục tiêu.</h3>
+<p>Cách mạng tháng 8 năm 1945 đã được mở ra một kỷ nguyên mới cho toàn dân tộc Việt Nam ta hướng tới mơ ước tha thiết là xây dựng một nước độc lập, tự do, dân chủ và hạnh phúc. Ba chục năm chiến tranh giải phóng dân tộc gian khổ và kiên cường đã đem lại nền độc lập và thống nhất cho đất nước. Sau đó, chế độ xã hội chủ nghĩa với nền kinh tế do Nhà nước quản lý tập trung và thể chế chính trị do Đảng lãnh đạo đã được chọn lựa chọn và áp đặt cho đất nước. Mười mấy năm trì trệ, suy thoái và khủng hoảng triền miên đã đủ chứng tỏ sự lựa chọn đó là không thích hợp để đạt tới tự do, dân chủ và hạnh phúc cho dân tộc.</p>
+<p>Ước mơ tự do, dân chủ và hạnh phúc của chúng ta cũng là ước mơ chung của nhân loại về một xã hội giàu có và công bằng. Chế độ xã hội nào bảo đảm được tốt nhất cho sự thực hiện các ước mơ đó? Các học thuyết kinh tế-chính trị trong thế kỷ 19 đã đề xuất hai mô hình cực đoan: một bên là nền kinh tế thị trường với sự tự do cạnh tranh hoàn toàn và tuyệt đối, bên kia là phủ định lôgích của mô hình đó, với những đối kháng, tương tác và vận động của chúng, tức là một nền kinh tế phi hàng hóa với chế độ quản lý theo kế hoạch tập trung. Và nhân loại đã chứng kiển sự thể nghiệm trong cuộc sống các mô hình đó, với những tương tác, đối kháng và vận động của chúng. Trong thế kỷ 20, các nền kinh tế thị trường với cơ chế tự do cạnh tranh dần dần đã được bổ sung thêm ở những mức độ và tính chất khác nhau – yếu tố điều tiết tập trung của Nhà nước; các nền kinh tế phi hàng hóa với chế độ quản lý tập trung được thiết lập trong các nước “ xã hội chủ nghĩa “ kéo dài nhiều năm trong tình trạng trì trệ cho đến khi khủng hoảng dẫn đến sụp đổ, và hiện đang phải chật vật trở lại với cơ chế thị trường.</p>
+<p>Các học thuyết kinh tế - xã hội trong thời đại chúng ta, được hỗ trợ bởi các lý thuyết khoa học hiện đại, đã cho ta thấy rõ các thiếu sót của các mô hình cực đoan nói trên, và từ đó, một kiểu mô hình hợp lý có khả năng vươn tới các mơ ước về giàu có và công bằng là: một nền kinh tế thị trường có sự điều tiết vĩ mô của Nhà nước cùng với một nền chính trị dân chủ, đoàn kết và hòa hợp dân tộc. Đó là xu thế chung của thời đại, là mục tiêu phấn đấu của nhiều dân tộc. Chúng ta cũng cần xác định mục tiêu cho đất nước ta theo xu thế đó.</p>
+</section>
+<section id="ii-2">
+<h3>2.  Một nền kinh tế thị trường phát triển có sự điều tiết vĩ mô của nhà nước.</h3>
+<p>Từ sau Đại hội VI Đảng CSVN cuối năm 1986, ta đã chuyển dần theo hướng phát triển nền kinh tế hàng hóa nhiều thành phần. Tuy nhiên nhiều vấn đề chưa được giải quyết thỏa đáng, chủ yếu do vướng mắc giữa đòi hỏi khách quan thoát khỏi khủng hoảng và những mong muốn chủ quan tiếp tục quan điểm cũ về chủ nghĩa xã hội với chế độ quản lý tập trung, sở hữu Nhà nước và kinh tế quốc doanh. Do đó nảy sinh nhiều khái niệm tự mâu thuẫn như: nền kinh tế hàng hóa có kế hoạch, nền kinh tế hàng hóa theo định hướng xã hội chủ nghĩa, kinh tế nhiều thành phần lấy quốc doanh và tập thể làm nền tảng, v.v.</p>
+<p>Nền kinh tế thị trường với sự tôn trọng đầy đủ quyền kinh doanh tự do và bình đẳng của các chủ thể kinh tế, sự tự do trao đổi hàng hóa với giá cả được xác định bởi quan hệ cung - cầu,... là cơ chế phổ biến để kích thích động lực lợi ích kinh tế, phát huy mọi năng lực làm nên sự giàu có cho xã hội. Ta xuất phát từ một nền sản xuất nông nghiệp lạc hậu, chưa trải qua kinh tế hàng hóa ở trình độ phát triển. Vì vậy, nếu đã chọn nền kinh tế thị trường là hướng đi tới, thì cần tạo một điều kiện thuận lợi và khuyến khích cho nó nhanh chóng hoàn thành và phát triển, chứ không đối xử ghẻ lạnh bằng những phân biệt và hạn chế.</p>
+<p>Kinh tế thị trường phát triển trong khi xã hội có sự tự do trao đổi hàng hóa giữa đông đảo các chủ thể kinh tế. Dĩ nhiên mỗi chủ thể kinh tế phải là người sở hữu. Xét đến cùng để phát triển kinh tế thị trường thì cần thừa nhận và tôn trọng quyền sở hữu tư nhân, kể cả về tư liệu sản xuất. Và vì cho đến nay phần lớn tài sản ở trong tay Nhà nước, nên việc chuyển sang kinh tế thị trường tất yếu phải đi kèm với một quá trình tư nhân hóa đồng thời với việc thu hẹp khu vực kinh tế quốc doanh. Xã hội tạo điều kiện cho mọi công dân có khả năng sở hữu tư nhân, chứ không phải tước đoạt mọi sở hữu tư nhân để hòa vào một thứ “sở hữu toàn dân“ luôn có nguy cơ biến thành sở hữu riêng vô trách nghiệm của một số kẻ đặc quyền. Xã hội tạo điều kiện cho việc thi thố mọi tài năng trong sản xuất kinh doanh, chứ không tìm cách duy trì vị trí “chủ đạo“ cho khu vực quốc doanh đã được chứng tỏ là thường kém hiệu quả và thua lỗ. Trong giai đoạn chuyển tiếp hiện nay, cần phải tính toán để kết hợp sử dụng “tư nhân hóa“ như là một biện pháp quan trọng khắc phục lạm phát và khủng hoảng. Từ các hình thức sở hữu tư nhân và cơ sở, nhà nước sẽ hình thành các loại hình doanh nghiệp: kinh tế tư nhân (kể cả xí nghiệp tư nhân), hợp tác xã, công ty cổ phần, xí nghiệp nhà nước, v.v... Trong nông nghiệp, cần thừa nhận quyền sở hữu ruộng đất của nông dân (người cày có ruộng) và để người nông dân tự chọn hình thức sản xuất gia đình hay hợp tác.</p>
+<p>Chức năng của Nhà nước trong kinh tế tạo môi trường thuận lợi cho sự phát triển nhanh chóng và nhịp nhàng của sự phát triển kinh tế thị trường, tạo cơ sở hạ tầng cho sự liên kết hệ thống của toàn bộ nền kinh tế, và điều tiết sự phát triển kinh tế ở tầm vĩ mô. Cần sớm hoàn thiện hệ thống luật kinh tế với tính chất khuyến khích phát triển nền kinh tế trong nước và mở rộng quan hệ kinh tế đối ngoại. Nhà nước điều tiết nền kinh tế bằng việc xác định các kế hoạch có tính định hướng và thực hiện sự định hướng đó chủ yếu bằng các biện pháp tài chính và tiền tệ (thuế, lãi xuất cho vay để đầu tư,...). Khu vực kinh tế quốc doanh sẽ bao gồm các nghành tạo cơ sở hạ tầng cho toàn hệ thông là năng lượng, truyền thông và giao thông vận tải (chủ yếu là đường sắt, đường hàng không, đường thủy Bắc – Nam và viễn dương); có thể giữ các nghành có siêu lợi nhuận để tăng thu cho ngân sách như rượu, bia, thuốc lá; các nghành khác sẽ được chuyển dần toàn bộ hoặc từng phần sang khu vực tư nhân hoặc liên doanh với tư nhân trong hình thức công ty cổ phần.</p>
+</section>
+<section id="ii-3">
+<h3>3. Một chế độ chính trị dân chủ, đoàn kết và hòa hợp dân tộc.</h3>
+<p>Nền kinh tế thị trường với sự tôn trọng đầy đủ quyền tự do kinh doanh và trao đổi hàng hóa của mọi thành viên xã hội tất yếu phải được hỗ trợ bởi một chế dộ chính trị tôn trọng các quyền tự do dân chủ của mọi người dân. Đó là các quyền cơ bản của con người và công dân mà loài người đã đấu tranh từ bao thế kỷ nay để giành cho được: quyền sống và mưu cầu hạnh phúc, quyền bất khả xâm phạm về thân thể, quyền tự do đi lại và cư trú, quyền tự do tư tưởng và sáng tạo, quyền tự do ngôn luận, và tự do báo chí, quyền tự do ứng cử và bầu cử vào các cơ quan quyền lực Nhà nước, quyền tự do hội họp, tự do lập hôi, v.v...</p>
+<p>Con người có đầy đủ các quyền đó sẽ thực sự là người làm chủ, có điều kiện để phát huy mọi tài năng và trí tuệ của mình, làm giàu cho bản thân mình và góp phần làm giàu cho đất nước. Dĩ nhiên, hệ thống luật pháp của xã hội quy định sao cho sự thực hiện các quyền đó của người này không làm hại đến việc thực hiện cũng các quyền đó của người khác.</p>
+<p>Chế độ chính trị dân chủ với việc bảo đảm các quyền cơ bản đó của công dân tự nó đã bao hàm sự thừa nhận tính đa nguyên. Đa nguyên là sự phản ánh chung thực thực tiễn khách quan của xã hội vào thể chế chính trị. Dân chủ chỉ là sự tôn trọng tính trung thực của sự phản ánh đó. Phủ nhận tính đa nguyên cũng đồng thời là phủ nhận nền dân chủ. Cần phải nhìn nhận một thực tế là không thể có dân chủ thật sự trong một chế độ có qui định trước sự độc quyền lãnh đạo của Đảng. Tuy nhiên, đa nguyên không đồng nhất với tình trạng đa đảng đối kháng, đấu tranh với nhau một mất một còn, thậm chí phủ định nhau bằng bạo lực. Chế độ chính trị dân chủ mà ta xây dựng cần loại bỏ tình trạng đó bằng qui định luật pháp. Nội quy đa nguyên là thừa nhận sự đa dạng về tư tưởng, về chính kiến, quyền tự do trao đổi và tranh luận giữa các tư tưởng và chính kiến khác nhau thông qua tự do ngôn luận và báo chí, thừa nhận sự tồn tại các tổ chức chính trị và xã hội khác nhau bình đẳng trước pháp luật, đặc biệt là bình đẳng trong các cuộc bầu cử tự do để giành sự tín nhiệm của xã hội. Một đảng chính trị vẫn có thể giành quyền lãnh đạo xã hội trong những phạm vi được qui định bởi pháp luật, nhưng phải giành quyền đó bằng sự tín nhiệm của xã hội thông qua việc thực hiện cơ chế dân chủ chứ không phải bằng một sự áp đặt định trước.</p>
+<p>Sự hưng thịnh của đất nước đòi hỏi quyền bình đẳng đóng góp sức lực và trí tuệ của mọi thành viên trong xã hội, không loại trừ một ai. Thực hiện chế độ chính trị dân chủ thực sự nói ở trên sẽ tạo điều kiện cho đoàn kết và hòa hợp dân tộc để cùng xây dựng đất nước. Sự đoàn kết và thống nhất của dân tộc phải được đặt ở trên cơ sở cùng nhau phấn đấu xây dựng một Tổ quốc chung của những công dân tự do và bình đẳng, chứ không phải trên sự “nhất trí” cưỡng bức với một tư tưởng của quyền lực chuyên chế, nhất là khi tư tưởng đó lạc hậu và xa lạ với yêu cầu của đất nước và thời đại
+Một chế độ chính trị dân chủ, đoàn kết và hòa hợp dân tộc và đòi hỏi bức thiết có tính chát sống còn đối với đất nước ta hiện nay.</p>
+</section>
+<section id="ii-4">
+<h3>4. Nhà nước.</h3>
+<p>Chế độ kinh tế và chế độ chính trị với nội dung nói trên phải được thể chế hóa trong hiến pháp , đặc biệt trong những qui định về tổ chúc Nhà nước. Đó là một nhà nước dân chủ pháp quyền. Trong điều kiện cảu nước ta, hình thức thích hợp của nhà nước pháp quyền đó nên là hình thức của chế độ nghị viện (tức Quốc hội ). Quốc hội là cơ quan quyền lực cao nhất ( thực sự chứ không phải hình thức ), đồng thời trực tiếp thực hiện quyền lập pháp. Quốc hội cử ra chính phủ (hành pháp) và Tối cao pháp viện (tư pháp), hai cơ quan này hoàn toàn độc lập với nhau và chỉ chịu trách nhiệm trước Quốc hội. Điều mấu chốt ở đây là Quốc hội phải được bầu ra bằng bầu cử thực sự tự do và công bằng, không một đảng phái chính trị nào được qui định trước là có quyền tuyệt đối đứng trên Nhà nước và lãnh đạo Nhà nước. Một Đảng giành đa số tuyệt đối trong Quốc hội có thể thi hành các chủ trương, và chính sách do Đảng mình đề xuất, nhưng phải tuân theo các qui định của luật pháp.</p>
+<p>Nhà nước được tổ chức như vậy là Nhà nước của toàn dân và cũng sẽ thực sự là của nhân dân lao động vì tuyệt đại đa số nhân dân là người lao động. Nhiệm vụ chung của Nhà nước là đưa ra các qui định luật pháp và các chính sách, các qui định nhằm tạo môi trường thuận lợi và điều kiện an ninh cho việc phát triển chế độ kinh tế và chính trị như trình bày trong các phần trên. Với nên kinh tế thị trường và nên chính trị dân chủ, Nhà nước sẽ có điều kiện thực hiện tích cực một chính sách đối ngoại hòa bình và hợp tác, tạo môi trường quốc tế thuận lợi cho sợ phát triển của đất nước. Một nhiệm vụ chiến lược quan trọng của Nhà nước là bồi dưỡng và nâng cao năng lực lao động, khẳ năng trí tuệ cho dân tộc, nền giáo dục,  đào tạo và phát triển khoa học phải được xem là quốc sách hàng đầu. Nhà nước thực hiện sự công bằng xã hội bằng các chính sách thuế thích hợp nhằm phân phối lại thu nhập, và bằng các chế độ bảo hiểm, phúc lợi xã hội, phổ cập giáo dục,... các chế độ này được nâng cao dần theo sự phát triển của kinh tế đất nước.</p>
+</section>
+</section>
+<div class="divider"></div>
+<section id="iii">
+<h2>III. Những giải pháp cấp bách</h2>
+<section id="iii-1">
+<h3>1. Yêu cầu và mục tiêu của một giải pháp.</h3>
+<p>Trong tình hình khủng hoảng toàn diện hiện nay chưa thể tính đến những chiến lược dài hạn với những mục tiêu không có nội dung xác định, những chỉ tiêu kinh tế đẹp đẽ nhưng không có căn cứ thực tế cho mươi, mười lăm năm sau. Điều cấp bách  trước mắt là phải kiên quyết khắc phục khủng hoảng, tạo lập một hoàn cảnh lành mạnh tối thiểu cho sự hoạt động bình thường của một nền kinh tế thị trường mà ta muốn xây dựng, một nền chính trị dân chủ cho mọi năng lực cho xã hội được tự do phát triển. Cần cố gắng và kiên quyết thực hiện những giải pháp cần thiết để trong vài ba năm về cơ bản khắc phục khủng hoảng, rồi sau đó, khi tình hình là có thể xem là bình thường, nền kinh tế thị trường sẽ bắt đầu hoạt động lành mạnh, và Nhà nước sẽ có căn cứ thực tiễn mới để trù liệu cho những bước tiếp theo.</p>
+<p>Những đặc điểm của khủng hoảng hiện nay là: tỷ lệ lạm phát cao (có lúc đến gần 500% trước 1989, giảm xuống khoảng 50% trong 1989 và tăng lên khoảng gần 100% năm 1990), tiền lương thực tế giảm mạnh (giảm gần 3 lần so với 1985 và còn giảm hơn một nửa so với 1989) và không còn ý nghĩa để đảm bảo cuộc sống, sức mua giảm sút, bội chi ngân sách lớn (lượng tiền phát hành để bù chi ngân sách chiếm khoảng 1/4 ngân sách trong 1990 và chắc còn cao hơn trong 1991), bộ máy nhà nước cồng kềnh bất lực nhưng đầy tiêu cực và tham nhũng, xã hội hỗn loạn với nhiều bất bình đẳng phi lý, tệ nạn xã hội phát triển, giáo dục y tế xuống cấp,...</p>
+<p>Không thể đặt quá nhiều mục tiêu cho những giải pháp cấp bách trong một khoảng thời gian không dài lắm. Nhưng để thực sự khắc phục khủng hoảng và đưa đất nước đi vào quĩ đạo của sự phát triển bình thường thì ít nhất phải tính đến một số mục tiêu tối thiểu sau đây:</p>
+<p>-    Giảm tỷ lệ lạm phát xuống dưới 10% hằng năm bằng  giảm bội chi ngân sách, đưa tỷ lệ phát hành để bù chi ngân sách dưới 10% ngân sách nhà nước<br/>
+-    Cải cách triệt để tổ chức bộ máy Nhà nước. Giảm ít nhất 50% biên chế ăn lương từ ngân sách Nhà nước trong 2 năm 1991-1992. Bảo đảm mức lương tối thiểu đủ sống cho công nhân viên chức trong bộ máy Nhà nước (mức lương tối thiểu trên 80kg gạo/tháng, do đó mức lương trung bình khoảng 120kg gạo/tháng). Xóa bỏ mọi chế độ bao cấp, đặc quyền đặc lợi.<br/>
+-    Tăng cường một bước khả năng đầu tư để cứu vãn sự suy sụp của giáo dục, y tế, nghiên cứu khoa học,... Huy động được vốn trong nước và vốn đầu tư từ nước ngoài cho sự nâng cấp và hiện đại hóa cho một số cơ sở hạ tầng tối thiểu để phục vụ phát triển kinh tế.</p>
+<p>Dưới đây sẽ đề nghị một giải pháp cấp bách (chắc chắn là còn nhiều khả năng chưa được tính đến) nhằm đạt các mục tiêu tối thiểu đó trong vòng vài năm trước mắt.</p>
+</section>
+<section id="iii-2">
+<h3>2. Các giải pháp kinh tế -  xã hội.</h3>
+<p>Để thực hiện được các mục tiêu tối thiểu cần thiết nói trên, cần có những biện pháp kiên quyết, có khi là quyết liệt. Nhưng nếu không đạt được những mục tiêu còn rất khiêm tốn đó thì không thể nói đến bất kì một điều kiện bình thường nào cho sự phát triển. Những biện pháp như vậy có thể bao gồm:</p>
+<p>- Kiên quyết chuyển sang nền kinh tế thị trường, hoàn thiện hệ thống luật pháp phù hợp với yêu cầu của kinh tế thị trường, đặc biệt quyền thừa nhận và bảo vệ quyền sở hữu tư nhân. Thật sự tạo điều kiện cho kinh tế thị trường phát triển, bảo đảm sự tin cậy cho việc phát huy tự do mọi khả năng kinh doanh, xóa bỏ mọi chế độ hạn chế và phân biệt đối xử đối với khu vực ngoài kinh tế quốc doanh.<br/>
+- Giải pháp chủ chốt trong giai đoạn này là thực hiện tư nhân hóa. Tư nhân hóa để chuyển sang kinh tế thị trường, và tư nhân hóa còn là biện pháp chủ yếu để trong một thời hạn tình thế có nguồn thu ngân sách lớn đủ cho Nhà nước chi vào các mục tiêu giảm biên chế, tăng lương, đầu tư cho cơ sở hạ tầng, giáo dục, y tế, … mà không phải phát hành để bội chi. Thực hiện tư nhân hóa bằng việc bán các cơ sở quốc doanh hiện nay, trước hết trong những lĩnh vực mà khu vực tư nhân có thể tiếp nhận được và sẽ kinh doanh có hiệu quả (dịch vụ, thương nghiệp, công nghiệp nhẹ, nhà cửa đất đai …). Nhà nước lập ban Đặc trách tư nhân hóa để bảo đảm thực hiện theo một chế độ thống nhất và thu đủ cho ngân sách nhà nước.<br/>
+- Tổ chức lại hệ thống bộ máy nhà nước để thực hiện được chức năng quản lý Nhà nước trong một nền kinh tế thị trường. Giảm biên chế và có khoản tiền cấp cho những người ra khỏi biên chế và chưa được bố trí việc làm để họ có thêm khả năng tự thu xếp công việc và cuộc sống. Tăng lương đủ sống cho những người trong biên chế để khôi phục kỉ luật, đạo đức hiệu quả công việc. Thi hành chế độ tuyển dụng và hợp đồng lao động cả trong khu vực nhà nước. Kiên quyết xóa bỏ mọi chế độ bao cấp về nhà cửa, xe cộ, phương tiện sinh hoạt, xóa bỏ mọi đặc quyền đặc lợi. Nhà nước không chi từ ngân sách cho các cơ quan ngoài bộ máy nhà nước (như các cơ quan đảng, đoàn thể,… ). Cần có ban thanh tra đặc trách chống tham nhũng và đặc quyền đặc lợi do quốc hội cử và chịu trách nhiệm trước quốc hội, chứ không phải Chính phủ cử và các thủ trưởng trong các cơ quan chính phủ phụ trách.<br/>
+- Tăng cường năng lực quản lý kinh tế của Nhà nước, trước hết cần đặc biệt tăng cường và hoàn thiện hệ thống tài chính và ngân hàng. Hoàn thiện hệ thống luật pháp và các qui định về các loại thuế, nhằm tạo ra sự ổn định tin cậy cho các hoạt động sản xuất kinh doanh, có tác động khuyến khích việc đầu tư vốn trong nước và từ nước ngoài cho sự phát triển kinh tế, đồng thời có những biện pháp tổ chức hữu hiệu để thu đủ thuế cho ngân sách, trừng phạt nghiêm khắc những hành động lậu thuế và tham nhũng trong thu thuế. Trên cơ sở lạm phát được kìm hãm, ổn định các hoạt động ngân hàng. Duy trì chế độ lãi suất tiết kiệm cao hơn tỷ lệ lạm phát và phấn đấu giảm lãi suất theo đà giảm lạm phát (khi tỷ lệ giảm dưới 10%/năm thì lãi suất tiết kiệm có thể xuống 2%/tháng. Chuyển nhanh hệ thống tổ chức ngân hàng cho phù hợp với yêu cầu của nền kinh tế thị trường, tạo ra một thị trường tiền tệ ổn định và tin cậy cho các hoạt động huy động vốn và đầu tư.</p>
+<p>Về các giải pháp kinh tế, chúng tôi có trình bày trong Phụ lục kèm theo một phương án tính toán sơ bộ nhằm minh họa tính khả thi của giải pháp đề nghị. Việc tính toán phương án này do trung tâm nghiên cứu hệ thống và quản lý thực hiện.</p>
+</section>
+<section id="iii-3">
+<h3>3.  Cải cách chính trị.</h3>
+<p>Cải cách hệ thống chính trị có ý nghĩa quyết định đối với toàn bộ sự nghiệp đổi mới. Mục tiêu của ta là đi đến một chế độ chính trị dân chủ, đoàn kết và hòa hợp dân tộc như đã trình bày trong phần trên. Chúng ta mong và tin rằng có con đường ổn định hòa bình và hòa giải để đi đến mục tiêu đó. Hiện nay Đảng CSVN đang lãnh đạo toàn diện và tuyệt đối đất nước. Vì vậy con đường tốt đẹp duy nhất cho đất nước là Đảng, vì lợi ích tối cao của dân tộc vì trách nhiệm trước lịch sử, tự mình đổi mới và chủ động mở đường cho toàn dân tộc thực hiện đến cùng công cuộc đổi mới. Trong điều kiện đó, cùng với việc thực hiện các giải pháp kinh tế - xã hội, trong các năm 1991-1992 có thể thực hiện các biện pháp cải cách sau đây:</p>
+<p>Mặt trận tổ quốc Việt Nam, được sự hỗ trợ của Đảng CSVN, hiệp thương với mọi lực lượng của dân tộc, các nhân sĩ, trí thức trong và ngoài nước, để tiến hành Đại hội dân tộc,  và các sinh hoạt chính trị có tính dân tộc khác, dưới tiêu đề và mục đích chung là Đoàn kết và xây dựng đất nước. Bằng cách đó sẽ bước đầu huy động rộng rãi mọi năng lực trí tuệ của dân tộc cho sự nghiệp xây dựng và phát triển đất nước trong tinh thần thật sự đoàn kết, hòa hợp và hòa giải dân tộc của những người Việt Nam tự do và bình đẳng.</p>
+<p>-   Cải cách bộ máy Nhà nước hiện nay, đặc biệt là thành lập một chính phủ cải cách cho giai đoạn cấp bách 1991-1992, đó phải là một chính phủ mạnh, gồm những người thực sự có năng lực và tri thức, để thực hiện có hiệu quả các giải pháp kinh tế-xã hội cấp bách cho giai đoạn khắc phục khủng hoảng, tạo môi trường lành mạnh cho sự phát triển đất nước trong những giai đoạn sau.</p>
+<p>- Thực hiện đầy đủ một số quyền tự do dân chủ, đặc biệt là các quyền tự do tư tưởng, tự do ngôn luận và báo chí, tự do hội họp và lập hội (có những giới hạn qui định rõ ràng bằng luật pháp để tránh việc ra đời các tổ chức phục thù, bạo lực). Điều này sẽ tạo ra một không khí dân chủ lành mạnh phát huy mọi năng lực trí tuệ của dân tộc phục vụ sự nghiệp xây dựng và phát triển đất nước.</p>
+<p>- Bầu cử quốc hội thật sự tự do và công bằng vào năm 1992 hoặc đầu năm 1993. Quốc hội sẽ xây dựng và thông qua hiến pháp qui định chế độ kinh tế thị trường có điều tiết vĩ mô của nhà nước và chế độ chính trị dân chủ đoàn kết và hòa hợp dân tộc.</p>
+</section>
+<section id="iii-4">
+<h3>4. Chuẩn bị chiến lược phát triển sau khi khắc phục khủng hoảng.</h3>
+<p>Trong quá trình thực hiện các giải pháp cấp bách để khắc phục khủng hoảng, sẽ chuẩn bị phát triển cho đất nước ở giai đoạn sau. Chiến lược, trong điều kiện của một nền kinh tế thị trường, sẽ khác với các kiểu chiến lược được hoạch định trong nền kinh tế quản lý tập trung trước đây.</p>
+<p>Việc chuyển sang nền kinh tế thị trường là cần thiết, xong không phải là giải quyết được mọi vấn đề. Chắc chắn nhiều vấn đề mới, phực tạp hơn, đa dạng hơn, sẽ xuất hiện và đòi hỏi những cách giải quyết mới. Trong giai đoạn đầu, khi sản xuất hàng hóa chưa thật phong phú, thị trương đang hình thành và chưa ở trình độ phát triển cao, thì cần có những chính sách tích cực hỗ trợ cho nền sản xuất hàng hóa phát triển; sau đó trong quá trình phát triển chắc chắn sẽ xuất hiện nhiều vấn đề cần có sự can thiệp của nhà nước ở những mức độ khác nhau. Chiến lược cho giai đoạn phát triển đó sẽ không còn là một chiến lược kiểu kế hoạch Nhà nước tập trung như từng được vạch ra trước đây, mà sẽ mang nội dung có tính chất phân tích, dự báo, định hướng, đề xuất các biện pháp điều tiết vĩ mô của Nhà nước.</p>
+</section>
+</section>
+<div class="divider"></div>
+<section id="iv">
+<h2>IV. Đảng CSVN và công cuộc cải cách.</h2>
+<p>Kiên quyết khắc phục khủng hoảng để tiến đến một nền kinh tế thị trường và một chế độ chính trị dân chủ là đòi hỏi sống còn của đất nước. Công cuộc cải cách có tính chất quyết định này sẽ được thực hiện ra sao và có kết quả như thế nào là phụ thuộc chủ yếu vào Đảng CSVN đang cầm quyền hiện nay.</p>
+<p>Với lý tưởng yêu nước. Đảng đã tập hợp được trong đội ngũ của mình đông đảo những thành phần ưu tú của dân tộc và đã lãnh đạo, động viên toàn dân tộc giành thắng lợi trong công cuộc giải phóng, đưa lại nền độc lập cho đất nước. Tuy nhiên, ta phải thừa nhận rằng học thuyết về chủ nghĩa cộng sản và chủ nghĩa xã hội với sự cường điệu hóa mâu thuẫn giai cấp, với việc áp đặt vội vã chế độ kinh tế công hữu hóa, quản lý tập trung, chế độ độc quyền lãnh đạo của Đảng ,.. đã mang lại cho đất nước ta nhiều thiệt thòi, dân tộc bị chia rẽ và tê liệt nền kinh tế lắm phen hoang tàn, cuộc sống nghèo nàn lạc hậu, cô lập với thế giới văn minh, v.v…</p>
+<p>Việc lựa chọn lý tưởng công sản có lý do lịch sử của nó, và đã có tác động tích cực trong công cuộc giải phóng dân tộc. Nhưng học thuyết về chủ nghĩa xã hội theo nguyên mẫu của nó cũng như theo mô hình thực tế trước đây mà ta đã theo, với tư cách là con đường xây dựng đất nước thì quả thực là một sự ngộ nhận và đã được chứng tỏ là không thích hợp với những đòi hỏi thực tiễn của nước ta - đòi hỏi đưa nước từ phong kiến nghèo nàn lạc hậu đi lên giàu có, tự do và hạnh phúc.</p>
+<p>Xuất phát từ lợi ích tối cao của dân tộc, từ những đòi hỏi thật và bức thiết của cuộc sống đất nước, ta cần tỉnh táo và can đảm tự giải phóng khỏi mọi tập quán của đam mê quyền lực, mọi nô lệ vào những tín điều đã không còn thích hợp, giành quyền tự do cho tư duy và nhận thức, tiếp thu và làm chủ mọi tri thức của nhân loại, để cùng tìm con đường đi thích hợp nhất cho đất nước. Đảng đã là vĩ đại trong việc tập hợp và lãnh đạo đất nước giành giải phóng dân tộc. Và sẽ là vĩ đại hơn nhiều nếu sau khi giành được giải phóng, Đảng trao quyền lại cho toàn dân tộc trong đó mình là bộ phận tiên phong, chứ không phải là giành trọn vẹn quyền lực cho Đảng, mà thực chất là cho một thiểu số quyền lực trong Đảng.</p>
+<p>Con đường tốt đẹp nhất cho dân tộc ta hiện nay là Đảng tự đổi mới và chủ động cùng toàn dân tộc thực hiện những cải cách triệt để, khắc phục khủng hoảng, xây dựng đất nước theo hướng phát triển kinh tế thị trường và một nền chính trị dân chủ. Đảng sẽ không còn đứng trên đầu một dân tộc bị mòn mỏi, kiệt quệ và cô lập, mà sẽ tựu đặt mình vào trong dân tộc, phấn đấu để luôn được tín nhiệm là bộ phận tiên phong của dân tộc, một dân tộc tự do, đầy sức lực và trí tuệ, hòa nhập với nhân loại văn minh.</p>
+<p>Đảng vốn được dân tộc thừa nhận như là đội ngũ tiên phong của dân tộc trong sự nghiệp yêu nước. Yêu nước là điều cốt lõi, mọi học thuyết, hay chủ nghĩa đều cần được lựa chọn, chắt lọc để phục vụ cho mục tiêu yêu nước. Chủ nghĩa Mác-Lênin và mô hình chủ nghĩa xã hội mà ta đã theo rõ ràng có nhiều điều chưa thích hợp để đáp ứng mục tiêu đó đối với đất nước ta, cũng như đã được chứng tỏ là không thích hợp với yêu cầu phát triển của thế giới hiện đại. Vì vậy, điều mong muốn là với tiềm lực to lớn của chính nội bộ Đảng và với sự hỗ trợ của toàn dân tộc, Đảng sẽ có đầy đủ sức mạnh để tự đổi mới, đổi mới về tư tưởng và nền tảng lý luận, đổi mới về tổ chức, đổi mới về việc xác định vị trí trong dân tộc,… để tiếp tục được tín nhiệm là đội ngũ tiên phong của dân tộc trong sự nghiệp yêu nước, trong giai đoạn hiện nay là đưa đất nước vào con đường phát triển lành mạnh của một nền kinh tế thị trường giàu có và một xã hội dân chủ đoàn kết và hòa hợp dân tộc.</p>
+</section>
+<section id="sign">
+<p><em>Phan Đình Diệu (02/1991)</em></p>
+</section>
+<section id="appendix1"><h2>Phụ lục 1</h2><p>Phụ lục: Phương án tính toán sơ bộ để thực hiện giải pháp cấp bách trong giai đoạn 1991-1992.</p>
+<p>Phương án tính toán trình bày dưới đây chỉ mới có tính chất là những gợi ý sơ bộ. Khi tính toán chúng tôi tạm dựa vào những số liệu thống kê mà Tổng cục Thống kê đã ban hành, và tạm tính theo giá hiện hành vào cuối năm 1990. Mặt khác, chúng tôi cũng dựa vào dự toán ngân sách mà Quốc hội đã thông qua. Chúng tôi chỉ tính them những yếu tố bổ sung phần tăng thu và tăng chi có khả năng xuất hiện nếu thực hiện các giải pháp cấp bách đề xuất trong bản Kiến nghị.</p>
+<p>Nhu cầu tăng chi từ Ngân sách:</p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Bù cho khoản bội chi theo dự toán ngân sách 1991:</td><td>2.000 tỷ</td></tr><tr><td>- Tiền bù chi để giảm 50% biên chế bộ máy hành chính nhà nước (trung bình cấp cho 1 người ra biên chế 2 triệu)</td><td>1.257 tỷ</td></tr><tr><td>-Tiền bổ sung để những người còn lại được hưởng lương trung bình 150.000đ/tháng</td><td>469 tỷ</td></tr><tr><td>-Đầu tư cho giáo dục, y tế, khoa học lớn hơn 4 lần so với năm 1990</td><td>4.292 tỷ</td></tr></table></div>
+<p> </p>
+<p>Khả năng tăng them phần thu cho Ngân sách:</p>
+<p> </p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Thanh lý tài sản:</td><td></td></tr><tr><td>Theo điều tra đến 1.1.1990 có 5,54% tài sản cố định phải thanh lý do hư hỏng và lạc hậu kỹ thuật với giá trị</td><td>1.427 tỷ</td></tr><tr><td>Thanh lý phần tài sản cố định chưa khấu hao hết</td><td>198 tỷ</td></tr><tr><td>Xóa bỏ chế độ bao cấp vốn cho quốc doanh</td><td></td></tr><tr><td>Thu hồi phần vốn nhà ngước cấp bị tổn thất do lamj phát, với giả thiết tỉ lệ lạm phát 30%/năm (với TSCĐ 10.452 tỷ, TSLĐ 3466 tỷ</td><td>4.025 tỷ</td></tr><tr><td>Không bao cấp qua tín dụng (thiệt hại do cho các xí nghiệp vay lãi suất thấp), 3.229 tỷ * 20%</td><td>646 tỷ</td></tr><tr><td>Thu do thực hiện bước đầu biện pháp tư nhân hóa:</td><td></td></tr><tr><td>-Bán 50% các cơ sở quốc doanh trong thương nghiệp, dịch vụ, cung ứng vật tư … đặc biệt các cơ sở địa phương (TSCĐ 1.486 tỷ + TSLĐ 2.477 tỷ)*50%</td><td>1.981 tỷ</td></tr><tr><td>-Bán một số cơ sở công nghiệp nhỏ (tương đương 20% giá trị công nghiệp) (TSCĐ 7.855 tỷ + TSLĐ 13.141 tỷ)*20%</td><td>4.204 tỷ</td></tr><tr><td>Thu (hay giảm chi) do bỏ các chế độ bao cấp về nhà cửa, xe cộ, phương tiện sinh hoạt … (chưa tính được):  </td><td>? tỷ<br/></td></tr><tr><td>Cộng</td><td>?+12.481 tỷ</td></tr></table></div>
+<p>Những tính toán kể trên còn hết sức sơ lược, những khả năng tăng thu có thể không thực hiện được đầy đủ, nhưng cũng còn những khả năng khác chưa được tính đến. Về khả năng vố tồn đọng trong dân để có thể mua các tài sản do nhà nước bán, theo ước tính của nhiều chuyên gia là hoàn toàn có, nhưng tất nhiên cần được nghiên cứu kỹ hơn. Vì vậy, những tính toán sơ lược đó mới có tính chất gợi ý cho thấy khả năng thực tế của những giải pháp đề xuất trong Kiến nghị. Chúng tôi đang cố gắng thu thập them thông tin và tính toán những phương án sát với khả năng thực tế hơn.</p>
+<p>Trung tâm nghiên cứu hệ thống và quản lý thực hiện</p></section><section id="appendix2"><h2>Phụ lục 2</h2><p>Phương án tính toán sơ bộ để thực hiện giải pháp cấp bách</p>
+<p>Giai đoạn 1991-1992</p>
+<p>Phương án này chỉ có tính chất sơ bộ. Khi tính toán chúng tôi lấy những số liệu thống kê do Tổng cục thống kê cấp và tính theo giá hiện hành (1990). Ở đây chỉ tính những yếu tố bổ sung cho việc tăng thu và tăng chi có khả năn xuất hiện nếu thực hiện các giải pháp đã đề xuất:</p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Nhu cầu tăng chi từ ngân sách</td><td></td></tr><tr><td> Bội chi theo kế hoạch 1991</td><td>2000 tỷ</td></tr><tr><td>Đầu tư cho khu vực y tế, khoa học, giáo dục lớn hơn 4 lần so với năm 1990</td><td>4292 tỷ</td></tr><tr><td>Tiền chi để giảm 50% biên chế bộ máy hành chính nhà nước (trung bình cấp cho người ra khỏi biên chế 2 triệu)</td><td>1257 tỷ</td></tr><tr><td>Số tiền cần bổ sung để những người làm việc còn lại được hưởng lương trung bình 150 nghìn đồng/tháng</td><td>496 tỷ</td></tr><tr><td>Tổng cộng</td><td>8018 tỷ</td></tr><tr><td>Khả năng tăng them phần thu cho ngân sách</td><td></td></tr><tr><td>Thanh lý tài sản:</td><td></td></tr><tr><td>Theo điều tra đến 1.01.1990 có 5.54% tài sản cố định phải thanh lý do hư hỏng và lạc hậu kỹ thuật với giá trị</td><td>1427 tỷ</td></tr><tr><td>Thanh lý phần tài sản cố định chưa khấu hao hết</td><td>198 tỷ</td></tr><tr><td>Không bao cấp vốn</td><td></td></tr><tr><td>Thu hồi phần vốn do nhà nước cấp bị tổn thất do lạm phát.</td><td>6709 tỷ</td></tr><tr><td>Trong đó:<br/>TSCĐ        10452 tỷ<br/>TSLĐ        3466 tỷ<br/>Với giả thiết tỷ lệ lạm phát là 50%/năm</td><td></td></tr><tr><td>Không bao cấp vốn qua tín dụng. Thiệt hại do co các xí nghiệp vay lãi suất thấp</td><td></td></tr><tr><td>3229 tỷ * 20%</td><td>648 tỷ</td></tr><tr><td>Biện pháp tư nhân hóa:</td><td></td></tr><tr><td>Bán một số cơ sở quốc doanh</td><td></td></tr><tr><td>50% cơ sở thương nghiệp cung ứng vật tư đặc biệt là các cơ sở địa phương làm ăn thua lỗ</td><td>1981 tỷ</td></tr><tr><td>Trong đó<br/>TSCĐ: 1486 tỷ<br/>TSLĐ: 2477 tỷ</td><td></td></tr><tr><td>Bán một số cơ sở công nghiệp nhỏ (tính tương đương 10% tổng giá trị DN)</td><td>2102 tỷ</td></tr><tr><td>Trong đó:<br/>TSCĐ 7885 tỷ<br/>TSLĐ 7885 *5/3=13141 tỷ</td><td></td></tr><tr><td>Tổng số thu</td><td>13065 tỷ</td></tr></table></div>
+<p>Bảng tính toán giảm biên chế</p>
+<p>Lương trung bình = 100 nghìn, mức chi một người = 1500 nghìn, số lao động = 1256.7</p>
+<p>Đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mục</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi</td><td>Tổng chi NS</td></tr><tr><td>5</td><td>62.84</td><td>1193.87</td><td>1432638.00</td><td>94252.50</td><td>1526890.50</td></tr><tr><td>10</td><td>125.67</td><td>1131.03</td><td>1357236.00</td><td>188505.00</td><td>1545741.00</td></tr><tr><td>15</td><td>188.50</td><td>1068.20</td><td>1281834.00</td><td>282757.50</td><td>1564591.50</td></tr><tr><td>20</td><td>251.34</td><td>1005.36</td><td>1206432.00</td><td>377010.00</td><td>1583442.00</td></tr><tr><td>25</td><td>314.18</td><td>942.53</td><td>1131030.00</td><td>471262.50</td><td>1602292.50</td></tr><tr><td>30</td><td>377.01</td><td>879.69</td><td>1055628.00</td><td>565515.00</td><td>1621143.00</td></tr><tr><td>35</td><td>439.85</td><td>816.86</td><td>980226.00</td><td>659767.50</td><td>1639993.50</td></tr><tr><td>40</td><td>502.68</td><td>754.02</td><td>904824.00</td><td>754020.00</td><td>1658844.00</td></tr><tr><td>45</td><td>565.51</td><td>691.19</td><td>829422.00</td><td>848272.50</td><td>1677694.50</td></tr><tr><td>50</td><td>628.35</td><td>628.35</td><td>754020.00</td><td>942525.00</td><td>1696545.00</td></tr></table></div>
+<p> </p>
+<p> </p>
+<p>Bảng tính toán giảm biên chế</p>
+<p>Lương trung bình = 100 nghìn, múc chi một người = 2000 nghìn, số lao động = 1256.7</p>
+<p>Đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mục</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi</td><td>Tổng chi NS</td></tr><tr><td>5</td><td>62.84</td><td>1193.87</td><td>1432638.00</td><td>125670.00</td><td>1558308.00</td></tr><tr><td>10</td><td>125.67</td><td>1131.03</td><td>1357236.00</td><td>251340.00</td><td>1608576.00</td></tr><tr><td>15</td><td>188.50</td><td>1068.20</td><td>1281834.00</td><td>377010.00</td><td>1658844.00</td></tr><tr><td>20</td><td>251.34</td><td>1005.36</td><td>1206432.00</td><td>502680.00</td><td>1709112.00</td></tr><tr><td>25</td><td>314.18</td><td>942.53</td><td>1131030.00</td><td>628350.00</td><td>1759380.00</td></tr><tr><td>30</td><td>377.01</td><td>879.69</td><td>1055628.00</td><td>754020.00</td><td>1809648.00</td></tr><tr><td>35</td><td>439.85</td><td>816.86</td><td>980226.00</td><td>879690.00</td><td>1859916.00</td></tr><tr><td>40</td><td>502.68</td><td>754.02</td><td>904824.00</td><td>1005360.00</td><td>1910184.00</td></tr><tr><td>45</td><td>565.51</td><td>691.19</td><td>829422.00</td><td>1131030.00</td><td>1960452.00</td></tr><tr><td>50</td><td>628.35</td><td>628.35</td><td>754020.00</td><td>1256700.00</td><td>2010720.00</td></tr></table></div>
+<p>Bảng quỹ lương theo từng mức lương trung bình</p>
+<p>Lao động = 1005.36 nghìn người, đơn vị ltb(nghindong), ql(triệu đồng)</p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Lương trung bình</td><td>Quỹ lương</td></tr><tr><td>60.00</td><td>723859.20</td></tr><tr><td>70.00</td><td>844502.40</td></tr><tr><td>80.00</td><td>965145.60</td></tr><tr><td>90.00</td><td>1085788.80</td></tr><tr><td>100.00</td><td>1206432.00</td></tr><tr><td>110.00</td><td>1327075.20</td></tr><tr><td>120.00</td><td>1447718.40</td></tr><tr><td>130.00</td><td>1568361.60</td></tr><tr><td>140.00</td><td>1689004.80</td></tr><tr><td>150.00</td><td>1809648.00</td></tr><tr><td>160.00</td><td>1930291.30</td></tr><tr><td>170.00</td><td>2050934.40</td></tr><tr><td>180.00</td><td>2171577.60</td></tr><tr><td>190.00</td><td>2292220.80</td></tr><tr><td>200.00</td><td>2412864.00</td></tr></table></div>
+<p>Bảng tính toám giảm biên chế</p>
+<p>Lương trung bình= 80 nghìn, mức chi một người = 600 nghìn, số lao động = 1005.4 đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mức GBC</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi giảm biên chế</td><td>Tổng chi NS</td></tr><tr><td>5%</td><td>50.27</td><td>955.09</td><td>916888.32</td><td>30160.80</td><td>947049.12</td></tr><tr><td>10%</td><td>100.54</td><td>904.82</td><td>868631.04</td><td>60321.60</td><td>928952.64</td></tr><tr><td>15%</td><td>150.80</td><td>854.56</td><td>820373.76</td><td>90482.40</td><td>910856.16</td></tr><tr><td>20%</td><td>201.07</td><td>804.29</td><td>772116.48</td><td>120643.20</td><td>892759.68</td></tr><tr><td>25%</td><td>251.34</td><td>754.02</td><td>723859.20</td><td>150804.00</td><td>874663.20</td></tr><tr><td>30%</td><td>301.61</td><td>703.75</td><td>675601.92</td><td>180964.80</td><td>856566.72</td></tr><tr><td>35%</td><td>351.88</td><td>653.48</td><td>627344.64</td><td>211125.60</td><td>838470.24</td></tr><tr><td>40%</td><td>402.14</td><td>603.22</td><td>579087.36</td><td>241286.40</td><td>820373.76</td></tr><tr><td>45%</td><td>452.41</td><td>552.95</td><td>530830.08</td><td>271447.20</td><td>802277.28</td></tr><tr><td>50%</td><td>502.68</td><td>502.68</td><td>482572.80</td><td>301608.00</td><td>784180.80</td></tr></table></div>
+<p>Bảng tính toám giảm biên chế</p>
+<p>Lương trung bình= 100 nghìn, mức chi một người =1500 nghìn, số lao động = 1005.4 đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<p> </p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mức GBC</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi giảm biên chế</td><td>Tổng chi NS</td></tr><tr><td>5%</td><td>50.27</td><td>955.09</td><td>1146110.40</td><td>75402.00</td><td>1221512.40</td></tr><tr><td>10%</td><td>100.54</td><td>904.82</td><td>1085788.80</td><td>150804.00</td><td>1236592.80</td></tr><tr><td>15%</td><td>150.80</td><td>854.56</td><td>1025467.20</td><td>226206.00</td><td>1251673.20</td></tr><tr><td>20%</td><td>201.07</td><td>804.29</td><td>965145.60</td><td>301608.00</td><td>1266753.60</td></tr><tr><td>25%</td><td>251.34</td><td>754.02</td><td>904824.00</td><td>377010.00</td><td>1281834.00</td></tr><tr><td>30%</td><td>301.61</td><td>703.75</td><td>844502.40</td><td>452412.00</td><td>1296914.40</td></tr><tr><td>35%</td><td>351.88</td><td>653.48</td><td>784180.80</td><td>527814.00</td><td>1311994.80</td></tr><tr><td>40%</td><td>402.14</td><td>603.22</td><td>723859.20</td><td>603216.00</td><td>1327075.20</td></tr><tr><td>45%</td><td>452.41</td><td>552.95</td><td>663537.60</td><td>678618.00</td><td>1342155.60</td></tr><tr><td>50%</td><td>502.68</td><td>502.68</td><td>603216.00</td><td>754020.00</td><td>1357236.00</td></tr></table></div>
+<p> </p>
+<p>Bảng tính toán giảm biên chế</p>
+<p>Lương trung bình= 100 nghìn, mức chi một người =2000 nghìn, số lao động = 1005.4 đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<p> </p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mức GBC</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi giảm biên chế</td><td>Tổng chi NS</td></tr><tr><td>5%</td><td>50.27</td><td>955.09</td><td>1146110.40</td><td>100536.00</td><td>1246646.40</td></tr><tr><td>10%</td><td>100.54</td><td>904.82</td><td>1085788.80</td><td>201072.00</td><td>1286860.80</td></tr><tr><td>15%</td><td>150.80</td><td>854.56</td><td>1025467.20</td><td>301608.00</td><td>1327075.20</td></tr><tr><td>20%</td><td>201.07</td><td>804.29</td><td>965145.60</td><td>402144.00</td><td>1367289.60</td></tr><tr><td>25%</td><td>251.34</td><td>754.02</td><td>904824.00</td><td>502680.00</td><td>1407504.00</td></tr><tr><td>30%</td><td>301.61</td><td>703.75</td><td>844502.40</td><td>603216.00</td><td>1447718.40</td></tr><tr><td>35%</td><td>351.88</td><td>653.48</td><td>784180.80</td><td>703752.00</td><td>1487932.80</td></tr><tr><td>40%</td><td>402.14</td><td>603.22</td><td>723859.20</td><td>804288.00</td><td>1528147.20</td></tr><tr><td>45%</td><td>452.41</td><td>552.95</td><td>663537.60</td><td>904824.00</td><td>1568361.60</td></tr><tr><td>50%</td><td>502.68</td><td>502.68</td><td>603216.00</td><td>1005360.00</td><td>1608576.00</td></tr></table></div>
+<p> </p>
+<p>Bảng tính toán giảm biên chế</p>
+<p>Lương trung bình= 120 nghìn, mức chi một người =1500 nghìn, số lao động = 1005.4 đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<p> </p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mức GBC</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi giảm biên chế</td><td>Tổng chi NS</td></tr><tr><td>5%</td><td>50.27</td><td>955.09</td><td>1375332.48</td><td>75402.00</td><td>1450734.48</td></tr><tr><td>10%</td><td>100.54</td><td>904.82</td><td>1302946.56</td><td>150804.00</td><td>1453750.56</td></tr><tr><td>15%</td><td>150.80</td><td>854.56</td><td>1230560.64</td><td>226206.00</td><td>1456766.64</td></tr><tr><td>20%</td><td>201.07</td><td>804.29</td><td>1158174.72</td><td>301608.00</td><td>1459782.72</td></tr><tr><td>25%</td><td>251.34</td><td>754.02</td><td>1085788.80</td><td>377010.00</td><td>1462798.80</td></tr><tr><td>30%</td><td>301.61</td><td>703.75</td><td>1013402.88</td><td>452412.00</td><td>1465814.88</td></tr><tr><td>35%</td><td>351.88</td><td>653.48</td><td>941016.96</td><td>527814.00</td><td>1468830.96</td></tr><tr><td>40%</td><td>402.14</td><td>603.22</td><td>868631.04</td><td>603216.00</td><td>1471847.04</td></tr><tr><td>45%</td><td>452.41</td><td>552.95</td><td>796245.12</td><td>678618.00</td><td>1474863.12</td></tr><tr><td>50%</td><td>502.68</td><td>502.68</td><td>723859.20</td><td>754020.00</td><td>1477879.20</td></tr></table></div>
+<p> </p>
+<p>Bảng tính toán giảm biên chế</p>
+<p>Lương trung bình= 120 nghìn, mức chi một người =2000 nghìn, số lao động = 1005.4 đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<p> </p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mức GBC</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi giảm biên chế</td><td>Tổng chi NS</td></tr><tr><td>5%</td><td>50.27</td><td>955.09</td><td>1375332.48</td><td>100536.00</td><td>1475868.48</td></tr><tr><td>10%</td><td>100.54</td><td>904.82</td><td>1302946.56</td><td>201072.00</td><td>1504018.56</td></tr><tr><td>15%</td><td>150.80</td><td>854.56</td><td>1230560.64</td><td>301608.00</td><td>1532168.64</td></tr><tr><td>20%</td><td>201.07</td><td>804.29</td><td>1158174.72</td><td>402144.00</td><td>1560318.72</td></tr><tr><td>25%</td><td>251.34</td><td>754.02</td><td>1085788.80</td><td>502680.00</td><td>1588468.80</td></tr><tr><td>30%</td><td>301.61</td><td>703.75</td><td>1013402.88</td><td>603216.00</td><td>1616618.88</td></tr><tr><td>35%</td><td>351.88</td><td>653.48</td><td>941016.96</td><td>703752.00</td><td>1644768.96</td></tr><tr><td>40%</td><td>402.14</td><td>603.22</td><td>868631.04</td><td>804288.00</td><td>1672919.04</td></tr><tr><td>45%</td><td>452.41</td><td>552.95</td><td>796245.12</td><td>904824.00</td><td>1701069.12</td></tr><tr><td>50%</td><td>502.68</td><td>502.68</td><td>723859.20</td><td>1005360.00</td><td>1729219.20</td></tr></table></div>
+<p> </p>
+<p>Bảng tính toán giảm biên chế</p>
+<p>Lương trung bình= 120 nghìn, mức chi một người =1500 nghìn, số lao động = 1256.7 đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<p> </p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mức GBC</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi giảm biên chế</td><td>Tổng chi NS</td></tr><tr><td>5%</td><td>50.27</td><td>1193.87</td><td>1719165.60</td><td>94252.50</td><td>1813418.10</td></tr><tr><td>10%</td><td>100.54</td><td>1131.03</td><td>1628683.20</td><td>188505.00</td><td>1817188.20</td></tr><tr><td>15%</td><td>150.80</td><td>1068.20</td><td>1538200.80</td><td>282757.50</td><td>1820958.30</td></tr><tr><td>20%</td><td>201.07</td><td>1005.36</td><td>1447718.40</td><td>377010.00</td><td>1824728.40</td></tr><tr><td>25%</td><td>251.34</td><td>942.53</td><td>1357236.00</td><td>471262.50</td><td>1828498.50</td></tr><tr><td>30%</td><td>301.61</td><td>879.69</td><td>1266753.60</td><td>565515.00</td><td>1832268.60</td></tr><tr><td>35%</td><td>351.88</td><td>816.86</td><td>1176271.20</td><td>659767.50</td><td>1836038.70</td></tr><tr><td>40%</td><td>402.14</td><td>754.02</td><td>1085788.80</td><td>754020.00</td><td>1839808.80</td></tr><tr><td>45%</td><td>452.41</td><td>691.19</td><td>995306.40</td><td>848272.50</td><td>1843578.90</td></tr><tr><td>50%</td><td>502.68</td><td>628.35</td><td>904824.00</td><td>942525.00</td><td>1847349.00</td></tr></table></div>
+<p> </p>
+<p>Bảng tính toán giảm biên chế</p>
+<p>Lương trung bình= 120 nghìn, mức chi một người =2000 nghìn, số lao động = 1256.7 đơn vị: người (nghìn người), tiền (triệu đồng)</p>
+<p> </p>
+<div class="table-wrap"><table class="docx-table"><tr><td>Mức GBC</td><td>Số người</td><td>Lao động còn lại</td><td>Quỹ lương còn lại</td><td>Ngân sách chi giảm biên chế</td><td>Tổng chi NS</td></tr><tr><td>5%</td><td>50.27</td><td>1193.87</td><td>1719165.60</td><td>125670.00</td><td>1844835.60</td></tr><tr><td>10%</td><td>100.54</td><td>1131.03</td><td>1628683.20</td><td>251340.00</td><td>1880023.20</td></tr><tr><td>15%</td><td>150.80</td><td>1068.20</td><td>1538200.80</td><td>377010.00</td><td>1915210.80</td></tr><tr><td>20%</td><td>201.07</td><td>1005.36</td><td>1447718.40</td><td>502680.00</td><td>1950398.40</td></tr><tr><td>25%</td><td>251.34</td><td>942.53</td><td>1357236.00</td><td>628350.00</td><td>1985586.00</td></tr><tr><td>30%</td><td>301.61</td><td>879.69</td><td>1266753.60</td><td>754020.00</td><td>2020773.60</td></tr><tr><td>35%</td><td>351.88</td><td>816.86</td><td>1176271.20</td><td>879690.00</td><td>2055961.20</td></tr><tr><td>40%</td><td>402.14</td><td>754.02</td><td>1085788.80</td><td>1005360.00</td><td>2091148.80</td></tr><tr><td>45%</td><td>452.41</td><td>691.19</td><td>995306.40</td><td>1131030.00</td><td>2126336.40</td></tr><tr><td>50%</td><td>502.68</td><td>628.35</td><td>904824.00</td><td>1256700.00</td><td>2161524.00</td></tr></table></div>
+<p> </p></section></div>
+</div>
+</body>
+</html>

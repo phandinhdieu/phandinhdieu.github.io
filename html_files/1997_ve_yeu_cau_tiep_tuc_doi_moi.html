@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>VỀ YÊU CẦU TIẾP TỤC ĐỔI MỚI TRONG GIAI ĐOẠN HIỆN NAY (1997) – Toàn văn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --surface: #0f172a;
+      --text: #e5e7eb;
+      --muted: #a1a1aa;
+      --accent: #60a5fa;
+      --line: rgba(255,255,255,.08);
+      --ring: rgba(0,0,0,.25);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #2563eb;
+        --line: rgba(0,0,0,.08);
+        --ring: rgba(0,0,0,.06);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: radial-gradient(1600px 800px at 20% -10%, rgba(96,165,250,.08), transparent 40%),
+                  radial-gradient(1400px 700px at 120% 10%, rgba(59,130,246,.08), transparent 35%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Noto Sans';
+      line-height: 1.75;
+    }
+    .layout { display: grid; grid-template-columns: 280px 1fr; gap: 28px; max-width: 1200px; margin: 32px auto; padding: 0 20px; }
+    nav { position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto; padding: 18px; border-radius: 16px; background: var(--surface); box-shadow: 0 10px 30px var(--ring); border: 1px solid var(--line); }
+    nav h2 { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 4px 0 12px; }
+    nav ol { list-style: none; padding: 0; margin: 0; }
+    nav li { margin: 6px 0; }
+    nav a { color: var(--text); text-decoration: none; display: block; padding: 6px 10px; border-radius: 10px; }
+    nav a:hover { background: var(--line); }
+    nav ol ol { margin-left: 10px; border-left: 2px solid var(--line); padding-left: 10px; }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px var(--ring); padding: 28px; }
+    header.page { padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 900; font-size: 28px; margin: 0 0 6px; text-transform: uppercase; text-align:center; }
+    header.page p.author { margin: 6px 0 0; color: var(--muted); font-style: italic; font-size: 15px; text-align:right; }
+    .muted { color: var(--muted); }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 5; backdrop-filter: saturate(1.2) blur(8px); background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; text-decoration:none; display:inline-block; }
+    .btn:active { transform: translateY(1px); }
+    a.anchor { text-decoration: none; color: inherit; }
+    section { padding: 8px 0; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 24px 0 6px; }
+    h3 { font-weight: 700; font-size: 18px; margin: 18px 0 8px; }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .quote { margin: 10px 0; padding-left: 14px; border-left: 3px solid var(--line); font-style: italic; }
+    .poem { white-space: pre-line; text-align: center; font-style: italic; }
+  
+/* === Added: Mobile-friendly tweaks (non-destructive) === */
+@media (max-width: 960px) {
+  .layout, .grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  nav, nav.toc { position: relative !important; top: auto !important; height: auto !important; max-height: none !important; }
+  .content { padding: 20px !important; }
+  header.page h1 { font-size: 26px !important; line-height: 1.3 !important; text-align: center !important; }
+  .topbar-inner { padding: 10px 16px !important; }
+}
+/* Images and tables scale to viewport */
+img, video, svg { max-width: 100% !important; height: auto !important; }
+.table-wrap { overflow-x: auto; }
+/* Print cleanup */
+@media print {
+  .topbar, nav .sticky, .btn { display: none !important; }
+  .layout { display: block !important; }
+  body { background: #ffffff !important; color: #000 !important; }
+  .content { border: 0 !important; box-shadow: none !important; }
+}
+/* === iPhone/Messenger fit fixes === */
+html, body { max-width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+* { min-width: 0; }
+nav, .toc, .content { max-width: 100%; }
+nav ol, nav li, nav a { overflow-wrap: anywhere; word-break: break-word; }
+@media (max-width: 1024px) {
+  .layout, .grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  nav, nav.toc { position: relative !important; top: auto !important; height: auto !important; max-height: none !important; width: auto !important; }
+}
+
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+      <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+      <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav aria-label="Mục lục" id="toc">
+      <h2>Mục lục</h2>
+      <ol>
+        <li><a href="#title">Về yêu cầu tiếp tục đổi mới (1997)</a></li>
+        <li><a href="#subtitle">Lời dẫn</a></li>
+        <li><a href="#fulltext">Toàn văn</a></li>
+      </ol>
+    </nav>
+
+    <div class="content">
+      <header class="page">
+        <a class="anchor" id="title"></a>
+        <h1>VỀ YÊU CẦU TIẾP TỤC ĐỔI MỚI TRONG GIAI ĐOẠN HIỆN NAY</h1>
+        <p class="author">PHAN ĐÌNH DIỆU • 12–13/12/1997, Hà Nội</p>
+      </header>
+
+      <section id="subtitle" class="note">
+        <p><em>Phát biểu ý kiến tại Hội nghị Đoàn Chủ tịch mở rộng UBTƯ Mặt trận Tổ quốc Việt Nam, 12–13/12/1997 tại Hà Nội.</em></p>
+      </section>
+
+      <section id="fulltext">
+        <p>Vấn đề tiếp tục công cuộc đổi mới để đẩy mạnh sự phát triển kinh tế xã hội ở nước ta vốn đã được đặt ra thường xuyên từ hơn mười năm nay, hiện nay trước những biến chuyển của tình hình mới nó lại càng trở nên cấp thiết, đòi hỏi chúng ta phải nghiêm túc đánh giá lại những gì đã qua để tìm những giải pháp tích cực cho giai đoạn mới. Tôi hoan nghênh bản báo cáo chuẩn bị cho Hội nghị TƯ Đảng lần thứ tư sắp tới do đ/c Lê Đăng Doanh trình bày, bản báo cáo đã đề cập một cách thẳng thắn đến nhiều vấn đề cơ bản của tình hình hiện nay và đã có sự phân tích tương đối sâu sắc, tôi hi vọng là từ những phân tích đó sẽ có thể đi đến các giải pháp thực sự đáp ứng các đòi hỏi mới của sự phát triển đất nước. Dưới đây tôi xin góp thêm một số ý kiến về việc phân tích tình hình và hướng tìm giải pháp cho việc tiếp tục đổi mới.</p>
+
+        <p>Chúng ta đang sống trong một thời đại của những chuyển biến sâu sắc và hết sức nhanh chóng trên toàn thế giới, trên khắp mọi lĩnh vưc kinh tế, chính trị, xã hội. Sự chuyển biến sang một nền kinh tế mới trong đó các yếu tố thông tin và trí tuệ ngày càng giữ một vai trò quyết định, sự diễn biến mau lẹ của quá trình thế giới hóa (mondialisation) nền kinh tế thị trường với sự cạnh tranh ngày càng quyết liệt, vốn xuất phát từ yêu cầu của các nước công nghiệp phát triển nhất, đã nhanh chóng tác động đến mọi nước trên thế giới, lôi cuốn cả thế giới vào trong cùng một dòng chảy mà bất kỳ nước nào, dầu không muốn cũng khó có cách gì tránh né được. Để hòa nhập được vào trong dòng chảy đó và vươn lên, chúng ta đã hiểu rằng cần phải đổi mới tư duy, tiếp nhận những cách suy nghĩ, những quan niệm mới về thời cuộc, học tập kinh nghiệm từ nhiều phía đối với việc tổ chức nền kinh tế xã hội, v.v… Cải cách kinh tế theo hướng phát triển kinh tế thị trường và cải cách chính trị theo hướng từng bước dân chủ hóa xã hội, về nguyên tắc đã được xem là nội dung cơ bản của đổi mới, cùng nhằm mục đích là phát huy tối đa mọi nguồn năng lực tài nguyên, lao động, trí tuệ, của toàn dân tộc để làm cho <em>dân giàu, nước mạnh, xã hội công bằng, văn minh.</em></p>
+
+        <p>Từ cuối những năm 80, trước yêu cầu cấp thiết của việc thoát ra khỏi tình trạng khủng hoảng toàn diện của đất nước, Đảng đã chấp nhận một số chủ trương đổi mới, đặc biệt về kinh tế, đồng thời Đảng giữ quyền lãnh đạo công cuộc đổi mới. Điều đó đã có tác động giữ cho công cuộc đổi mới bước đầu được tiến hành trong điều kiện tương đối ổn định, đất nước thoát ra khỏi khủng hoảng, nền kinh tế thị trường được hình thành dần, đời sống của một bộ phận dân cư được cải thiện rõ rệt, v.v… Nhưng rồi rất nhanh chóng, tình hình đã làm bộc lộ rõ một mâu thuẫn cơ bản: yêu cầu phát triển nền kinh tế thị trường một cách đầy đủ trong điều kiện hiện đại với nhiều thách thức và canh tranh gay gắt đòi hỏi sự đổi mới toàn diện cả về kinh tế và chính trị đã xung đột với vị trí lãnh đạo độc quyền của một Đảng Cộng sản, tuy có chấp nhận một số nội dung đổi mới nhưng vẫn kiên trì các nguyên tắc chuyên chính vô sản, đấu tranh giai cấp và cái gọi là định hướng xã hội chủ nghĩa (cái định hướng này thường được giải thích tùy tiện: khi thì như là dân giàu nước mạnh để ai cũng có thể chấp nhận, trong các tài liệu chính thức thì vẫn là kinh tế quốc doanh là chủ đạo, xây dựng chế độ sở hữu công cộng và sở hữu tập thể, và chuyên chính một Đảng…). Đáng lẽ Đảng đẩy mạnh hơn nữa quá trình tự đổi mới để phù hợp với yêu cầu phát triển kinh tế thị trường và dân chủ hóa xã hội, thì tiếc thay, dưới danh nghĩa duy trì sự ổn định chính trị, Đảng vẫn tiếp tục củng cố sự lãnh đạo độc quyền với các nguyên tắc nói trên. Và như vậy, mâu thuẫn cơ bản kể trên không được giải quyết một cách thỏa đáng theo yêu cầu khách quan của sự phát triển, mà lại được kiềm chế lại dưới sức mạnh chuyên chế để bảo đảm quyền lãnh đạo duy nhất của Đảng. Điều này đã được thể hiện ở Đại hội 7, và một cách rõ ràng, dứt khoát hơn ở Đại hội 8 của Đảng. Đảng liên tiếp khẳng định là <em>Đảng cầm quyền, lãnh đạo toàn diện và tuyệt đối Nhà nước và xã hội</em>. Mâu thuẫn bị kiềm chế và dồn nén, không được giải quyết theo hướng tích cực, thì đã quay trở lại biến thành một sức mạnh phá phách từ bên trong bằng mọi kiểu kết hợp các tiêu cực của một thị trường hỗn loạn và một độc quyền toàn trị không giới hạn. Đó có thể xem là nét đặc trưng chủ yếu của tình hình kinh tế xã hội ở nước ta trong những năm gần đây, đang tạo ra những khó khăn to lớn cho sự phát triển tiếp tục của đất nước.</p>
+
+        <div class="divider"></div>
+
+        <p>Tình trạng nói trên được biểu hiện rõ rệt trên mọi mặt của đời sống đất nước trong những năm vừa qua. Trước hết là tệ nạn tham nhũng tràn lan tàn phá mọi thành quả khiêm tốn của những cố gắng xây dựng đất nước mà chưa có cách nào khắc phục được. Một thị trường còn non yếu lại nửa kín nửa mở không biến được thành nơi phát huy và ganh đua của các tài năng kinh doanh, nhưng lại rất thuận lợi cho những thế lực độc quyền mặc sức tự do thi thố các mánh khóe trao đổi và bán chác quyền lực, đó là đặc điểm chính của quốc nạn tham nhũng, buôn lậu, hối lộ tràn lan; càng kêu gọi chống lại càng phát triển trầm trọng. Một số vụ tham nhũng bị đưa ra xét xử đã làm dân chúng bàng hoàng về qui mô của tội phạm, nhưng cũng đáng hoài nghi về khả năng trừng trị tận gốc vì truy cứu các đường dây hối lộ đến một lúc nào đó trở đi thì thường trở nên mờ mịt.</p>
+
+        <p>Về kinh tế, tuy có nói đến kinh tế nhiều thành phần, nhưng ngay trong Văn kiện Đại hội 8, cách đề cập đến cũng đã khá phân biệt đối xử. Trong bài trình bày của đồng chí Lê Đăng Doanh đã nói khá rõ tình hình làm ăn thua lỗ của đại đa số các doanh nghiệp quốc doanh, và nhiều vị đã phát biểu nêu rõ tình trạng tham nhũng, hối lộ tại các doanh nghiệp đó. Chấp nhận kinh tế thị trường, có các doanh nghiệp, có các ngân hàng, có các cơ cấu tài chính,…, đáng lẽ các cơ cấu và tổ chức đó phải được có đầy đủ trách nhiệm và quyền chủ động hoạt động kinh doanh theo cơ chế thị trường, nhưng chúng lại được quản lý và chỉ đạo tuân theo ý muốn chủ quan của lãnh đạo, nên tình trạng làm ăn kém hiệu quả, thiếu năng động và sáng tạo, tạo điều kiện cho tiêu cực, tham nhũng, đi đến đổ vỡ, v.v… là tất nhiên.</p>
+
+        <p>Trong nền kinh tế thị trường, các doanh nghiệp tư nhân đã được khẳng định trên khắp thế giới là năng động nhất, chính vì vậy mà ngày nay, việc tư nhân hóa các doanh nghiệp nhà nước không những được thực hiện ở các nước xã hội chủ nghĩa cũ mà cả ở các nước tư bản vốn đã từng có một khu vực quốc doanh rộng lớn. Thậm chí, để tăng cường năng lực cạnh tranh trong giai đoạn thương mại điện tử của quá trình thế giới hóa nền kinh tế hiện nay, nhiều vị lãnh đạo các nước đã xem việc các doanh nghiệp tư nhân giữ vị trí dẫn đầu là một nguyên tắc bảo đảm cho sự thành công ở nước ta trong bước đầu phát triển kinh tế thị trường, các doanh nghiệp tư nhân mới được hình thành và nói chung còn non yếu, tuy vậy cũng đã góp phần tạo nên những yếu tố năng động trong nền kinh tế. Nhưng trước thái độ ghẻ lạnh và kỳ thị của Đảng (đã từng có những chỉ thị cấm đảng viên làm kinh tế tư bản tư nhân) và trăm thứ phiền hà do các cơ quan nhà nước gây ra, nhiều tâm huyết và năng lực sớm bị thui chột, rồi đến nỗi hiện nay, như nhiều nhà quan sát nước ngoài nhận xét và lấy làm lạ là hầu như không thấy có một doanh nhân nào có tầm cỡ, có ý đồ lâu dài xây dựng một cái gì đáng kể cho nền kinh tế đất nước! Trong điều kiện không được khuyến khích như vậy, một điều khá tự nhiên là người ta chỉ có thể đầu tư cho những việc có lợi ích ngắn hạn, có tính chất ăn xổi ở thì, thậm chí làm ăn gian dối, móc ngoặc với các phần tử tiêu cực trong cơ quan nhà nước để trục lợi.</p>
+
+        <p>Chúng ta phải thấy rằng đất nước có giàu mạnh lên được hay không, nền kinh tế có tạo nên những điểm sáng đặc sắc có sức mạnh cạnh tranh trên thị trường hay khôn, chủ yếu là tùy thuộc ở chỗ ta có xây dựng được các doanh nghiệp mạnh, năng động với các doanh nhân có nghị lực, có tâm huyết, có tri thức và năng lực sáng tạo hay không. Những doanh nhân như vậy khó có thể xuất hiện từ những người lãnh đạo doanh nghiệp nhà nước, vốn là những công chức nhà nước phải tuân theo cách quản lý quan liêu của bộ máy hành chính nhà nước. Khu vực kinh tế tư nhân với những đặc thù của nó, nếu được thật sự khuyến khích để tự do phát triển, sẽ có thể là nơi cống hiến cho đất nước những doanh nhân như vậy. Ngoài ra, khuyến khích và tạo các điều kiện thuận lợi, an toàn về pháp lý và có những ưu đãi cần thiết đối với khu vực kinh tế này , đặc biệt là trong những ngành mũi nhọn, cũng sẽ có tác động thu hút các nguồn vốn trong nước cho sự nghiệp xây dựng đất nước, không để các nguồn vốn này bị tồn đọng vô ích hoặc chi tiêu hoang phí.</p>
+
+        <p>Một hệ quả quan trọng nữa của việc kéo dài tình trạng lãnh đạo độc quyền là sự thoái hóa rõ rệt cả về năng lực, phẩm chất và uy tín của bộ máy nhà nước. Đảng, hay đúng hơn một bộ phận nhỏ nắm quyền lực của Đảng, tự qui định là lãnh đạo toàn diện và tuyệt đối Nhà nước và xã hội, đề ra các nguyên tắc khá chi tiết về việc hệ thống cấp ủy Đảng cho ý kiến chỉ đạo đối với các hoạt động của Quốc hội, Chính phủ, Tòa án, Viện Kiểm sát, cho đến các đoàn thể quần chúng, trên thực tế đã biến toàn bộ thể chế nhà nước thành một hệ thống thừa hành chỉ thị của bộ phận quyền lực trong Đảng; “dân chủ”, luật pháp cũng biến thành những công cụ phục vụ cho sự thừa hành đó. Và tất nhiên, trong điều kiện như vậy, mọi tài năng, tâm huyết, bản lĩnh, nếu không trở thành vô hiệu thì cũng bị bào mòn cho vừa khung của cửa quyền lực. Và trong mọi cấp, mọi ngành xuất hiện ngày càng nhiều những kẻ ăn bám theo cơ chế độc quyền với đủ tính chất nịnh bợ, dối trá, tham nhũng, quan liêu, hống hách, cửa quyền,… Hiệu lực của bộ máy nhà nước bị giảm sút, thậm chí nhiều chủ trương tích cực, đúng đắn cũng bị chính những người trong bộ máy biến báo và lợi dụng cho lợi ích cá nhân nên không được thi hành đến nơi đến chốn, dân tình ta thán vì mọi thứ nhũng nhiễu,v.v… Vì Đảng đặc biệt nắm toàn quyền quyết định trong khâu tổ chức cán bộ, nên trong cơ chế lựa chọn những cán bộ chủ chốt hiện nay, việc sắp xếp thực chất chỉ được tiến hành trong một phạm vi hẹp, tự sắp xếp cho nhau và cho những người tùy thuộc trong trật tự quyền lực. Cả dân tộc thực tế là đứng ngoài sự lựa chọn đó. Và vì vậy, không ít những kẻ bỗng chốc leo lên những vị trí chủ chốt, đầy quyền lực nhưng ngoài việc lo giữ ghế và tìm cách leo cao hơn thì chẳng có mấy tài năng và tâm huyết để làm được việc có ích cho đất nước.</p>
+
+        <div class="divider"></div>
+
+        <p>Tôi không có tham vọng phát biểu ý kiến đầy đủ về mọi mặt khó khăn trong tình hình phát triển kinh tế xã hội của nước ta hiện nay. Tại Hội nghị này, nhiều vị đã phát biểu và phân tích sâu sắc về các vấn đề như: hiệu quả của việc sử dụng vốn đầu tư nước ngoài và tình hình công nợ, cách thức quyết định khi chưa có đủ căn cứ vững chắc cho các dự án đầu tư lớn, tình hình giáo dục và khoa học chậm được cải thiện, sự bất bình đẳng trong xã hội gia tăng, đặc biệt là đời sống cực kỳ khó khăn của đại đa số nông dân và công nhân, v.v… Dĩ nhiên, tất cả tình hình khó khăn đó đều có nguyên nhân khách quan là nước ta bước vào thời kỳ đổi mới từ những hậu quả chưa được khắc phục của chiến tranh và từ sự nghèo nàn lạc hậu vốn có của nền kinh tế. Những thách thức của quá trình hội nhập vào nền kinh tế khu vực và thế giới lại quá nghiệt ngã, phải chấp nhận hội nhập trong khi chưa tạo được những ưu thế cạnh tranh đáng kể. Chắc chắn không ai có thể phủ nhận những khó khăn khách quan là cực kỳ to lớn. Tuy nhiên, điều đáng nói ở đây là trước những khó khăn khách quan và những khó khăn nghiệt ngã đó, ta chưa huy động được mọi khả năng về tài nguyên, về lao động và trí tuệ của toàn dân tộc để làm thành sức mạnh đưa đất nước tiến lên. Mà một nguyên nhân cơ bản là chưa có được giải pháp thỏa đáng để giải quyết mâu thuẫn giữa yêu cầu phát triển kinh tế thị trường và dân chủ hóa xã hội với việc duy trì sự lãnh đạo độc quyền của Đảng Cộng sản.</p>
+
+        <p>Thời đại hiện nay đang có những chuyển biến sâu sắc về kinh tế và xã hội. Và trong sự chuyển biến đó, vai trò của Nhà nước cũng có nhiều thay đổi. Nhà nước không còn là công cụ của đấu tranh giai cấp, mà phải tiến tới là nhà nước của sự tăng trưởng kinh tế, của các tiến bộ công nghệ và của thị trường. Nhà nước phải là Nhà nước của toàn dân, mà chức năng chủ yếu là kiến tạo một môi trường pháp lý và những điều kiện thuận lợi cho mọi người dân được tự do phát huy mọi năng lực và trí tuệ của mình để tiến hành các hoạt động kinh tế, văn hóa, xã hội, đồng thời đóng vai trò là người trọng tài công minh điều hòa mọi xung đột lợi ích của các công dân trong xã hội. Nhà nước không còn là Nhà nước cai trị, lại càng không thể là công cụ của một Đảng cai trị. Theo một ý nghĩa nào đó, Nhà nước cũng cần phải tính toán sòng phẳng với dân theo kiểu một doanh nghiệp: những sản phẩm do bộ máy nhà nước làm ra (các quyết định, chính sách, các biện pháp quản lý, điều hành,…) phải được đánh giá và phán xét về chất lượng, hiệu quả; nếu hiệu quả quá thấp so với chi phí thì cần phải xử lý. Ngày nay, không thể có một bộ phận nào chiếm đặc quyền lãnh đạo, làm ra sản phẩm gì dân cũng phải chấp nhận, nói xuôi nói ngược gì dân cũng phải nghe như lời vàng ý ngọc. Trong điều kiện nước ta, đã đến lúc không thể vin vào lý do trung thành để áp đặt một ý thức hệ lỗi thời cho xã hội, không thể dựa vào những hào quang dĩ vãng của một thế hệ di trước để khẳng định vị trí độc tôn cho một lớp người tự xưng là kế thừa trong hiện tại, không thể buộc mọi người chấp nhận có con đường được lựa chọn một lần cho mãi mãi.</p>
+
+        <p>Cuộc sống hiện tại có những yêu cầu của hiện tại, và phải do những con người của hiện tại cùng nhau góp sức tìm cách giải quyết trong sự bình đẳng. Yêu cầu của hiện tại là phải tiếp tục đổi mới sâu rộng hơn nữa theo hướng chấp nhận đầy đủ kinh tế thị trường và dân chủ hóa xã hội. Chấp nhận kinh tế thị trường, xóa bỏ sự quản lý bao cấp của các cơ quan hành chính nhà nước đối với các doanh nghiệp, tạo điều kiện bình đẳng với các chủ thể kinh doanh khuyến khích các doanh nghiệp tư nhân và ưu tiien tạo thuận lợi cho các doanh nhân tài năng có khả năng tạo nên các ưu thế cho kinh tế quốc gia, từ đó huy động được mạnh mẽ các nguồn đầu tư trong nước cả về vốn cũng như về năng lực trí tuệ. Một nhân tố cơ bản của  nền kinh tế mới trên phạm vi thế giới là thông tin và trí tuệ, cho nên việc tự do hóa trao đổi thông tin, tăng cường giáo dục nâng cao dân trí, đưa thông tin và tri thức đến mọi người, đồng thời tăng cường các yếu tố thông tin trong hiện đại hóa các ngành sản xuất, dịch vụ hiện có và phát triển các ngành sản xuất, dịch vụ mới,… là những cơ hội cần được đặc biệt chú ý. Mà để tận dụng được những cơ hội này, thì kinh tế tư nhân, do tính năng động và linh hoạt của nó, là thích hợp hơn cả. Để tạo ra một nền kinh tế năng động, một xã hội năng động, hãy để cho toàn xã hội tham gia vào việc quyết định các hoạt động sản xuất, kinh doanh, dịch vụ,…còn Nhà nước thì cần đủ năng lực để quản lý vĩ mô, bảo đảm cho xã hội một môi trường an ninh và thuận lợi là chủ yếu. Yêu cầu dân chủ hóa chính trị cũng đã trở nên hết sức bức thiết. Những tư tưởng mới, những quan điểm mới, vốn là những nguồn giá trị hỗ trợ cho việc làm ra của cải và sự giàu có trong giai đoạn mới, nhưng nếu trái với sự hiểu biết của Đảng; đều bị cấm đoán. Yêu cầu hiện đại hóa xã hội đòi hỏi phải thực hiện các quyền tự do dân chủ tối thiểu như tự do ngôn luận, tự do tư tưởng, tự do báo chí, rồi tự do lập hội, tự do ứng cử và bầu cử thật sự.</p>
+
+        <p>Tiếc rằng, trong các Văn kiện Đại hội 8 của Đảng cũng như trong các chủ trương gần đây, Đảng nói đến đổi mới nhưng chưa hề có ý định tự đổi mới để đáp ứng các yêu cầu nói trên. Cũng cần phải nhìn nhận một thực tế là với một bộ máy có tổ chức chặt chẽ và một lực lượng chuyên chính thừa hưởng được từ trong quá khứ, bộ máy quyền lực trong Đảng hiện nay vẫn có đủ sức mạnh khống chế xã hội dưới quyền cai trị của mình để thực hiện sự đổi mới nửa vời, dưới danh nghĩa bảo vệ sự ổn định, không đi chệch hướng, giữ vững vai trò lãnh đạo của giai cấp công nhân, thực hiện định hướng xã hội chủ nghĩa,v.v. và v.v… Thực ra thì trong xã hội ta hiện nay, nói mãi những chuyện cách mạng xã hội chủ nghĩa, vai trò lãnh đạo của giai cấp công nhân, Đảng là đội tiên phong của giai cấp,…đã trở nên vô ích và vô nghĩa, khi mà trong thực tế, trong cái xã hội mà giai cấp công nhân được mang danh là lãnh đạo thì công nhân và nông dân vẫn là những tầng lớp có cuộc sống khốn khổ nhất, trong khi lớn tiếng chống bóc lột thì những người đáng gọi là bóc lột  chủ yếu hiện nay lại chính là một bộ phận khá lớn những quan chức có quyền lực trong Đảng. Cần phải thẳng thắn mà thừa nhận rằng đất nước ta không thể giàu lên được, đời sống nhân dân lao động của ta không thể khấm khá lên được bằng đấu tranh giai cấp, bằng chuyên chính vô sản, bằng kinh tế nhà nước, và bằng những lời lẽ mị dân được đâu.</p>
+
+        <p>Cho nên, nếu Đảng tiếp tục củng cố sự lãnh đạo độc quyền của mình bằng sưc mạnh chuyên chế, thì đất nước khó mà tiến hơn được nữa, nguy cơ của tụt hậu và khủng hoảng khó mà tránh khỏi. Con đường thoát ra cho đất nước lúc này là Đảng thật sự tự đổi mới một cách triệt để để mở đường cho dân tộc đẩy mạnh đổi mới theo những hướng nói trên. Đảng triệt để đổi mới là đổi mới về mục tiêu, về cơ sở lý luận và tư tưởng, về phương thức tổ chức, vầ đặc biệt về cách xác định vị trí của mình trong dân tộc. Không cần băn khoăn về tính giai cấp, về vai trò tiên phong giai cấp của mình, vì như trên đã nói, những chuyện đó đã trở nên vô nghĩa, cái cần quan tâm và giữ vững là có tiếp tục giữ vai trò lực lượng tiên phong của dân tộc trong bước chuyển biến lịch sử quan trọng này hay không.</p>
+
+        <p>Dẫu biết rằng vô cùng khó khăn, nhưng là một người dân của đất nước, tôi cũng hy vọng rằng sớm muộn Đảng, với nhiều năng lực và trí tuệ vốn tiềm tàng trong đội ngũ của mình, sẽ thật sự thực hiện cuộc đổi mới lịch sử của mình, tạo điều kiện cho đất nước ta, dân tộc ta phát huy được mọi tiềm năng tài nguyên, sức lực và trí tuệ để nhanh chóng nâng cao thân phận của mình, sánh vai bình đẳng cùng các dân tộc khác khi bước sang thế kỷ mới.</p>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phan Đình Diệu - Nhật Ký Một Chuyến Đi Xa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #0f152b;
+      --card: #111936;
+      --text: #e7ecff;
+      --muted: #9aa3c0;
+      --accent: #5b8cff;
+      --line: #1d274c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f1530;
+        --muted: #55607a;
+        --accent: #3957ff;
+        --line: #e7e9f4;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; }
+    nav.toc {
+      position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto;
+      padding: 18px; border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    nav.toc h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+    nav.toc ol { list-style: none; padding: 0 0 0 4px; margin: 0; }
+    nav.toc > ol > li > a { font-weight: 600; }
+    nav.toc li { margin: 6px 0; }
+    nav.toc a { color: var(--text); display: inline-block; padding: 6px 8px; border-radius: 8px; }
+    nav.toc a:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    nav.toc details { border: 1px solid var(--line); border-radius: 10px; padding: 6px 8px; margin: 8px 0; }
+    nav.toc details > summary { cursor: pointer; list-style: none; font-weight: 700; }
+    nav.toc details[open] { background: color-mix(in srgb, var(--accent), transparent 92%); }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.06); padding: 28px; }
+    header.page { padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px; text-align: center; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 30px; margin: 0 0 6px; line-height: 1.3; text-transform: uppercase; }
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; text-align: right; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 26px 0 6px; line-height: 1.35; }
+    h3 { font-weight: 700; margin: 18px 0 8px; }
+    p { margin: 10px 0; }
+    figure { margin: 18px 0; text-align: center; }
+    figure img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+    figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+              background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    .copy-anchor { margin-left: 8px; border: 1px dashed var(--line); border-radius: 8px; padding: 2px 6px; font-size: 12px; cursor: pointer; }
+    .copy-anchor:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+
+    /* Mobile layout */
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: 1fr; }
+      nav.toc { position: relative; height: auto; }
+      header.page h1 { font-size: 26px; }
+    }
+
+    /* Print cleanup */
+    @media print {
+      .topbar, nav.toc, .copy-anchor { display: none !important; }
+      .grid { display: block !important; }
+      main.content { border: 0 !important; box-shadow: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+      a { color: inherit !important; text-decoration: none !important; }
+      h1, h2, h3, p { break-inside: avoid; }
+      summary { display: none !important; }
+    }
+  </style>
+  <script>
+    function copyAnchor(btn) {
+      const h = btn.closest('h2, h3');
+      if (!h) return;
+      const anchor = h.querySelector('a[id]');
+      const id = anchor ? anchor.id : h.id;
+      if (!id) return;
+      const url = location.origin + location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        const prev = btn.textContent;
+        btn.textContent = 'Đã sao chép';
+        setTimeout(() => btn.textContent = 'Sao chép liên kết', 1200);
+      });
+    }
+  </script>
+  </head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+        <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+        <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </div>
+    <div class="grid">
+      <nav class="toc" aria-label="Mục lục">
+        <h2 id="mucluc">Mục lục</h2>
+
+        <details open>
+          <summary><a href="#title">Nhật ký một chuyến đi xa</a></summary>
+          <ol>
+            <li><a href="#mo-dau">Mở đầu — Đến San Francisco</a></li>
+            <li><a href="#16-9">16/9 — Los Angeles </a></li>
+            <li><a href="#17-9">17/9 — XEROX Computer Service</a></li>
+            <li><a href="#18-9">18/9 — Đi lại WESCON/80</a></li>
+            <li><a href="#19-9">19/9 — Đại học Stanford</a></li>
+            <li><a href="#22-9">22/9 — Đại học Berkeley</a></li>
+            <li><a href="#23-9">23/9 — Trung tâm tính toán của Lawrence Berkeley Laboratory</a></li>
+            <li><a href="#24-9">24/9 — Gặp Neal Koblitz ở Seattle</a></li>
+            <li><a href="#25-9">25/9 — Đại học Washington ở Seattle</a></li>
+            <li><a href="#26-9">26/9 — Tham quan nhà máy sản xuất máy bay Boeing</a></li>
+            <li><a href="#29-9">29/9 — J. H. Levan (Lê Văn Hóa)</a></li>
+            <li><a href="#30-9">30/9 — Đại học Illinois University at Chicago Circle</a></li>
+            <li><a href="#1-10">1/10 — 9 giờ sáng đến 12 giờ khuya</a></li>
+            <li><a href="#2-10">2/10 — Một ngày trên ba thành phố của Canada: Toronto – Montréal – Québec</a></li>
+            <li><a href="#4-10">4/10 — Một buổi sáng Québec</a></li>
+            <li><a href="#6-10">6/10 — Trường Đại học Harvard</a></li>
+            <li><a href="#7-10">7/10 — Trường MIT</a></li>
+            <li><a href="#8-10">8/10 — Tạm biệt, Boston – Cambridge</a></li>
+            <li><a href="#9-10">9/10 — New York</a></li>
+            <li><a href="#12-10">12/10 — Gặp ông E. Cooperman</a></li>
+            <li><a href="#13-10">13/10 — Hội nghị khoa học</a></li>
+            <li><a href="#14-10">14/10 — Tiếp tục dự hội nghị và gặp gỡ một số người quen biết</a></li>
+            <li><a href="#15-10">15/10 — Về Washington</a></li>
+            <li><a href="#17-10">17/10 — Nghỉ</a></li>
+            <li><a href="#18-10">18/10 — Tạm biệt New York và nước Mỹ</a></li>
+            <li><a href="#19-10">19/10 — Paris</a></li>
+            <li><a href="#20-10">20/10 — Đến CNAM và dạo chơi Paris</a></li>
+            <li><a href="#21-10">21/10 — Đại học Paris 6, 7</a></li>
+            <li><a href="#22-10">22/10 — Paris - Gặp gỡ các bạn Pháp</a></li>
+            <li><a href="#23-10">23/10 — Làm việc với một số anh em của Viện sang đây thực tập</a></li>
+            <li><a href="#24-10">24/10 — Jean Marc Steyaert</a></li>
+            <li><a href="#25-10">25/10 — Alain Tessonnière</a></li>
+            <li><a href="#26-10">Tối 26/10 — Đến sân bay Singapore</a></li>
+            <li><a href="#27-10">27/10 — Rời Singapore, đi máy bay về Bangkok</a></li>
+            <li><a href="#28-10">28/10 — Bangkok</a></li>
+            <li><a href="#29-10">29/10 — Đến thăm trường AIT (Asian Institute of Technology) ở Bangkok</a></li>
+            <li><a href="#30-10">30/10 — Anh Tôn Thất Tùng</a></li>
+            <li><a href="#31-10">31/10 — Về Hà Nội - thực sự chỉ mới bắt đầu...</a></li>
+          </ol>
+        </details>
+
+      </nav>
+      <main class="content">
+        <header class="page">
+          <a id="title"></a>
+          <h1>NHẬT KÝ MỘT CHUYẾN ĐI XA</h1>
+          <p class="author">IX – X/1980 &nbsp; | &nbsp; Phan Đình Diệu</p>
+        </header>
+
+   
+
+        <section id="lts" class="note">
+                <p><a href="NhatKyMotChuyenDiXa_PhanDinhDieu_My_0910_1980.pdf" target="_blank"><strong>Bản viết tay – Nhật Ký Một Chuyến Đi Xa</strong></a></p>
+      
+           <figure>
+          <img src="Nhatky-bia.png" alt="Bản viết tay - Nhật ký một chuyến đi xa " style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+        </figure>
+
+                <p><strong>Lời dẫn – </strong>
+                        <em>
+                                Nhật ký một chuyến đi xa viết về chuyến đi 6 tuần của ông Phan Đình Diệu (khi đó là thanh niên 43 tuổi) vào tháng 9, tháng 10 năm 1980.
+Trong chuyến đi, ông đã được mời trình bày xêmina khoa học ở những nhóm nghiên cứu đỉnh cao như xêmina ở Berkeley với Harrison, Paz, Blum, Zadeh, Smale ; xêmina MIT của Papadimitriou chủ trì ; xêmina ở Đại học Washington với Koblitz, ở  Đại học Toronto với Cook, Rackoff, Erdos, ở Đại học Maryland và một số nơi khác ; 
+trao đổi khoa học hay bàn thảo về hợp tác khoa học giữa hai nước ở Stanford (Ullman, Manna), Havard (M.Rabin, J. Reif), Chicago (Lousie Hay, Douglas Miller, Levan), Courant Institute of Mathematics (M. Davis), Columbia (Filotti),  National Science Foundation v.v. 
+Trên đường về ông qua Paris trình bày xêmina ở Paris 6 và làm việc cùng nhiều người bạn thân thiết và gắn bó với Việt nam (Maurice Nivat, Henri Van Regemonter, Alain Tessonière,  Jean-Marc Steyert v.v ). 
+<br />
+Xúc  động nhất khi xen giữa những cuộc làm việc đó là những cuộc gặp thân tình với những người bạn, những người đồng hương, cùng những tâm tư, trăn trở với tình hình đất nước của ông. 
+Chúng tôi xin gửi các bạn những trang nhật ký này (có cắt đi một số đoạn riêng tư gia đình) để như một tham khảo về chuyến đi của một nhà khoa học Việt Nam trên đất Mỹ, trong giai đoạn đất nước bị cấm vận và dường như bị cô lập với thế giới bên ngoài.  
+Cuối năm 1980 ông có những phát biểu mạnh mẽ trên Quốc hội, và sau đó năm 1981 viết một bài nghiên cứu công phu về 
+<a href="1981-khoa-hoc-he-thong.html">« Khoa học hệ thống và một số ý kiến về vấn đề cải tiến quản lý kinh tế hiện nay ».</a> Cũng năm 1981, ông thôi là nghị sỹ quốc hội. 
+<br /> </em>
+<br /> 
+<strong>Nhật ký chuyến đi này đã được trích đăng 3 kỳ trên báo VietnamNet:</strong>
+<ul>
+        <li><label for="vietnamnet-3"><a href="https://vietnamnet.vn/nhat-ky-mot-chuyen-di-xa-cua-co-gs-phan-dinh-dieu-505175.html">Nhật ký một chuyến đi xa của cố GS Phan Đình Diệu</a></label></li>
+        <li><label for="vietnamnet-2"><a href="https://vietnamnet.vn/nhung-dem-khong-ngu-cua-gs-phan-dinh-dieu-o-canada-505179.html">"Những đêm không ngủ" của GS Phan Đình Diệu ở Canada</a></label></li>
+        <li><label for="vietnamnet-1"><a href="https://vietnamnet.vn/gs-phan-dinh-dieu-chieu-dai-nao-cho-dat-nuoc-505180.html">GS Phan Đình Diệu: "Chiều dài nào cho đất nước?"</a></label></li>
+</ul>
+
+<a href="https://www.facebook.com/rongchoi/posts/pfbid02m7fC3VdPWGb5mAQNYmYHywF3TQ4XzAEhs7Pr6iXWyyjLhKxpNJSnLFf9sgbMUhtMl">Bản trên facebook</a>
+
+        </section>
+
+        <section id="mo-dau"><p class="muted">NHẬT KÝ MỘT CHUYẾN ĐI XA</p>
+<p>IX - X/1980</p>
+<p>9 giờ đêm. Máy bay đỗ xuống sân bay San Francisco. Đất liền nước Mỹ rồi. Kết thúc một chuyến bay vượt Thái Bình Dương. Nước Mỹ đến với tôi bằng một hình ảnh đầu tiên của một thành phố rực sáng trong đêm.</p>
+<p>Nhiều anh chị Việt Kiều ra đón. Gọi điện thoại cho ông E. Cooperman. Và được anh Phước đưa cho vé máy bay để sáng mai đi ngay xuống Los Angeles.</p>
+<p>Ôtô rời sân bay San Francisco. Ngược lên bán đảo xinh đẹp này rồi vượt cầu dài 12 km bắc qua vịnh San Francisco, vào thành phố Berkeley. Xa kia một chút là trường Đại học Berkeley nổi tiếng mà tôi đã từng nghe đến và từng biết tên nhiều nhà khoa học. Rồi những ngày tới sẽ có được dịp đến thăm.</p>
+<p>Nghỉ đêm ở nhà a Lũy, mà cũng là trụ sở của hội người Việt Nam tại Mỹ. Trò chuyện rôm rả, mãi đến hơn 1 giờ sáng vẫn còn thức.</p>
+<p>Thao thức khó ngủ. Chương trình của chuyến.</p>
+<p>Làm xong chương trình đầy đủ cho chuyến đi. Sẽ về nhà đúng quy định. Nói chuyện bằng điện thoại với Tuệ ở Québec (Canada) và anh Liễu ở Paris. Vâng, tôi đang ở trong một thế giới hoàn toàn khác mà!</p>
+<p></p></section>
+
+        <section id="16-9"><h2>16/9</h2><p>Sáng đến Lãnh sự quán Canada ở Los Angeles để xin thị thực nhập cảnh vào Canada. Theo chương trình tôi sẽ qua Toronto, Montréal vào khoảng 30/9. Mọi việc sẽ thuận lợi.</p>
+<p>Về Anaheim, đến Convention Center để xem WESCON/80. Đây là một triển lãm kỹ thuật mới trong lĩnh vực thông tin và máy tính. Những tiến bộ ghê gớm trong lĩnh vực này trong thời gian qua thật đáng kính phục. Tôi xem say mê, tiếc rằng không có thì giờ để tìm hiểu được cho kỹ càng và đầy đủ hơn.</p>
+<p>Chiều, đến đài phát thanh PACIFICA của Los Angeles. Cùng với Cooperman và Keut làm một hội thảo trên đài về việc hợp tác khoa học. Sau đó đến nhà anh Phạm Văn Liễu chơi.</p>
+<p></p></section>
+
+        <section id="17-9"><h2>17/9</h2><p>Sáng đến XEROX Computer Service. Đây là một hãng chuyên bán các hệ thống sử dụng máy tính cho công nghiệp. Và bản thân nó cũng có một mạng máy tính phục vụ nhiều nơi sử dụng. Và trước nữa, nó cũng đã từng sản xuất máy tính.</p>
+<p>Chiều đến Đại học Los Angeles (UCLA), khoa System Science. Gặp giáo sư N. Levan. Thật vui vì N. Levan chính là Lê Văn Nhẫn, người Việt Nam, hiện nay là giáo sư của một trường đại học Mỹ.</p>
+<p>Bàn nhiều về khoa học, về việc nghiên cứu khoa học hệ thống đối với đất nước, và về nhiều chuyện khác. Khi nào qua New York phải nhớ nói với anh Lâu về trường hợp này.</p>
+<p></p></section>
+
+        <section id="18-9"><h2>18/9</h2><p>Đi lại WESCON/80. Hôm trước đi, vội vã nên chỉ mới xem qua loa. Hôm nay, dành cả buổi sáng để đi xem. Đây là một trưng bày có tính chất thương mại những kỹ thuật mới nhất trong lĩnh vực sản xuất các máy móc, thiết bị xử lý thông tin và tính toán. Không trưng bày các máy móc hoàn chỉnh, mà chủ yếu là các linh kiện, các thiết bị phụ cận.</p>
+<p>Các microprocessor mới của INTEL, MOTOROLA, ZILOG, v.v..., các bộ nhớ bằng bọt từ (bubble), máy in dùng nhiệt, các loại display, các thiết bị truyền tin bằng ánh sáng, máy laser dùng để ghi âm và ghi hình bằng màu lên đĩa, vân vân và vân vân.</p>
+<p>Tôi không phải là một chuyên gia kỹ thuật, nhưng mấy năm nay trên cương vị công tác của mình tôi muốn phục vụ được ít nhiều anh em kỹ thuật trong đơn vị, nên cũng cố vươn mắt nhìn tới những cái hiện đại – và đây, chính là những thứ mà ta mong muốn!</p>
+<p>Tôi biết rõ rằng từ khu Đồi Thông – Liễu Giai, nơi Viện tôi làm việc – và cũng có một phòng thí nghiệm về Vi tin học – đến WESCON/80 với những thiết bị được trình bày như nói ở trên là cả một khoảng cách hàng thế kỷ. Nhưng dầu sao cũng vẫn có thể tìm một gạch nối. Gạch nối đó là cái gì, và ở đâu? Đó là một câu hỏi đáng được quan tâm một cách nghiêm túc. Từ bao lâu nay tôi chỉ mới thấy được một phần trong cái gạch nối đó, đó là sự nỗ lực của trí tuệ. Nhưng như vậy đã đủ chưa? Hẳn là chưa, dẫu rằng chỉ riêng sự nỗ lực của trí tuệ thôi cũng đã đòi hỏi không ít.</p>
+<p>Ôi! Sức mạnh ghê gớm của khả năng sáng tạo của con người! Con người có thể mở đường đi lên các vì sao, và con người – với đôi mắt thần của mình – có thể nhìn thấu mỗi bước sóng, mỗi chấm hạt trong tận cùng cấu trúc của vật chất. Để rồi sáng tạo nên cả những cái mà bản thân con người cũng phải giật mình kinh ngạc.</p>
+<p>Đất nước thân yêu ơi! Giữa những đòi hỏi hàng ngày của miếng cơm tấm áo mà ta đang rất đỗi thiếu thốn đến cái thế giới của những tiến bộ kỹ thuật ghê gớm này, có con đường nào nhanh hơn mà ta có thể tìm được? Tôi không nói đến việc tổ chức các quan hệ xã hội, tôi cũng không hiểu gì nhiều về chuyện đó, nhưng phải chăng một quan hệ xã hội tốt đẹp mà ta mong muốn chỉ có thể có được trong điều kiện một nền sản xuất phong phú, một sức mạnh khoa học kỹ thuật hiện đại?</p>
+<p>Ăn cơm trưa ở Tiệm Ánh Hồng. Bò bảy món – món ăn nổi tiếng của đất Sài Gòn!</p>
+<p>6h30 chiều – Từ biệt gia đình E. Cooperman để ra sân bay đi về San Francisco. Kết thúc mấy ngày ngắn ngủi ở miền nam California – thành phố Los Angeles.</p>
+<p>Trở lại San Francisco, Berkeley. Chuẩn bị cho ngày mai làm việc.</p>
+<p></p></section>
+
+        <section id="19-9"><h2>19/9</h2><p>Sáng đi làm thủ tục gia hạn visa ở Mỹ. Vì hôm ở Bangkok sơ ý một tí, nên mất công thêm buổi sáng hôm nay.</p>
+<p>Đến Đại học Stanford – Stanford University, một đại học của Mỹ nổi tiếng mà tôi đã từng biết tên và từng đọc nhiều công trình nghiên cứu. Khoa Computer Science. Ở đây có Gray, Kmith, Ullman, Manna, v.v... Gặp và nói chuyện khoa học hồi lâu với Ullman. Các vấn đề về ngôn ngữ chương trình. Ngôn ngữ S, ngôn ngữ C – chuyên vãn về Ada. Về NP – complete proplems. Và cả về những trò semantics of recursive program schemata của nhóm Nivat, vân vân. Đi thăm Trung tâm tính toán của khoa. Khắp nơi đều có terminal. Máy chính là IBM4041. Máy tính và các phương tiện xử lý thông tin tràn ngập khắp nơi.</p>
+<p>Trường Đại học Stanford ở một khu rộng nằm về phía nam thành phố San Francisco. Qua cổng trường là những khu rừng với nhiều cây to và bóng mát. Những ngôi nhà một tầng, hai tầng trải rộng và ẩn hiện trong màu xanh của cây cối. Không có những tòa nhà cao tầng với những dòng người đông đúc. Yên tĩnh, thoải mái. Không gian và môi trường ở nơi đây thật tuyệt diệu cho việc học hành và nghiên cứu.</p>
+<p>Những khu nhà của các giáo sư là những biệt thự trong những khoảnh vườn đầy hoa và cây xanh.</p>
+<p>Vào hiệu sách của trường. Sách cũng mênh mông và la liệt. Tìm sách thì dễ, nhưng làm sao mà mang về được đây!</p>
+<p>Nhiều người nói với tôi là trình độ văn hóa trung bình của người Mỹ không cao lắm, có nhiều người Mỹ học xong trung học 12 năm mà thậm chí vẫn gần như “mũ chữ”. Và sự hiểu biết của từng người Mỹ nói chung khá hẹp. Tôi không có điều kiện để thể nghiệm điều đó, nhưng giả sử là như vậy đi, thì quả thực từ những thành viên “hiểu biết hẹp” mà có được một nền sản xuất, một xã hội rất phát triển với kỷ luật chặt chẽ, hẳn phải có những tài năng và kinh nghiệm ghê gớm trong vấn đề quản lý và tổ chức.</p>
+<p>Nghe tin bão lụt lớn ở quê nhà – vùng Thanh Hóa. Tự nhiên ứa nước mắt. Ôi, quê hương lắm gian nan vất vả. Thiên nhiên cũng tàn nhẫn với đất nước ta lắm thay!</p>
+
+        <figure>
+          <img src="Nhatky199.jpg" alt="Bản viết tay ngày 19/9" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">Sau này, vào năm 2020, Ullman và Aho được giải Turing về chương trình dịch và thuật toán (<a href="https://awards.acm.org/about/2020-turing">Thông báo giải của ACM</a>). Cuộc nói chuyện với Ullman về đúng chương trình dịch và thuật toán từ đúng 40 năm trước đó.</figcaption>
+        </figure>
+
+
+<p></p></section>
+
+        <section id="22-9"><h2>22/9</h2><p>Sáng đến trường Đại học Berkeley. Khoa Toán. Gặp và nói chuyện với Giáo sư S. Smale, một nhà Toán học lớn, đã từng được giải thưởng quốc tế Fields năm 1966. Ông ta đã già hơn nhiều so với lần gặp ông ta ở Mạc Tư Khoa, 1966. Và cũng như xưa, ông ta chống xâm lược khắp mọi nơi. Chống Mỹ xâm lược Việt Nam trước đây, và cũng chống cả việc Việt Nam “xâm lược” Campuchia, Lào bấy giờ! Ôi, cái lô gích hình thức của một nhà khoa học lớn!</p>
+<p>Đại học Berkeley. Một trường đại học nổi tiếng mà tôi đã từng biết tên. Trên đồi cao. Một khu trường rộng lớn. Hôm nay là ngày khai trường cho một tam cá nguyệt mới. Sinh viên đông, đi lại nhộn nhịp. Ở nơi đây đã từng đào tạo nhiều nhà bác học lớn. Và cũng là nơi làm việc của nhiều nhà bác học lớn. Vâng, trên đồi cao này, tôi đã từng nghĩ đến những đỉnh cao trí tuệ với niềm khâm phục chân thành.</p>
+<p></p></section>
+
+        <section id="23-9"><h2>23/9</h2>
+
+        <figure>
+          <img src="NhatKy_239.png" alt="Bản viết tay ngày 23/9" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">Sau này, năm 1995, Manuel Blum là người được giải Turing (<a href="https://awards.acm.org/about/1995-turing">Thông báo giải của ACM</a>). 
+                M. Blum cũng  là thầy hướng dẫn siêu việt, học trò làm tiến sỹ với ông có Shafi Goldwasser và Silvio Micali (cả hai cùng đạt giải Turing), Adleman (A trong RSA, cũng đạt giải Turing), Naor (giải Godël), Impagliazzo, Rudich, Sisper, Vazirani...
+Impagliazzo có định nghĩa 5 thế giới rất thú vị trong độ phức tạp tính toán mà anh Phan Dương Hiệu có từng viết trên tạp chí Pi: <a href="https://pi.edu.vn/detail-news/bon-the-gioi-ao-va-mot-the-560.html"> Bốn thế giới ảo và một thế giới thực.</a> 
+</figcaption>
+        </figure>
+<p>Sáng đến xem Trung tâm tính toán của Lawrence Berkeley Laboratory trong Đại học Berkeley. Một trung tâm tính toán lớn với những máy tính điện tử cỡ lớn CDC 7600, CDC 6600, v.v..., những máy tính mình được biết từ lâu nhưng bây giờ mới thấy.</p>
+<p>Thuyết trình ở Department of Computer Science về ôtômat xác suất, NP – complete problems, những vấn đề mà tôi với họ cùng quan tâm, và tôi cũng có một số kết quả nghiên cứu được họ chú ý.</p>
+<p>A. Paz vốn dạy ở Đại học Haife, Israel, năm nay sang đây là visiting professor. Chuyện với anh ta cởi mở, vui vẻ. M. Blum quan tâm nhiều đến kết quả của tôi về NP – complete problems.</p>
+<p>Gặp gỡ và trao đổi ý kiến với Zadeh, ông tổ của fuzzy sets and fuzzy logic. 15 năm trước đây Zadeh viết công trình đầu tiên về fuzzy sets, vậy mà giờ đây, cái “mập mờ” – fuzzy – đã trở thành một hướng nghiên cứu được phát triển khắp nơi trên thế giới. Tôi đã biết nhóm fuzzy của Peschl ở Berlin, nhóm fuzzy ở Pháp, nhưng quả thực chưa biết Orlovski ở Mạc Tư Khoa cũng làm fuzzy và lại càng ngạc nhiên khi đọc những tập công trình về fuzzy logic của Đại học Vũ Hán, Hồ Nam – Trung Quốc.</p>
+<p>Buổi trao đổi với Zadeh thật lý thú và bổ ích.</p>
+<p>Tạm biệt anh Lũy và chị Lựu. Cảm ơn anh và chị đã săn sóc chu đáo trong mấy ngày ở nhà anh. Chuyển sang ở nhà anh Phước để sáng mai tiện ra sân bay đi Seattle, kết thúc chương trình khoa học ở vùng San Francisco – Berkeley này. Mong sẽ có ngày được trở lại làm việc lâu hơn ở những trung tâm khoa học nổi tiếng.</p>
+<p></p></section>
+
+        <section id="24-9"><h2>24/9</h2><p>Sáng. Còn ít thì giờ trước khi ra sân bay, đi chơi phố một lát. Đến một khu nghèo ở ngoại ô Oakland cho biết thế nào là cái “nghèo” ở xứ này. Và đến một khu nhà làm sẵn cho những người giàu mua. Quả là sang thật. Những nhà giàu – những chủ tư bản Mỹ - sống sang trọng thật. Nhưng tôi cũng chợt nhớ ra rằng ở ngay trong nước Việt Nam nghèo khổ của tôi cũng không phải là không có những người được sống trong những căn nhà rộng rãi, sang trọng còn hơn thế! (và đâu chỉ phải là một nhà!).</p>
+<p>Rồi San Francisco ở sân bay Oakland, bay lên Seattle. Thế là tuần trước còn ở Los Angeles, thành phố tận cùng ở tây nam nước Mỹ, giờ đây lại đã ở một nơi tận cùng của tây bắc nước Mỹ.</p>
+<p>Neal Koblitz và vợ ra đón. Seattle nằm bên bờ vịnh giữa một vùng có nhiều núi non, và ngoài xa kia là Thái Bình Dương. Ngày còn ấm, nhưng đêm thì đã khá lạnh. Lên tháp Space Neddle cao gần 200 m, ăn chiều và ngắm thành phố khắp mọi phía, khi phòng ăn của tháp quay vòng đều đều và chậm rãi.</p>
+<p>Ngắm phố, ngắm hồ, ngắm vịnh, ngắm tàu bay vừa bay vừa bơi dưới hồ – thủy phi cơ mà – ngắm xe lửa chạy trên đường một ray, ngắm đèn dần sáng khắp thành phố, và cả ngắm trăng lên từ phía sau dãy núi. Hôm nay trăng 16, hôm qua là trăng rằm tháng tám. Không hiểu Trung thu này ở nhà các con có được ăn quà gì không.</p>
+<p>Đêm ngồi chuyện gẫu với mấy bạn Mỹ. Chuẩn bị bài cho ngày mai thuyết trình ở Đại học Washington – Seattle.</p>
+<p></p></section>
+
+        <section id="25-9"><h2>25/9</h2><p>Sáng cùng N. Koblitz đến Đại học Washington ở Seattle. Một trường đại học lớn, có khoảng 25 ngàn sinh viên, cũng ở trên đồi với một khu đất rộng lớn. Những trường đại học Mỹ chọn được những vị trí thật tuyệt diệu.</p>
+<p>Thư viện, nhiều tài liệu. Ở đây tôi tìm được đầy đủ những bài mà tôi đang cần. Tôi cũng tìm được bản dịch tiếng Anh của một số bài của chính mình mà trước đây tôi chưa hề thấy!</p>
+<p>Chiều. Thuyết trình ở xê-mi-ne của Department of Computer Science trong Đại học Washington về một vài kết quả về graph theory và ứng dụng. Buổi thuyết trình thứ hai trên đất Mỹ. Mình cũng có thể lấy làm vui vì những kết quả của mình cũng được người nghe chú ý theo dõi. Ôi, trong chốc lát chợt nghĩ đến những điều kiện làm việc của anh em mình ở nhà và không khỏi thầm so sánh. Vâng, các bạn nghe tôi trình bày, tôi cảm ơn các bạn, nhưng các bạn có hiểu được rằng những kết quả nghiên cứu này đã được thực hiện trong những hoàn cảnh thiếu thốn như thế nào! Những người nghiên cứu khoa học trên đất nước Việt Nam chúng tôi đang thiếu mọi thứ, cả cơm ăn, cả sách để đọc, cả phương tiện để thực nghiệm, v.v..., nhưng chúng tôi cũng mong có được ít nhiều kết quả để khi phán xét và so sánh nó, người ta có thể chỉ xét đến cái giá trị thực của nó mà không cần xét hoàn cảnh sản sinh ra nó. Vâng, chúng tôi không mong sự chiếu cố, và chúng tôi hiểu rằng vì vậy, cần phải cố gắng gấp bội.</p>
+
+      <figure>
+          <img src="Nhatky_259.png" alt="Bản viết tay ngày 25/9" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">Bản viết tay ngày 25/9</figcaption>
+        </figure>
+<p>Tối. Đi ăn cơm với mấy nhà toán học Mỹ ở trường. Cũng nên ghi tên cho khỏi quên:</p>
+<p>Neal Kobliz và vợ</p>
+<p>Waltes L. Ruzzo và vợ, con</p       >
+<p>Martin Furer và vợ</p>
+<p>Martin Tompa và vợ</p>
+<p>Les Goldschlager từ Úc sang.</p>
+<p></p></section>
+
+        <section id="26-9"><h2>26/9</h2><p>Sáng làm việc ở Department of Computer Science của Đại học Washington và xem sách báo ở thư viện. Giá có nhiều thì giờ mà đọc tạp chí ở các thư viện đại học Mỹ! Mình là dân nghèo, đói tài liệu, đến đây thì thấy quả thực người ta quá no nê về thông tin, và có lẽ no quá nên người ta cũng không thèm ăn uống. Phải chăn       g vì thế mà không ít những người tôi đã gặp không biết nhiều lắm ngoài một vài vấn đề hẹp mà họ quan tâm?</p>
+<p>Trưa cùng đi t nhà máy sản xuất máy bay Boeing. Đã từng ngồi máy bay Boeing, nhưng quả thật tôi không hề nghĩ là có lúc được đến tận nơi sản xuất ra những máy bay đó. Người hướng dẫn đưa đi một tua của dây chuyền sản xuất. Từ những phân xưởng gia công cánh, vỏ, v.v... cho đến nơi lắp ráp cuối cùng ra những máy bay Boeing 727, 737, 757. Nhà máy có mấy chục nghìn công nhân, nhưng phần lớn công việc là tự động!</p>
+<p>Tôi chẳng hiểu gì về kỹ thuật, nhưng có vài điều lạ làm tôi chú ý: nhà máy chăm lo khá nhiều đến đời sống, sự giải trí của công nhân viên, và khắp các phân xưởng đều có nơi trang trọng dán ảnh của những công nhân, nhân viên làm việc xuất sắc trong tháng và trong quí! Lao động tiên tiến hay chiến sĩ thi đua nhỉ?! Tôi chợt nhớ ra tôi đang đứng trong một xí nghiệp lớn tư bản chủ nghĩa!</p>
+<p>Đi dọc bờ hồ Washington, và dạo một lát trong khu vườn phía nam thành phố. Vườn Nhật Bản! Nhật Bản, vâng, Nhật Bản có mặt khắp nơi trên đất này. Và họ có mặt một cách vững chắc bằng những nhà máy lớn, bằng những gian hàng điện tử rất được ưa chuộng, và bằng hàng vạn, hàng chục vạn ôtô hàng ngày chạy trên đường phố Mỹ. Đáng khâm phục thay trí tuệ của một dân tộc Á Đông!</p>
+<p>Nói về Nhật Bản, tôi dõi nhìn về phía bên kia Thái Bình Dương. Nơi ấy có đất nước tôi, và cũng có những đất nước với những nền văn minh đáng kính như Nhật Bản, Trung Hoa. Trung Hoa của bao nhiêu biến cố suốt mấy chục năm qua, Trung Hoa đang là kẻ hàng ngày đe dọa xâm lược đất nước tôi. Tôi không quên điều đó, nhưng tôi cũng thành thực mong rằng sẽ đến một ngày không xa, hai dân tộc sẽ lại có thể sống cùng nhau một cách hòa hợp, hay ít nhất thì cũng là những láng giềng bình thường như mọi láng giềng khác.</p>
+<p>Tôi không nghĩ rằng tôi có thể ghét được Hua Luogeng, nhà toán học lớn Trung Hoa, nay là phó chủ tịch Viện Hàn lâm khoa học Trung Quốc, người mà hơn hai chục năm trước đây đã có những tác phẩm làm tôi say mê nghiền ngẫm hàng năm trời. Sang Mỹ này, tôi mới có dịp được đọc nhiều những công trình toán học của các tác giả Trung Quốc. Vâng, và qua sự trao đổi khoa học của họ, tôi đã thấy rõ ràng các nhà khoa học Trung Quốc ngày càng tham gia một cách sâu rộng vào mọi hoạt động của cộng đồng khoa học thế giới.</p>
+<p>Nước Trung Hoa mênh mông. Nước Trung Hoa sâu thẳm trong chiều sâu của văn minh nhân loại. Và dĩ nhiên, nước Trung Hoa đã và sẽ còn sản sinh nhiều tài năng văn hóa, khoa học cho nhân loại. Ước gì những quyền thế của Trung Hoa đừng tìm cách gây hận thù, để cho lòng kính trọng của chúng ta đối với dân tộc đó được trọn vẹn!</p>
+<p>Nhớ câu chuyện với A. Paz. Cho số , , ..., . Có hay không hai tập , không giao nhau (nhưng không nhất thiết ) sao cho . Bài toán đó có là NP – complete hay không?</p>
+<p>Và cùng nhớ câu chuyện với mấy bạn toán ở Đại học Washington. Khi bàn về toán, tôi có nên lên giả thuyết: Cho một hệ hình thức . Bài toán độc lập đối với hệ là giải được khi và chỉ khi bản thân hệ là giải được?</p>
+<p>(Bài toán độc lập: với mọi công thức , xét xem có độc lập đối với hay không, tức là có phải cả và đều không là định lý của của hay không). Và một giả thuyết khác: Nếu đối với một hệ hình thức , bài toán độc lập là giải được, thì đối với không có công thức nào là độc lập! Lô gích mệnh đề trực quan của Heytuig có là một công thức độc lập, nhưng nó có là giải được không nhỉ?</p>
+<p>Đúng hay không, dễ hay khó? Tạm ghi lại để sau này suy nghĩ!</p>
+<p>Nhớ nhà. Hôm nay là ngày cuối tuần làm việc ở đây. Lúc này ở nhà là trưa thứ bảy.</p>
+<p></p></section>
+
+        <section id="29-9"><h2>29/9</h2><p>Anh J. H. Levan (Lê Văn Hóa) đưa đi thăm một số nơi trong Chicago và đến trường Đại học Northwestern.</p>
+<p>Hồ Michigan mênh mông. Nhìn cảnh hồ và cảnh thành phố ban ngày được rõ ràng hơn đêm qua.</p>
+<p>Đại học. Trường Đại học khắp nơi. Và những khu trường đại học ở đâu cũng rộng rãi, yên tĩnh. Đại học cho học sinh học ban ngày, cho học sinh học ban đêm, và cho cả công nhân, nhân viên học thêm ngoài giờ. Đại học công và đại học tư. Có phải đại học chỉ giành cho những người giàu có hay dành cho mọi người có ham muốn học tập?</p>
+<p>Tôi vẫn không rời khỏi được những ý nghĩ về khoảng 300 000 người Việt Nam hiện có trên đất Mỹ. Phải chăng phần đông trong số họ cũng nhớ đất nước, quê nhà?</p>
+<p>Và rồi mười năm sau, hai mươi năm sau, với tinh thần hiếu học, cần cù của người Việt Nam nói chung, lại được nền khoa học kỹ thuật tiên tiến ở đây dìu dắt, hẳn là sẽ có hàng chục ngàn nhà kỹ thuật, kinh tế và khoa học người gốc Việt có tài năng trên đất này.</p>
+<p>Có cách gì không nhỉ, để rồi sau mươi năm, hai mươi năm, đa số những chuyên gia người Việt đó sẽ nhìn về tổ quốc với những mong muốn đóng góp của những đứa con xa nước xa nhà?</p>
+<p>Tổ quốc bao dung sẽ cần đến họ và sẽ sẵn sàng đón nhận họ chứ?</p>
+
+      <figure>
+          <img src="Nhatky_299.png" alt="Bản viết tay ngày 29/9" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">Bản viết tay ngày 29/9</figcaption>
+        </figure>
+<p
+<p>Nhà anh J. H. sang trọng. Nhưng anh cho biết rằng vào dịp nghỉ hè, các con anh vẫn đi “làm thuê” như làm bồi khách sạn, cắt cỏ, hái trái cây, v.v... Và con E. Kennedy trong những dịp nghỉ hè lao động những việc như đi đưa báo, làm bồi, ...</p>
+<p>Giàu có, sang trọng, đầy đủ tiện nghi. Nơi đây có thiên nhiên ưu đãi, nhưng phải chăng cũng có – và là chủ yếu – sự lao động chuyên cần và có kỷ luật của con người?</p>
+<p></p></section>
+
+        <section id="30-9"><h2>30/9</h2><p>Sáng. Tạm biệt gia đình anh chị Sơn + Hoa và cháu Diệp. Cảm ơn sự đón tiếp chân tình của anh chị trong gần hai ngày ở Chicago. Hẹn gặp lại nhau mà quả thực không biết rồi có bao giờ gặp lại được không. Thế giới vẫn còn lắm phân chia, và dẫu đất nước đã thống nhất, vẫn còn lắm gia đình dân Việt phải phân chia. Vậy thôi, hãy giữ lấy một chút kỷ niệm thân tình của những người con cùng Tổ quốc gặp nhau nơi đất khách quê người!</p>
+<p>Đến thăm trường Đại học Illinois University at Chicago Circle.</p>
+<p>Trung tâm tính toán – Máy tính điện tử IBM 4341 và IBM 370/158. Tôi chú ý đến một máy mới mà chưa được thấy từ trước là máy in IBM 6670 Information Distributor, một máy in dùng tia laser, mỗi phút có thể in được 16 nghìn hàng theo kiểu chữ in nét rất đẹp!</p>
+<p>Khoa Toán. Gặp đông người. Nói chuyện nhiều với Louise Hay và Douglas Miller, làm về logic và độ phức tạp. Louise Hay là thư ký của hội Logic toán quốc tế, sẵn sàng trao đổi tạp chí. Họ chú ý nhiều đến những kết quả của tôi và của nhóm Toán rời rạc ở Hà Nội.</p>
+<p>Cũng như ở một số đại học khác, Đại học Illinois sẵn sàng nhận đào tạo sinh viên Việt Nam, nếu ta gửi sang!</p>
+<p>Chuyện với anh Hòa nhiều. Ôi! Biết bao điều đáng suy nghĩ về hướng phát triển khoa học ở nước ta, về kinh tế và xã hội. Dẫu biết rằng những ý kiến của mình chẳng có tác dụng gì, nhưng không sao tránh khỏi những suy nghĩ bất tận về cuộc đời và con người. Vui ít, buồn nhiều...</p>
+<p>3 giờ chiều. Lên máy bay rời Chicago, và đây cũng là tạm rời nước Mỹ để sang Canada.</p>
+<p>Canada. Toronto. Chaudler Davis ra đón. Bạn đã già hơn, đầu tóc và râu đã bạc nhiều, nhưng vẫn vui vẻ và nhiệt tình.</p>
+<p>Về ở trong nhà khách của Đại học Toronto.</p>
+<p>Buổi tối, ăn cơm với Chaudler Davis và ông cụ, Lee Lorch, và vợ chồng Vuil Suil. Lại ở một tiệm ăn Nhật Bản, trên đất Canada!</p>
+<p>Vậy là tôi đã đến đất nước tận cùng ở phía bắc đại lục châu Mỹ. Toronto rộng, đông dân, có nhiều nhà cao tầng, nhưng đại đa số nhà ở vẫn là những biệt thự một hai tầng trải rộng về mọi phía. Có lẽ không giàu bằng ở Mỹ nhưng điều đó khó có thể nhìn thấy theo cung cách sinh hoạt bề ngoài.</p>
+<p>Xa nhà vừa tròn 20 ngày. Nhớ!</p>
+<p></p></section>
+
+        <section id="1-10"><h2>1/10</h2><p>
+        <figure>
+          <img src="Nhatky0110.jpg" alt="Bản viết tay ngày 29/9" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">
+                Buổi trình bày xêmina độ phức tạp tính toán trước <a href="https://en.wikipedia.org/wiki/Stephen_Cook">Stephen Cook</a> - người đưa ra khái niệm NP-đầy đủ và <a href="https://en.wikipedia.org/wiki/Charles_Rackoff">Charles Rackoff </a> - người sau này được giải Godel năm 1993 cho những công trình về chứng minh tương tác (interactive proof) và sử dụng non-interactive zero-knowledge proof trong việc xây dựng sơ đồ có thể chống tại tấn công CCA (tấn công mạnh nhất) trong mật mã!
+
+        </figcaption>
+        </figure>             
+                
+                
+
+
+                Một ngày làm việc nhiều, liên tục từ 9 giờ sáng đến 12 giờ khuya.</p>
+<p>9h – 11h. Làm việc với Sofer từ Detroit (Mỹ) sang.</p>
+<p>11h – 12h. Dự nghe thuyết trình của P. Erdos, một bác học lớn về toán rời rạc người Mỹ gốc Hung.</p>
+<p>12h – 1h. Ăn trưa với Erdos và nhiều nhà toán học Canada (ăn cũng là làm việc, nhiều khi lại còn mệt hơn làm việc bình thường, vì mọi sự trao đổi ý kiến đều dễ thực hiện ở đây!)</p>
+<p>1h – 4h. Làm việc với một số nghiên cứu sinh ở khoa Computer Science của Đại học Toronto đến trao đổi ý kiến.</p>
+<p>4h – 5h30. Thuyết trình ở xê-mi-ne Theoretical computer Science của Đại học Toronto.</p>
+<p>5h30 – 7h. Tiếp tục trao đổi về kết quả đã thuyết trình và tìm tài liệu liên quan ở thư viện.</p>
+<p>7h – 9h. Ăn cơm chiều (lại là làm việc!) với Chaudler Davis, Lee Lorch, Barron Brainerd và bà Nancy Pocock ở một tiệm ăn Hungari.</p>
+<p>9h – 12h. Tiếp xúc và trò chuyện với anh chị em Việt Kiều ở Toronto.</p>
+<p>Buổi thuyết trình xê-mi-ne hôm nay đối với tôi là một buổi thú vị. Nhiều người đến nghe, vì nội dung đã được thông báo từ trước. Có Borodin, Cook, Mendelsohn, Rackoff, Ch. Davis, Brainerd và nhiều người khác. Tôi nhìn thấy có khá nhiều nghiên cứu viên người Trung Quốc và Nhật. Thuyết trình về bài toán NP đang được giới toán học về tính toán rất quan tâm. Cách làm và kết quả được mọi người chú ý đến. Và quan trọng hơn cả là sau khi trình bày, có rất nhiều ý kiến trao đổi rất bổ ích đối với tôi.</p>
+<p>Tôi hiểu, làm khoa học ở một nước thiếu thốn mọi thứ như nước ta, đến cả thì giờ cũng rất thiếu, chọn cách làm và chọn vấn đề làm như thế nào là một chuyện rất quan trọng. Muốn có tiến bộ, không có cách nào khác là phải nhảy vào dòng cuộc sống đang cuộn chảy để rồi cố gắng hết sức mà vùng vẫy, mà ngoi lên, mà trỗi dậy, thì mới mong được cuộc đời thừa nhận. Cũng có kẻ thích tìm một góc đá rêu mốc phủ kín làm chỗ nương thân và tự mãn xem rằng ở cái nơi cô quạnh đó không ai hơn mình cả, thì dẫu có làm vương ở một góc đá phỏng có nghĩa gì với dòng đời luôn sục sôi cuồn cuộn?</p>
+<p>Đêm lại cũng trằn trọc không sao ngủ được. Không hiểu sao dạo này tôi thường hay mất ngủ. Đất nước thân yêu luôn luôn là hình ảnh ngự trị trong mọi suy nghĩ của tôi. Cái nôi tận cùng của sự nghèo nàn đó vẫn còn là một điểm gần như cô lập với nền văn minh hiện đại của nhân loại. Ta tự bằng lòng với cái góc đá rêu mốc phủ kín đó và thỉnh thoảng tự vỗ ngực xem mình là trung tâm của vũ trụ, hay là chịu chấp nhận trò chơi của cuộc đời và nhảy vào dòng xoáy đó để vùng vẫy?</p>
+<p>Trong thế giới ngày nay, “độc lập” phải chăng chỉ là một trạng thái cân bằng giữa những mối phụ thuộc?</p>
+<p>Hãy chấp nhân sự phụ thuộc, sự phụ thuộc về mọi phía để rồi tìm cho ra một trạng thái cân bằng trong sự phụ thuộc về mọi phía và đồng thời cũng là trong sự độc lập tương đối đối với mọi sự phụ thuộc đó!</p>
+<p>Tôi nói: sự phụ thuộc về mọi phía, chứ không phải sự phụ thuộc về một phía.</p>
+<p>Ôi, nhưng làm thế nào được khi sự trì trệ vẫn còn được xem là dấu hiệu của vững bền!</p>
+<p>Toronto. Vậy là tôi chỉ ở Toronto được có một ngày 1/10 này. Làm việc cả ngày thành thử chẳng còn thì giờ để đi thăm phố xá, và danh lam thắng cảnh.</p>
+<p>Ngày mai, lại ra đi rồi. Sẽ rời Toronto đi ngược lên phía bắc đến Montréal và Québec.</p>
+<p></p></section>
+
+        <section id="2-10"><h2>2/10</h2><p>Một ngày có mặt trên ba thành phố của Canada: Toronto – Montréal – Québec.</p>
+<p>Sáng. Trước khi ra sân bay đi lượn ít vòng qua các phố xá lớn của Toronto. Những ngôi nhà kính hiện đại, ngôi nhà của sở điện với việc sử dụng điện qua sự hấp thụ năng lượng mặt trời và sự tỏa nhiệt bên trong. Những phố King, phố Queen – vua chúa, nữ hoàng – gợi nhớ về dĩ vãng hoàng kim của đế quốc Anh một thuở mà “mặt trời không bao giờ lặn”!</p>
+<p>Qua một khu phố nghèo của Toronto, người ta bảo là “nghèo”, nhưng nếu không bảo thì chắc tôi cũng khó nhận ra được.</p>
+<p>11h. Ra sân bay Toronto để đi máy bay lên Montréal.</p>
+<p>Montréal. Trời mưa. Lần đầu tiên thấy trời mưa kể từ ngày sang đến đất Mỹ tới nay. Anh Trụ và anh Nhàn ra đón. Về trụ sở hội người Việt Nam tại Canada. Hội ở đây hoạt động mạnh, có cơ ngơi đàng hoàng.</p>
+<p>Đến thăm qua Trung tâm nghiên cứu toán ứng dụng của Đại học Montréal.</p>
+<p>Mệt. Hôm nay mới thực sự cảm thấy mệt mỏi. Nghỉ một lát để đến chiều đi Québec.</p>
+<p>5h30. Tạm rời Montréal đi lên Québec, cách xa khoảng 250 km. Đi bằng xe hơi. Lần đầu tiên trong chuyến đi này di chuyển bằng xe hơi giữa hai thành phố. Đường rộng thênh thang. Những mạng lưới xa lộ như thế này chẳng chịt khắp lục địa Bắc Mỹ. Đất đai mông mênh và bằng phẳng. Nước Canada có diện tích gần 10 triệu cây số vuông này chỉ có hơn 20 triệu người sinh sống! Những ruộng ngô bạt ngàn không cần thu hoạch mà để dành luôn tại chỗ cho gia súc. Không biết đối với những đất nước này có bao giờ họ phải lo đến chuyện lương thực hay không?</p>
+<p>8h tối. Đến Québec. Québec giàu có và đông dân. Québec nói tiếng Pháp. Từ Canada tiếng Anh, tôi đã đến Canada tiếng Pháp rồi!</p>
+<p></p></section>
+
+        <section id="3-10"><h2>3/10</h2><p>Québec. Trời nắng đẹp. Người ta bảo chúng tôi gặp may, vì mấy hôm vừa qua ở đây trời mưa nhiều.</p>
+<p>Sáng, đến trường Đại học Laval, Québec. Khoa Toán. Thuyết trình ở xê-mi-ne. Lần thứ hai thuyết trình ở Canada. Lần này trình bày bằng tiếng Pháp. Tôi nói tiếng Anh, tiếng Pháp đều chẳng giỏi gì, nhưng buộc nói mãi rồi cũng thấy thinh thích!</p>
+<p>Thăm một số phòng thí nghiệm của trường – Lazer, mazer: mình chẳng hiểu mấy tí. Các trường đại học ở Canada cũng giàu có, đầy đủ tiện nghi như các đại học ở Mỹ.</p>
+<p>Đi dạo (bằng ôtô!) xem qua một vài nơi thắng cảnh của Québec. Bờ sông Sairl Loret khu đồi cao, bên kia là một hòn đảo xinh đẹp, dẫu có nhiều công trình hiện đại nhưng vẫn còn lắm vẻ đẹp thơ mộng. Khu phố cổ, những lâu đài của bao thế kỷ trước.</p>
+<p>Thời gian ít quá, không kịp đậu lại ở đâu lâu đủ để cảm thụ được cái đẹp của thiên nhiên và của sức sáng tạo của con người.</p>
+<p>Đêm. Gặp gỡ anh em trí thức Việt Kiều tại Québec. Nói chuyện vui vẻ.</p>
+<p>Một đêm kỳ lạ. Mấy anh em Việt Nam, người xa nước đã từ lâu, kẻ mới ở nhà sang, nơi đất khách quê người ở tận cùng phương bắc của lục địa châu Mỹ xa xôi này, một đêm cuối tuần, ngồi cùng nhau quyến luyến chẳng nỡ rời.</p>
+<p>Mấy anh chàng khoa học, kẻ ngành nọ, người nghề kia, nhưng đêm nay tự nhiên gặp nhau ở một Tình thơ lai láng.</p>
+<p>Một đêm đọc thơ, ngâm thơ, bình thơ thật đáng ghi nhớ. Thơ, thơ, thơ của dân tộc, của muôn đời. Nguyễn Trãi, Nguyễn Du, cho đến Thế Lữ, Xuân Diệu, Hoàng Cầm, ... Thơ Bạch Cư Dị, thơ Tagor, v.v... Ai nhớ gì đọc nấy, ai thích gì ngâm nấy. Tự Québec xa xôi, tâm hồn rung động dõi về điệu dân ca của “bên kia sông Đuống” một thuở mây mù “bây giờ đi đâu, về đâu”... Ôi! Một “quê hương có con sông xanh biếc” làm da diết biết bao nhiêu tấm lòng của những kẻ tha phương.</p>
+<p>Tình quê, vâng, tình quê, phải chăng đó là sợi dây thần mãi mãi gắn bó mọi tâm hồn dân Việt, dù họ đến tự nơi nào, và họ sẽ đi đâu, về đâu...</p>
+<p>Gần ba giờ sáng. Lưu luyến tiễn đưa nhau, hẹn một ngày không biết đến bao giờ lại gặp nhau trở lại.</p>
+<p></p></section>
+
+        <section id="4-10"><h2>4/10</h2><p>Một buổi sáng Québec. Một ngày thu thật là “mùa thu”. Trước khi lại ra đi, dạo chơi thêm một vòng quanh thành phố Québec. Có lẽ đã tự lâu rồi, hôm nay tôi mới có được một buổi sáng rảnh rỗi để cho tâm hồn được thấm đượm hương thu. Có giọt mưa thu, có cả rừng thu “lá vàng rơi xào xạc”, cả một trời thu ... Đi với bạn cùng tâm sự, trong đất trời mùa thu này của một phương trời lạ, mà lòng tôi lại vẫn nặng tình hướng về mùa thu đất nước.</p>
+<p>Đất nước ra đời tự một mùa thu, đã qua rồi những ngày xuân rực rỡ, đã có rồi những nắng hạ tưng bừng... Và rồi đất trời sẽ vẫn chuyển sao đây để lại qua đi những thu đông ảm đạm mây mù, và vươn tới một mùa xuân mới cho cuộc đời hiện tại và mai sau?</p>
+<p>Rời Québec, đi ôtô buýt trở lại Montréal. Đi xe buýt đường dài ở đây, tự nhiên nhớ đến cái cảnh đi xe buýt ở Hà Nội. Dĩ nhiên làm sao mà cứ so sánh mãi được?</p>
+<p>Montréal. Một tối gặp gỡ với anh chị em và bà con Việt Kiều. Đông quá, ngoài dự kiến của mình. Tự nhiên phải đóng vai trò của người “nói chuyện”. Tôi có quen nói chuyện tình hình bao giờ đâu. Vậy mà phải nói, và tất nhiên là nói thật, cái thật mà mình hiểu.</p>
+<p>Tình đồng bào, nghĩa non nước thật làm tôi xúc động. Một đêm Québec sâu lắng, tâm tình; một tối Montréal rộn ràng, nhộn nhịp; và trước đó đã có những đêm gặp gỡ ở Los Angeles, San Francisco, Chicago, Toronto; và sau đây rồi còn có những đêm gặp gỡ nào nữa... Một chuyến đi hiểu thêm nước người, nhưng cũng hiểu thêm nhiều tấm lòng của những bà con xa quê hương đất nước.</p>
+<p></p></section>
+
+        <section id="6-10"><h2>6/10</h2><p>Trường Đại học Harvard. Ở Cambridge này có hai trường đại học nổi tiếng của nước Mỹ: Đại học Harvard và MIT (Massachusetts Institute of Technology). Hôm nay tôi đến Harvard.</p>
+<p>Harvard. Từ lâu nghe tiếng trường đại học lừng danh này, hôm nay được may mắn đến thăm tận nơi. Trường rộng, khu vực của trường gồm nhiều biệt thự xinh xắn trong một vườn cây xanh tươi giữa một thành phố yên tĩnh, thanh bình. Và ngoài khu trường ra, còn có nhiều ký túc xá ở rải rác khắp nơi trong vùng Cambridge – Boston này. Đại học Harvard nổi tiếng vì có nhiều nhà bác học lớn, vì trình độ khoa học cao của những công trình nghiên cứu và phát minh. Và cũng nổi tiếng vì đây là một trường tư có học phí cao, thường chỉ con nhà giàu hoặc những sinh viên thật xuất sắc mới học được. Và lại nổi tiếng vì nhiều chính khách cỡ lớn thường đã từng học hoặc từng dạy nơi đây.</p>
+<p>Chỉ một ngày, tất nhiên tôi không thể tìm hiểu nhiều về nhà trường có tầm vóc khổng lồ này. Nhưng trong ngành chuyên môn của mình, tôi cũng đã tìm thấy ở đây nhiều tên tuổi vào hàng đầu thế giới.</p>
+<p>Nói chuyện nhiều với John Reif, giáo sư về Computer Science.</p>
+<p>Và đặc biệt lý thú là trao đổi hồi lâu với M. Rabin, Tinsley Professor của trường. Rabin là bác học cỡ lớn, người Do Thái, dạy ở Israel và ở Mỹ. Ông ta trình bày cho tôi nghe về lý thuyết các thuật toán ngẫu nhiên, trước đây tôi ít để ý đến, bây giờ nghe ông ta trình bày tôi mới thấy rõ cái hay của nó. Và tôi cũng trình bày cho ông ta nghe những việc mình làm và những suy nghĩ của mình.</p>
+<p>Ăn cơm trưa với J. Reif và M. Rabin ở một tiệm cơm Tàu. Rất tiếc là không có thì giờ để gặp gỡ thêm một số người mà mình muốn gặp!</p>
+<p></p>
+    <figure>
+          <img src="Nhatky0610.jpg" alt="Bản viết tay ngày 06/10" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">
+Năm 1980 cũng là năm <a href="https://en.wikipedia.org/wiki/Michael_Rabin">Rabin</a> xuất bản bài báo về thuật toán ngẫu nhiên kiểm thử tính nguyên tố (<a href="https://www.sciencedirect.com/science/article/pii/0022314X80900840">Link bài báo</a>).
+        </figcaption>
+        </figure>             
+    
+
+</section>
+
+        <section id="7-10"><h2>7/10</h2><p>Hôm nay đến trường MIT. MIT nổi tiếng. Cùng với Harvard, MIT là một đại học lớn trong số khoảng dăm trường đại học nổi tiếng nhất của Mỹ. Tôi đã đến Stanford, Berkeley, Harvard, hôm nay lại được đến MIT, đối với tôi quả là một dịp may hiếm có. Một khu trường rộng mênh mông, có những biệt thự cổ kính và cũng có những tòa nhà rất hiện đại. Nơi đây đã ra đời nhiều công trình nghiên cứu lớn góp phần quan trọng vào những tiến bộ kỹ thuật của nước Mỹ. Tôi chỉ đến được một góc nhỏ của MIT, biết một phần rất ít của nó, nhưng qua cái phần nhỏ mà mình am hiểu đó, tôi cũng hình dung được phần nào cái vĩ đại của một trung tâm nghiên cứu khoa học kỹ thuật lớn trong thời đại ngày nay.</p>
+<p>Đến làm việc với nhóm nghiên cứu của C. H. Papadimitriou, Gray Miller. Gặp nhiều người, thấy có hai người Trung Hoa, chắc là dân Mỹ gốc Tàu. Một buổi trao đổi chuyên môn thú vị.</p>
+<p>Thuyết trình ở xê-mi-ne của C. H. Papadimitriou những kết quả nghiên cứu của mình về “Otomal xác suất có cấu trúc thay đổi theo thời gian”. Cũng như những lần thuyết trình trước, buổi thuyết trình này cũng được người nghe chú ý – có thể nói là hào hứng. Ôi, mình nghĩ, giá như ở nhà mình đừng bận những việc “sự vụ” linh tinh, mà được tập trung nhiều hơn vào nghiên cứu khoa học! Qua lần đi này, dầu sao tôi cũng thấy tự tin hơn vào khả năng xây dựng những ê kíp nghiên cứu khoa học có trình độ cao ở nước mình. Vấn đề là, làm sao tạo điều kiện tốt hơn nữa cho những khả năng đó phát triển.</p>
+<p>Chiều. Đi dạo chơi thành phố Boston. Đi ra cảng Boston. Đại Tây Dương. Kia là biển Đại Tây Dương rồi. Từ bờ phía đông của Thái Bình Dương, thế là tôi đã sang bờ phía tây của Đại Tây Dương. Dạo một lát gần bờ biển, chợt nhớ ba năm về trước, cũng đã một lần dạo chơi trên bờ phía tây của Đại Tây Dương, ở thành phố Laltabana xinh đẹp của hòn đảo tự do Cuba. Và câu thơ</p>
+<p>Cũng đó khoảng trời xanh, cũng đây làn gió thoảng</p>
+<p>Mà sóng vỗ bờ kia là sóng Đại Tây Dương</p>
+<p>Khoảng rộng không gian gợi chiều sâu ngày tháng</p>
+<p>...</p>
+<p>Và giờ đây, cái khoảng rộng ấy không chỉ gợi nhớ về chiều sâu ngày tháng trong dĩ vãng, mà còn xôn xao trong lòng tôi cái chiều dài của thời gian về phía trước, trong tương lai. Không phải chỉ về chiều sâu của một tâm hồn, mà còn về chiều dài mai sau của một đất nước. Mong sao cho cái chiều dài ấy đừng có mịt mù, thăm thẳm...</p>
+<p></p>
+
+    <figure>
+          <img src="Nhatky0710.jpg" alt="Bản viết tay ngày 07/10" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">
+                Cuốn sách Computational Complexity này của <a href="https://en.wikipedia.org/wiki/Christos_H. Papadimitriou">Papadimitriou</a> (ông sau này được giải Gödel năm 2012) là cuốn sách gối đầu giường của những thế hệ làm nghiên cứu về tin học lý thuyết.
+        </figcaption>
+        </figure>             
+  
+</section>
+
+        <section id="8-10"><h2>8/10</h2><p>Tạm biệt, Boston – Cambridge. Tạm biệt các bạn bè quen biết. Tạm biệt ông bà Boone và Peggy rất đỗi chân tình. Và kính chào MIT, Harvard. Ngày xưa, khi tạm biệt trường Đại học Mạc Tư Khoa nổi tiếng, tôi viết</p>
+<p>Mạc Tư Khoa, kính chào người, tạm biệt!</p>
+<p>Một quãng đời ta, một mảnh lòng ta!</p>
+<p>...</p>
+<p>Giờ đây, tôi chưa thể viết như thế về Boston, Cambridge. Tôi chỉ mới ở đây được vài ba ngày, đời chưa quen và trình cũng chưa đậu. Nhưng lòng kính trọng và ngưỡng mộ đối với những đỉnh cao của trí tuệ hẳn cũng có thể cho phép tôi giữ lấy cho mình chút kỷ niệm lưu luyến.</p>
+<p>Rời Boston, đi xe buýt về Amherst. Sẽ đến Đại học Massachusetts at Amherst để gặp M. Arbit, một chuyên gia lớn về lý thuyết hệ thống.</p>
+<p>Đường từ Boston đến Springfield rồi rẽ về Amherst thật đẹp. Từ khi sang Mỹ tới nay, chỉ đến các thành phố lớn, hôm nay lần đầu tiên được đi ra ngoài thành phố, ngắm cảnh thiên nhiên của đất trời nước Mỹ. Mùa thu. Ven đường là trùng điệp những rừng rậm đầy cây lá xum xuê. Vẫn còn nhiều màu xanh. Nhưng đã có những cây đầy lá vàng rực rỡ hoặc lá đỏ sặc sỡ. Không khí mát mẻ, trong lành. Một buổi sáng thanh bình, thật dễ chịu.</p>
+<p>Amherst – một thành phố chỉ có khoảng chục vạn dân mà có một trường đại học lớn với khoảng 20 nghìn sinh viên, lại còn có thêm 4 trường cao đẳng, hai cho nam, hai cho nữ.</p>
+<p>Đến Đại học Massachusetts ở Amherst. Gặp giáo sư M. Arbit. Thú vị. Cái ý hay nhất có lẽ là ở ý đồ xây dựng một semanties mới cho ngôn ngữ chương trình. Kết hợp được chăng với các sơ đồ song song?</p>
+<p>Ở Amherst, gặp lại Hafner và Ast Westuiq. Cảm ơn các bạn.</p>
+<p>Rời Amherst lúc 4 giờ chiều. Đi xe buýt ra Springfiled rồi về New York. Đường buổi chiều cũng đẹp.</p>
+<p>New York. 8h30 tối đến New York. Thế là sau bao tuần lang thang khắp đây đó, bây giờ mới tới New York, thành phố lớn nhất nước Mỹ. Đến bằng xe buýt đi trong đêm. Những khu nhà chọc trời tôi chỉ mới thấy qua những tầng sáng ban đêm. Mới nhìn qua cũng biết rằng ở nơi đây không còn cái thanh bình của Cambridge, cái yên ổn của những thành phố California. Mai kia rồi sẽ tranh thủ đi xem cho biết.</p>
+<p>Việt, Trinh ra đón. Và về nhà giáo sư Gallagher, trưởng khoa Toán Đại học Columbia. Ông Gallagher có vợ là chị Châu, người Việt. Vui vẻ, niềm nở, thân mật. Và được ăn một bữa cơm tối đầu tiên ở New York đầy vị Việt Nam: có cá kho, đậu phụ, dưa cải, cà muối và canh bí!</p>
+<p></p></section>
+
+        <section id="9-10"><h2>9/10</h2><p>New York. Trong bữa ăn sáng, trong câu chuyện với P. Gallagher tự nhiên lại đưa về lý thuyết số với những Vinogradov, Linnik và Hua Luogeng. Và một điều kỳ lạ: ở cái ghế mà tôi đang ngồi đây mới bốn ngày trước chính Hua Luogeng đã ngồi! Ôi! Một sự “gặp gỡ” lạ lùng! Hai mươi hai năm về trước tôi đã từng ngưỡng mộ Hua đến nỗi tự học chữ Trung Quốc để dịch sách “Số luận đạo dẫn” của Hua, một quyển sách mà cho đến nay vẫn là quyển sách hay nhất về lý thuyết số. Và kể từ đó, lòng kính trọng của tôi đối với Hua chưa bao giờ giảm, dẫu rằng hẳn Hua chẳng hề biết tôi. Rồi thời thế đổi thay, trong những năm biến động “cách mạng văn hóa”, tôi nghe nói rằng Hua bị đọa đầy khổ sở. Và biết rằng. Giờ đây Hua lại xuất hiện với tư cách là phó chủ tịch Viện Hàn lâm khoa học Trung Quốc, trưởng đoàn Toán học của Trung Quốc đi thăm Mỹ. Tiếc quá, giá như tôi đến New York sớm được bốn ngày, thì tôi đã gặp được Hua, và tôi tin rằng sẽ có những điều thú vị.</p>
+<p>Vậy là đến tận bên bờ này của thế giới, tôi vẫn chỉ được gặp Hua trong sự kính trọng. Mà nào có xa lắm đâu. Hà Nội – Bắc Kinh cách nhau chỉ có một biên giới. Ôi, ước gì cái biên giới ấy lại trở lại là cái biên giới hữu nghị. Khi xưa, để các nhà khoa học và nhân dân hai nước được sống với nhau trong sự hòa thuận!</p>
+<p>Đến Đại học Rockefeller. Khu trường không mênh mông như các đại học ở phía tây, nhưng cũng thoáng đãng, sạch sẽ. Và rất hiện đại, tất nhiên!</p>
+<p>Gặp nói chuyện với Marc Kac, giáo sư của trường, Viện sĩ Viện Hàn lâm khoa học Mỹ. Ngoài chuyện Toán cũng nói nhiều chuyện về quan hệ hoa học giữa hai nước. Ông ta hy vọng có thể lập được quan hệ giữa hai Viện Hàm lâm khoa học, và qua đó có thể có những hình thức thích hợp trao đổi và giúp đỡ. Cần hết sức chú ý!</p>
+<p>Chiều, đến Courant Institute of Mathematical Sciences của New York University. Một trung tâm nghiên cứu toán học lớn. Giá có thì giờ ngồi làm việc ở thư viện thì thích biết mấy.</p>
+<p>Gặp Martin Davis. Tôi nhớ ông ta từ lần gặp gỡ ở Matscơva 1966, và dĩ nhiên là rất biết ông ta về những cống hiến trong việc giải bài toán thứ 10 của Hilbert. Trao đổi chuyên môn với ông ta thú vị!</p>
+<p>Chiều. Đến trường Đại học Columbia. Nói chuyện hồi lâu với Filotti: vui vẻ. Khoa Computer Science ở đây có Unger, Shaw, v.v... , Filotti đang làm về các thuật toán giải bài toán đẳng cấu các graph với genus cho trước.</p>
+<p>Trường Đại học Columbia cũng là một trường lớn có tiếng. S. Eileuberq cũng ở đây, tiếc là không còn thì giờ để đề nghị gặp ông ta.</p>
+<p>Tối, gặp gỡ và nói chuyện với anh chị em Việt Kiều ở New York.</p>
+<p>Chuyện rôm rả. Nhiều câu hỏi, và không phải câu hỏi nào cũng dễ trả lời!</p>
+<p>Kết thúc một cách lưu luyến!</p>
+<p></p></section>
+
+        <section id="12-10"><h2>12/10</h2><p>Chủ nhật.</p>
+<p>Sáng. Đến trụ sở của đoàn đại hội thường trực của Việt Nam tại Liên hợp quốc. Gặp và nói chuyện với anh Nguyễn Cơ Thạch và anh Hà Văn Lâu. Gặp những người đại diện của đất nước ở nơi xa xôi này, thật mừng.</p>
+<p>Gặp lại ông E. Cooperman ở nhà anh Việt. Cảm ơn ông ta đã lo cho chuyến đi này. Tạm biệt và hẹn gặp nhau, chắc là ở Hà Nội, năm sau.</p>
+<p>Chiều. Tạm biệt anh Pal Gallagher và chị M. Châu. Nhớ mãi Gallagher hiền lành, chân tình và chị Châu tuy sang đây đã lâu nhưng vẫn rất thắm tình quê hương. Đến thăm và ăn chiều ở nhà Trinh + Tuyết.</p>
+<p>7h30 tối. Rời New York lên máy bay đi Syracuse. Một giờ sau đến nơi.</p>
+<p>Syracuse – Hội nghị khoa học Foundations of Computer Science.</p>
+<p>Ở khách sạn Shearaton.</p>
+<p>Đến đây lại được mấy anh em Việt Kiều ra đón. Kể cũng lạ! Ở tận cái nơi Syracuse hẻo lánh này cũng có người Việt Nam học và làm việc.</p>
+<p></p></section>
+
+        <section id="13-10"><h2>13/10</h2><p>Nghe các báo cáo khoa học ở hội nghị. Gặp nhiều người quen. Và quen thêm một số người mới. Nói chuyện với cả một vài người từ Trung Quốc sang. Cũng là một sự quen biết thú vị!</p>
+<p>Trao đổi thêm với John Reif (Harvard) về kết quả nghiên cứu trình bày hôm trước ở Harvard.</p>
+<p>Tối, đi chơi Syracuse một tí. Vào một cửa hàng tạp hóa mà mọi quầy hàng đều dùng máy tính điện tử để làm việc bán hàng.</p>
+<p></p></section>
+
+        <section id="14-10"><h2>14/10</h2><p>Tiếp tục dự hội nghị và gặp gỡ một số người quen biết. Gặp lại R. Book, chủ tịch của Ủy ban về Cơ sở toán học của Computing. Đã gặp ông ta hai lần ở Paris, và đây là lần thứ ba gặp ông ta.</p>
+<p>Chiều, trời nắng đẹp. Đi chơi phố Syracuse cùng với Phi. Syracuse là một thành phố nhỏ, nhưng cũng hiện đại như mọi thành phố khác của Mỹ. Nghe nói ngày xưa, đây là thủ phủ của dân da đỏ, và bây giờ đây, những người da đỏ bất hạnh còn lại sống ở một vùng cách đây không xa lắm đang đòi quyền tự trị.</p>
+<p>Nghỉ sớm để mai dậy sớm rời Syracuse đi Washington – thủ đô nước Mỹ!</p>
+<p></p></section>
+
+        <section id="15-10"><h2>15/10</h2><p>7 giờ sáng, rời sân bay Syracuse bay về thủ đô Washington. 8h, đến sân bay Baltimore. Nói là về thủ đô, nhưng ngày hôm nay còn phải làm việc ở Đại học Maryland, cách Washington vài ba chục cây số.</p>
+<p>A. Weidemann và Côn, Tuyên ra đón. Về College Park Campus của Đại học Maryland. Dạo chơi một lát quanh khu trường. Vào thư viện. Thư viện trang bị hiện đại. Có nhiều bàn có máy thu hình dùng videotape để nghe lại, xem lại các bài giảng, và nhiều thiết bị khác. Ở nhà mình kiếm được một display cho máy tính cũng còn là chuyện khó!</p>
+<p>10h30. Gặp giáo sư John S. Toll, president của Đại học Maryland. Trường này là một trong những đại học lớn của Mỹ, có 70 ngàn sinh viên! Buổi nói chuyện đề cập đến khả năng trong tương lai lập những quan hệ giữa đại học hai nước.</p>
+<p>Trưa đi ăn cơm với Joe Anslander. Gặp một số thầy dạy Toán của trường.</p>
+<p>Chiều nay thuyết trình ở Department of Computer Science của trường. Một buổi thuyết trình khoa học có một cử tọa khá kỳ lạ. Ngoài các người Mỹ trong khoa đến nghe vì chuyên môn, còn có một số khá đông sinh viên người Việt. Họ học ở trường, hầu hết là dân di tản, có lẽ họ đến nghe vì tò mò thấy có một người Việt Nam tận Hà Nội sang thuyết trình khoa học ở một đại học Mỹ! Hà Nội! Dù trong lòng họ còn lắm hoài nghi, còn có cả căm giận, nhưng chắc là tận sâu trong tâm tư họ, Hà Nội vẫn là hình ảnh quê hương đất nước mà dẫu muốn hay không họ vẫn còn ít nhiều gắn bó.</p>
+<p>Sau buổi thuyết trình, họ xúm lại nói chuyện với tôi một cách hồ hởi. Tôi thầm mừng, vì có thể vài chuyện Toán học của tôi đã góp phần nhỏ nào đó vào việc thức tỉnh tình quê hương đất nước trong lòng họ và làm cho họ nhìn về Tổ quốc bớt xa vời. Có hai cậu còn trẻ, Việt và Thụ, hoàn cảnh di tản khá éo le và thương tâm, cứ theo tôi không nỡ rời, mãi cho đến chiều tối. Họ xúc động gặp tôi, và tôi, tôi cũng xúc động.</p>
+<p>Trao đổi chuyên môn thêm với Edmulson, Kim, Nau. Edmulson làm nhiều nghiên cứu giống những việc mà tôi làm. Trao đổi thú vị.</p>
+
+        <figure>
+          <img src="NhatKy_150.png" alt="Bản viết tay ngày 15/10" style="max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);" />
+          <figcaption class="muted">Bản viết tay ngày 15/10</figcaption>
+        </figure>
+
+<p>Tối, đi sang tận Virginia, nhà một chị Việt Kiều – Chi – dự buổi gặp gỡ với một số bà con Việt Kiều ở vùng Washington – Philadelphia. Thành phần gặp gỡ khá đa dạng. Có người trong phong trào, có người chạy hồi 1975, có người di tản sau này, cũng có người ra đi hợp pháp. Và chúng tôi – những kẻ đi sang đây và sắp về đây cũng “hợp pháp”! Dẫu từ đâu đến, gặp đây chốc lát rồi lại sẽ đi về đâu, chúng ta vẫn có cùng chung một Tổ quốc. Hãy nhớ lấy điều đó!</p>
+<p>Gặp và nói chuyện với John G. Hurley, phó giám đốc cơ quan quan hệ quốc tế của Viện Hàn lâm khoa học Mỹ. Biết thêm nhiều điều về tổ chức và hoạt động của National Academy of Sciences. Dĩ nhiên, quan hệ với Việt Nam còn là một điều xa xôi. Nhưng hãy nhớ một điều, hiện nay hàng năm có hàng chục đoàn khoa học Mỹ và Trung Quốc thăm viếng lẫn nhau!</p>
+<p>Ăn cơm trưa cùng A. Weidemann và Alvin Thatler, anh này làm việc ở National Science Foundation. Hiểu thêm về tổ chức này – một tổ chức cấp tiền cho nhiều nghiên cứu khoa học cơ bản trong nước Mỹ!</p>
+<p>Đến trường Đại học Howard trong thành phố Washington. Đây là một trường đại học mà hơn 90% sinh viên là người da đen. Gặp khoa Toán. J. A. Donaldson, trưởng khoa, cũng là người da đen. Nhiệt tình được bộc lộ khá rõ ràng.</p>
+<p>Thuyết trình về Finite graph ở khoa Toán, Đại học Howard. Đông người nghe. Đây là buổi thuyết trình cuối cùng của tôi trên đất Mỹ trong chuyến đi này.</p>
+<p>Cora Sadosky, một nữ giáo viên Toán ở Đại học này, người Argentina, rất nhiệt tình, sau buổi làm việc ở Đại học Howard đã cùng đi chơi và giới thiệu thành phố.</p>
+<p>Tối, ăn cơm ở một tiệm ăn kiểu châu Phi do khoa Toán Đại học Howard mời. Nói chuyện rôm rả. Nhưng tôi mệt lắm rồi. Ăn món ăn đặc biệt Xênêgan, hơi lạ nên khó ăn.</p>
+<p>8h tối. Đành tạm biệt. Tạm biệt các bạn, tạm biệt cả thủ đô Hoa Kỳ.</p>
+<p>8h tối. Ra sân bay Washington mua vé và đi trở lại New York. Chào Washington! Tạm biệt A. Weidemann, bạn rất đỗi chu đáo và nhiệt tình.</p>
+<p>Từ Washington về New York, máy bay bay trên những thành phố nối nhau không dứt. Dưới cánh bay là liên tục một biển ánh sáng kéo dài hàng mấy trăm cây số.</p>
+<p>10h tối. Đến sân bay New York. Được đông anh em ra đón. Về trụ sở của Đoàn Việt Nam tại Liên hợp quốc nghỉ. Xem như là về nhà rồi. Kết thúc đợt làm việc ở Mỹ và Canada. Sẽ nghỉ hai ngày ở đây, rồi đi Paris để về nước.</p>
+<p></p></section>
+
+        <section id="17-10"><h2>17/10</h2><p>Nghỉ. Một ngày nghỉ sau hơn một tháng làm việc và đi lại khá căng thẳng. Mua vài thứ linh tinh.</p>
+<p></p></section>
+
+        <section id="18-10"><h2>18/10</h2><p>New York. Chiều nay tôi sẽ từ giã New York để đi về!</p>
+<p>Thế là sau năm tuần lễ đi thăm và làm việc nhiều nơi ở Mỹ và Canada, tôi sắp kết thúc chuyến đi đầy những ấn tượng mới lạ trên một đất nước xa xôi và chứa đầy những “bí mật” đối với tôi này. Nước Mỹ! Ôi, một đất nước mênh mông giàu có, một đất nước của một sức mạnh kinh tế và kỹ thuật khủng khiếp; một đất nước mà trước đây tôi chỉ được hiểu là sào huyệt của những thế lực tàn bạo, thù địch của nhân loại.</p>
+<p>Tôi chưa có thì giờ để nghiền ngẫm và tổng kết những suy nghĩ của mình qua năm tuần lang thang trên đất nước rộng lớn này. Nhưng rõ ràng có rất nhiều điều đáng được suy nghĩ.</p>
+<p>Trước đây, nhiều khi tôi được nghe nói xã hội Mỹ là một xã hội “tiêu thụ”, một nơi ăn chơi trác táng, đồi trụy, v.v... Tôi hiểu, và cũng đã nhìn thấy cái cách tiêu thụ ở xứ này, và cũng đã thấy sơ qua cái tự do thác loạn của nhiều loại người ở đây. Nhưng có một câu hỏi: ở đây, có tiêu thụ nhiều, phải chăng vì có sản xuất lớn, có ăn chơi đấy, nhưng ai ăn chơi và ai lao động, và người ta đã lao động ra sao?</p>
+<p>Những câu hỏi đó, và biết bao câu hỏi nữa về bản chất của chế độ xã hội này, về mối quan hệ giữa con người ở nước này, vân vân, ... tôi chưa thể rút ra những điều kết luận đúng đắn một cách vội vã. Hẳn là rồi còn phải suy nghĩ nhiều. Chỉ có một điều là phải suy nghĩ, và đừng giáo điều!</p>
+<p>Tôi nhìn qua của sổ. Ngoài trời mưa dầm, âm u buồn. Dưới kia là dòng sông East River êm đềm. Một hòn đảo nhỏ giữa dòng. Những chiếc cầu dài nối hai bờ sông East với những dòng xe cộ tấp nập. Và kia là những ngôi nhà chọc trời yên lặng. Thỉnh thoảng, vài chiếc trực thăng chở du khách đi chơi ngắm phố lên xuống dưới sân bay nhỏ cạnh nhà. Xa kia, tận chân trời, thảng hoặc một vài tia nắng mặt trời xuyên qua lớp lớp sương mù dày đặc.</p>
+<p>Một chiều New York cuối tuần. Và đối với tôi, phải chăng đây sẽ mãi mãi là buổi chiều cuối cùng trên đất Mỹ. Biết rồi còn có bao giờ trở lại! Tôi chưa yêu mà cũng không ghét. Nhưng dầu sao có thoáng một chút nhớ nhung.</p>
+<p>Nhưng nhớ gì? Nhớ gì nhỉ? Vâng, nhớ, và đáng nhớ lắm chứ. Trên đất này, tôi đã gặp biết bao là bạn. Và có thêm biết bao bè bạn. Bạn thân hay sơ, gần hay xa, vẫn cần biết đấy, nhưng tình bạn chân thành có phải bao giờ cũng nhất thiết phải đo bằng chiều dài ngắn.</p>
+<p>Vậy thì tôi nhớ. Tôi không nói rằng một mảnh lòng tôi xin gửi lại đây, nhưng tôi cũng tự biết rằng có những hình ảnh gặp gỡ trên đất này sẽ theo về với lòng tôi mãi mãi.</p>
+<p>Ôi, đất nước thân yêu! Tôi chỉ là một đứa con nhỏ bé của đất nước, nhưng trong chuyến đi này đã biết bao lần tôi gọi tên đất nước. Biết bao đêm thao thức, biết bao nỗi suy tư, và cả biết bao lần nhớ thương đến nhỏ thầm giọt lệ! Đất nước ơi, đất nước của biết bao sự tích anh hùng, đất nước của lắm tài năng, đất nước của những con người cần mẫn. Vậy mà ngày nay, đó vẫn là đất nước của sự nghèo khổ cùng cực, của một hiện tại vô vọng, của một tương lai mịt mờ.</p>
+<p>Tôi bi quan quá chăng? Tôi thường nghĩ: không nên nói nhiều về bi quan hay lạc quan, thái độ đáng có là một thái độ thực tiễn và hành động. Thực tiễn! Hãy có đủ dũng cảm để nhìn cho thấu rõ tận đáy sâu của sự thật, cái sự thật rất đỗi đau lòng về mọi mặt trong cơ cấu nhà nước của Việt Nam ta hiện nay, để rồi tự cái sự thật trần trụi và tàn nhẫn đó mà tìm ra may ra mới có thể tìm cách thoát ra được.</p>
+<p>Tôi sẽ làm gì cho đất nước thân yêu của tôi? Chao ôi, nghĩ đến sự bất lực của chính mình mà hổ thẹn. Tôi vẫn nghĩ rằng rồi một lúc nào đó tôi sẽ làm một con bọ thiêu thân. Nhưng con bọ thiêu thân chỉ có thể tự giết mình một lần. Vậy thì cái lần duy nhất ấy phải là lần nào đây? Sự thiêu thân có giúp được chút ích gì cho đồng loại hay không.</p>
+<p>Nước Mỹ. New York. Thôi, giã từ ngươi. Ta sẽ đi về. Ta có một quê hương của ta, một quê hương cực khổ - cả sự cực khổ không thể tránh được và những cực khổ không đáng có – và ta yêu quí quê hương đó vô vàn. Cuộc đời ta, máu thịt ta gắn bó với quê hương đó. Ta chào ngươi, và ta mong rằng những ngày sống gần ngươi này sẽ có ích cho ta khi ta trở về đất nước của ta!</p>
+<p>Đêm 18/10 – rạng sáng 19/10. New York – Paris.</p>
+<p>Một đêm hoàn toàn mất ngủ. Hay đúng hơn, tôi đã không có được cái đêm nay để mà ngủ. Chuyến bay từ tây sang đông đã lấy mất 5 giờ chênh lệch, và thế là vừa mới được ăn tối trên máy bay thì mặt trời cũng vừa ló ở chân trời Đại Tây Dương.</p>
+<p>New York. Trời mưa tầm tã khi chúng tôi ra sân bay. Đường chật nghẽn. Tôi ngắm nhìn thêm một lần nữa những đường phố New York sau màn mưa dày đặc để nhủ thầm lời từ biệt.</p>
+<p>Sân bay John Kennedy. Mênh mông, và vô vàn là máy bay. Máy bay xếp hàng đợi ra đường băng, và vì vậy cất cánh chậm mất một giờ.</p>
+<p>Vượt Đại Tây Dương. Khoảng 7 giờ sáng, nhìn thấy đất liền nước Pháp. Đất đai, đồng ruộng, rừng cây bằng phẳng của nước Pháp trải rộng mênh mông dưới đôi cánh bay êm dịu. Đẹp. Cái đẹp của sự giàu có, phì nhiêu, cái đẹp của thiên nhiên và của lao động con người. Những cánh đồng bạt ngàn, thẳng tắp, màu nâu của đất và màu xanh cây lá dệt chen nhau như một tấm thảm vô tận.</p>
+<p>Sân bay Charles de Gaulle. Đến thủ đô nước Pháp rồi. Alain Jessonnière và anh Liễu ra đón. Về nhà AT. Paris! Paris quen thuộc. Thế là tôi lại đã được đến đây rồi. Kính chào!</p>
+<p></p></section>
+
+        <section id="19-10"><h2>19/10</h2><p>Paris. Ngày đầu tiên ở Paris, không được nghỉ lấy một giờ.</p>
+<p>Về nhà, đã có đông anh em đợi sẵn. Việt Kiều và cán bộ từ trong nước sang – toàn là anh em Informatique. Chuyện mãi đến chiều.</p>
+<p>Chiều tối đến anh Liễu. Gặp Henri van Regemorter, và nhiều người khác. Ăn, và làm việc.</p>
+<p>Mãi đến 12 giờ khuya mới về đến nhà và đi ngủ.</p>
+<p></p></section>
+
+        <section id="20-10"><h2>20/10</h2><p>Sáng. Đến CNAM (Conservatoire national des Arts et Métiers). Gặp gỡ và chuyện trò với giáo sư Namian. Chuyện gửi thực tập sinh, chuyện hợp tác hai bên.</p>
+<p>Chiều đến Sứ quán. Gặp anh Hùng để bàn thêm về việc chi tiêu khoản tiền của Viện.</p>
+<p>Đi với Sách, Thức và Mỹ một lát.</p>
+<p>Dạo chơi một lúc trên đường phố Paris. Nhớ! Vâng, trên những đường phố này, tôi nhớ lắm điều. Nhớ những lần đến Paris từ trước, nhớ nước, nhớ nhà. Nhớ, và tôi hiểu những điều tôi nhớ.</p>
+<p></p>
+<section id="21-10"><h2>21/10</h2><p></p>
+<p>Lại một ngày làm việc căng thẳng.</p>
+<p>Hôm nay đến Đại học Paris 6, 7. Institut de Programmation. Nơi quen cũ, và có nhiều bạn cũ.</p>
+<p>Girault trình bày cho biết tình hình hiện nay của IP, LITP. Nhiều chuyện lý thú.</p>
+<p>Gặp và ăn cơm trưa với B. Roninet, M. Nivat, Nolin, Girault, Irène Guessarian, v.v... Gọi là một bữa “chiêu đãi” của bè bạn dành cho mình.</p>
+<p>Chiều, thuyết trình ở Đại học Paris VI (Inst. de Pry.). Nơi đây, tôi đã thuyết trình hai lần vào những lần trước, 1975 và 1977.</p>
+<p>Tối, ngồi nghiên cứ bản dự thảo báo cáo của Ủy ban hợp tác khoa học với Việt Nam về nhận xét tình hình và các đề nghị mới.</p>
+<p>Bạn có nhiều phê bình. Không biết những người có trách nhiệm trong nước rồi có chấp nhận hay không?</p>
+<p>Gặp Didier Dacunha Castelle. Ngày mai bạn sẽ đi sang Việt Nam. Và hôm nay trong lòng bạn còn nhiều hoài nghi, thắc mắc. Tôi biết làm sao để giải đáp được hết cho bạn những câu hỏi, mà chính tôi tôi cũng chưa biết trả lời. Dĩ nhiên, tôi đã khuyến khích bạn đi, trong nhiều khó khăn vẫn có những yếu tố đáng được sự quan tâm giúp đỡ của các bạn.</p>
+<p></p></section>
+
+        <section id="22-10"><h2>22/10</h2><p>Sáng đến Sứ quán. Sứ quán ở trụ sở mới, phố Boileau. Sang trọng hơn, hiện đại học. Nhưng tôi cũng có cảm tưởng nơi ở mới này có tính chất “pháo đài” quá, và do đó lại cũng dễ bị khép kín quá.</p>
+<p>Gặp anh Sang, chuyện trò vui vẻ. Và cũng có những chuyện không vui về một số cán bộ ta sang đây.</p>
+<p>Đến Electricité de France. Nơi này – đặc biệt là ở phòng microinformatique – đã có nhiều cán bộ của Viện tôi đến thực tập. Và anh em đều đã làm việc tốt, có tín nhiệm. Đáng mừng, và cần làm sao để tiếp tục giữ được tín nhiệm.</p>
+<p>Trung tâm tính toán ở đây giàu quá, có IBM 370/168, có cả IBM 30/33, và nhiều máy hiện đại khác.</p>
+<p>Henri van Regemorter đón về Meudon ngồi nói chuyện và làm việc. Bạn thân mến! Việt Nam chúng tôi có được bao nhiêu những người bạn thủy chung và nhiệt tình như bạn? Và ngày nay, chúng tôi còn giữ được bao nhiêu cái vốn quí về tình bạn trong các giới khoa học nước ngoài?</p>
+<p>Tôi hết sức buồn vì người ta đã để phung phí, đã làm mất đi biết bao nhiêu cái vốn quí vô giá đó, và cũng chính vì vậy mà lại càng xúc động trân trọng những gì còn lại.</p>
+<p>Tối. Gặp nhiều bạn Pháp đến dự buổi họp về tình hình phát triển Informatique ở Việt Nam và bàn nội dung hợp tác Việt – Pháp. Tôi phải trình bày ở buổi họp này. Thấy mặt nhiều bạn cũ. Và cũng thấy thiếu một số bạn cũ.</p>
+<p>Nhiều bạn trí thức Pháp trong những năm gần đây đã dần dần xa lánh Việt Nam. Họ không còn tìm thấy ở Việt Nam hình ảnh của những gì mà họ hy vọng. Có nên cứ kết luận bừa rằng đó là lẽ tất nhiên, vì những trí thức đó vẫn mang trong mình “lập trường tư sản”?!</p>
+<p>Hãy nghĩ, hãy suy nghĩ sâu hơn, về phía chúng ta, chúng ta đã làm ăn dở như thế nào để đến nỗi mất dần bè bạn?</p>
+<p>Khuya. Sau buổi họp, mấy anh em Việt Kiều kéo về nhà ăn cơm và bàn chuyện đến nửa đêm. Tưởng về Paris được nghỉ đôi chút, hóa ra lại cứ liên miên hết ngày nọ đến ngày kia không dứt!</p>
+<p></p></section>
+
+        <section id="23-10"><h2>23/10</h2><p>Hôm nay dành làm việc với một số anh em của Viện sang đây thực tập. Và cũng đi phố một lát.</p>
+<p>Chiều. Họp mặt với Chi hội Toán và Informatique của hiệp hội Khoa học kỹ thuật Việt Nam tại Pháp. Đông anh chị em tới dự. Lại vô vàn câu hỏi. Và cũng nào có dễ trả lời!</p>
+<p></p></section>
+
+        <section id="24-10"><h2>24/10</h2><p>Jean Marc Steyaert. Đến nhà bạn chơi. Cảm ơn bạn, chúng ta vẫn giữ được nhiệt tình quí mến nhau như từ lần đầu tiên gặp gỡ của chúng ta.</p>
+<p>Josep Diaz từ Barcelona (Tây Ban Nha) gọi điện thoại sang tha thiết mời tôi đến Barcelona một tuần. Nhóm của Diaz đang rất quan tâm đến việc chứng minh một giả thuyết do tôi nêu ra về các bài toán NP – complete. Kể đi được gặp các bạn thì cũng thú đấy, nhưng đối với tôi nào có dễ, vì tuy đường đi Paris – Barcelona không xa, nhưng quan hệ Việt Nam – Tây Ban Nha thì lại còn quá xa vời. Xin được visa đến đấy chắc cũng mất ít nhất ba bốn tuần! Cảm ơn nhiệt tình của các bạn. Xin hẹn một lần khác vậy.</p>
+<p>Tối nay, vợ chồng M. Nivat mời cơm. Có cả vợ chồng B. Robinet tới dự. Thân mật. Tôi biết bạn không nói nhiều, nhưng tình cảm của bạn sâu lắng, đậm đà. Tôi tự nhủ phải hết sức trân trọng và cố giữ gìn tình bạn, bởi vì không có tình bạn thì cũng không thể có bất kỳ một kết quả hợp tác khoa học nào.</p>
+<p>Nói chuyện với bạn thân mật, và chia tay với bạn đầy lưu luyến.</p>
+<p></p></section>
+
+        <section id="25-10"><h2>25/10</h2><p>Sáng. Làm việc với A. Tessonnière và Mỹ, Thức về việc sử dụng khoản tiền của Viện và dự trù về việc mua một micro ordinateur do phía Pháp cấp tiền. Cũng mong cho công việc tiến triển. Trong nhiều khó khăn, lại càng cần tìm những khả năng – dù là nhỏ nhất – để vươn lên.</p>
+<p>Dành vài ba giờ trước khi rời Paris đến chơi nhà anh chị Liễu. Bà cụ nhất định gọi đến để cho ăn xôi đậu xanh. Tôi nhớ một lần ba năm trước, trên tàu hỏa Paris – Berlin, tôi đã được ăn gói xôi nắm muối vừng do bà cụ chuẩn bị cho. Trên đất lạ châu Âu, ăn xôi nắm chấm vừng thì quả là thú vị. Và bây giờ đây, trước khi lên đường trở lại quê hương, ngồi nói chuyện quê nhà giữa kẻ ở người về để thêm tình lưu luyến.</p>
+<p>Paris! Xin kính chào tạm biệt! Tôi đến đây vội vàng và ra về cũng vội vàng. Còn nhiều bạn bè tôi chưa kịp gặp. Và biết bao nơi quen cũ tôi chưa được thăm trở lại. Tôi được biết rằng ba năm qua, nước Pháp cũng đã có nhiều đổi thay. Tình hình kinh tế, chính trị đã không còn như trước. Quan hệ Pháp – Việt đã trở nên khá lạnh lùng. Bên trong nước Pháp, vị trí của những người cộng sản cũng khó khăn hơn, bị cô lập hơn. Vân vân và vân vân ...</p>
+<p>Trời mua thu. Mưa nhiều. Tôi trân trọng vô cùng những tình bạn thủy chung còn lại, nhưng tôi cũng không thể không cảm thấy bầu không khí lạnh lẽo bao quanh.</p>
+<p>Tôi nhớ chiều 1/5/1975, một buổi chiều nắng đẹp Paris với cuộc biểu tình rầm rộ hào hứng sau chiến thắng của Việt Nam. Năm năm đã trôi qua. Cuộc đời lắm nỗi thăng trầm. Một hình ảnh rực rỡ, chói lọi đã phai nhạt. Dĩ nhiên, kẻ thù bao giờ cũng muốn bôi đen, nhưng chúng ta có góp phần nào trong việc làm lạnh lẽo đi những tình bạn chân thành?</p>
+<p>Paris! Tạm biệt!</p>
+<p>Sân bay Orly. Máy bay của hãng Singapore Airline đến chậm, và thay đổi đường bay.</p>
+<p>Vậy là đi về Singapore theo đường: Paris – Amsterdam – Dubai – Colombo – Singapore.</p>
+<p>Rời Paris lúc 8h30 tồi, và trái với lịch bay, chúng tôi bay ngược lên Amsterdam. Hơn một giờ sau, đến nơi.</p>
+<p>Amsterdam. Thành phố nổi tiếng của nước Hà Lan nhỏ bé và giàu có. Tôi không được thăm thành phố, mà chỉ lưu lại vài giờ ở sân bay. Không hiểu sao thủ tục khám xét an ninh ở đây lại phiền phức đến thế.</p>
+<p>Lại lên máy bay. Chiếc Boeing 747 bay trong trời đêm châu Âu, xuyên suốt lục địa châu Âu rồi dừng nghỉ ở Dubai, thủ đô của Liên bang các tiểu vương quốc Ả rập.</p>
+<p>Từ Dubai, lại bay tối dừng chân một lát ở Colombo – thủ đô Xây Lan (Xri Lanca) – rồi từ đó bay về Singapore.</p>
+<p></p></section>
+
+        <section id="26-10"><h2>Tối 26/10</h2><p>Đến sân bay Singapore. Máy bay đến chậm thành bị lỡ chuyến bay tiếp Singapore – Bangkok. Đành phải chờ đến chuyến bay sáng mai.</p>
+<p>Singapore. Hòn ngọc Viễn Đông là đây. Đến vào buổi tối, lại chỉ ngồi ở phòng đợi sân bay, tôi chưa thể thấy gì về hòn đảo – thành phố.</p>
+<p></p></section>
+
+        <section id="27-10"><h2>27/10</h2><p>Rời Singapore, đi máy bay về Bangkok. Máy bay cũng bị chậm. Đến Bangkok đã hơn 12 giờ trưa.</p>
+<p>Cảm ơn các anh ở Sứ quán. Đêm qua, vì chúng tôi lỡ chuyến bay mà đã làm các anh vất vả.</p>
+<p>Về trụ sở Sứ quán. Thoải mái. Trút bỏ những bụi đường, và nằm nghỉ một cách khoan khoái.</p>
+<p>Bangkok. Từ nơi này, chúng tôi đã ra đi về phía đông, và rồi trong suốt hành trình, chúng tôi cứ đi mãi về phía đông, để đến hôm nay, lại trở về nơi xuất phát: Bangkok. Vậy là đã hoàn thành một vòng quanh quả đất.</p>
+<p>Một chuyến đi xa. Và cũng là đi đến những nơi xa lạ. Một hành trình mà trong đời tôi, có lẽ tôi cũng chỉ có điều kiện để thực hiện được một lần. Một tháng và hai tuần. Trong một tháng hai tuần đó chúng tôi đã đi qua và ở lại hơn 15 thành phố lớn, thực hiện 18 lần bay di chuyển, thăm và làm việc ở 14 trường đại học Mỹ, 3 trường ở Canada, và vài ba cơ quan nghiên cứu ở Pháp.</p>
+<p>Để rồi hôm nay, trước khi về Hà Nội, dừng chân ít hôm ở Bangkok cho tâm trí được hưởng chút thảnh thơi sau những ngày đi lại và làm việc cũng có thể nói là căng thẳng.</p>
+<p>Rồi cũng cũng phải tổng kết, phải sắp xếp lại những suy nghĩ và ý kiến. Nhưng chưa phải hôm nay. Hôm nay thì tự cho phép nghỉ ngơi một chút đã.</p>
+<p></p></section>
+
+        <section id="28-10"><h2>28/10</h2><p>Bangkok. Biết rằng đến khi về nhà thì lại sẽ bận rộn ngay vào công việc, nên tranh thủ hôm nay ngồi viết báo cáo của chuyến đi.</p>
+<p>Và, viết xong báo cáo!</p>
+<p></p></section>
+
+        <section id="29-10"><h2>29/10</h2><p>Đến thăm trường AIT (Asian Institute of Technology) ở Bangkok, xa trung tâm thủ đô khoảng 50 cây số. Đây là một trường đại học đào tạo sinh viên ở cấp cao học (master) và tiến sĩ (doctor), dành cho các nước châu Á về các chuyên ngành kỹ thuật. Một trường đại học độc lập, nhận tiền viện trợ của nhiều nước, đặc biệt là Mỹ, Nhật, ... Khu trường rộng mênh mông. Thiết bị phong phú và hiện đại. Phương tiện vật chất dành cho học tập và đào tạo dồi dào, không kém gì (có khi còn hơn) các trường đại học ở phương Tây.</p>
+<p>Nói chuyện với Roger J. Hosking và Kanchit Malairongo, trưởng và phó khoa Computer Applications. Nội dung học tập và đào tạo ở đây khá cao và rất thiết thực! Việt Nam cũng đã bắt đầu gửi người đến học, nhưng có lẽ cần gửi những người trẻ hơn và thật đúng chuyên môn hơn. Có cả người Việt Nam làm trưởng khoa và giáo sư ở đây như Thành, Phiên.</p>
+<p>Lần đầu tiên tiếp xúc với một trường đại học ở vùng Đông Nam Á (ngoài Việt Nam), tôi cũng thấy thú vị và không khỏi thầm so sánh. Chỉ cách nhau có một đoạn đường mà điều kiện học tập và nghiên cứ đã xa nhau ghê gớm. Tôi nói điều kiện, chứ không nói khả năng, vì tôi vẫn luôn tin vào khả năng to lớn của học sinh và cán bộ nước ta, tôi nghĩ rằng chỉ cần có được 1/10 điều kiện sống và làm việc như ở AIT này thì anh em chúng ta cũng đã có thể làm được nhiều gấp bội những gì mà hiện nay chúng ta đang làm.</p>
+<p></p></section>
+
+        <section id="30-10"><h2>30/10</h2><p>Anh T. T. Tùng vừa sang đây để đợi tàu bay đi Pháp. Đi dạo chơi cùng anh một hồi lâu và nói nhiều chuyện về khoa học nước nhà. Vâng, chúng ta chỉ có thể có được khoa học chân chính khi chúng ta có được sự tự do hoàn toàn cho tư tưởng và sáng tạo. Và tự do sáng tạo, không phải tự nó có mà không cần đấu tranh!</p>
+<p>Chiều. Đi Chùa Ngọc Bangkok. Người ta bảo đến đây mà chưa xem Chùa Ngọc thì coi như chưa biết Bangkok. Khu chùa nguy nga, tráng lệ, kiến trúc theo kiểu Ấn Độ. Người Thái Lan có thể tự hào về khu chùa nguy nga này như bất kỳ dân tộc nào khác tự hào về những di tích văn hóa của mình.</p>
+<p>Cái giá trị vĩnh cửu bao giờ cũng phải là giá trị của sự sáng tạo!</p>
+<p></p></section>
+
+        <section id="31-10"><h2>31/10</h2><p>Đi máy bay của Hàng không Việt Nam từ Bangkok về Hà Nội. Hoàn toàn kết thúc một chuyến đi xa. Nhưng tôi hiểu, những suy nghĩ về chuyến đi xa đó thì chưa phải đã kết thúc, mà thực sự chỉ mới bắt đầu...</p></section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

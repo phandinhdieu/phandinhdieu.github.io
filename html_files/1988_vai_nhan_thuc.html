@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>VÀI NHẬN THỨC VỀ THỜI ĐẠI NGÀY NAY VÀ CON ĐƯỜNG CỦA TA – Toàn văn có mục lục</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --surface: #0f172a;
+      --card: #0b1220;
+      --text: #e5e7eb;
+      --muted: #a1a1aa;
+      --accent: #60a5fa;
+      --line: rgba(255,255,255,.08);
+      --ring: rgba(0,0,0,.25);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #2563eb;
+        --line: rgba(0,0,0,.08);
+        --ring: rgba(0,0,0,.06);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: radial-gradient(1600px 800px at 20% -10%, rgba(96,165,250,.08), transparent 40%),
+                  radial-gradient(1400px 700px at 120% 10%, rgba(59,130,246,.08), transparent 35%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Noto Sans';
+      line-height: 1.75;
+    }
+    .layout { display: grid; grid-template-columns: 280px 1fr; gap: 28px; max-width: 1200px; margin: 32px auto; padding: 0 20px; }
+    nav { position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto; padding: 18px; border-radius: 16px; background: var(--surface); box-shadow: 0 10px 30px var(--ring); border: 1px solid var(--line); }
+    nav h2 { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 4px 0 12px; }
+    nav ol { list-style: none; padding: 0; margin: 0; }
+    nav li { margin: 6px 0; }
+    nav a { color: var(--text); text-decoration: none; display: block; padding: 6px 10px; border-radius: 10px; }
+    nav a:hover { background: var(--line); }
+    nav ol ol { margin-left: 10px; border-left: 2px solid var(--line); padding-left: 10px; }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px var(--ring); padding: 28px; }
+    header.page { padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 900; font-size: 28px; margin: 0 0 6px; text-transform: uppercase; }
+    header.page p.author { margin: 6px 0 0; color: var(--muted); font-style: italic; font-size: 15px; }
+    section { padding: 8px 0 4px; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 24px 0 6px; }
+    h3 { font-weight: 700; font-size: 18px; margin: 18px 0 4px; }
+    p { margin: 10px 0; }
+    .muted { color: var(--muted); }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 5; backdrop-filter: saturate(1.2) blur(8px); background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    a.anchor { text-decoration: none; color: inherit; }
+    figure { margin: 18px 0; text-align: center; }
+    figure img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+    figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .footnotes { font-size: 0.95em; color: var(--muted); }
+    .footnotes ol { padding-left: 1.25rem; }
+    .footnote-ref { text-decoration: none; }
+  
+/* === Added: Mobile-friendly tweaks (non-destructive) === */
+@media (max-width: 960px) {
+  .layout, .grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  nav, nav.toc { position: relative !important; top: auto !important; height: auto !important; max-height: none !important; }
+  .content { padding: 20px !important; }
+  header.page h1 { font-size: 26px !important; line-height: 1.3 !important; text-align: center !important; }
+  .topbar-inner { padding: 10px 16px !important; }
+}
+/* Images and tables scale to viewport */
+img, video, svg { max-width: 100% !important; height: auto !important; }
+.table-wrap { overflow-x: auto; }
+/* Print cleanup */
+@media print {
+  .topbar, nav .sticky, .btn { display: none !important; }
+  .layout { display: block !important; }
+  body { background: #ffffff !important; color: #000 !important; }
+  .content { border: 0 !important; box-shadow: none !important; }
+}
+/* === iPhone/Messenger fit fixes === */
+html, body { max-width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+* { min-width: 0; }
+nav, .toc, .content { max-width: 100%; }
+nav ol, nav li, nav a { overflow-wrap: anywhere; word-break: break-word; }
+@media (max-width: 1024px) {
+  .layout, .grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  nav, nav.toc { position: relative !important; top: auto !important; height: auto !important; max-height: none !important; width: auto !important; }
+}
+
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+      <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+      <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav aria-label="Mục lục">
+      <h2>Mục lục</h2>
+      <!-- Mục lục đầy đủ -->
+      <ol>
+        <li><a href="#title">Vài nhận thức về thời đại ngày nay và con đường của ta</a></li>
+        <li><a href="#intro">Mở đầu</a></li>
+        <li><a href="#i">I – Cách mạng khoa học – kỹ thuật và thế giới hiện nay</a>
+          <ol>
+            <li><a href="#i-1">1. Những phát minh khoa học trong thế kỉ 20</a></li>
+            <li><a href="#i-2">2. Sự chuyển biến về chất của lực lượng sản xuất</a></li>
+            <li><a href="#i-3">3. Những đổi thay trong cơ cấu kinh tế – xã hội</a></li>
+            <li><a href="#i-4">4. Biến đổi tính chất lao động và cơ cấu lao động</a></li>
+            <li><a href="#i-5">5. Thế giới như một hệ thống chỉnh thể</a></li>
+          </ol>
+        </li>
+        <li><a href="#ii">II – Về chủ nghĩa xã hội</a>
+          <ol>
+            <li><a href="#ii-1">1. Thử thách của chủ nghĩa xã hội</a></li>
+            <li><a href="#ii-2">2. Nguyên tắc, động lực và những nhược điểm của cơ chế cũ</a></li>
+            <li><a href="#ii-3">3. Định hướng đổi mới</a></li>
+            <li><a href="#ii-4">4. Các nước chậm phát triển và con đường XHCN</a></li>
+          </ol>
+        </li>
+        <li><a href="#iii">III – Về con đường của ta</a>
+          <ol>
+            <li><a href="#iii-1">1. Xác định mục tiêu theo chặng</a></li>
+            <li><a href="#iii-2">2. Kinh tế hàng hóa – cơ chế thị trường đầy đủ</a></li>
+            <li><a href="#iii-3">3. Tìm vị trí trong chỉnh thể thế giới</a></li>
+            <li><a href="#iii-4">4. Xây dựng năng lực trí tuệ quốc gia</a></li>
+            <li><a href="#iii-5">5. Dân chủ – quyền lực thuộc về nhân dân</a></li>
+          </ol>
+        </li>
+        <li><a href="#footnotes">Chú thích</a></li>
+        <li><a href="#sign">Ký hiệu</a></li>
+      </ol>
+    </nav>
+
+    <div class="content">
+      <header class="page">
+        <a class="anchor" id="title"></a>
+        <h1>VÀI NHẬN THỨC VỀ THỜI ĐẠI NGÀY NAY VÀ CON ĐƯỜNG CỦA TA</h1>
+        <p class="author">  <h2>Phan Đình Diệu</h2> Phát biểu tại Ủy ban khoa học xã hội, đầu năm 1988 </p>
+      </header>
+
+<figure>
+  <picture>
+    <img src="TQ88.png" alt="Hình minh họa (TQ88)" style="width:60%; height:auto;">
+  </picture>
+  <figcaption class="muted">Bài đăng trên số báo cuối của báo Tổ Quốc</figcaption>
+</figure>
+
+      <!-- Toàn văn nội dung được giữ nguyên, không cắt bớt -->
+      <section id="intro">
+        <p>Dưới tác động của cuộc cách mạng khoa học – kỹ thuật hiện đại, thế giới chúng ta đang trải qua những biến động và đổi thay cực kì sâu sắc<a class="footnote-ref" href="#fn1" id="ref1">[1]</a>. Lực lượng sản xuất xã hội đang trong quá trình chuyển biến với những bước tiến cơ bản về chất lượng, nền kinh tế thế giới đang chuyển đổi “ từ một nền kinh tế chủ yếu dựa vào các nguồn tài nguyên cạn hẹp của hành tinh chúng ta sang một nền kinh tế của trí tuệ” - như lời người đứng đầu một cường quốc đã phát biểu. Loài người, với tất cả cái phức tạp và đa dạng, với tất cả những khác biệt sâu sắc và những mâu thuẫn giằng xé, đang tiến bước lên một giai đoạn lịch sử mới của nền văn minh.</p>
+        <p>Trong quá trình phát triển đó, thế giới càng ngày càng có nhiều mối ràng buộc để trở thành một hệ thống chỉnh thể. Đồng thời, trong cái chỉnh thể đó, chứa đựng nhiều cái khác biệt: trong khi một bộ phận tiên tiến của thế giới đã bước qua ngưỡng cửa đi vào giai đọa mới – giai đoạn thứ ba – của nền văn minh nhân loại, thì một bộ phận lớn khác vẫn chưa ra khỏi giai đoạn thứ nhất của lịch sử văn minh đó. Điều quan trọng là: <em>chỉnh thể,</em> nhưng không <em>thuần nhất</em>; đồng thời,<em> khác biệt</em>, nhưng không <em>biệt lập.</em></p>
+        <p>Đất nước ta, do nhiều nguyên nhân lịch sử, tiếc thay vẫn nằm trong bộ phận chậm tiến của nhân loại – ít nhất về phương diện kinh tế. Nhưng không biệt lập, nghĩa là vẫn tồn tại và tiến hóa trong sự tương tác với thế giới bên ngoài. Vì vậy, con đường mà ta muốn chọn cho mình phải là con đường trong cái “chỉnh thể” của thế giới đó. Cho nên, để xác định đường đi đúng đắn cho mình, ta phải hiểu rõ bản chất của những gì đang xảy ra trong thế giới, nói rõ hơn là bản chất của cuộc cách mạng khoa học – kĩ thuật và những đổi thay của thế giới hiện đại. Đó là điều thứ nhất. Điều thứ hai: chủ nghĩa xã hội – mục tiêu mà chúng ta hướng tới. Ngày nay, chúng ta không thể yên trí nói rằng chúng ta xây dựng chủ nghĩa xã hội, và thế là mục tiêu đã rõ ràng. Ta biết rằng bản thân chủ nghĩa xã hội đang trải qua những thử thách nghiêm trọng. Vậy trong mô hình cũ của chủ nghĩa xã hội đã có những khuyết tật nào, và cần có quan niệm mới về chủ nghĩa xã hội đã có những khuyết tật nào, và cần có quan niệm mới về chủ nghĩa xã hội như thế nào. Không nghiên cứu kĩ những vấn đề này, thì cái đích mà chúng ta định sẽ mù mờ, và do đó, đường mà ta vạch ra cũng sẽ không xác đáng.</p>
+        <p>Dưới đây, nhằm mục đích trao đổi ý kiến, tôi xin phát biểu một số suy nghĩ và nhận thức về hai vấn đề quan trọng đó, và từ đó, một vài suy nghĩ về con đường trước mắt của ta.</p>
+      </section>
+
+      <!-- Các phần I, II, III giữ nguyên văn như gốc -->
+      <section id="i">
+        <h2>I – Cách mạng khoa học – kỹ thuật và thế giới hiện nay</h2>
+        <section id="i-1">
+          <h3>1 – Những phát minh khoa học trong thế kỉ 20</h3>
+          <p>Trước hết, đó là những phát minh của Vật lí học về cấu trúc của chất. những hiểu biết về cấu trúc hạt nhân, các phản ứng phân chia và tổng hợp hạt nhân đã là cơ sở cho kĩ thuật năng lượng hạt nhân. Các nghiên cứu về điện tử, về quá trình vận động của điện tử trong các môi trường vật chất khác nhau đã là nền tảng cho sự ra đời và phát triển nhanh chóng của kĩ thuật điện tử và vi điện tử. Với kĩ thuật điện tử, con người giải quyết được các vấn đề phức tạp về đo lường, khuếch đại, biểu diễn và biến đổi tín hiệu, đó là cơ sở của kĩ thuật xử lí thông tin, một ngành kĩ thuật tiến nhanh như vũ báo trong mấy chục năm qua.</p>
+          <p>Thông tin là một khái niệm trung tâm của khoa học trong thời đại chúng ta. Thông tin thể hiện mặt trật tự và tổ chức vật chất, vận động thông tin là hình thái chuyển hóa tính trật tự và tổ chức của các hệ thống vật chất. Sự ra đời và phát triển nhanh chóng của các ngành khoa học về thông tin, điều khiển, hệ thống, v.v…, cũng với những bước tiến vũ bão của kĩ thuật tin học là cơ sở vững chắc của quá trình “tin học hóa” các hoạt động của con người trong mọi lĩnh vực của sản xuất, kinh tế và xã hội.</p>
+          <p>Những phát minh sâu sắc cũng đã được thực hiện trong khoa học về sự sống – thí dụ việc phát hiện mã di truyền trong cấu trúc của đại phân tử ADN, việc tổng hợp gen, v.v… đó là cơ sở cho sự ra đời công nghệ sinh học, một ngành công nghệ hứa hẹn những đóng góp kì diệu phục vụ đời sống con người trong tương lai.
+Không thể kể hết những thành tựu to lớn mà khoa học đã đạt được trong mấy thập kỉ qua trên mọi lĩnh vực của tri thức. Nói tóm lại một câu, khoa học một mặt đã đi rất sâu vào những cấu trúc cơ bản của các hệ thống vật chất, mặt khác, trên cơ sở những qui luật cơ bản đó nhận thức một cách sâu sắc các đối tượng thực tế của tự nhiên và xã hội, đồng thời tạo ra các công nghệ có tác dụng to lớn phát triển nền sản xuất và kinh tế của xã hội.</p>
+        </section>
+        <section id="i-2">
+          <h3>2 – Sự chuyển biến về chất của lực lượng sản xuất</h3>
+          <p>Cách mạng khoa học – kĩ thuật hiện đại đang thúc đẩy sự phát triển vượt bậc với những thay đổi về chất lực lượng sản xuất của xã hội.</p>
+          <p>Loài người đã trải qua hàng nghìn năm trong giai đoạn thứ nhất của nền văn minh – giai đoạn của <em>nền sản xuất nông nghiệp thủ công</em>, với công cụ lao động chủ yếu là công cụ thủ công sử dụng nguồn năng lượng tự nhiên của cơ thể.</p>
+          <p>Giai đoạn thứ hai của nền văn minh nhân loại là giai đoạn của nền <em>sản xuất cơ khí hóa</em>. Sự phát triển của giai đoạn này gắn liền với những thành tựu khoa học – kĩ thuật giúp con người khai thác và sử dụng các nguồn năng lượng to lớn trong thiên nhiên vào các hoạt động sản xuất. Tự động hóa các vận động cơ giới bằng cách sử dụng các nguồn năng lượng đó là đặc trưng chủ yếu của công cụ lao động trong giai đoạn văn minh cơ khí hóa.</p>
+          <p>Ngày nay với máy tính điện tử, với các thiết bị điều khiển tự động, với các rô bốt thông minh, loại người đang tiến đến giai đoạn thứ ba của nền văn minh nhân loại – sau khi các vận động cơ giới trong công cụ lao động đã được tự động hóa, thì lao động của con người trên những công cụ đó là để thực hiện các hoạt động điều khiển, tức là các vận động thông tin. Tự động hóa điều khiển, tức tự động hóa các vận động thông tin, là đặc điểm cơ bản của công cụ lao động trong giai đoạn này. Tuy nhiên, các quá trình thông tin không phải chỉ có trong hoạt động điều khiển các máy móc cơ khí, do đó phạm vi của việc tự động hóa cả quá trình thông tin rộng lớn hơn rất nhiều: trong sản xuất và tổ chức sản xuất, trong thông tin liên lạc, trong các hoạt động kinh tế như ngân hàng, tài chính, thống kê, kế hoạch, trong các hoạt động dịch vụ, trong điều tra cơ bản, nghiên cứu khoa học, trong công tác hành chính văn phòng, trong các hoạt động xã hội. v.v…</p>
+          <p>Ta biết rằng trong một nước công nghiệp phát triển, khu vực dịch vụ và thông tin càng ngày càng chiếm tỉ lệ to lớn trong nền kinh tế quốc dân (trong các nước tư bản chủ yếu, tỉ lệ đó hiện nay là trên dưới 60%), vì vậy, tự động hóa các vận động thông tin, tức “tin học hóa” sản xuất và các hoạt động kinh tế - xã hội ó ý nghĩa cách mạng sâu sắc.</p>
+          <p>Sau giai đoạn cơ khí hóa là giai đoạn <em>tin học hóa</em> – đó là sự chuyển biến về chất của lực lượng sản xuất xã hội, sự chuyển biến này kéo theo nó hàng loạt những chuyển biến khác về tính chất lao động sản xuất và kinh tế, về cơ cấu sản phẩm, cơ cấu tạo thành giá trị, cơ cấu của lực lượng lao động xã hội, v.v…</p>
+        </section>
+        <section id="i-3">
+          <h3>3 – Những đổi thay trong cơ cấu kinh tế – xã hội</h3>
+          <p>Trong nền kinh tế và xã hội của thế giới hiện đại đã và đang xảy ra những đổi thay cơ bản và sâu sắc trong cơ cấu nhu cầu, cơ cấu sản phẩm, cơ cấu phân bổ giá trị trong tổng thu nhập quốc dân, v.v…</p>
+          <p>Nền sản xuất đại công nghiệp cơ khí đã tạo ra những mối quan hệ ngày càng phức tạp, những mối liên kết ngày càng phong phú trong mỗi quá trình sản xuất cũng như trong toàn bộ nền kinh tế. Và đến lượt mình, bản thân các quan hệ, các mối liên kết đó cũng trở thành các yếu tố của chính quá trình sản xuất và hoạt động kinh tế, việc xử lý các mối liên hệ đó cũng trở thành một hoạt động sản xuất trực tiếp. Kinh tế phát triển thúc đẩy các nhu cầu xử lí thông tin hình thành và phát triển. đáp ứng các nhu cầu này lại làm cho kinh tế và xã hội càng có nhiều liên kết phong phú và đa dạng hơn, tức là đến lượt mình lại thúc đẩy thêm các nhu cầu xử lí thông tin, v.v…</p>
+          <p>Con người trong xã hội nói chung có hai loại nhu cầu: <em>thức ăn và thông tin</em> (food and information). <em>Thức ăn</em> (cách nói tắt cho các nhu cầu về ăn, mặc, ở,…) là nhu cầu để cá nhân tồn tại, thông tin là nhu cầu để con người trở thành thành viên của xã hội – xã hội càng phát triển, nhu cầu này càng tăng lên. Nhu cầu về <em>thức ăn</em> là có hạn, còn nhu cầu về <em>thông tin</em> thì vẫn phát triển không ngừng.</p>
+          <p>Nhu cầu của con người, của sản xuất và của xã hội thay đổi, thì cơ cấu sản phẩm của nền kinh tế cũng thay đổi để đáp ứng các nhu cầu đó.</p>
+          <p>Ta thấy rõ trong mấy chục năm gần đây, cơ cấu sản phẩm tiêu dùng của thế giới thay đổi nhanh chóng. Từ các máy thu thanh, thu hình đến máy tính cá nhân, điện thoại truyền hình, hộp thư điện tử, v.v…, các sản phẩm tiêu dùng đáp ứng các nhu cầu thông tin đang không ngừng tăng lên nhanh chóng về chủng loại, số lượng và chất lượng.</p>
+          <p>Trong công nghiệp, các sản phẩm là tự liệu sản xuất, là công cụ lao động cũng chứa đựng ngày càng nhiều các yếu tố xử lí thông tin hay điều khiển tự động.</p>
+          <p>Quan niệm về vai trò của “công nghiệp nặng” hẳn sẽ có những thay đổi. Trong nền sản xuất cơ khí hóa, công nghiệp nặng về cơ bản là ngành chế tạo ra các máy móc cơ khí, tức các máy móc sử dụng năng lượng để thực hiện các vận động, cơ giới. Trong nền sản xuất “tin học hóa”, chế tạo máy sẽ cơ bản là chế tạo ra các máy xử lý thông tin. Và, vì vậy, nếu chế tạo máy trong giai đoạn cơ khí hóa được thực hiện trong các nhà máy lớn chế tạo công cụ của công nghiệp nặng truyền thống, “chế tạo máy” trong giai đoạn tin học hóa một phần lớn sẽ được thực hiện bằng lao động trí tuệ bên cạnh các máy tính điện tử, các “trạm làm việc” với máy tính và thiết bị tự động hóa thiết kế.</p>
+          <p>Các sản phẩm đáp ứng nhu cầu thông tin trong các lĩnh vực kinh tế, văn hóa, và xã hội cũng chiếm một tỷ lệ rất to lớn trong nền sản xuất hiện đại.</p>
+          <p>Cơ cấu nhu cầu, cơ cấu và tính chất của sản phẩm thay đổi, điều đó dẫn đến những đổi thay cơ bản trong cơ cấu phân bố các phần giá trị tạo thêm trong tổng thu nhập quốc dân. Xu hướng chung là trong những nền kinh tế càng phát triển và hiện đại hóa, thì phần đóng góp giá trị của các khu vực dịch vụ và thông tin càng có tỉ lệ lớn. Trong khi ở các nước chậm phát triển, nông nghiệp còn đóng góp trên 50% giá trị trong thu nhập quốc dân, dịch vụ và thông tin không đáng kể, thì ở các nước tư bản phát triển, phần đóng góp giá trị của khu vực sản xuất nông nghiệp chỉ có khoảng 3-5%, của khu vực dịch vụ 20-25%, của khu vực thông tin 34-45%. Ở đây, cần chú ý một điều là quan niệm về giá trị và việc tạo thành giá trị trong nền sản xuất xã hội cần có những thay đổi để phù hợp với bản chất của các quá trình sản xuất và kinh tế hiện đại.</p>
+        </section>
+        <section id="i-4">
+          <h3>4 – Những đổi thay nói trên trong nền sản xuất xã hội đưa đến những đổi thay to lớn trong tính chất của lao động và cơ cấu thành phần lao động trong xã hội.</h3>
+          <p>Lao động chân tay thuần túy đã được thay thế phần lớn trong giai đoạn cơ khí hóa. Lao động điều khiển các máy móc cơ khí đã và đang được thay thế dần bởi các thiết bị điều khiển tự động hóa. Và, vì vậy, phần chủ đạo của lao động con người trong một nền sản xuất tương lai sẽ là lao động trí tuệ: thiết kế và tổ chức các hệ thống thông tin bằng máy tính, các hệ điều khiển và quản lý tự động hóa, thiết kế các máy tính, thế hệ mới, các loại thiết bị chuyên dụng, các hệ chuyên gia, các rôbốt thông minh, v.v…</p>
+          <p>Tất nhiên, nói như vậy không có nghĩa là lao động trong toàn xã hội sẽ là lao động trí tuệ. Chắc chắn sẽ vẫn còn những khâu nhất định của lao động chân tay, lao động điều khiển không thể tự động hóa hoàn toàn. Nhưng lao động trí tuệ có tính chất sáng tạo sẽ là lao động đặc trưng.</p>
+          <p>Trong các hoạt động đó, cần đặc biệt chú ý loại hoạt động tổ chức và quản lí. Kinh tế và xã hội càng phức tạp, càng đa dạng, thì hoạt động tổ chức và quản lí sản xuất, kinh tế, xã hội càng khó khăn và có ý nghĩa cực kì quan trọng.</p>
+          <p>Tính chất của lao động thay đổi, thì cơ cấu thành phần lao động của xã hội cũng thay đổi. Thành phần công nhân, đại diện cho chân tay và điều khiển các máy móc cơ khí, không còn đóng vai trò tiên tiến trong nền sản xuất xã hội nữa. Đại diện tiên tiến nhất của nền sản xuất hiện đại là lao động trí tuệ. Vì vậy, hoặc phải đổi mới bản thân khái niệm “công nhân”, hoặc phải đổi mới cách nhìn về “vai trò tiên tiến” của thành phần công nhân theo nghĩa truyền thống.</p>
+          <p>Từ mười năm trước đây, nhiều nhà kinh tế học đã nhận định rằng ở các nước phát triển nhất, như Mĩ, “thông tin” là nguồn tài nguyên quốc gia quan trọng nhất. Gần đây, người ta lại nói: Thời đại của chúng ta đang chứng kiến một sự chuyển biến đến “một nền kinh tế của trí tuệ”. Với một vài phân tích sơ lược như trình bày ở trên, ta có căn cứ để tin vào sự thật đó.</p>
+        </section>
+        <section id="i-5">
+          <h3>5 – Thế giới hiện đại như một hệ thống chỉnh thể</h3>
+          <p>Thế giới hiện đại, trong quá trình phát triển hết sức phức tạp và đa dạng, đang càng ngày càng trở thành một hệ thống chỉnh thể với tất cả những khác biệt và không thuần nhất trong bản thân nó.</p>
+          <p>Thế giới bao gồm các quốc gia. Nói thế giới là một chỉnh thể có nghĩa là trong thế giới đó, có nhiều mối liên kết để cho sự tồn tại và phát triển của mỗi quốc gia luôn phụ thuộc và, và tác động đến sự tồn tại và phát triển của các quốc gia khác: và với những ràng buộc trong các tương tác và phụ thuộc đó, thế giới trở thành một thực thể hệ thống, có những thuộc tính hệ thống mà từng quốc gia thành viên không có. </p>
+          <p>Nền kinh tế hiện đại đang bước sang giai đoạn tin học hóa. Tuy nhiên, không hề có một nền kinh tế tin học hóa đối lập với một nền công nghiệp cơ khí hóa hiện đại. Đứng về toàn bộ quá trình phát triển mà nói, thì tin học hóa là giai đoạn tiếp nối trên cơ sở đã trải qua và đang hoàn thiện giai đoạn cơ khí hóa; và một nền kinh tế hiện đại hoàn chỉnh bao gồm trong nó các thành phần của nền sản xuất cơ khí hóa đang được tiếp tục hoàn thiện và các thành phần mới của “tin học hóa”. Bằng nhiều hình thức liên kết khác nhau, nền kinh tế hiện đại có xu thế trở thành một hệ thống hoàn chỉnh trên phạm vi thế giới, trong khi nền kinh tế của từng quốc gia không nhất thiết là hoàn chỉnh. Các mối quan hệ cân đối tương tác trong nền kinh tế cũng được thực hiện trong phạm vi toàn thế giới. Tính chỉnh thể của thế giới về mặt kinh tế đang được hình thành và củng cố như vậy.</p>
+          <p>Khi hệ thống, tính chỉnh thể của thế giới được tăng cường, thì quan hệ giữa các quốc gia chủ yếu là quan hệ phụ thuộc lẫn nhau, sự tồn tại và phát triển của mỗi quốc gia có quan hệ gắn bó với sự tồn tại và phát triển của toàn hệ thống thế giới.</p>
+          <p>Tính chỉnh thể làm xuất hiện những mục tiêu và lợi ích toàn cầu của toàn hệ thống, và độc lập với ý muốn con người, đó  là cơ sở cho một sự thống nhất nào đó giữa mọi quốc gia và thế lực có thể rất khác biệt nhau trong xã hội. Sự “thống nhất” lợi ích này lại càng được tăng cường bởi những lợi ích chung về mặt xã hội của toàn hệ thống thế giới khi toàn thế giới loài người đang cùng phải đương đầu với những nguy cơ thật sự đe dọa sự tồn tại của mình như chiến tranh hạt nhân hủy diệt, sự ô nhiễm và hủy hoại môi trường, v.v…</p>
+          <p>Tất nhiên, các yếu tố làm cho thế giới trở thành chỉnh thể đó không hề làm cho thế giới trở thành thuần khiết. Các mâu thuẫn cơ bản của thời đại không mất đi, nhưng có những thay đổi nhất định về tính chất và phương thức giải quyết. Chẳng hạn, giữa hai hệ thống xã hội vẫn tồn tại những mâu thuẫn gay gắt, nhưng đồng thời cũng xuất hiện những mối quan hệ lợi ích phụ thuộc lẫn nhau; mâu thuẫn đó không thể giải quyết bằng chiến tranh, mà phải được giải quyết trong điều kiện cùng tồn tại hòa bình và thi đua hòa bình.</p>
+          <p>Trong xu thế tăng cường các mối liên kết hệ thống đó của thế giới, mọi sự phân chia thế giới theo một tiêu chuẩn tuyệt đối hóa nào đó đều không tránh khỏi phiến diện. Các nước có cùng <em>chế độ xã hội </em>có những quan hệ lợi ích liên kết với nhau, nhưng các nước có cùng <em>trình độ phát triển</em> của nền sản xuất cũng có những vấn đề chung., và các mối quan tâm chung. Thí dụ: một nước chậm phát triển chọn nền xã hội chủ nghĩa có những lợi ích chính trị chung với các nước xã hội chủ nghĩa khác, nhưng về mặt sản xuất phát triển và kinh tế có tiếng nói chung với các nước chậm phát triển hơn là các nước xã hội chủ nghĩa đã phát triển.</p>
+          <p>Trong thế giới chỉnh thể của vô vàn những mối liên kết phức tạp, những quan hệ hỗ trợ nhau cũng như những mâu thuẫn giằng xé nhau đó, một quốc gia, để tìm một chiến lược phát triển thuận lợi cho mình, phải tính đến tất cả các mối phụ thuộc, tìm kiếm một lối đi có lợi trong tất cả các mối phụ thuộc đó, chứ không thể đơn giản hóa, sơ lược hóa – và do đó làm nghèo nàn – các mối liên hệ phụ thuộc của mình với thế giới.</p>
+        </section>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="ii">
+        <h2>II. – Về chủ nghĩa xã hội</h2>
+        <section id="ii-1">
+          <h3>1- Hệ thống xã hội chủ nghĩa</h3>
+          <p>Hệ thống xã hội chủ nghĩa trên thế giới được bắt đầu hình thành từ sau thắng lợi của Cách mạng tháng Mười, đã trải qua một chặng đường dài xây dựng và đã có những cống hiến vĩ đại đối với sự tồn tại và phát triển của toàn nhân loại. Tuy nhiên, con đường xã hội chủ nghĩa là con đường chưa có sẵn, loài người đang phải dày công khám phá. Mô hình xã hội chủ nghĩa thực tế ở Liên-xô và các nước khác trong những thập kỉ qua đã chứng tỏ những ưu việt, đồng thời cũng bộc lộ những yếu kém mà gần đây càng thấy rõ.</p>
+          <p>Cuộc cách mạng khoa học – kĩ thuật hiện đại đang làm rung chuyển thế giới, trên thực tế đã xảy ra và được tiến hành mạnh mẽ sâu rộng trong các nước tư bản phát triển, chứ chưa phải trong các nước xã hội chủ nghĩa, nó đang đi những bước chậm chạp và khó khăn. Chủ nghĩa xã hội, trên thực tế, trong những thập kỉ qua, chưa tạo được điều kiện thuận lợi cho những bước tiến mạnh mẽ của cách mạng khoa học – kĩ thuật, cho sự phát triển và đổi mới nền sản xuất và kinh tế của mình.</p>
+          <p>Như vậy, chủ nghĩa xã hội trên thế giới đang đứng trước những thử thách nghiêm trọng, cần có những đổi mới thật sự để khắc phục những yếu kém và phát huy được đầy đủ những ưu việt bản chất của mình. Để làm cơ sở cho những đổi mới đó, cần có những xem xét cơ bản về chính những nguyên tắc xây dựng chủ nghĩa xã hội hiện nay.</p>
+        </section>
+        <section id="ii-2">
+          <h3>2- Nguyên tắc, động lực, nhược điểm cơ chế cũ</h3>
+          <p>Chủ nghĩa xã hội – theo định nghĩa – là giai đoạn quá độ tiến lên chủ nghĩa cộng sản. Để thủ tiêu chế độ bóc lột, giải phóng sức sản xuất xã hội, chủ nghĩa xã hội thực hiện chế độ sở hữu công cộng về tư liệu sản xuất, xây dựng một nền kinh tế kế hoạch hóa với chế độ quản lí tập trung của Nhà nước. Qui luật kinh tế cơ bản của chủ nghĩa xã hội xác định mục tiêu chung của nền kinh tế đó là mở rộng và hoàn thiện không ngừng nền sản xuất trên cơ sở kĩ thuật tiên tiến để thỏa mãn các nhu cầu ngày càng tăng và sự phát triển toàn diện của mọi thành viên trong xã hội. Nền kinh tế đó được phát triển theo qui luật cân đối và có kế hoạch. Trong chủ nghĩa xã hội, chưa có sự công bằng tuyệt đối những có sự công bằng xã hội ở giai đoạn thấp theo nguyên tắc phân phối theo lao động.</p>
+          <p>Việc tổ chức và điều hành nền kinh tế theo kế hoạch kế hoạch hóa Nhà nước dưới sự quản lí tập trung đã có tác dụng đáng kể đối với việc xây dựng và phát triển nền kinh tế xã hội chủ nghĩa trong những giai đoạn nhất định và những hoàn cảnh nhất định.</p>
+          <p>Nhưng trong những thập kỷ vừa qua, cơ chế kinh tế theo những nguyên tắc nói trên đã bộc lộ những nhược điểm của nó, mà nhược điểm quan trọng nhất là không tạo ra được một động lực thật sự mạnh mẽ thúc đẩy sự phát triển năng động của nền kinh tế xã hội.</p>
+          <p>Nhược điểm đó không nằm trong những mục tiêu tốt đẹp của chủ nghĩa xã hội, mà là trong những nguyên tắc không phù hợp với thực tiễn mà ta vẫn xem là những nguyên tắc (hay qui luật) của kinh tế xã hội chủ nghĩa.</p>
+          <p><em>Động lực</em> phát triển kinh tế xét cho cùng, bao giờ cũng xuất phải xuất phát từ <em>lợi ích kinh tế</em>. Xã hội gồm các thành viên là những con người cụ thể. Có lợi ích kinh tế của toàn xã hội và lợi ích kinh tế của mỗi cá nhân. Qui luật kinh tế cơ bản qui định trong nền kinh tế xã hội chủ nghĩa, lợi ích toàn xã hội là nhằm để phục vụ lợi ích của mọi thành viên. Từ đó, trong xã hội chủ nghĩa mỗi người trước hết phải phấn đấu cho lợi ích chung, lợi ích toàn thể, rồi sẽ có được trong lợi ích chung đó sự đáp ứng các lợi ích cá nhân chính đáng của mình. “Mỗi người vì mọi người, mọi người vì mỗi người” là nguyên tắc sống của xã hội. Tất cả những nguyên tắc đó <em>đồng nhất lợi ích chung với lợi ích riêng</em>, trên thực tế dẫn đến không thừa nhận <em>lợi ích riêng, phủ nhận cá nhân</em> và phủ nhận luôn cả nguồn động lực chân thực nhất của sự phát triển. Tuy nhiên, dẫu không được thừa nhận, thì về khách quan, lợi ích riêng vẫn tồn tại. Tồn tại, nhưng không được thừa nhận, dẫn đến những biểu hiện không thật, do đó cũng góp phần tạo ra cái “không thật” trong các mối quan hệ kinh tế, xã hội.</p>
+          <p>Vấn đề lợi ích kinh tế là một vấn đề mấu chốt. Trong những năm gần đây, các nước xã hội chủ nghĩa đều có những điều chỉnh theo hướng thừa nhận tính độc lập lợi ích cá nhân và thực hiện các chính sách, biện pháp kết hợp lợi ích toàn xã hội và lợi ích các nhân. Chủ nghĩa xã hội có những tiền đề cần thiết cho sự kết hợp đó, đó là sự nhất trí về nguyên tắc lợi ích chung của toàn xã hội và lợi ích riêng của cá nhân người lao động. Nhưng cần thừa nhận một điều là: mỗi người lao động trong hoạt động sản xuất và kinh tế trực tiếp của mình nhằm trước hết đạt được lợi ích cá nhân. Còn tạo ra những biện pháp khống chế và hiệp tác như thế nào để các lợi ích cá nhân không mâu thuẫn, mà góp phần thực hiện lợi ích chung, là trách nhiệm quản lí của toàn hệ thống xã hội. Phải chăng khẩu hiệu lí tưởng “mỗi người vì chính mình, và từ chỗ vì chính mình mà góp phần vì xã hội”. Mỗi thành viên, được động lực lợi ích kích thích sẽ phát triển mọi năng lực năng động và sáng tạo của mình để tăng gia sản xuất và phát triển kinh tế, đồng thời toàn xã hội, bằng các biện pháp tổ chức và quản lí thích hợp, bằng các chế độ và chính sách thảo đáng, thực hiện sự hiệp tác “từ chỗ mỗi người vì chính mình mà góp phần vì toàn xã hội”.</p>
+          <p>Hệ thống các yếu tố: một chế độ sở hữu công cộng về tư liệu sản xuất, một nền kinh tế Nhà nước được quản lí tập trung và phát triển theo kế hoạch, đã từng là nền tảng cho xã hội xã hội chủ nghĩa. Theo quan điểm của khoa học thông tin và hệ thống, một hệ thống kinh tế như vậy có những nhược điểm chính như sau:</p>
+          <p>- Quản lí là làm quyết định trên cơ sở xử lí thông tin. Kế hoạch là quyết định của quản lí Nhà nước về hoạt động của toàn bộ nền kinh tế xã hội. Nếu muốn có những kế hoạch chi tiết thì phải cử lí thông tin về rất nhiều những mối quan hệ trong kinh tế - xã hội, mà <em>độ phức tạp của chúng vượt quá khả năng của mọi hệ thống xử lí thông tin mà con người có thể có được</em>. Vì vậy, chỉ mới xét riêng nguyên nhân đó thôi, thì việc xác định một kế hoạch cân đối chi tiết cho toàn bộ nền kinh tế, về nguyên tắc là <em>không thể được</em>. Không thể được: mà vẫn làm, thì kết quả là áp đặt lên nền sản xuất xã hội những “kế hoạch” không thực tế, buộc nền sản xuất đó hoặc phải tuân theo một cách khiên cưỡng để đi đến đổ vỡ, hoặc tự tìm cách thoát ra khỏi sự kiềm chế của “kế hoạch” để tạo nên <em>hỗn loạn</em>.</p>
+          <p>- Mọi kế hoạch đều mang tính chất là những mệnh lệnh tĩnh cho hệ thống kinh tế - xã hội là một hệ thống <em>sinh động</em> với vô vàn những mối liên hệ phong phú và đa dạng. Bắt nền kinh tế tuân theo kế hoạch định sẵn là làm xơ cứng và nghèo nàn đi các mối liên kết sinh động đó. Trong khi bản thân các mối liên kết phong phú và đa dạng cũng đã tạo thành một yếu tố quan trọng của nền sản xuất xã hội, việc xử lí các mối liên kết mang lại những đóng góp to lớn vào giá trị tạo thêm trong nền kinh tế thì việc làm nghèo đi các mối liên kết là tước mất ở nền kinh tế những khả năng tạo thêm giá trị. Chính vì vậy mà trong khi ở các nước tư bản phát triển, khu vực dịch vụ và thông tin không ngừng tăng lên nhanh chóng (đóng góp trên dưới 60% giá trị vào tổng thu nhập quốc dân, thì ở các nước xã hội chủ nghĩa, dịch vụ rất kém và khu vực thông tin cũng nghèo nàn.</p>
+          <p>- Kế hoạch hóa cũng đi liền với <em>độc quyền</em> Nhà nước trong mọi hoạt động sản xuất, kinh doanh. Một nền sản xuất không có cạnh tranh không được khuyến khích bởi sự đáp ứng các nhu cầu và thị hiếu của người tiêu thụ, thì tất yếu trở thành trì trệ, không đòi hỏi cải tiến và đổi mới một cách cấp thiết.</p>
+          <p>Ngoài những vấn đề kinh tế như trình bày trên, chủ nghĩa xã hội cũng đang phải xem xét lại nhiều vấn đề thuộc về hệ thống chính trị, đặc biệt là vấn đề dân chủ trong xã hội. Dân chủ là một yêu cầu cấp thiết để giải phóng và phát huy mọi năng lực sáng tạo của quần chúng trong sản xuất, trong quản lí kinh tế và quản lí Nhà nước. Trong lịch sử, dưới danh nghĩa chuyên chính vô sản đã không ít trường hợp thiết lập trong những thời gian dài sự chuyên chính của những phe nhóm thậm chí của những cá nhân. Tạo ra một cơ chế xã hội, một hệ thống chính trị bảo đảm không xảy ra những sự lạm dụng như vậy và bảo đảm cho một nền dân chủ thật sự - nền dân chủ trong đó mọi quyền lực trong xã hội thuộc về nhân dân – là một nhiệm vụ trọng đại trong công cuộc đổi mới hiện nay.</p>
+        </section>
+        <section id="ii-3">
+          <h3>3. Định hướng đổi mới</h3>
+          <p>Để khắc phục các nhược điểm và để phát huy tính ưu việt bản chất của mình, chủ nghĩa xã hội cần được đổi mới. Nghiên cứu cơ sở lí luận cho sự đổi mới chế độ xã hội chủ nghĩa là một vấn đề cực kì quan trọng, chắc chắn đang được tiến hành ở nhiều nước. Dưới đây xin trình bày một vài suy nghĩa bước đầu.</p>
+          <p>Trước hết, cần xem xét từ việc xác định <em>mục tiêu</em>. Việc công hữu hóa, hợp tác hóa, quản lí tập trung, kế hoạch hóa, v.v… đều không phải là <em>mục tiêu</em>, mà chỉ là <em>phương tiện</em> mà ta đã từng hi vọng là đưa ta đạt tới mục tiêu. Mục tiêu của chủ nghĩa xã hội, xét cho cùng cũng là nhằm <em>phát triển sản xuất</em> và tạo lập một sự <em>công bằng xã hội</em>. Phát triển sản xuất trên cơ sở sử dụng có hiệu quả các thành tự khoa học và kĩ thuật tiên tiến để làm ra nhiều của cải vật chất và văn hóa đáp ứng các nhu cầu ngày càng tăng của con người và xã hội. Công bằng xã hội là một mối quan hệ xã hội không có áp bức bóc lột, mọi người lao động có điều kiện phát huy mọi năng lực sáng tạo của mình và được hưởng xứng đáng với thành quả lao động.</p>
+          <p>Hai mục tiêu đó không bao giờ cũng tương thích với nhau, và cơ chế đề đạt hai mục tiêu đó cũng rất khác nhau.</p>
+          <p>Không nhất thiết tương thích, có nghĩa là không phải khi mục tiêu này đạt được thì mục tiêu kia cũng đạt được, thậm chí có khi việc nhằm đạt mục tiêu này lại làm hỏng việc đạt mục tiêu kia. Chẳng hạn, trong điều kiện một nền sản xuất thấp kém, một nền kinh tế nghèo nàn thì không thể có công bằng xã hội. Trong điều kiện đó, nếu ta áp đặt một cách khiên cưỡng mục tiêu công bằng xã hội thì kết quả chỉ có thể là một thứ chủ nghĩa bình quân hình thức , không khuyến khích phát triển, thậm chí phá hoại sản xuất, rồi đến lượt mình điều đó lại dẫn đến hỗn loạn, làm cho ngay cả một sự công bằng bình quân trong nghèo đói cũng không đạt được. Mặt khác, trong chế độ tư bản, sự phát triển sản xuất  nhanh chóng rõ ràng cũng không nhất thiết dẫn đến công bằng xã hội. Tuy nhiên phải có một nền sản xuất phát triển ở trình độ cao, một nền kinh tế giàu có thì mới có điều kiện cần thiết cần thiết cho một sự công bằng xã hội thực sự. Vì vậy, trong sự kết hợp kết hợp hai mục tiêu nói trên, mục tiêu phát triển sản xuất bao giờ cũng cần được chú ý  một cách ưu tiên.</p>
+          <p>Cơ chế để phát triển sản xuất phải là cơ chế kích thích động lực lợi ích kinh tế, còn cơ chế để thực hiện công bằng xã hội lại thuộc phạm trù tổ chức và quản lí của Nhà nước.</p>
+          <p>Lấy lợi ích kinh tế làm động lực phát triển sản xuất tất nhiên dẫn đến việc có nhiều thành phần kinh tế khác nhau trong xã hội. Nhưng động lực lợi ích không phải chỉ liên quan đến các thành phần kinh tế cá thể, tư nhân, tập thể, mà cần phải kích thích động lực đó ngay trong thành phần kinh tế quốc doanh , tức là trong các xí nghiệp Nhà nước. Việc giành quyền tự chủ sản xuất và kinh doanh cho các xí nghiệp, tách quyền sở hữu của nhà nước với quyền quản lí kinh tế độc lập của xí nghiệp là những công việc có ý nghĩa quyết định theo phương hướng đó. Nền sản xuất xã hội, trong khung cảnh như vậy phải là một nền sản xuất hàng hóa với cơ chế thị trường theo đầy đủ ý nghĩa của nó.</p>
+          <p>Vai trò của Nhà nước xã hội chủ nghĩa trong kinh tế không còn là vai trò của một cơ quan quản lí tập trung, đưa ra các kế hoạch cho toàn bộ nền kinh tế, Nhà nước thực hiện chức năng của hệ thống , tức là những chức năng bảo đảm sự ổn định và phát triển của toàn hệ thống mà từng thành phần hoặc từng nhóm thành phần không thực hiện được. Theo nghĩa đó, trong quản lý kinh tế, kế hoạch quản lý kinh tế, kế hoạch nhà nước chỉ quan tâm đến các chỉ tiêu bảo đảm những cân đối lớn đối với kinh tế trong nước và trong kinh tế đối ngoại, trong khu vực sản xuất, đầu tư của Nhà nước chủ yếu tập trung vào những ngành tạo ra cơ sở hạ tầng cho sự phát triển và liên kết toàn hệ thống như: năng lượng, giao thông vận tải, thông tin liên lạc, nhà nước cần tập trung vào việc tìm kiếm và phát huy những nguồn tiềm lực lớn cho xã hội, đặc biệt là việc giáo dục, đào tạo các thế hệ trẻ và bồi dưỡng năng lực, nâng cao chất lượng cho người lao động trong xã hội.</p>
+          <p>Mục tiêu công bằng xã hội được Nhà nước thực hiện bằng các quy định pháp luật và các chính sách nhằm phân phối lại thu nhập quốc dân, tăng các khoản phúc lợi xã hội, tạo điều kiện cho mọi người lao động được giáo dục đào tạo và có cơ hội phát huy năng lực của mình.</p>
+          <p>Chủ nghĩa xã hội trên thế giới đã nhận thữ rõ những nhược điểm, những khuyết tật trong các mô hình cũ của mình. Một trong những vấn đề quan trọng nhất của quá trình đổi mới hiện nay là xây dựng cơ sở lí luận cho một xã hội xã hội chủ nghĩa với sức sống mới, phát huy được tính ưu việt thực sự của mình- mạnh mẽ, có sự công bằng xã hội theo nghĩa là mọi người lao động có điều kiện được phát huy mọi năng lực sáng tạo và được hưởng thụ xứng đáng với lao động của mình, một xã hội có nền dân chủ thực sự để mọi tư tưởng tiến bộ, mọi năng lực xuất sắc được được thể hiện và lựa chọn vào các vị trí xứng đáng vì sự phát triển và phồn vinh của toàn xã hội. Dĩ nhiên, có rất nhiều vấn đề phức tạp cần được nghiên cứu giải quyết trong việc xây dựng cơ sở lí luận cho một học thuyết đổi mới như vậy; trong bài viết ngắn này, tôi không có tham vọng đề cập đến nhiều.</p>
+        </section>
+        <section id="ii-4">
+          <h3>4- Các nước chậm phát triển và con đường XHCN</h3>
+          <p>Xin thêm vài lời về các nước chậm phát triển sau khi hoàn thành nhiệm vụ giải phóng dân tộc đã chọn con đường xã hội chủ nghĩa. Chủ nghĩa xã hội là một mơ ước nhưng trên thực tế, nền kinh tế-xã hội của các nước này hoàn toàn chưa có những chuẩn bị cần thiết cho việc xây dựng chủ nghĩa xã hội. Nhiều nước chậm phát triển, sau khi giành được độc lập, nôn nóng dán lên cho mình nhãn hiệu xã hội, chủ nghĩa, đã để mình lâm vào tình trạng khó khăn, mà chủ yếu là:</p>
+          <p>- <em>Về đối nội,</em> bằng cách áp đặt sự quản lí tập trung của Nhà nước, đã tự mình <em>hạn chế</em> - nếu không nói là <em>giết chết</em> - mọi năng lực làm ra của cái trong xã hội. Mục tiêu phát triển sản xuất, lẽ ra phải đặt lên ưu tiên số một, trong thực tế đã bị đặt dưới nhiều mục tiêu ảo tưởng khác. Hậu quả là đưa nên kinh tế-xã hội đến tình trạng rối loạn, chứa đựng nhiều dối trá, không dễ khắc phục nổi.</p>
+          <p>- <em>Về đối ngoại</em>, tự làm mất đi nhiều mối quan hệ đáng lẽ cần phải có để phát triển; điều đó hạn chế khả năng giao lưu, tiếp thụ sức sống từ bên ngoài.</p>
+          <p>Một nước chậm phát triển chọn con đường xã hội chủ nghĩa, về khách quan mà nói, vẫn mang trong mình các yếu tố của sự chậm phát triển là chủ yếu, chứ không phải các yếu tố của chủ nghĩa xã hội là chủ yếu. Vì vậy, phải tìm cách sống và tự phát triển theo các qui luật khắc nghiệt dành cho tình trạng chậm phát triển, chứ không được ảo tưởng bỏ qua và vội áp đặt các qui luật của chủ nghĩa xã hội vốn chưa thích hợp với điều kiện yếu kém của mình. Chủ nghĩa xã hội là mơ ước, chứ chưa thế là hiện thực. Con đường quá dộ đến đó chắc không phải chỉ là một vài chục năm, và vì vậy không thể vì muốn “tiến thẳng” mà bất chấp mọi gai góc trên đường.</p>
+        </section>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="iii">
+        <h2>III – Về con đường của ta</h2>
+        <p>Chúng ta đang xây dựng Cương lĩnh và chiến lược phát triển kinh tế - xã hội trong tinh thần đổi mới tư duy, đặc biệt là tư duy chính trị và tư duy kinh tế. Xác định một cách nhìn mới, không giáo điều bảo thủ, không lẹ thuộc vào vị trí quyền lực, thật sự khoa học, đối với con đường mà ta cần đi để thoát khỏi tình trạng khủng hoảng khủng hoảng và bế tắc nghiêm trọng hiện nay là hoàn toàn khẩn thiết.</p>
+        <p>Trong phạm vi bài biết ngắn này, và trong những hiểu biết hạn chế của mình, tôi không có tham vọng phát biểu ý kiến một cách toàn diện. Trong các phần trên, tôi đã trình bày, một số nhận thức đối với hai yếu tố có ảnh hưởng quan trọng đối với con người mà ta chọn cho mình: cuộc cách mạng khoa học – kĩ thuật hiện đại và chủ nghĩa xã hội. Trên cơ sở những nhận thức đó, tôi nghĩ rằng khi nghiên cứu để xác định Cương lĩnh và chiến lược cho mình, ta cần chú ý một số điểm sau đây:</p>
+        <section id="iii-1">
+          <h3>1 - Xác định mục tiêu</h3>
+          <p>Xác định mục tiêu: Mục tiêu của ta là chủ nghĩa xã hội. Nhưng quan niệm về chủ nghĩa xã hội đang được đổi mới, ta cần có những thay đổi nhận thức về vấn đề này. Vả chăng, đối với chúng ta, một nước nghèo, đang trong tình trạng chậm phát triển, chủ nghĩa xã hội là mục tiêu mà ta hướng tới, chứ chưa phải là mục tiêu trực tiếp. Con đường quá độ đến đó còn rất dài, bao gồm nhiều chặng. Cần xác định mục tiêu cho những chặng trước mắt. Nghèo, chậm phát triển, thì mục tiêu cho những thập kỉ trước mắt phải được ưu tiên là phát triển sản xuất, thoát khỏi nghèo nàn và lạc hậu. <em>Bằng mọi cách</em> để phát triển sản xuất, làm ra nhiều của cải cho xã hội là điều cần thiết nhất lúc này. Để đạt được mục tiêu “hiền lành” đó, thì những khẩu hiệu “ai thắng ai”, những quan hệ căng thẳng vô mục đích là không thích hợp.</p>
+        </section>
+        <section id="iii-2">
+          <h3>2 - Cơ chế kinh tế</h3>
+          <p>Ta đang đi theo hướng tháo gỡ các ràng buộc để thành phần kinh tế tham gia vào phát triển sản xuất của xã hội. Nhưng để thật sự phát triển sản xuất cần khẳng định một cách đầy đủ hơn một cơ chế mới của nền kinh tế xã hội. Một nền sản xuất hàng hóa với cơ chế thị trường không thể thật sự thúc đẩy sản xuất nếu chỉ là hàng hóa nửa vời, thị trường nửa vời. Không thể chỉ xem sản phẩm là hàng hóa, trong khi vật tư, lao động, vốn… còn chưa là hàng hóa. Không thể để các xí nghiệp được tự chủ kinh doanh khi vẫn độc quyền sản xuất, không có cạnh tranh, v.v… Ta không sợ phát triển sản xuất với một nền sản xuất hàng hóa đầy đủ là làm mất chủ nghĩa xã hội, bởi vì chủ nghĩa xã hội là cái ta đã có đâu mà sợ mất. Có mất chăng là mất đi những thứ mang nhãn hiệu chủ nghĩa xã hội dối trá, để xây dựng dần cơ sở giúp có cho một chủ nghĩa xã hội thật sự trong tương lai.</p>
+        </section>
+        <section id="iii-3">
+          <h3>3 - Vị trí trong chỉnh thể thế giới</h3>
+          <p>Như một phần trên đã nói, thế giới ngày nay là một chỉnh thể, và cái chỉnh thể đó đang bước mạnh sang giai đoạn thứ ******** của nền văn minh nhân loại. Ta phải tìm đường cho ta với tư cách là một thành viên trong cái chỉnh thể đó. Như vậy, ta không tự đặt cho mình việc xây dựng một nền kinh tế độc lập, hoàn chỉnh và tự cân đối. Ta là một bộ phận của thế giới và tự tìm vị trí của mình trong cái cân đối chung của hệ thống. Vị trí nào có lợi nhất? Điều đó phụ thuốc vào năng lực của ta. Nếu ta có tiềm lực trí tuệ lớn thì có thể xông đến những lĩnh vực mũi nhọn của thời đại. Trong khi chưa có, thì làm những công việc lao động có tính chất “làm thuê” cũng là cần thiết. Việc tìm ra cho được trong sự liên kết của chỉnh thể thế giới đó những mối liên hệ kinh tế khả dĩ đưa lại giá trị cao nhất là nội dung chủ yếu của việc xác định chiến lược.</p>
+        </section>
+        <section id="iii-4">
+          <h3>4 - Năng lực trí tuệ quốc gia</h3>
+          <p>Xu thế phát triển của thế giới là tiến đến một nền kinh tế của trí tuệ. Trong khi đang phải giải quyết những nhiệm vụ của một nền kinh tế chậm phát triển, nếu muốn được “vượt giai đoạn”, tức là muốn tiến nhanh, việc tạo ra  một năng lực trí tuệ lớn của dân tộc là điều cực kì quan trọng. Hệ thống giáo dục đào tạo, nghiên cứu khoa học phải được đặc biệt quan tâm đầu tư và phát triển. Bất cứ một chính sách thiển cận nào trong lĩnh vực này cũng đều mang lại những thiệt hại to lớn không bù đắp nổi cho đất nước trong tương lai.</p>
+        </section>
+        <section id="iii-5">
+          <h3>5 - Dân chủ</h3>
+          <p>Để phát huy mọi năng lực sáng tạo, mọi tư tưởng và sáng kiến, để dân tộc luôn luôn lựa chọn được những tài năng thật sự vào những vị trí xứng đáng của hệ thống làm quyết định, cần phải xây dựng được một nền dân chủ xã hội, nền dân chủ bảo đảm điều đã ghi trong Hiến pháp là “ở nước ta mọi quyền lực đều thuộc về nhân dân”.</p>
+        </section>
+        <section id="sign">
+          <p class="muted" style="text-align:right"><strong>P.Đ.D</strong></p>
+        </section>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="footnotes" class="footnotes">
+        <h2>Chú thích</h2>
+        <ol>
+          <li id="fn1">Bài này được viết trên cơ sở phát biểu ý kiến của tác giả tại một Hội thảo khoa học do một tiểu ban của Ban dự thảo Cương lĩnh tổ chức tại Ủy ban khoa học xã hội đầu năm 1988. Bài viết dự định sẽ được in trong một tuyển tập do tiểu ban nói trên ấn hành. <a href="#ref1" aria-label="Quay lại nội dung">↩</a></li>
+        </ol>
+      
+        <ol start="2">
+          <li id="fn2">Xem thêm: P.Đ.D, "Khoa học và kĩ thuật trong sự phát triển xã hội", Nxb. Khoa học xã hội, Hà Nội, 1986. <a href="#ref2" aria-label="Quay lại nội dung">↩</a></li>
+        </ol>
+      <section id="sign">
+        <p class="muted" style="text-align:right"><strong>P.Đ.D</strong></p>
+      </section>
+
+    </div>
+  </div>
+</body>
+</html>

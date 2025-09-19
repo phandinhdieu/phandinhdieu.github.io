@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phan Đình Diệu - GÓP Ý KIẾN VỀ ĐỔI MỚI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #0f152b;
+      --card: #111936;
+      --text: #e7ecff;
+      --muted: #9aa3c0;
+      --accent: #5b8cff;
+      --line: #1d274c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f1530;
+        --muted: #55607a;
+        --accent: #3957ff;
+        --line: #e7e9f4;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; }
+    nav.toc {
+      position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto;
+      padding: 18px; border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    nav.toc h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+    nav.toc ol { list-style: none; padding: 0 0 0 4px; margin: 0; }
+    nav.toc > ol > li > a { font-weight: 600; }
+    nav.toc li { margin: 6px 0; }
+    nav.toc a { color: var(--text); display: inline-block; padding: 6px 8px; border-radius: 8px; }
+    nav.toc a:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    nav.toc details { border: 1px solid var(--line); border-radius: 10px; padding: 6px 8px; margin: 8px 0; }
+    nav.toc details > summary { cursor: pointer; list-style: none; font-weight: 700; }
+    nav.toc details[open] { background: color-mix(in srgb, var(--accent), transparent 92%); }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.06); padding: 28px; }
+    header.page { padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px; text-align: center; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 30px; margin: 0 0 6px; line-height: 1.3; text-transform: uppercase; }
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; text-align: right; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 26px 0 6px; line-height: 1.35; }
+    h3 { font-weight: 700; margin: 18px 0 8px; }
+    p { margin: 10px 0; }
+    figure { margin: 18px 0; text-align: center; }
+    figure img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+    figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+              background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    .copy-anchor { margin-left: 8px; border: 1px dashed var(--line); border-radius: 8px; padding: 2px 6px; font-size: 12px; cursor: pointer; }
+    .copy-anchor:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+
+    /* Mobile layout */
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: 1fr; }
+      nav.toc { position: relative; height: auto; }
+      header.page h1 { font-size: 26px; }
+    }
+
+    /* Print cleanup */
+    @media print {
+      .topbar, nav.toc, .copy-anchor { display: none !important; }
+      .grid { display: block !important; }
+      main.content { border: 0 !important; box-shadow: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+      a { color: inherit !important; text-decoration: none !important; }
+      h1, h2, h3, p { break-inside: avoid; }
+      summary { display: none !important; }
+    }
+  </style>
+  <script>
+    function copyAnchor(btn) {
+      const h = btn.closest('h2, h3');
+      if (!h) return;
+      const anchor = h.querySelector('a[id]');
+      const id = anchor ? anchor.id : h.id;
+      if (!id) return;
+      const url = location.origin + location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        const prev = btn.textContent;
+        btn.textContent = 'Đã sao chép';
+        setTimeout(() => btn.textContent = 'Sao chép liên kết', 1200);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+        <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+        <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <nav aria-label="Mục lục" class="toc" id="toc">
+        <h2 id="mucluc">Mục lục <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+        <details open>
+          <summary><a href="#title">Góp ý kiến về đổi mới</a></summary>
+          <ol>
+            <li><a href="#lts">Lời tòa soạn (L.T.S)</a></li>
+            <li><a href="#intro">Mở đầu</a></li>
+            <li><a href="#p1">1 – Đổi mới tư duy</a>
+              <ol>
+                <li><a href="#p1a">a) Không biến mỗi lời của Marx, Engels, Lênin thành một giáo điều, mà phải nghiên cứu một cách khoa học</a></li>
+                <li><a href="#p1b">b) Tư tưởng mới từ cách mạng KH–KT</a></li>
+                <li><a href="#p1c">c) Nhận thức từ thực tiễn thế giới hiện đại</a></li>
+              </ol>
+            </li>
+            <li><a href="#p2">2 – Đánh giá tình hình và thực trạng xã hội</a></li>
+            <li><a href="#p3">3 – Thế giới là gì? Ta là gì? Mục tiêu?</a>
+              <ol>
+                <li><a href="#p3a">a) Biến đổi của thế giới</a></li>
+                <li><a href="#p3b">b) Ta là gì trong thế giới đó?</a></li>
+                <li><a href="#p3c">c) Mục tiêu phát triển</a></li>
+              </ol>
+            </li>
+            <li><a href="#p4">4 – Các giải pháp ngắn hạn</a></li>
+            <li><a href="#p5">5 – Hướng giải pháp lâu dài</a></li>
+            <li><a href="#p6">6 – Về chính sách đối ngoại</a></li>
+            <li><a href="#p7">7 – Vấn đề dân chủ</a></li>
+            <li><a href="#p8">8 – Vấn đề đoàn kết dân tộc</a></li>
+            <li><a href="#buttich">Phụ Lục – Bút tích bản nháp viết tay</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <main class="content">
+        <header class="page">
+          <a id="title"></a>
+          <h1>GÓP Ý KIẾN VỀ ĐỔI MỚI</h1>
+           Hội nghị Ủy ban trung ương Mặt trận Tổ quốc Việt Nam, 09/1986
+          <p class="author">PHAN ĐÌNH DIỆU</p>
+        </header>
+
+        <section id="lts" class="note">
+          <p><strong>L.T.S – </strong><em>Tháng chính 1986, tại Hội nghị Ủy ban trung ương Mặt trận Tổ quốc Việt Nam góp ý kiến với Đại hội VI của Đảng cộng sản Việt Nam, giáo sư Phan Đình Diệu, tiến sĩ khoa học toán-lí đã đọc một bản tham luận . Từ đó đến nay, hai năm đã trôi qua, thời gian chỉ càng làm sáng tỏ thêm sự đúng đắn của những ý kiến mà tác giả đã nêu lên trong bản tham luận ấy. Đó là những ý kiến được đề xuất từ sự suy nghĩ độc lập với tầm nhìn xa rộng của một người tri thức có nhiệt tâm và hiểu biết về nhiều lĩnh vực.</em></p>
+          <p><em>Tạp chí &laquo;&laquo; Tổ quốc&raquo;&raquo; trân trọng giới thiệu với bạn đọc nguyên văn bản tham luận ấy.</em></p>
+        </section>
+
+        <figure>
+          <picture>
+            <img src="TQ88.png" alt="Hình minh họa (TQ88)" />
+          </picture>
+          <figcaption class="muted">Bài đăng trên số báo cuối của báo Tổ Quốc</figcaption>
+        </figure>
+
+        <section id="intro">
+          <p>Đất nước ta đang ở một thời điểm mà sự sống còn và phát triển của nó đòi hỏi phải có bước ngoặt của sự đổi mới toàn diện. Với ý thức trách nhiệm của một người dân đối với đất nước, tôi xin phép được góp một số ý kiến sau đây:</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="p1">
+          <h2>1 – <em>Đổi mới tư duy:</em></h2>
+          <p>Ta kêu gọi nhiều về đổi mới tư duy. Nhưng <em>nội dung</em> của sự đổi mới như thế nào thì không thấy nói rõ. <em>Mới</em> là thế nào? Cơ sở của sự đổi mới là gì? Tôi nghĩ cần xây dựng một hệ thống lí luận cho sự đổi mới này. Có thể một số yếu tố sau đây phải được coi là căn cứ khoa học của nội dung đổi mới tư duy:</p>
+          <section id="p1a">
+            <p>a. Những luận điểm cơ bản của học thuyết mác xit về kinh tế và về chủ nghĩa xã hội khoa học vẫn là căn cứ quan trọng cho tư duy đúng đắn của chúng ta. Tất nhiên cái mới lạ ở chỗ không biến mỗi lời của Marx, Engels, Lênin thành một giáo điều, mà phải nghiên cứu một cách khoa học. Trong sự nghiên cứu đó, cần hiểu sâu sắc hơn các nguyên lí cơ bản, đồng thời cần xem xét lại một số luận điểm hoặc nhận định không còn phù hợp với thực tiễn của thời đại ngày nay. Nói cách khác, cần nghiên cứu nó như một học thuyết khoa học.</p>
+          </section>
+          <section id="p1b">
+            <p>b. Những tư tưởng lớn, những quan điểm và phương pháp nhận thức mới mà cuộc cách mạng khoa học – kĩ thuật hiện nay mang lại. Đây lả một yếu tố cực kì quan trọng. Thí dụ: quan điểm hệ thống, các tư tưởng và phương pháp của khoa học điều khiển hiện đại cho ta những khả năng nhìn nhận và phân tích mới mẻ đối với các hệ thống kinh tế-xã hội. Tri thức khoa học của thời đại là một nguồn phong phú cung cấp sức sống mới cho tư duy và nhận thức của chúng ta.</p>
+          </section>
+          <section id="p1c">
+            <p>c. Những nhận thức lí luận trên cơ sở phân tích thực tiễn phát triển của thế giới hiện đại như: vai trò của cách mạng khoa học – kĩ thuật: những điềm hay, dở cũng như sự vận động của các hình thái tổ chức xã hội hiện tại, những thử thách nghiêm trọng đối với sự phát triển  mà chủ nghĩa xã hội thực tế đang gặp phải, kinh nghiệm của các nước trong thế giới thứ ba, xu hướng phát triển của thế giới và quan niệm mới về chủ nghĩa xã hội,v....v</p>
+          </section>
+          <p>Cần xây dựng dần một hệ thống lí luận như vậy để làm nền tảng khoa học cho sự đổi mới tư duy.</p>
+          <p>Với cách tiếp cận đó đối với &laquo;&laquo;đổi mới tư duy&raquo;&raquo;, tôi xin đề cập đến một số vấn đề sau đây:</p>
+        </section>
+
+        <section id="p2">
+          <h2>2 – <em>Đánh giá tình hình và thực trạng xã hội</em></h2>
+          <p>Tình hình kinh tế-xã hội của ta đang rất khó khăn, nghiêm trọng, đó là điều ai cũng biết. Nhưng đặc điểm cơ bản là gì? Tôi nghĩ rằng đặc điểm cơ bản là: Nhà nước tập trung độc quyền nhưng bất lực, trong khi đó xã hội phát triển hỗn loạn ngoài phạm vi kiểm soát của Nhà nước. Về tổ chức và quản lí kinh tế, một nhà nước nắm trong tay mọi quyền lực và phương tiện, mà làm ăn thua lỗ, không trả lương được cho người làm công đủ sống, thì rõ ràng về mặt kinh tế, một nhà nước như vậy không thể tiếp tục tồn tại.</p>
+          <p>Những tiêu cực hiện nay trong xã hội và trong Nhà nước là hiện tượng hay bản chất? một hiện tượng lặp đi lặp lại, có tính phổ biến thì rõ ràng mang tính bản chất. Vậy bản chất ấy là gì? Là đã áp đặt lên một thực thể những nguyên tắc không phù hợp với khả năng vận động và phát triển khách quan của nó, trong khi trên thực tế sự phát triển của thực thể đó vẫn cố tìm cách thoát khỏi sự áp đặt, để tuân theo những &laquo;&laquo;quy luật&raquo;&raquo; thích hợp với nó.</p>
+          <p>Xã hội ta chưa phải là xã hội chủ nghĩa. Cưỡng bức những kiều xã hội chủ nghĩa một cách &laquo;&laquo;ý chí luận&raquo;&raquo; cho nó như vừa qua thì không làm cho nó gần tới chủ nghĩa xã hội, mà thực tế đẩy nó ra xa hơn.</p>
+        </section>
+
+        <section id="p3">
+          <h2>3 – <em>Thế giới là gì? Ta là gì? Nên đặt mục tiêu gì cho nước ta hiện nay?</em></h2>
+          <p>Với quan niệm &laquo;&laquo;ta&raquo;&raquo; không hải là một hệ thống lớn hơn là thế giới, muốn tìm cách phát triển, ta cần phải nghiên cứu kĩ các vấn đề nói trên.</p>
+          <section id="p3a">
+            <p>a. Thế giới đã và đang có những biến đổi to lớn. Cách mạng khoa học-kĩ thuật hiện đại đang làm thay đổi nhanh chóng lực lượng sản xuất và tất nhiên ảnh hưởng đến sự biến đổi quan hệ sản xuất. Cơ cấu sản phẩm, cơ cấu tạo thành giá trị có những thay đổi lớn (thí dụ: các khu vực thông tin và dịch vụ chiếm tỉ lệ ngày càng lớn trong thu nhập quốc dân), nhu cầu của con người cũng có nhiều thay đổi. Tính chất xã hội, tính toàn cầu của nền sản xuất và kinh tế và ngày càng lớn, do đó, khái niệm &laquo;&laquo;độc lập&raquo;&raquo;  thay đổi ý nghĩa ( có còn indépendance hay chỉ interdépendance?).v....v</p>
+          </section>
+          <section id="p3b">
+            <p>b. Ta là gì trong thế giới đó? Đã cần xác định là một nước xã hội chủ nghĩa chưa? Trong thực tế, ta chưa thể tự xem là một nước xã hội chủ nghĩa, mà làm ai có chủ nghĩa xã hội trên cơ sở một nền kinh tế ốm yếu, một xã hội nghèo đói.</p>
+            <p>Rõ ràng ta là một nước nghèo trong thế giới thứ ba- chủ nghĩa xã hội là một mục tiêu xa mà ta muốn đạt đến chứ chưa phải là một hiện thực.</p>
+            <p>Xác định đúng vị trí là rất quan trọng- một mặt mình tự nhìn rõ mình, mặt khác tranh thư được sự đồng tình và ủng hộ của thế giới.</p>
+          </section>
+          <section id="p3c">
+            <p>c. Cách xác định vị trí của ta trong thế giới sẽ giúp ta xác định được mục tiêu cho sự phát triển của mình.</p>
+            <p>Là một nước nghèo, chậm phát triển, thì rõ ràng mục tiêu trước mắt phải là tìm được điều kiện yên ổn để làm ăn, thoát khỏi cảnh nghèo. Thoát khỏi cảnh nghèo nàn , tạo ra nhiều giá trị, đó phải là mục tiêu ưu tiên. Phải chăng trong thời gian qua ta đã theo đuổi nhiều mục tiêu vượt quá khả năng thực tế của ta và đã phải trả giá đắt mà mục tiêu vẫn không đạt được?</p>
+          </section>
+        </section>
+
+        <section id="p4">
+          <h2>4 – <em>Các giải pháp cho ngắn hạn</em></h2>
+          <p>Ta nhấn mạnh đến mục tiêu &laquo;&laquo;ổn định&raquo;&raquo;. Nhưng rõ ràng không thể có ổn định trong tình trạng tổ chức kinh tế-xã hội hiện nay. Chỉ có thể tìm sự ổn đinh trong một sự thay đổi, một sự biến chuyển cơ bản về tổ chức và quản lí kinh tế-xã hội theo hướng giải phóng và phát huy mọi thứ khả năng làm ra của cải của xã hội. Được (và phải) làm việc, làm đủ ăn, lương đủ sống và điều kiện tối thiểu cho sự ổn định và phát triển.</p>
+          <p>Trên tinh thần đó, cần phát triển rộng rãi khu vực kinh tế tập thể,cá nhân và tư nhân, kinh tế gia đình. Cần khẳng định bằng pháp luật chính sách lâu dài đối với sự phát triển các khu vực kinh tế này. Bằng các chính sách đó, giải phóng mọi khả năng sản xuất hiện có ở trong nước, thu hút sự đóng góp của Việt kiều ở ngoài nước và các nguồn khác.</p>
+          <p>Nhà nước giảm bớt và thu hẹp khu vực sản xuất và kinh doanh do mình trực tiếp nắm mà không có lãi. Chỉ nên giữ lại một số ngành và cơ sở sản xuất then chốt đối với kinh tế quốc dân. Trong các xí nghiệp nhà nước, chế độ tự chủ kinh doanh nên đến đâu?</p>
+          <p>Cần tách quyền sở hữu và hoạt động quản lí tài sản thuộc quyền sở hữu nhà nước, nhưng xí nghiệp cần được hoàn toàn tự chủ trong việc quản lí hoạt động sản xuất, kinh doanh, Nhà nước chia phần lợi nhuận và thu thuế. Những ngành xây dựng cơ sở hạ tầng mà Nhà nước cần tập trung phát triển là: năng lượng, giao thông vận tải, đặc biệt thông tin-liên lạc.</p>
+          <p>Để phát triển kinh tế theo các hướng đó, từ chỗ thừa nhận các lợi ích kinh tế khác nhau. Phải tiến lên thừa nhận sự cạnh tranh- cạnh tranh trong khu vực kinh tế tư nhận, và cả cạnh tranh trong khu vực Nhà nước: việc phá sản do làm ăn thua lỗ của các xí nghiệp, quốc doanh cũng cần xem là tự nhiên!</p>
+          <p>Bằng việc phát triển mọi thành phần kinh tế trong xã hội. Nhà nước mới có khả năng thu hẹp biên chế. Cũng cần nhanh chóng có chính sách đối ngoại thích hợp để giảm chi phí quốc phòng, giảm quân đội. Tăng thu nhập cho ngân sách và giảm biên chế ăn lương thì Nhà nước mới sớm có khả năng trả lương đủ sống cho những người làm việc trong bộ máy nhà nước.</p>
+        </section>
+
+        <section id="p5">
+          <h2>5 – <em>Hướng tìm giải pháp cho lâu dài</em></h2>
+          <p>Về quan niệm, cần đặt ra trong thế giới để tìm kiếm giải pháp. Như vậy không phải đi tìm một sự phát triển cân đối trong nội bộ nước ta như một hệ kín, mà cần nghiên cứu sự phát triển &laquo;&laquo;cân đối&raquo;&raquo; của thế giới và trong hệ lớn của thế giới đó, ta có thể và nên làm gì để phát huy được hết khả năng và thu nhiều lợi nhất. Do đó, trong khi chưa đủ khoai ăn, không nhất thiết chỉ đi trồng khoai, mà nhiều khi phải học để làm chim quay, làm chim quay bán cho người khác ăn để lấy tiền mua khoai cho con mình ăn-mà có nhiều tiền thì rồi mới dần thoát khỏi cảnh ăn khoai, chứ nếu chỉ trồng khoai thì suốt đời chỉ được ăn khoai!</p>
+          <p>Với cách đặt vấn đề như thế, cần nghiên cứu xu thế biến đổi và phát triển của cơ cấu kinh tế thế giới, cơ cấu hình thành và tạo ra giá trị trong các khu vực sản xuất, dịch vụ của kinh tế thế giới, sự biến đổi của nhu cầu con người và do đó nhu cầu thị trường trong hiện tại và tương lai.</p>
+          <p>Một đặc điểm trong sự biến đổi cơ cấu đó là khu vực dịch vụ và thông tin ngày càng chiếm một tỉ lệ lớn trong tổng giá trị của kinh tế các nước phát triển, hàm lượng trí tuệ trong các loại sản phẩm ngày càng tăng. Nhu cầu của con người hiện tại và tương lai là thức ăn và thông tin. Nhu cầu về thức ăn thì có hạn, còn về thông tin thì chưa có giới hạn.</p>
+          <p>Ta cần chuẩn bị gì cho Việt Nam hòa nhập được vào thế giới trong tương lai, và trong sự hòa nhập đó, tìm được cho mình một chỗ đứng chắc chắn, có lợi.</p>
+          <p>Rõ ràng trong khi đang cần chú trọng phát triển nông nghiệp, công nghiệp, hàng tiêu dùng..v.. cũng cần chú ý ngay đến việc tạo điều kiện cho sự phát triển các ngành dịch vụ và các ngành làm ra các sản phẩm trong khu vực thông tin, các ngành đòi hỏi chất lượng trí tuệ. Việc làm ra tiền nhờ các hoạt động trí tuệ cần được phát triển, kể cả việc xuất khẩu lao động trí óc sang các nước đang phát triển hiện nay.</p>
+          <p>Muốn vậy, cần phải cải tổ hoàn toàn và đầu tư mạnh cho hệ thống giáo dục , đào tạo và nghiên cứu khoa học. Việc đào tạo giáo viên, bác sĩ để xuất khẩu cũng cần được đầu tư thích đáng và có hệ thống. Cần có chính sách và đầu tư thích đáng cho các ngành như điện tử và tin học, công nghệ sinh học..v..v</p>
+          <p>Chú ý rằng ngay đối với nông nghiệp và hàng tiêu dùng cũng cần được phát triển theo hướng hiện đại hóa các loại sản phẩm hàng hóa được làm ra.</p>
+          <p>Tạo tiềm năng tri thức và trí tuệ cho dân tộc là cực kì quan trọng. Hạn chế quá trình đó sẽ là một tội lỗi đối với dân tộc trong tương lai!</p>
+          <p>Tất nhiên, để làm được các việc trên, một điều kiện tiên quyết là phải thực sự biến nước ta thành một hệ mở, mở với thế giới và hòa nhập vào thế giới như một thành viên không bị phân biệt đối xử.</p>
+        </section>
+
+        <section id="p6">
+          <h2>6 – <em>Về chính sách đối ngoại</em></h2>
+          <p>Đây là một lĩnh vực tế nhị, tôi không biết gì nhiều và không dám nói nhiều. Nhưng có những điều cấp bách mà ai cũng mong được sớm giải quyết.</p>
+          <p>Với mục tiêu là sớm thoát khỏi cảnh nghèo để phát triển đất nước hiện nay, rõ ràng ta càng cần nhiều bạn ít thù. Bạn, thù ra sao phụ thuộc rất nhiều vào cách ta xác định mục tiêu và cách sống của ta. Nếu ta tự xem là một nước chậm phát triển, với mục tiêu tìm sự yên ổn để khắc phục nghèo nàn và vươn lên, thì chắc sẽ nhiều bạn ít thù hơn. Nếu ta tự xem là mạnh, với mục tiêu lật đổ chủ nghĩa tư bản trên thế giới (đấy là giả dụ thôi) thì trong điều kiện thế giới hiện tại, chắc là khó mà có nhiều bạn.</p>
+          <p>Trong khung cảnh đó, giải quyết vấn đề Campuchia và quan hệ Trung Quốc là điểm quyết định nhất. Tôi chắc Trung Quốc sau này vẫn có những mưu đồ của một nước lớn, nhưng Trung Quốc có kẻ thù hay không là kẻ thù cũng một phần phụ thuộc vào cách đặt mục tiêu của ta trong khu vực này. Liên Xô xem Trung Quốc là một nước xã hội chủ nghĩa láng giềng vĩ đại. Mọi nước xã hội chủ nghĩa khác đang tìm quan hệ thân thiện với Trung Quốc. Trung Quốc ngày này không phải như thời cách mạng văn hóa. Phải chăng trong mấy năm qua, Trung Quốc đang khám phá con đường con đường đưa một nước lớn chậm phát triển và hỗn loạn đi lên con đường ổn định, thoát dần khỏi nghèo nàn và vươn lên hiện đại, trong khi vẫn giữ mục tiêu xa là chủ nghĩa xã hội? Vậy thì, bình thường hóa, lập quan hệ hữu nghị và học Trung Quốc là điều đáng mong muốn.</p>
+          <p>Tất nhiên không dễ nhưng rõ ràng quan hệ với Trung Quốc là một vấn đề sống còn của chúng ta. </p>
+        </section>
+
+        <section id="p7">
+          <h2>7 – <em>Vấn đề dân chủ</em></h2>
+          <p>Để đổi mới thì cần có dân chủ trong xã hội. Mà dân chủ cũng phải là một mục tiêu của sự đổi mới.</p>
+          <p>Việc xây dựng một nền dân chủ xã hội chủ nghĩa hay nói đúng hơn, một chế độ xã hội chủ nghĩa thực sự dân chủ, là một vấn đề cực kì quan trọng của thời đại, chắc chắn là còn cần nhiều nghiên cứu, thí nghiệm và đấu tranh đề đạt tới.</p>
+          <p>Dân chủ là quyền làm chủ của người dân. Trong xã hội, một người dân vừa là cá nhân mình, vừa là một thành viên của xã hội. Quyền làm chủ, với tư cách cá nhân, là quyền sống, quyền mưu cầu hạnh phúc, quyền tự do thân thể, tự do tư tưởng..v...v.. Với tư cách là một thành viên của xã hội, quyền làm chủ là quyền tham gia làm quyết định trong mọi vấn đề tổ chức và quản lí xã hội. Nhưng việc làm quyết định không thể mọi người đều làm mà phải ủy thác cho lãnh đạo. Vì vậy, ở đây dân chủ được thể hiện ở quyền tham gia tự do lựa chọn các cơ quan lãnh đạo, đặc biệt là lãnh đạo cao nhất của đất nước và quyền công khai giám sát, phê phán, tranh luận và đánh giá quyết định của lãnh đạo đương nhiệm. Để thực hiện các quyền đó cần được thực sự tự do ứng cử và bầu cử, tự do ngôn luận đặc biệt là tự do báo chí, tự do hội họp và lập hội,v.v. Điều kiện để thực hiện các quyền đó là bảo đảm tính công khai về mọi thông tin trong xã hội: nói cách khác, đó là quyền bình đẳng về sở hữu thông tin trong xã hội.</p>
+          <p>Dân chủ là quyền của dân, đồng thời cũng là nguồn vô tận nên tạo nên sự phong phú và giàu có của xã hội. Vì vậy, dân chủ là một yêu cầu cấp thiết, một nội dung cơ bản của đổi mới.</p>
+        </section>
+
+        <section id="p8">
+          <h2>8 – <em>Vấn đề đoàn kết dân tộc</em></h2>
+          <p>Nhiệm vụ của Mặt trận Tổ Quốc chúng ta luôn luôn là đoàn kết dân tộc để xây dựng và bảo vệ đất nước. Vì vậy, hơn lúc nào hết, trong thời điểm hiện nay, cần tập hợp được cao nhất tất cả lực lượng của dân tộc để phấn đấu cho sự phồn vinh của đất nước.</p>
+          <p>Tuy nhiên, ta cũng cần nhìn nhận rằng tuy thống nhất đất nước đã được mười năm, nhưng dân tộc và đất nước chưa thật sự được thống nhất một cách mạnh mẽ: lòng người còn phân tán, Bắc –Nam còn nhiều phân biệt, tình trạng địa phương cát cứ trầm trọng, nhiều vấn đề sau chiến tranh còn nhức nhối , còn nhiều phân biệt đối xử trong các tầng lớp nhân dân, dòng người bỏ đất nước ra đi còn tiếp diễn,.v..v.. nhưng quan trọng nhất là sức mạnh của dân tộc (về trí thức, về kinh tế, về khả năng sản xuất kinh doanh, ở trong nước và ngoài nước) chưa được huy động cho sự phát triển đất nước. </p>
+          <p>Một chính sách đoàn kết dân tộc rộng rãi cần được ban bố và thi hành trong thực tế. Cốt lõi của chính sách đó phải là: mọi người Việt Nam, dù ở góc trời nào, miễn là có nguyện vọng, đều có thể tìm được một chỗ đứng bình đẳng trên đất nước Việt Nam này để lao động và cống hiến cho sự phồn vinh của đất nước bằng mọi cách thích hợp với hoàn cảnh và khả năng của mình. Và tất nhiên, điều đó sẽ được thể hiện bằng những chính sách cụ thể, như về giải quyết các hậu quả sau chiến tranh còn tồn tại, chính sách đối với người Việt Nam ở nước ngoài, chính sách thu hút vốn đầu tư và thu hút lực lượng khoa học kĩ thuật..v..v..</p>
+          <p>Tôi hi vọng rằng một số ý kiến trên đây sẽ được xem là phần đóng góp giọt nước nhỏ bé của mình vào trong hơn 60 triệu giọt nước khác của dân tộc để hòa thành dòng thác đổi mới của đất nước ta hiện nay.</p>
+        </section>
+        Phan Đình Diệu, Hà Nội, tháng 9-1986.<br />
+
+        ---------------------------
+        <h2><em>Phụ lục: Bút tích bản nháp viết tay.</em></h2>
+        <br />
+        <section id="buttich">
+        <figure>
+          <picture>
+            <img src="VietTay_Gopy86_1.png" alt="Buttich" />
+          </picture>
+          <figcaption class="muted">Bút tích bản nháp viết tay - trang 1</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <img src="VietTay_Gopy86_2.png" alt="Buttich" />
+          </picture>
+          <figcaption class="muted">Bút tích bản nháp viết tay - trang 2</figcaption>
+        </figure>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

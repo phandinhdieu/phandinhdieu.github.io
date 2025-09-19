@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Phan Đình Diệu - Trang Thơ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+:root{--bg:#0b1020;--surface:#0f152b;--card:#111936;--text:#e7ecff;--muted:#9aa3c0;--accent:#5b8cff;--line:#1d274c}
+@media(prefers-color-scheme:light){:root{--bg:#f7f8fc;--surface:#fff;--card:#fff;--text:#0f1530;--muted:#55607a;--accent:#3957ff;--line:#e7e9f4}}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.9;font-size:18.5px;padding-top:60px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1200px;margin:0 auto;padding:20px;display:block}
+.toc{position:fixed;top:64px;left:calc((100vw - 1200px)/2 + 20px);width:260px;height:calc(100vh - 84px);overflow:auto;padding:16px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.toc h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:4px 0 10px}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:6px 0}
+.toc a{display:block;padding:6px 8px;border-radius:8px;color:var(--text)}
+.toc a:hover{background:color-mix(in srgb, var(--accent), transparent 90%)}
+.toc ol ol{margin-left:12px;border-left:2px solid var(--line);padding-left:10px}
+.content{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.06);padding:26px;margin-left:300px}
+header.page{text-align:center;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}
+header.page h1{font-family:'Merriweather',serif;font-weight:800;font-size:30px;margin:0 0 6px;line-height:1.3;text-transform:uppercase}
+header.page p.author{margin:0;color:var(--muted);font-style:italic;font-size:16px}
+.poem-sec{margin:22px 0 28px}
+.poem-sub{margin-left:20px;padding-left:16px;border-left:2px solid var(--line)}
+.poem-sec h2{font-family:'Merriweather',serif;font-size:24px;margin:0 0 6px}
+.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+.subtitle{font-style:italic;color:var(--muted);margin:4px 0 8px}
+pre.poem{white-space:pre-wrap;line-height:1.9;margin:0;background:transparent;border:0;font:inherit}
+.topbar{position:fixed;top:0;left:0;width:100%;z-index:100;backdrop-filter:blur(8px);background:color-mix(in srgb, var(--surface), transparent 25%);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:10px}
+.btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}
+.toc a.active{background:color-mix(in srgb, var(--accent), transparent 85%);font-weight:700}
+#ba-bai-tho-duong > .poem-sec, #phu-luc-xuan-huong > .poem-sec{margin-left:14px;border-left:2px solid var(--line);padding-left:12px}
+.poem-sec{scroll-margin-top:90px}
+
+@media(max-width:1024px){.toc{position:relative;top:auto;left:auto;width:auto;height:auto}.content{margin-left:0}header.page h1{font-size:26px}body{font-size:18px}}
+@media print{.topbar,.btn,.toc{display:none!important}.wrap{display:block}body{background:#fff!important;color:#000!important}.content{border:0!important;box-shadow:none!important}}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="btn" href="../v259n-th417.html">Về Trang Phan Đình Diệu</a>
+      <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+      <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+  </div>
+  <div class="wrap">
+    
+    <nav class="toc">
+      <h2>Mục lục</h2>
+      <ol>
+        <li><a href="#neu-nhu-em-ve-day">Nếu như em về đây</a></li>
+        <li><a href="#tren-duong-nho-em">Trên đường nhớ em</a></li>
+        <li><a href="#tet-nho-nha">Tết nhớ nhà</a></li>
+        <li><a href="#tinh-que">Tình quê</a></li>
+        <li><a href="#dem-vac-na">Đêm Vác-na</a></li>
+        <li><a href="#trua-hamburg">Trưa Hamburg</a></li>
+        <li><a href="#tang-ban-phan-lan">Tặng bạn Phần Lan</a></li>
+        <li><a href="#tu-cuba-xa-xoi">Từ Cuba xa xôi</a></li>
+        <li><a href="#gui-con">Gửi con</a></li>
+        <li><a href="#ba-bai-tho-duong">Ba bài Thơ Đường</a>
+          <ol>
+            <li><a href="#tang-anh-tran-dai-nghia">Tặng Anh (kính tặng Anh Trần Đại Nghĩa)</a></li>
+            <li><a href="#vieng-anh-ta-quang-buu">Viếng Anh – Tưởng nhớ Giáo sư Tạ Quang Bửu</a></li>
+            <li><a href="#mung-thay-hao-70">Mừng Thầy Nguyễn Thúc Hào 70 tuổi</a></li>
+          </ol>
+        </li>
+
+        <li><a href="#phu-luc-xuan-huong">Phụ lục – Thơ Văn Xuân Hương</a>
+          <ol>
+            <li><a href="#xuan-huong-50-nam">Năm mươi năm chặng đường dài (50 năm ngày cưới)</a></li>
+            <li><a href="#xuan-huong-mung-anh-70">Mừng anh tuổi 70</a></li>
+            <li><a href="#xuan-huong-toi-dai">Tôi dại</a></li>
+            <li><a href="#xuan-huong-tu-mung-70">Tự mừng 70 tuổi</a></li>
+            <li><a href="#xuan-huong-tu-hoi">Tự hỏi</a></li>
+          </ol>
+        </li>
+
+      </ol>
+    </nav>
+
+    <main class="content">
+      <header class="page">
+        <h1>PHAN ĐÌNH DIỆU - Trang Thơ</h1>
+      </header>
+
+      <section id="neu-nhu-em-ve-day" class="poem-sec">
+        <h2>Nếu như em về đây</h2>
+        <div class="meta">(Hà Tĩnh, 1961)</div>
+        <pre class="poem">Mưa nhẹ đường thôn gió vờn sóng lúa
+Ôi xa rồi những ngày xưa êm ả
+Những Tết xưa ấp ủ đợi chờ
+Rảo bước đường quê nhớ tuổi ấu thơ
+Lòng man mác bao ước mơ vời vợi
+Xóm cũ đây rồi làng xưa êm ái 
+Một bếp lửa hồng một tối đoàn viên 
+Một ý trẻ thơ mơ ước hão huyền 
+Ôi phút chốc cả sóng chiều xao động 
+Thức dậy vô vàn ước vọng xốn xang 
+Một bóng tre làng một bờ giếng ngọt 
+Phải chăng em là tươi mát tình em 
+Cả quê hương thân thiết êm đềm 
+
+Trên mái tóc em dịu mềm vương vấn
+Trong đôi mắt em trời xanh thăm thắm 
+Trên môi em say đắm mặn mà 
+Kết lại giờ đây em hỡi, tình ta 
+Là em đó cả xa xưa sống lại 
+Cả hôm nay và mãi mãi mai sau 
+Như tiếng nói quê ta nghĩa nặng tình sâu 
+
+Đã đến đây rồi với bước cầu quen thuộc 
+Với mái nhà thân yêu 
+Có mẹ già anh sớm sớm chiều chiều 
+Ngóng đợi em về chắt chiu thương mến
+Tấm lòng quê dù chẳng diễn thành lời 
+Trong khó nhọc vẫn ngời ngời hy vọng 
+Và bà anh phơ phơ tóc trắng 
+Tám chục tuổi tròn nghe tin em lòng bỗng hết héo hon 
+Hết ốm hết đau sức già trẻ lại
+Xay lúa đêm đêm tay chờ tay đợi 
+Tấm lòng già khấp khởi thầm mong 
+Và những đứa em thấp thỏm trong lòng
+Chờ đón một tình thương gần gũi
+Cả quê hương như êm đềm thân ái
+Giang rộng tay mời đón bạn thương yêu 
+Trong lòng quê thanh bạch cảnh nghèo 
+Em yêu ơi! Nếu như em về đây...</pre>
+      </section>
+
+      <section id="tren-duong-nho-em" class="poem-sec">
+        <h2>Trên đường nhớ em</h2>
+       <div class="meta">(Hà Nội - Bắc Kinh - Mạc Tư Khoa, 9/1964)</div>
+
+        <pre class="poem">Nắng vàng Hà Nội trưa nay
+Xa em kể tự phút này chia phôi
+Cầm tay nhau chẳng nỡ rời
+Rưng rưng mắt lệ nghẹn lời chia ly
+Còi tàu vội giục chân đi
+Buông tay ngơ ngẩn biết gì chăng em ?
+Dõi trông tay vẫy dịu mềm, 
+Bàng hoàng nào tưởng xa em, xa rồi.
+Nỗi tình ngày ngắn đêm vơi
+Bâng khuâng cảnh mới, bồi hồi niềm xưa.
+Điều kia nửa tỏ nửa mờ
+Lo âu để lại bây giờ một ai
+Nhớ thương trĩu nặng đường dài
+Nhủ mình thôi cố rút ngày chờ mong.
+
+*
+Chiều hôm đất Lạng Đồng Đăng
+Đường qua biên giới chập trùng núi cao.
+Nhìn quê mà dạ nôn nao
+Vài dòng gửi lại biết nào tới em.
+
+*
+Dùng dằng chốc đã nửa đêm
+Bằng Tường tàu đã sắp êm ghế ngồi.
+Nhớ về Hà Nội xa xôi
+Giờ này em hẳn đã rời Thủ đô
+Ra về ai tiễn ai đưa
+Chút lòng tưởng nhớ gọi là tiễn nhau.
+
+*
+Bằng Tường anh tới Liễu Châu
+Em từ Hà Nội hẳn vào đến Vinh.
+Đường đi hai hướng, hai mình
+Mà lòng chỉ tưởng một mình đôi ta
+Xa xôi nghìn dặm quê nhà
+Trưa nay ai sẽ ra ga đón mình ?
+Gió mờ cát bụi thành Vinh
+Nắng trưa có nỡ sạm mình chăng em ?
+
+*
+Toàn Châu sương rủ màn đêm
+Hiu hiu gió lạnh, êm đềm nhạc ru.
+Đường xa quê lạ chiều thu
+Bốn bề sương lạnh âm u bốn bề
+Bồi hồi nhớ cảnh nhớ quê
+Nhớ khi bếp lửa chiều về đợi ai
+Cơm ngon canh ngọt sẵn bày
+Nhanh về em nhé kẻo đây ngóng chờ.
+
+*
+Chập chờn nửa tỉnh nửa mơ
+Qua đêm tỉnh giấc nào ngờ chiêm bao
+Tưởng chừng như đó bên nhau
+Nào hay xe vẫn cuốn mau dặm đường.
+Trường Sa đó, nọ Hoành Dương
+Mịch La chốn ấy, Nhạc Dương chốn này
+Trên đường gợi gió gợi mây
+Hồn xưa như vẫn đâu đây vật vờ
+Nhạc Phi nơi nọ, oan xưa
+Ly Tao còn đó, đâu giờ Khuất Nguyên ?
+Nhớ xưa chiếc bóng bên đèn
+Thương người chín suối tận miền xa xôi.
+Giờ đây chân dạo quê người
+Lòng quê man mác, tình đời vẩn vơ.
+
+*
+Đường xa gió cuốn bụi mờ
+Thênh thang đất bạn, thẫn thờ lòng ai.
+Trường Giang cầu rộng sông dài
+Bên kia Hán Khẩu, bên này Vũ Xương
+Ven đường chốn nọ Hán Dương
+Câu thơ Thôi Hiệu vấn vương thuở nào.
+Tứ thơ hiểu có là bao
+Nhớ nhiều chỉ những buổi nào cùng em 
+Quỳnh Đôi quê mẹ chiều êm
+Thơ Đường nhấp giọng tình thêm đậm đà
+“Hoàng hôn khuất bóng quê nhà”
+Mới hai ngày đó mà xa nghìn trùng.
+
+*
+Càng đi càng những lạnh lùng
+Đường lên phía Bắc mịt mùng trời mây
+Khi về nóng bức chốn này
+Giờ đi ngọn cỏ lá cây chớm vàng
+Nghe buồn gọi gió thu sang
+Nhớ về quê mẹ hẳn đang nắng chiều.
+Càng đi càng nhớ càng yêu
+Càng nhiều cách trở càng nhiều ái ân.
+Khi về mỗi bước mỗi gần
+Giờ đi một bước một phần xa xăm
+Khi về rạo rực ước mong
+Giờ đi canh cánh bên lòng nhớ thương
+Từ xa thăm thẳm trùng dương
+Em giờ chắc vẫn dõi đường bước anh.
+
+*
+Sáng nay tàu đến Bắc Kinh,
+Trời thu mây nặng, lá xanh ngả vàng
+Phố đông xe ngựa rộn ràng
+Tiền Môn nẻo nọ, Thiên An lối này
+Đường về chốn trọ là đây
+Nhớ em, anh viết thư này gửi em.
+
+*
+Dừng chân nghỉ một ngày đêm
+Sáng ra xe lại tiếp thêm đường dài
+Kinh kỳ từ giã sương mai
+Nào ai đưa tiễn, nào ai dặn dò
+Đường xa lại cuốn bụi mờ
+Bâng khuâng lại nhớ những giờ chia ly.
+Kể từ lúc bước chân đi
+Lòng riêng tưởng nhớ chẳng khi nào rời
+Nhớ từ miệng nói mắt cười
+Nhớ câu tâm sự, nhớ lời tỉ tê
+Mái tranh nhớ buổi đi về
+Chợ trưa nhớ lúc vai kề sánh vai
+Thăm nhà nhớ những hôm mai
+Đường trơn mưa bụi, bước ai gập ghềnh
+Đêm hôm sốt mẩy vang mình
+Nhớ ai lặn lội một mình canh khuya
+Rồi ra nước nọ non kia
+Ai chung ấm lạnh, ai chia ngọt bùi
+Thương em góc biển chân trời
+Tháng ngày đằng đẵng xa vời nhớ thương.
+
+*
+Chiều tà vàng nhạt ánh dương
+Xe đưa lữ khách dặm đường nghỉ chân.
+Nơi đây Vạn Lý Trường Thành
+Nọ là biển biếc, non xanh ấy là
+Trải bao dâu bể can qua
+Ngang trời sừng sững, sơn hà lừng danh
+Giờ đây bên bức cổ thành
+Lò cao ngút khói, dập dềnh tàu khơi
+Nghìn năm trẻ lại sức người
+Mang tình thiên cổ, vọng lời non sông.
+
+*
+Đêm về trăng dãi lạnh lùng
+Một màu đất bạc, một vùng trời xanh
+Giờ đây thứ bảy quê mình
+Ngắm trăng em có nhớ anh chăng là ?
+Vừa thôi mới một tuần qua
+Cũng chiều thứ bảy có ta, có mình.
+Xa vời non nước mông mênh
+Gửi hồn theo gió về Vinh xa vời
+Cùng em, em nhé, dạo chơi
+Trăng êm Bến Thủy, dịu trời Lam Giang
+Gió mây, mây gió mơ màng
+Nghe vờn sóng nước mà man mác lòng.
+
+*
+Đường qua bao núi bao sông
+Mãn Châu đất rộng, mịt mùng thảo nguyên
+Dập dềnh vừa một ngày đêm
+Tinh mơ tàu đã tới miền biên khu
+Lạnh lùng nghe gió vi vu
+Nhìn ra chỉ thấy mịt mù sương mai.
+Thẩn thơ tính tháng, tính ngày
+Tròn ba tháng trước nơi đây đi về
+Một lần biên giới xa quê
+Giờ thêm biên giới đường về thêm xa
+Tình quê thêm nỗi thiết tha
+Nghĩ đường cách trở mà da diết tình.
+
+*
+Con đường Tây Bá thênh thênh
+Nước non thăm thẳm, mông mênh đất trời.
+Nơi đây thu tự lâu rồi
+Quanh quanh chỉ thấy vàng rơi lá vàng
+Một đi thêm một ngỡ ngàng
+Dẫu quen mà vẫn mơ màng xa xôi.
+Vẫn là lạ cảnh, lạ người
+Lạ trăng lạ gió lạ trời lạ mây
+Lại thêm nỗi nọ niềm này
+Nên đêm thao thức, nên ngày thẩn thơ.
+Quê hương xa khuất mịt mờ
+Nhớ em nhẩm tính từng giờ xa em
+Đêm ngày lại tiếp ngày đêm
+Lạnh lùng cách trở lại thêm lạnh lùng
+Tương tư bao nỗi bên lòng
+Nhìn mây cũng đợi, nhìn trăng cũng chờ
+Gió vờn tưởng tiếng ai mơ
+Thoảng trông đèn dọi cũng ngờ bóng ai
+Muôn trùng sương tối, nắng mai
+Cảnh này tình ấy, khắc dài canh thâu.
+
+*
+Ngút ngàn hết Á sang Âu
+Trời Nga vời vợi một màu mênh mang
+Đất bằng rơi rụng lá vàng
+Ven đường trắng lạnh những hàng bạch dương.
+Tiễn đưa từ buổi lên đường
+Mười ngày hơn vạn dặm trường đi qua.
+Khuya về đến Mạc Tư Khoa
+Thắm tình bạn đón, thiết tha nỗi tình,
+
+Xa xôi giấc ngủ yên lành
+Trong mơ có nhớ đón anh chăng mình ...
+
+Hà Nội - Bắc Kinh - Mạc Tư Khoa
+9, 1964
+Phan Đình Diệu</pre>
+      </section>
+
+      <section id="tet-nho-nha" class="poem-sec">
+        <h2>Tết nhớ nhà</h2>
+        <div class="meta">(Mạc Tư Khoa, Tết 1966)</div>
+        <pre class="poem">Tuyết rơi bao độ nhớ quê nhà
+Đã mấy xuân rồi mãi mãi xa
+Quê mẹ dẫu nay bừng khói lửa
+Vườn xuân chắc vẫn nở đều hoa
+Trông vời non nước lòng xao xuyến
+Tưởng chút niềm riêng dạ thiết tha
+Mỗi bước quê người thêm mỗi nhớ
+Yêu thương như giục tấm lòng xa</pre>
+      </section>
+
+      <section id="tinh-que" class="poem-sec">
+        <h2>Tình quê</h2>
+        <div class="meta">(Trên nền trường xưa, 1971)</div>
+        <pre class="poem">Mười mấy năm về lại chốn này
+Thời gian còn thoảng chút hương say
+Mênh mang gió gợn niềm mơ ước
+Một ánh trăng xa, những tháng ngày....</pre>
+      </section>
+
+      <section id="dem-vac-na" class="poem-sec">
+        <h2>Đêm Vác-na</h2>
+        <div class="meta">(Vác-na, Bungari, 1978)</div>
+        <pre class="poem">Đêm Vác-na nằm nghe sóng vỗ
+Tiếng vọng thời gian dìu dặt gần xa
+Xao xuyến bấy chút ngọt ngào thương nhớ
+Như biển trời kia thấm dịu ánh trăng ngà...</pre>
+      </section>
+
+      <section id="trua-hamburg" class="poem-sec">
+        <h2>Trưa Hamburg</h2>
+        <div class="meta">(1982)</div>
+        <pre class="poem">Trưa Ham-buốc chờ tàu đổi chuyến
+Chợt gặp đồng hương mà chẳng dám mừng
+Ôi, đời phân chia cho người một nước
+Vẫn xa nhau dù ở chốn tha hương
+
+Người đã đến đây, từ đâu phiêu bạt?
+Có mang theo một nỗi nhớ quê nhà
+Một sợi mây chiều, một tia nắng sớm
+Từ bầu trời đất nước vời xa?
+
+Nhìn hút bóng người vào mịt mùng vô định
+Tôi bỗng bâng khuâng một thoáng buồn....</pre>
+      </section>
+
+      <section id="tang-ban-phan-lan" class="poem-sec">
+        <h2>Tặng bạn Phần Lan</h2>
+        <div class="meta">(Turku–Oulu, 1982)</div>
+        <p class="subtitle">Kính tặng GS. A. Salomaa và P. Turakainen</p>
+        <pre class="poem">Quê bạn là đây, đầy tuyết trắng
+Rừng thông dài trải suốt đường xa
+Biết nhau nhiều mà nay mới gặp
+Chuyện hàn huyên thân mật đậm đà
+
+Đi cùng bạn, tôi thầm đếm bước
+Nào mấy gần và mấy xa xôi
+Để được gần nhau vài chuyện Toán
+Phải vượt bao xa mấy dặm đời
+
+Bạn kể: chưa lâu bạn cũng nghèo
+Trong, ngoài lắm lúc cũng gieo neo
+Nhìn bạn đời nay tôi nhẩm tính
+Lận đận quê tôi vẫn đói nghèo
+
+Uống với nhau đây một chén mừng
+Mai rồi lại tiếp bước tha hương
+Một chút gió lành từ đất bạn
+Tôi giữ theo tôi những dặm trường...</pre>
+      </section>
+
+      <section id="tu-cuba-xa-xoi" class="poem-sec">
+        <h2>Từ Cuba xa xôi</h2>
+        <pre class="poem">Cũng đó khoảng trời xanh, cũng đây làn gió thoảng
+Mà sóng vỗ bờ kia là sóng Đại Tây Dương
+Khoảng rộng không gian gợi chiều sâu ngày tháng 
+Ánh trăng ngời kia phải ánh mắt quê hương 
+Ôi đẹp một ánh trăng từ thủa ấy
+Vẫn cùng ta đi khắp mọi nẻo đường
+Khi đất Á, khi trời Âu biển Mỹ
+Vẫn dõi lòng người qua những đại dương
+Ta hiểu tình ta từ nửa vòng trái đất
+Hiểu cái lắng sâu của cuộc sống bình thường
+Bởi tự rất xa nhìn cái gần mới thật
+Mới rõ tình người từ muôn dặm trùng dương</pre>
+      </section>
+
+      <section id="gui-con" class="poem-sec">
+        <h2>Gửi con</h2>
+        <div class="meta">(Aarhus, Đan Mạch, một ngày đông 1982)</div>
+        <pre class="poem">Tận quê xa, con ơi có hỏi
+Giờ này đây, bố ở nơi đâu?
+Trong giấc yên lành con có biết
+Mảnh tình riêng bố gửi về đâu?  
+
+Một góc trời Âu, bên bờ biển lạ
+Trên bước lang thang đỗ lại nơi này
+Trời Đan Mạch sương mù, mưa dóng dả
+Mùa đông về se lạnh những hàng cây
+
+Nơi đông vui mà không người quen thuộc
+Nỗi cô đơn thấm lạnh mỗi tế bào
+Một buổi thuyết trình, vài bạn sơ giao
+Không khuây nổi lòng nhớ thương xa cách
+
+Đất nước hiền hòa trên từng gương mặt
+Trên mỗi sắc màu xanh đỏ thắm tươi
+Chú ngựa rơm giữa vàng son lấp lánh
+Chuyện An-đéc-xen như sống giữa cuộc đời
+
+Mỗi làn gió cũng đùa vui hớn hở
+Vuốt nhẹ mặt đường những thoáng lo âu
+Và bao la trời thanh bình vạn thuở
+Vẫn chứa hôm nay những xáo động muôn màu
+
+Mỗi bước đất người nhớ về quê mẹ
+Thương mỗi nếp nhăn vất vả sớm hôm
+Chồng câu hỏi từng đêm dài quạnh quẽ
+Ước một nét vui trên những gợn buồn
+
+Và, con ơi,
+Bố muốn tặng con một chú ngựa rơm
+Trên gập ghềnh đường xa
+con sẽ bước....</pre>
+      </section>
+
+      <section id="ba-bai-tho-duong" class="poem-sec">
+        <h2>Ba bài Thơ Đường</h2>
+
+        <section id="tang-anh-tran-dai-nghia" class="poem-sec poem-sub">
+          <h3>Tặng Anh (kính tặng Anh Trần Đại Nghĩa)</h3>
+          <pre class="poem">Nghĩa lớn gọi về với nước non
+Buồn vui đã trải cuộc vuông tròn
+Rèn tài văn võ thời phiêu bạt
+Gánh việc giang sơn thuở mất còn
+Tình nặng ấy chưng tình đất nước
+Nghiệp đời há kể nghiệp vàng son
+Gốc thông đứng thẳng dầu mưa nắng
+Để gió lành reo ngát nước non.</pre>
+        </section>
+
+        <section id="vieng-anh-ta-quang-buu" class="poem-sec poem-sub">
+          <h3>Viếng Anh – Tưởng nhớ Giáo sư Tạ Quang Bửu</h3>
+          <pre class="poem">Một khối nghĩ suy, một khối tình
+Nước non là đó, nọ là mình
+Đã tròn một cuộc, bầu tâm huyết
+Chưa thỏa đôi bề, lẽ tử sinh
+Nghĩa nặng nhân tình còn quyến luyến
+Ánh ngời tài trí vẫn lung linh
+Nỗi đời chất chứa lòng ưu ái
+Một khối nghĩ suy, một khối tình</pre>
+        </section>
+
+        <section id="mung-thay-hao-70" class="poem-sec poem-sub">
+          <h3>Mừng Thầy Nguyễn Thúc Hào 70 tuổi</h3>
+          <pre class="poem">Một tấm gương trong giữ vẹn tròn 
+Sá bao công vượt suối trèo non 
+Tay dù trắng, đẹp đời trong trắng 
+Lòng vẫn son, bền chí sắt son. 
+Từng trải nắng mưa lo nghiệp lớn 
+Giờ vui mây nước mảnh tình con 
+Đời còn sương bụi bao mờ tỏ 
+Xin mãi long lanh ánh nguyệt tròn.</pre>
+<br/>
+          <div class="note">
+             <em>Chú thích: Đây là bài Hoạ cho bài Xướng trước đó của Văn Như Cương (cũng là học trò thầy Nguyễn Thúc Hào):</em>
+            <pre class="poem">
+<em>Mừng thầy nay thọ bảy mươi tròn 
+Sáu nổi một chìm với nước non 
+Tính toán một đời hai tay trắng 
+Chắt chiu hai tốt một lòng son 
+Lơ thơ lui tới trò và bạn 
+Ríu rít ra vào cháu với con 
+Dẫu biết bảy mươi xưa nay hiếm 
+Vẫn mong thầy thọ đến trăm tròn. </em></pre>
+          </div>
+        </section>
+      </section>
+
+
+    
+      <section id="phu-luc-xuan-huong" class="poem-sec">
+        <h2>Phụ lục – Thơ Văn Xuân Hương</h2>
+
+        <section id="xuan-huong-50-nam" class="poem-sec">
+          <h3>Năm mươi năm chặng đường dài </h3>
+             <div class="meta">(50 năm ngày cưới)</div>
+          <pre class="poem">Năm mươi năm chặng đường dài 
+Em và anh đã tuổi ngoài bảy mươi 
+Bên nhau hơn nửa cuộc đời
+Vẫn còn duyên nợ như thời trẻ trung 
+Ngày xưa sóng gió bão bùng 
+Anh còn đứng vững gốc thông giữa đời
+Em dù cuộc sống chơi vơi
+Mãi là người vợ trọn đời bên anh 
+Giờ đây cây đã đâm cành 
+Cháu con ríu rít vây quanh ông bà 
+Hạnh phúc không phải đâu xa
+Hạnh phúc đang ở quanh ta rất gần 
+Các con nay đã trưởng thành 
+Bạn bè thân hữu có mình có ta
+Thời gian dĩ vãng trôi qua 
+Năm mươi năm ấy khó nhòa trong tim</pre>
+        </section>
+
+        <section id="xuan-huong-mung-anh-70" class="poem-sec">
+          <h3>Mừng anh tuổi 70</h3>
+          <pre class="poem">Mừng anh sang tuổi 70
+Vẫn vui nghiên cứu vẫn say giảng bài 
+Vẫn nhiều bè bạn thăm chơi 
+Vẫn còn nhớ hết từng người năm xưa 
+Mừng anh đang có mẹ già 
+Còn ba xuân nữa cụ bà bách niên 
+Cháu con chắt chút khắp miền 
+Bên cây cổ thụ vững bền gia phong 
+
+Mừng anh con gái cùng chồng 
+Về quê công tác sống chung một nhà 
+Có thằng cháu ngoại lên ba 
+Giống ông như tạc bà càng thêm vui 
+Mừng anh đang có vợ hiền 
+Cùng nhau chia sẻ nỗi niềm riêng tư 
+Cháu con đang ở phương xa
+Chúc mừng bố mẹ cả nhà cùng vui</pre>
+        </section>
+
+        <section id="xuan-huong-toi-dai" class="poem-sec">
+          <h3>Tôi dại</h3>
+          <pre class="poem">Không ai mà dại như tôi
+Lấy chồng làm toán thế thôi đã đành 
+Đêm dài thức suốt thâu canh
+Lại thêm con gái đồng hành cùng cha 
+Để rồi tất cả việc nhà 
+Một mình gánh vác vào ra một mình 
+Được hai chàng rể tận tình
+Cũng làm Tin, Toán có mình có ta 
+Tưởng chừng còn cậu thứ ba
+Không theo ngành Toán may ra được nhờ 
+Công ty doanh nghiệp sẵn chờ 
+Lương cao bổng hậu mẹ nhờ được con 
+Ngờ đâu vẫn một lối mòn 
+Vẫn say làm toán cho hồn thảnh thơi 
+Cha con làm Toán với đời 
+Tìm bao cái đẹp cho người say mê 
+Nhớ xưa mái ấm trường quê 
+Mẹ vui dạy Toán mải mê trồng người 
+Trải qua một chặng đường dài 
+Yêu người yêu toán hỡi ai đừng cười 
+Tôi đi gần hết cuộc đời 
+Dại thì biết dại vui thời vẫn vui!</pre>
+        </section>
+
+        <section id="xuan-huong-tu-mung-70" class="poem-sec">
+          <h3>Tự mừng 70 tuổi</h3>
+          <pre class="poem">Năm nay sang tuổi 70
+Bâng khuâng cứ ngỡ như thời còn xuân
+Vẫn còn ước vẫn còn mong 
+Vẫn còn góp sức vui trồng tương lai 
+Vẫn còn ngày rộng tháng dài 
+Vẫn say chăm bón các loài cỏ cây 
+Cuộc đời sóng gió vơi đầy 
+Gom thêm sức sống cho ngày mai sau 
+Đời cho ta đã có nhau 
+Phong ba bão táp có đâu phai nhòa 
+Các con đang ở phương xa
+Tin yêu bố mẹ quê nhà xa xôi
+Vườn xuân hoa nở thắm tươi 
+Dưới ao bơi lội từng đôi cá vàng
+Đất trời ngày tháng mênh mang 
+Tuổi già đã đến nhẹ nhàng thế sao 
+Tin yêu xen chút tự hào 
+Gia đình hạnh phúc tuổi nào cũng vui.</pre>
+        </section>
+
+        <section id="xuan-huong-tu-hoi" class="poem-sec">
+          <h3>Tự hỏi</h3>
+          <pre class="poem">Bảy hai tuổi đã già chưa nhỉ? 
+Nhiều đêm dài suy nghĩ miên man 
+Giờ đây cuộc sống bình an 
+Nhớ bao kỷ niệm gian nan thuở nào 
+Niềm vui ta vẫn ước ao 
+Có thêm sức sống dồi dào năm xưa
+Cùng anh tập luyện sớm trưa
+Bảy mươi hai tuổi vẫn chưa thấy già</pre>
+        </section>
+      </section>
+
+    </main>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const tocLinks = document.querySelectorAll('.toc a');
+  const sections = Array.from(tocLinks).map(link => {
+    const id = link.getAttribute('href').slice(1);
+    return document.getElementById(id);
+  }).filter(Boolean);
+  function onScroll() {
+    let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+    let current;
+    sections.forEach(sec => {
+      if (sec.offsetTop - 80 <= scrollPos) {
+        current = sec.getAttribute('id');
+      }
+    });
+    tocLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', onScroll);
+});
+</script>
+<style>
+.toc a.active {background: color-mix(in srgb, var(--accent), transparent 80%); font-weight: 600;}
+</style>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const links = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
+  const map = new Map();
+  links.forEach(a=>{
+    const id = a.getAttribute('href').slice(1);
+    const sec = document.getElementById(id);
+    if(sec) map.set(sec, a);
+    // smooth scroll
+    a.addEventListener('click', function(e){
+      const target = document.getElementById(id);
+      if(target){
+        e.preventDefault();
+        const y = target.getBoundingClientRect().top + window.scrollY - 80; // offset for fixed topbar
+        window.scrollTo({top:y, behavior:'smooth'});
+        history.replaceState(null,'','#'+id);
+      }
+    });
+  });
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(ent=>{
+      const a = map.get(ent.target);
+      if(!a) return;
+      if(ent.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        a.classList.add('active');
+        // also expand parent link if nested
+        const parentLi = a.closest('ol')?.parentElement?.querySelector(':scope > a');
+        if(parentLi) parentLi.classList.add('active');
+      }
+    });
+  },{rootMargin:'-50% 0px -45% 0px', threshold:0.01});
+  map.forEach((a,sec)=>obs.observe(sec));
+});
+</script>
+
+</body>
+</html>

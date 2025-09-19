@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phan Đình Diệu - GÓP Ý KIẾN VỀ ĐỔI MỚI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #0f152b;
+      --card: #111936;
+      --text: #e7ecff;
+      --muted: #9aa3c0;
+      --accent: #5b8cff;
+      --line: #1d274c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f1530;
+        --muted: #55607a;
+        --accent: #3957ff;
+        --line: #e7e9f4;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; }
+    nav.toc {
+      position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto;
+      padding: 18px; border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    nav.toc h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+    nav.toc ol { list-style: none; padding: 0 0 0 4px; margin: 0; }
+    nav.toc > ol > li > a { font-weight: 600; }
+    nav.toc li { margin: 6px 0; }
+    nav.toc a { color: var(--text); display: inline-block; padding: 6px 8px; border-radius: 8px; }
+    nav.toc a:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    nav.toc details { border: 1px solid var(--line); border-radius: 10px; padding: 6px 8px; margin: 8px 0; }
+    nav.toc details > summary { cursor: pointer; list-style: none; font-weight: 700; }
+    nav.toc details[open] { background: color-mix(in srgb, var(--accent), transparent 92%); }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.06); padding: 28px; }
+    header.page { padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px; text-align: center; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 30px; margin: 0 0 6px; line-height: 1.3; text-transform: uppercase; }
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; text-align: right; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 26px 0 6px; line-height: 1.35; }
+    h3 { font-weight: 700; margin: 18px 0 8px; }
+    p { margin: 10px 0; }
+    figure { margin: 18px 0; text-align: center; }
+    figure img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+    figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+              background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    .copy-anchor { margin-left: 8px; border: 1px dashed var(--line); border-radius: 8px; padding: 2px 6px; font-size: 12px; cursor: pointer; }
+    .copy-anchor:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+
+    /* Mobile layout */
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: 1fr; }
+      nav.toc { position: relative; height: auto; }
+      header.page h1 { font-size: 26px; }
+    }
+
+    /* Print cleanup */
+    @media print {
+      .topbar, nav.toc, .copy-anchor { display: none !important; }
+      .grid { display: block !important; }
+      main.content { border: 0 !important; box-shadow: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+      a { color: inherit !important; text-decoration: none !important; }
+      h1, h2, h3, p { break-inside: avoid; }
+      summary { display: none !important; }
+    }
+  </style>
+  <script>
+    function copyAnchor(btn) {
+      const h = btn.closest('h2, h3');
+      if (!h) return;
+      const anchor = h.querySelector('a[id]');
+      const id = anchor ? anchor.id : h.id;
+      if (!id) return;
+      const url = location.origin + location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        const prev = btn.textContent;
+        btn.textContent = 'Đã sao chép';
+        setTimeout(() => btn.textContent = 'Sao chép liên kết', 1200);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+        <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+        <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <nav aria-label="Mục lục" class="toc" id="toc">
+        <h2 id="mucluc">Mục lục <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+        <details open>
+          <summary><a href="#title">Góp ý kiến về đổi mới</a></summary>
+          <ol>
+            <li><a href="#lts">Lời tòa soạn (L.T.S)</a></li>
+         
+            <li><a href="#p3">3 – Thế giới là gì? Ta là gì? Mục tiêu?</a>
+              <ol>
+                <li><a href="#p3a">a) Biến đổi của thế giới</a></li>
+                
+              </ol>
+            </li>
+            
+            <li><a href="#p8">8 – Vấn đề đoàn kết dân tộc</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <main class="content">
+        <header class="page">
+          <a id="title"></a>
+          <h1>GÓP Ý KIẾN VỀ ĐỔI MỚI</h1>
+          <p class="author">PHAN ĐÌNH DIỆU</p>
+        </header>
+
+        <section id="lts" class="note">
+          <p><strong>L.T.S – </strong><em>Tháng chính 1986, tại Hội nghị Ủy ban trung ương Mặt trận Tổ quốc Việt Nam góp ý kiến với Đại hội VI của Đảng cộng sản Việt Nam, giáo sư Phan Đình Diệu, tiến sĩ khoa học toán-lí đã đọc một bản tham luận . Từ đó đến nay, hai năm đã trôi qua, thời gian chỉ càng làm sáng tỏ thêm sự đúng đắn của những ý kiến mà tác giả đã nêu lên trong bản tham luận ấy. Đó là những ý kiến được đề xuất từ sự suy nghĩ độc lập với tầm nhìn xa rộng của một người tri thức có nhiệt tâm và hiểu biết về nhiều lĩnh vực.</em></p>
+          <p><em>Tạp chí &laquo;&laquo; Tổ quốc&raquo;&raquo; trân trọng giới thiệu với bạn đọc nguyên văn bản tham luận ấy.</em></p>
+        </section>
+
+        <figure>
+          <picture>
+            <img src="TQ88.png" alt="Hình minh họa (TQ88)" />
+          </picture>
+          <figcaption class="muted">Bài đăng trên số báo cuối của báo Tổ Quốc</figcaption>
+        </figure>
+
+
+		</body>
+</html>

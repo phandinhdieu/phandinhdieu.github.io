@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Niềm ngưỡng mộ thầy Thiêm và tình yêu toán học</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+:root{--bg:#0b1020;--surface:#0f152b;--card:#111936;--text:#e7ecff;--muted:#9aa3c0;--accent:#5b8cff;--line:#1d274c}
+@media(prefers-color-scheme:light){:root{--bg:#f7f8fc;--surface:#fff;--card:#fff;--text:#0f1530;--muted:#55607a;--accent:#3957ff;--line:#e7e9f4}}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.8;font-size:18px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1200px;margin:70px auto 0;padding:20px}
+.grid{display:grid;grid-template-columns:1fr;gap:28px}
+nav.toc{position:sticky;top:20px;height:calc(100vh - 40px);overflow:auto;padding:18px;border-radius:16px;background:var(--surface);border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.08)}
+nav.toc h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:2px 0 12px}
+nav.toc ol{list-style:none;padding:0 0 0 4px;margin:0}
+nav.toc > details > summary{cursor:pointer;list-style:none;font-weight:700}
+nav.toc > details[open]{background:color-mix(in srgb, var(--accent), transparent 92%);border-radius:10px;padding:6px 8px}
+nav.toc li{margin:6px 0}
+nav.toc a{color:var(--text);display:inline-block;padding:6px 8px;border-radius:8px}
+nav.toc a:hover{background:color-mix(in srgb, var(--accent), transparent 90%)}
+nav.toc ol ol{margin-left:10px;border-left:2px solid var(--line);padding-left:10px}
+nav.toc a{overflow-wrap:anywhere;word-break:break-word}
+.content{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.06);padding:30px}
+header.page{padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:18px;text-align:center}
+header.page h1{font-family:'Merriweather',serif;font-weight:800;font-size:30px;margin:0 0 6px;line-height:1.3;text-transform:uppercase}
+header.page p.author{margin:0;color:var(--muted);font-style:italic;font-size:16px;text-align:center}
+h2{font-family:'Merriweather',serif;font-size:24px;margin:22px 0 6px;line-height:1.35}
+p{margin:12px 0}
+.center{text-align:center}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:18px 0}
+blockquote{margin:14px 0;padding:12px 16px;border-left:4px solid var(--accent);background:color-mix(in srgb, var(--accent), transparent 93%);border-radius:8px}
+.poem{white-space:pre-line;text-align:center;font-style:italic}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(8px);background:color-mix(in srgb, var(--surface), transparent 25%);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:10px}
+.btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.meta{color:var(--muted);font-size:14px;text-align:center}
+/* NOTE style synced to the 1986 page (yellow highlight) */
+.note{ background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px }
+.note h3{margin:0 0 6px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.note p{margin:8px 0}
+.figure{margin:10px 0;text-align:center}
+.figure img{max-width:100%;height:auto;border-radius:10px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.figure figcaption{color:var(--muted);font-size:13px;margin-top:6px}
+@media(max-width:1024px){.grid{grid-template-columns:1fr;gap:18px}nav.toc{position:relative;top:auto;height:auto;max-height:none;width:auto}header.page h1{font-size:26px}.topbar-inner{padding:10px 16px}body{font-size:17px}}
+@media print{.topbar,nav.toc,.btn{display:none!important}.grid{display:block!important}body{background:#fff!important;color:#000!important}.content{border:0!important;box-shadow:none!important}a{color:inherit!important;text-decoration:none!important}h1,h2,p{break-inside:avoid}}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="btn" href="../v259n-th417.html">Về Trang Phan Đình Diệu</a>
+      <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+      <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="grid">
+      <main class="content">
+        <header class="page" id="title">
+          <h1>NIỀM NGƯỠNG MỘ THẦY THIÊM VÀ TÌNH YÊU TOÁN HỌC</h1>
+          <p class="author">PHAN ĐÌNH DIỆU · Tưởng nhớ Giáo sư Lê Văn Thiêm</p>
+        </header>
+
+        <section id="toan-bai">
+          <p>Tôi còn nhớ rõ lần đầu tiên tôi được nghe tiếng giáo sư Lê Văn Thiêm là vào một ngày đầu năm học 1948-1949, năm học trung học đầu tiên của tôi tại trường huyện (Can Lộc, Hà Tĩnh). Hôm ấy, thầy dạy Toán vào lớp, với một vẻ hân hoan hiếm có, kể cho chúng tôi nghe một tin tức từ báo chí ở Việt Bắc gửi về, trong đó có nói về một buổi nói chuyện của nhà khoa học Tạ Quang Bửu giới thiệu một số phát minh mới của khoa học thế giới, và giới thiệu thành tích của một số nhà khoa học Việt Nam, đặc biệt về nhà toán học trẻ tuổi Lê Văn Thiêm, tiến sĩ Toán học đầu tiên của nước ta tại Pháp và hiện đang dạy học tại Thụy Sĩ. Bọn học trò chúng tôi nghe một cách háo hức, để mà phấn khởi, tự hào, chứ thực ra chẳng hiểu gì mấy. Thế nào là một phát minh toán học, là một luận án tiến sĩ, làm thế nào mà một người Việt Nam có thể nghĩ ra những "định lý toán học chưa ai từng biết"? Những câu hỏi như vậy thì trong nhiều năm sau chúng tôi vẫn chưa có câu trả lời, nhưng cái tên Lê Văn Thiêm, cùng với tên tuổi của các nhà khoa học cùng quê hương Nghệ Tĩnh như Hoàng Xuân Hãn, Tạ Quang  Bửu, ... thì đã in đậm trong trí nhớ non nớt của chúng tôi, như những thần tượng, những mơ ước xa xôi mà thân thiết.  Trong thời thơ ấu ở một vùng quê heo hút, chính niềm ngưỡng mộ đối với những tên tuổi huyền thoại đó đã nhen nhóm trong lòng tôi niềm mê say toán học tự lúc nào mình cũng không biết.</p>
+
+          <p>Cho đến đầu năm 1955, khi từ quê ra thủ đô Hà Nội mới được giải phóng để thi vào học Đại học, tôi mới có cơ hội tiếp cận với khả năng đạt được mong ước học Toán của mình. Nhưng chưa phải đã đạt được ngay mà còn phải trải qua một chặng thử thách khá trớ trêu nữa. Số là tôi ra Hà Nội chậm mất vài ba ngày, không kịp dự thi vào Khoa Toán (Đại học Sư phạm) nữa, chỉ còn có thể thi vào các ngành như Dược, Sinh-Lý-Hóa (có thể xem là Dự bị Y khoa), và thế là năm học đầu tiên đó, tôi theo học Dược được vài tuần rồi học Sinh-Lý-Hóa cho đến hết năm học. Nhưng không dứt được lòng ham mê Toán học, thỉnh thoảng tôi vẫn đi nghe trộm (hay xem trộm) các buổi giảng ở lớp Toán, chẳng hiểu gì nhưng vẫn thích thú và bị cuốn hút bởi những điều lạ tai về vi phân, tích phân, ..., nên đến năm học sau, tôi đã bỏ việc theo học ngành Y và thi lại vào ngành Toán Đại học Sư phạm để được học Toán như ước muốn.</p>
+
+          <p>Mấy năm học Toán ở Đại học Sư phạm Hà Nội hồi ấy, tuy nhà trường còn nhiều thiếu thốn, nhưng đã là những năm học hành rất hào hứng đối với tuổi trẻ của tôi. Môn học nào cũng là mới mẻ, đầy hứng thú, chúng tôi được học với các thầy có uy tín, nhiều nhiệt tình. Thầy Thiêm dạy chúng tôi ở năm thứ ba, môn học Lý thuyết hàm số phức. Môn học được xem là khó, nhưng đầy hấp dẫn với những kiến thức mới lạ, những kết quả bất ngờ và những ứng dụng kỳ thú trong các lĩnh vực khác. Tôi nhớ, trong chương trình học hồi đó tôi thích nhất là các môn Cơ sở hình học, Số học và Lý thuyết hàm số phức, đặc biệt là những ứng dụng hàm số phức trong số học. Sau khi tốt nghiệp, ra trường được giữ lại dạy học ở khoa Toán, được bắt đầu một thời kỳ làm việc dưới sự chỉ đạo chung của thầy Thiêm, tôi đã chọn môn học đầu tiên mà mình nghiên cứu là Số học. Thầy Thiêm đã đồng ý với sự lựa chọn của tôi, và khuyến khích tôi đi sâu vào môn Số học. Thầy chỉ cho tôi biết những liên hệ thú vị giữa Lý thuyết hàm số phức và Số học. Số học là môn nghiên cứu về các con số, đã có lịch sử từ hơn hai nghìn năm và còn để lại biết bao bài toán khó nổi tiếng, lý thuyết hàm số phức nghiên cứu về các hàm số mà cả đối số và hàm số đều nhận giá trị là các số phức, tức chủ yếu là các số ảo, môn nghiên cứu tương đối mới mà thầy đã có nhiều kết quả đặc sắc, riêng những lý do đó đã hấp dẫn lòng say mê tuổi trẻ của tôi. Hồi đó, sách báo nghiên cứu khoa học ở nước ta còn rất thiếu thốn, nhưng may mắn làm sao tôi lại tìm mua được ở hiệu sách Tràng Tiền quyển "Số luận đạo dẫn" của Hoa La Canh mới xuất bản ở Bắc Kinh, chỉ có điều là sách in bằng tiếng Trung quốc. Tôi cầm sách đến hỏi ý kiến thầy với băn khoăn là mình không biết đọc tiếng Trung quốc. Thầy mừng, bảo tôi: tìm được sách là tốt, Hoa La Canh là một nhà toán học lớn, nội dung sách rất hiện đại, còn chưa biết đọc tiếng Trung quốc thì phải cố học mà đọc cho được thôi. Thật là đơn giản, cái gì chưa biết mà cần biết thì phải cố mà học thôi, không được lùi bước; đó là bài học lớn đầu tiên tôi học được từ thầy. Tôi còn nhớ võ vẽ một ít chữ Hán học từ thuở bé, nay mua thêm một cuốn từ điển Hán-Việt của Văn Tân, rồi cố đọc sách của ông Hoa theo kiểu tra, đọc từng chữ Hán suốt một năm trời, cuối cùng cũng đọc được, hiểu được và dịch xong sách. Phần thưởng cho sự cố gắng đó là niềm hạnh phúc được hiểu biết những tri thức kỳ diệu về các con số, và đặc biệt nữa là về sự liên kết tài tình giữa các bộ môn khác nhau để tạo nên những điều kỳ diệu đó. Tôi bắt đầu hiểu đôi chút về Toán học và sự sáng tạo trong Toán học. Khảo sát về những vấn đề của lý thuyết hàm phức như các không điểm của hàm zê-ta (ζ) Riemann, dáng điệu của các tổng lượng giác, ... mà lại có thể tìm ra phân bố các số nguyên tố, tìm các hướng đi nhằm giải quyết các bài toán khó trong số học như các bài toán Waring, Goldbach, v.v. Tôi còn được học với thầy Thiêm một chuyên đề nữa về Lý thuyết hàm số phức vào những năm đầu dạy học ở Đại học Sư phạm, đó là chuyên đề về ứng dụng trong các phương trình vi phân đạo hàm riêng. Chân trời liên kết giữa các ngành tri thức ngay trong một lĩnh vực Toán học trước mắt tôi đã được mở rộng và hiện ra thật sáng sủa, có tác động rất lớn trong việc hình thành nhận thức về khoa học sau này của tôi. Vào những năm 1958-60, ta bắt đầu có "phong trào" ứng dụng khoa học vào thực tế sản xuất và đời sống.  Tôi nhớ, hồi ấy các bậc đàn anh như thầy Thiêm với "bài toán thấm trong các công trình thủy lợi", anh Tụy với việc "ứng dụng Vận trù học", đã hăng hái đề xuất và dẫn đầu bọn trẻ chúng tôi đi vào thực tế, tìm kiếm các bài toán trong sản xuất nông nghiệp, trong thủy lợi, giao thông vận tải, ...để ứng dụng Toán học; và chúng tôi, với ít hiểu biết và nhiều nhiệt tình, háo hức đi theo các anh về các nhà máy, hợp tác xã; kết quả của việc hăng hái "ứng dụng Toán học" thì có thể chưa có gì đáng kể, nhưng một ý thức gắn liền việc học lý thuyết với ứng dụng trong thực tế thì đã được hình thành đậm nét từ đó.  Với tôi, chính cái ý thức có vẻ còn mơ hồ từ thuở ấy đã dẫn dắt tôi đến với Tin học, Điều khiển học và Khoa học hệ thống sau này. Hình ảnh của thầy Thiêm, một nhà toán học lý thuyết lớn, một tiến sĩ Tây học, trong bộ quần áo giản dị, băng đồng lội ruộng, hăng hái một cách hồn nhiên trong những đợt đi thực tế, mãi mãi đối với tôi vẫn là hình ảnh thân thương về một tấm gương lớn của một nhà khoa học đàn anh trong niềm tin "khoa học phục vụ đời sống" của mình.</p>
+
+          <p>Thời gian tôi được làm việc gần gũi với thầy Thiêm lâu nhất là từ khi thầy về công tác ở Viện Khoa học Việt Nam, trực tiếp phụ trách xây dựng và phát triển Viện Toán học. Viện Toán học được chính thức thành lập từ đầu những năm 1970, lúc đầu chỉ có 4 bộ môn (Giải tích toán học, Vận trù học và Tối ưu hóa, Xác suất và thống kê, Lôgich và lý thuyết ô-tô-mát), và đã trải qua một thời gian đầu xây dựng với nhiều thiếu thốn, khó khăn. Tuy nhiên, với ưu thế là một cơ sở nghiên cứu Toán học đầu tiên của cả nước, với uy tín khoa học của thầy Thiêm và của các nhà toán học đàn anh như GS Hoàng Tụy, Viện Toán đã nhanh chóng trở thành một địa chỉ tập trung đầy hấp dẫn đối với giới Toán học, sau một số năm đã thu hút được nhiều cán bộ nghiên cứu trẻ và có năng lực về công tác tại Viện. Viện đã sớm tạo được một không khí học thuật và nghiên cứu khoa học sôi nổi, phát triển và mở rộng công tác đào tạo và nghiên cứu ra hầu khắp các lĩnh vực toán học hiện đại, xuất bản đều đặn các tạp chí khoa học ở trình độ tiên tiến, có nhiều quan hệ hợp tác quốc tế rộng rãi, .... Là một cán bộ toán học, có may mắn được công tác một thời gian đầu ở Viện Toán dưới sự lãnh đạo chung của thầy Thiêm, về sau tuy không còn là thành viên của Viện nhưng vẫn nhiều gắn bó với Viện, tôi vẫn luôn xem Viện là "quê hương" của mình, và vui mừng nhận thấy trong không khí hoạt động sôi nổi và thân thiện, nhiều chất trí tuệ mà vẫn rất bình dị hiền hòa ngày nay của Viện, đâu đó vẫn phảng phất phong thái của vị Viện trưởng đầu tiên, của người thầy chung của giới Toán học, cố Giáo sư Lê Văn Thiêm kính yêu.  Tôi có vinh dự là người cùng quê Hà Tĩnh với thầy Thiêm, tình yêu Toán học đã được nhen nhúm từ niềm ngưỡng mộ đối với thầy từ thuở thiếu thời, và cho đến nay, niềm ngưỡng mộ đó vẫn tiếp tục nuôi dưỡng tình yêu Toán học trong tôi, và tôi hiểu rằng nhiều niềm yêu khoa học khác mà tôi có được trong cuộc đời cũng đã được bắt nguồn từ chính tình yêu Toán học đó.</p>
+
+          <p class="center">Phan Đình Diệu</p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
