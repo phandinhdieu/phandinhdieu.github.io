@@ -31,6 +31,25 @@ blockquote{margin:14px 0;padding:12px 16px;border-left:4px solid var(--accent);b
 .abstract p{margin:8px 0}
 @media(max-width:1024px){header.page h1{font-size:26px}body{font-size:17px}}
 @media print{.topbar,.btn{display:none!important}body{background:#fff!important;color:#000!important}.content{border:0!important;box-shadow:none!important}a{color:inherit!important;text-decoration:none!important}h1,h2,p{break-inside:avoid}}
+     #buttich img {
+      max-width: 70%;   /* Không vượt quá chiều ngang khung cha */
+      height: auto;      /* Giữ đúng tỉ lệ ảnh */
+      display: block;    /* Loại bỏ khoảng trống thừa dưới ảnh */
+      margin: 0 auto;    /* Canh giữa */
+    }
+
+    #buttich {
+      max-width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center; 
+    }
+
+    #buttich figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -47,7 +66,15 @@ blockquote{margin:14px 0;padding:12px 16px;border-left:4px solid var(--accent);b
         <h1>Einstein và những cuộc cách mạng tư duy khoa học trong thế kỷ 20</h1>
         <p class="author">Phan Đình Diệu</p>
       </header>
-
+ <section id="buttich">
+        <figure>
+          <picture>
+            <img src="Einstein.jpeg" alt="Buttich" />     
+          </picture>
+          <figcaption class="muted">Ảnh chụp bởi Phan Dương Hiệu, New York, 2023.</figcaption>
+        </figure>
+        
+        </section>
       <section class="abstract">
         <h3>Tóm tắt</h3>
         <p>Những biến đổi cách mạng về tư duy trong vật lý học hiện đại, được đánh dấu bởi những phát minh ra thuyết tương đối, vật lý lượng tử, và gần đây hơn bởi sự phát hiện ra hiện tượng “hỗn độn tất định” và sự ra đời của khoa học về phức tạp, đã mang lại cho toàn bộ sự phát triển khoa học trong thế kỷ 20 nói chung một khung mẫu tư duy hoàn toàn mới, hứa hẹn đưa đến những bước tiến mới cho nhận thức của con người về vũ trụ, tự nhiên, xã hội, và cả về chính mình. Trong các cuộc biến đổi đó, dù với tư cách là người đề xướng hay có lúc là người phản biện không tán thành, Einstein — nhà khoa học số 1 của thế kỷ 20 — đều đã để lại những dấu ấn trí tuệ sâu sắc, có ảnh hưởng to lớn đến sự phát triển của khoa học.</p>
