@@ -101,7 +101,7 @@
   }
 
    #buttich img {
-      max-width: 100%;   /* Không vượt quá chiều ngang khung cha */
+      max-width: 90%;   /* Không vượt quá chiều ngang khung cha */
       height: auto;      /* Giữ đúng tỉ lệ ảnh */
       display: block;    /* Loại bỏ khoảng trống thừa dưới ảnh */
       margin: 0 auto;    /* Canh giữa */
@@ -115,6 +115,26 @@
     }
 
     #buttich figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    #buttich1 img {
+      max-width: 50%;   /* Không vượt quá chiều ngang khung cha */
+      height: auto;      /* Giữ đúng tỉ lệ ảnh */
+      display: block;    /* Loại bỏ khoảng trống thừa dưới ảnh */
+      margin: 0 auto;    /* Canh giữa */
+    }
+
+    #buttich1 {
+      max-width: 50%;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center; 
+    }
+
+    #buttich1 figcaption {
       font-size: 0.9rem;
       color: #666;
       margin-top: 0.5rem;
@@ -133,20 +153,23 @@
 <header class="page">
 <a id="title"></a>
 <h1>KHOA HỌC HỆ THỐNG</h1>
- <p class="sub" id="subtitle"><h2>và một số ý kiến về vấn đề cải tiến quản lý kinh tế hiện nay</h2></p>
-<p class="author">Phan Đình Diệu, 1981</p>
+<center><h2>và một số ý kiến về vấn đề cải tiến quản lý kinh tế hiện nay</h2>
+<h3>Bản gốc có thể xem <a href="https://www.dropbox.com/s/qw6mbj05o228co3/1981_KhoaHocHeThong%28bangoc%29.pdf?dl=0">tại đây</a></h3>
+</center>
+<p class="author">Phan Đình Diệu, 1981. .</p>
+
 <p> </p>
    <section id="buttich">
         <figure>
           <picture>
-            <img src="1981_khoahochethong.png" alt="Buttich" />
+            <img src="Phamvandong.jpeg" alt="Buttich" />
           </picture>
-          <figcaption class="muted">Bản gốc có thể xem <a href="https://www.dropbox.com/s/qw6mbj05o228co3/1981_KhoaHocHeThong%28bangoc%29.pdf?dl=0">tại đây</a>.</figcaption>
         </figure>
         
         </section>
    <section id="lts" class="note">
-          <p><strong>Lời dẫn – </strong><em>
+
+    <p><strong>Lời dẫn – </strong><em>
             Trong một bài phỏng vấn, ông có đề cập đến bài viết này như sau “Năm 1981, sau khi phát biểu ở Quốc hội , Thủ tướng Phạm Văn Đồng có gặp riêng và yêu cầu tôi viết cho ông một bản báo cáo. Tôi đã dành mấy tháng nghiên cứu tài liệu và viết một bản báo cáo, phân tích dưới góc độ khoa học với nhan đề "Khoa học hệ thống và một số vấn đề về quản lý kinh tế của nước ta hiện nay". Khi đi vào phân tích tình hình kinh tế của Việt Nam theo quan điểm hệ thống, kết quả phân tích cũng làm chính tôi ngạc nhiên. Tôi phát hiện ra rằng, đó không chỉ là sự dối trá trong các báo cáo, mà tệ hại hơn, sự dối trá đã trở thành một thứ "đạo lý” trong xã hội ta, mọi người phải dối trá với nhau, với chính mình mà sống, mà thăng tiến... Đó chính là cái khó khăn và cản trở lớn nhất cho sự phát triển thật sự của nước ta. Một xã hội không được thể hiện thật, không được nhận thức thật, thì khó mà điều khiển thật để phát triển thật được. Mà khuyết điểm đó không chỉ của riêng ta, cả ở các nước "anh em" cũng vậy, tức là của cả hệ thống "xã hội chủ nghĩa"! 
           </em></p>
         </section>
@@ -163,7 +186,7 @@
 <p>Lý thuyết thông tin, nghiên cứu mặt định lượng của thông tin bằng các phương pháp toán học, đã thu được nhiều kết quả có tác dụng lớn đối với kỹ thuật truyền tin và việc tổ chức các hệ thông tin, trong đó có những kết quả có tính chất nguyên lý. Từ định lý Shannon về mã hóa: “Với mọi kênh truyền tin có khả năng thông qua C, bao giờ cũng có thể tìm phép mã hóa đạt tốc độ truyền tin R trên kênh đó, với R gần C bao nhiêu cũng đươc nhưng không thể lớn hơn C”, ta đi đến nguyên lý đa dạng “Để điều khiển một đối tượng có độ phức tạp nào đó, cơ quan điều khiển phải có khả năng đa dạng lớn hơn độ phức tạp đó, chứ không thể bé hơn”. Nói một cách nôn na, “Võ quýt dày phải có móng tay nhọn”, cái phức tạp không thể khống chế bằng cái sơ lược và đơn giản. Dĩ nhiên, để vận dụng được nguyên lý đó, điều quan trọng là phải đi sâu nghiên cứu để trong từng trường hợp, hình dung được (và nếu có thể, tính toán được) độ phức tạp và khả năng đa dạng cần phải có. Định lý Shannon còn cho ta một hiểu biết sâu sắc hơn, tương tự như nguyên lý bảo toàn vật chất và bảo toàn năng lượng, có thể gọi là nguyên lý bảo toàn thông tin, hay bảo toàn tính trật tự của vật chất: Để chuyển hóa tính trật tự từ chỗ này đến chỗ khác, hễ có một khâu nào làm mất trật tự (nhiễu của kênh) thì phải được bỗ sung tính trật tự ở một khâu khác (phần hiệu chỉnh của mã). Chúng ta không sáng tạo ra năng lượng, mà chỉ là khai thác năng lượng; chúng ta cũng không sang tạo ra thông tin (theo nghĩa rộng của từ đó), mà chỉ khai thác, chế biến và sử dụng nó.</p>
 <p>Người ta cũng dung cho hệ thống thông tin nguyên lý về entropy tương tự nguyên lý thứ hai của nhiệt động học. Theo nguyên lý đó, một hệ thống đóng kín về thông tin, tức là không trao đổi thông tin với bên ngoài, thì entropy có xu hướng tăng, tức là độ mất trật tự, độ hỗn loạn sẽ tăng. Một hệ thống phức tạp, nếu không được điều khiển (hay khi sự điều khiển đã mất hiệu lực), thì đi tới hỗn loạn là điều khó tránh khỏi.</p>
 <p>Nhiệm vụ của hệ điều khiển, như nói ở trên, là sản xuất ra thông tin điều khiển. Để làm được việc đó cần xác định rõ mục tiêu của sự điều khiển, cần hiểu rõ cơ cấu, khả năng và hiện trạng của đối tượng; cần thu thập đầy đủ các thông tin cần thiết, đặc biệt là thông tin liên hệ ngược; và cần có phương pháp chế biến, tức là các phương pháp giải bài toán điều khiển một cách có hiệu quả. Khoa học điều khiển mấy chục năm qua đã thu được rất nhiều kết quả phong phú về cả mấy khâu đó, tức là: mô hình hóa các đối tượng điều khiển, các phương pháp và công cụ thu thập, truyền đạt, lưu trữ và xử lý thông tin, các loại bài toán điều khiển và các phương pháp giải chúng. Về những vấn đề này, cần có những bài giới thiệu riêng, trong báo cáo này không thể đề cập cụ thể được.</p>
-<p>Cần nhấn mạnh thêm rằng thông tin là một thuộc tính của vật chất, vận động thông tin là một hình thái của vận động vật chất. Và nếu ta xem toàn bộ hoạt động làm ra của cải xã hội trong điều kiện hiện đại như một quá trình vận động vật chất thống nhất, thì hoạt động quản lý là một khâu trong quá trình đó với chức năng là thực hiện mặt vận động thông tin của nó. Vì vậy, hoạt động quản lý không phải là đứng ngoài, mà nằm trong, không phải gián tiếp, mà là trực tiếp tham gia vào toàn bộ quá trình sản xuất ra của cải xã hội. Thông tin là trật tự, và với tư cách là trật tự, nó còn là nguồn của cải hết sức to lớn của xã hội, chúng ta phải có ý thức đầy đủ để khai thác, dìn giữ và sử dụng nó.</p>
+<p>Cần nhấn mạnh thêm rằng thông tin là một thuộc tính của vật chất, vận động thông tin là một hình thái của vận động vật chất. Và nếu ta xem toàn bộ hoạt động làm ra của cải xã hội trong điều kiện hiện đại như một quá trình vận động vật chất thống nhất, thì hoạt động quản lý là một khâu trong quá trình đó với chức năng là thực hiện mặt vận động thông tin của nó. Vì vậy, hoạt động quản lý không phải là đứng ngoài, mà nằm trong, không phải gián tiếp, mà là trực tiếp tham gia vào toàn bộ quá trình sản xuất ra của cải xã hội. Thông tin là trật tự, và với tư cách là trật tự, nó còn là nguồn của cải hết sức to lớn của xã hội, chúng ta phải có ý thức đầy đủ để khai thác, gìn giữ và sử dụng nó.</p>
 <p>4. Các hệ thống thực tế mà ta gặp trong tự nhiên, trong kỹ thuật hiện đại, và đặc biệt trong kinh tế, xã hội là những hệ thống lớn và phức tạp. Lớn, và phức tạp, với ý nghĩa là có rất nhiều những nhân tố, những bộ phận tác động lẫn nhau trong những mối quan hệ rất đa dạng mà khả năng hiện tại của con người (cộng với các phương tiện hiện có) khó có khả năng xử lý và điều khiển nó một cách tập trung với tư cách là một đối tượng duy nhất. Vì vậy, tách đối tượng ra từng bộ phận và phi tập trung hóa việc điều khiển nó là một việc tự nhiên. Đối với các hệ thống sản xuất, kinh tế và xã hội, thì cơ cấu phổ biến là: đối tượng gồm nhiều bộ phận tương tác lẫn nhau, và hệ điều khiển có cấu trúc phân cấp: Cấp dưới điều khiển từng bộ phận, và cấp trên điều khiển bằng cách phối hợp, hay hiệp tác, các hoạt động của cấp dưới. Lý thuyết điều khiển phân cấp các hệ thống lớn là một lĩnh vực nghiên cứu được chú ý đặc biệt trong hơn chục năm gần đây của khoa học hệ thống. Chú ý rằng khi nói phân cấp là phân cấp hệ điều khiển, cách phân cấp tùy thuộc vào cách tách đối tượng điều khiển. Thí dụ tùy theo cách ta tách nền kinh tế quốc dân ra từng ngành như thế nào mà có thể phân cấp quản lý theo ngành tương ứng. Đối với những hệ thống như vậy, có hai đặc điểm cần hết sức chú ý: 1) đối tượng là một toàn thể thống nhất, dù có được tách ra, thì không phải là tách được thành các bộ phận biệt lập, mà chỉ là tách một cách tương đối thành những bộ phận có tương tác (interaction) lẫn nhau; 2) hệ điều khiển được phân cấp, nhưng không phải hoàn toàn phi tập trung, nó có tính hình tháp: có các bộ điều khiển địa phương, điều khiển hoạt động của từng bộ phận và đồng thời có bộ điều khiển trung ương. Nói chung bộ điều khiển trung ương không trực tiếp điều khiển các bộ phận của đối tượng, mà đề ra các biện pháp hiệp tác sự điều khiển của các địa phương. Có hai loại mục tiêu: mục tiêu tổng thể của toàn hệ thống và mục tiêu của các địa phương. Bộ điều khiển trung ương nhằm điều khiển toàn hệ thống nhằm đạt mục tiêu tổng thể, nhưng không phải đạt được điều đó bằng sự điều khiển tập trung, trực tiếp đến đối tượng, mà phải thông qua các bộ điều khiển địa phương, do đó thông tin điều khiển của trung ương phải là các biện pháp hiệp tác, sao cho trong phạm vi ràng buộc của cá biện pháp đó, các địa phương tuy vẫn điều khiển bộ phận của mình theo mục tiêu địa phương (với những ràng buộc nói trên), nhưng một cách khách quan, trong khi các địa phương đạt được mục tiêu riêng của mình thì đồng thời toàn hệ thống cũng đạt được mục tiêu tổng thể. Nếu có những biện pháp hiệp tác như vậy, thì hệ thống được gọi là hiệp tác được. Trong phong trào “ba lợi ích” (?) hiện nay, cần chú ý là không nên xem có ba lợi ích tách rời nhau,  cần đạt được cả lợi ích này và lợi ích kia, mà phải xem – không những xem mà cần có biện pháp để thực hiện được – là trong khi nhằm tới lợi ích địa phương thì đồng thời lợi ích toàn cục cũng được bảo đảm, nói cách khác là cần xác định được các biện pháp hiệp tác (cũng tức là các biện pháp khống chế) sao cho không thể thực hiện được bất kỳ lợi ích địa phương nào tổn hại đến sự thực hiện lợi ích địa phương toàn cục.</p>
 <p>Trở lại hai đặc điểm nêu trên đối với các hệ phân cấp, ta thấy rằng để hệ thống có thể hoạt động được, thì bất kỳ biện pháp hiệp tác nào của trung ương cũng phảo bảo đảm sự cân đối tương tác giữa các bộ phận. Để thực hiện điều đó, trung ương có thể chọn nhiều biện pháp hiệp tác khác nhau, nhưng tựu chung co hai phương pháp cơ bản nhất: 1) Dự báo tương tác: Trung ương đề ra các chỉ tiêu cụ thể cho các giá trị của tương tác, đã có sẵn sự cân đối, và các địa phương tính toán các bài toàn điều khiển của mình tuân theo các chỉ tiêu đó; 2) Phối hợp mục tiêu (hay cũng gọi là cân đối tương tác):Trung ương không đề ra các chỉ tiêu cụ thể cho các giá trị của tương tác, mà chỉ cho giá trị của một số tham số gián tiếp, với các giá trị tham số này, mỗi địa phương sửa đổi mục tiêu của mình cho thích hợp và điều khiển bộ phận theo mục tiêu đó. Theo cách thứ hai, toàn bộ “Kế hoạch sản phẩm” của bộ phận là do địa phương quyết định. Tuy nhiên các giá trị tham số gián tiếp nói trên chỉ thực sự hợp thành biện pháp hiệp tác khi hệ thống sản phẩm cuối cùng thỏa mãn sự cân đối tương tác. Lấy thí dụ: nền kinh tế quốc dân được chia ra thành các ngành; điều khiển theo cách thứ nhất là điều khiển trực tiếp bằng các kế hoạch chỉ tiêu sản phẩm cho từng ngành, điều khiển theo cách thứ hai là điều khiển gián tiếp, chẳng hạn thông qua việc xác định hệ thống giá trị cho sản phẩm và cho nguyên liệu, chứ không giao chỉ tiêu sản phẩm cụ thể. Cả hai cách đó đều nằm trong phạm vi “kế hoạch hóa”, giá trong cách điều khiển thứ hai là giá kế hoạch, khác với giá hình thành trong thị trường tự do theo quy luật giá trị.</p>
 <p>Một bài toán quan trọng của lý thuyết điều khiển phân cấp là bài toán về sự hiệp tác được. Với những điều khiển nào thì hệ thống là hiệp tác được? là hiệp tác được theo nguyên lý dự báo tương tác, theo nguyên lý phối hợp mục tiêu? Nếu hệ là không hiệp tác được thì có cách sửa đổi nào để nó trở thành hiệp tác được? Cùng với bài toán hiệp tác là bài toán phân tách? Một hệ thống có thể phân tách như thế nào, phân tách thế nào, để nó trở thành hiệp tác được?</p>
