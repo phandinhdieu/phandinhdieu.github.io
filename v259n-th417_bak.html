@@ -310,7 +310,31 @@ body{
   background: #e6f2ff;
   border: 1px solid #cfe6ff;
 }
-.note.sky h3{ margin: 0 0 8px; text-align: center; }</style></head>
+.note.sky h3{ margin: 0 0 8px; text-align: center; }</style>
+<!-- Force light theme to avoid low-contrast text on mobile dark mode -->
+<style>
+  :root{
+    --bg:#f7f8fc;
+    --surface:#ffffff;
+    --card:#ffffff;
+    --text:#0f1530;
+    --muted:#55607a;
+    --accent:#3957ff;
+    --line:#e7e9f4;
+  }
+  body, body.wsite-theme-light{
+    background: var(--bg) !important;
+    color: var(--text) !important;
+  }
+  /* Ensure entries and notes inherit proper text color */
+  .entry, .note, .note.sky, #content-wrap, #main-wrap, #wsite-content{
+    color: var(--text) !important;
+  }
+  /* Fix any accidental global opacity dimming on content */
+  #site-wrap { opacity: 1 !important; }
+</style>
+
+</head>
 <body class="no-header-page wsite-page-v259n-th417 wsite-theme-light"><div id="site-wrap">
 <div class="overlay" id="search">
 <h2>Search the site...</h2>
@@ -330,6 +354,11 @@ body{
 <div class="spacer hidden-sm"></div>
 </div>
 <div class="w-navlist nav"><ul class="wsite-menu-default">
+<li class="wsite-menu-item-wrap" id="pg673150331978822359">
+<a class="wsite-menu-item" href="accueil.html">
+				Trang chủ
+			</a>
+</li>
 <li class="wsite-menu-item-wrap" id="pg313186046757270604">
 <a class="wsite-menu-item" href="index.html">
 				Nghĩ suy
@@ -345,11 +374,6 @@ body{
 				Văn Thơ
 			</a>
 </li>
-<li class="wsite-menu-item-wrap" id="pg673150331978822359">
-<a class="wsite-menu-item" href="accueil.html">
-				Accueil
-			</a>
-</li>
 </ul>
 </div>
 </div>
@@ -357,25 +381,17 @@ body{
 <div class="overlay w-navpane w-navpane-fullscreen" id="nav">
 <div class="nav" id="navcontainer"><ul class="wsite-menu-default">
 <li class="wsite-menu-item-wrap" id="pg313186046757270604">
+<li class="wsite-menu-item-wrap" id="pg673150331978822359">
+<a class="wsite-menu-item" href="accueil.html">
+				Trang chủ
+			</a>
+</li>
+<li id="pg313186046757270604" class="wsite-menu-item-wrap">
 <a class="wsite-menu-item" href="index.html">
 				Nghĩ suy
 			</a>
 </li>
-<li class="wsite-menu-item-wrap" id="pg673150331978822359">
-<a class="wsite-menu-item" href="accueil.html">
-				Accueil
-			</a>
-</li>
-<li class="wsite-menu-item-wrap" id="pg889948956406421021">
-<a class="wsite-menu-item" href="agrave-propos.html">
-				À propos
-			</a>
-</li>
-<li class="wsite-menu-item-wrap" id="pg772677497385560218">
-<a class="wsite-menu-item" href="contact.html">
-				Contact
-			</a>
-</li>
+
 <li class="wsite-menu-item-wrap" id="pg136159425459815479">
 <a class="wsite-menu-item" href="khoa-hoc--giaacuteo-d7909c.html">
 				Khoa hoc &amp; Giáo dục
@@ -440,7 +456,11 @@ body{
 <strong><br/>Niềm ngưỡng mộ thầy Thiêm và tình yêu toán học: </strong>Tưởng nhớ Giáo sư <em><strong>Lê Văn Thiêm</strong></em> 
 <strong> <a href="html_files/niem-nguong-mo-thay-thiem.html" style="color:red; font-weight:bold;">[Bản đọc dạng HTML]</a></strong>
 <br/>
-<strong>Niềm kính yêu đối với người thầy mẫu mực: </strong>Kính tặng Giáo sư <em><strong>Nguyễn Thúc Hào</strong></em> nhân dịp mừng thọ Thầy 95 tuổi <a href="https://www.dropbox.com/s/erempkak1rcn2xs/xx_NguyenThucHao.pdf?dl=0" target="_blank">[pdf]<br/></a><br/>​<strong>Nhớ về một người thầy thanh cao mà bình dị (<em>Thầy Nghệ</em>) </strong><a href="http://vanhoanghean.com.vn/dat-va-nguoi-xu-nghe6/nguoi-xu-nghe43/nho-ve-mot-nguoi-thay-thanh-cao-ma-binh-di" target="_blank">[link]<br/></a><br/></div>
+<strong>Niềm kính yêu đối với người thầy mẫu mực: </strong>Kính tặng Giáo sư <em><strong>Nguyễn Thúc Hào</strong></em> nhân dịp mừng thọ Thầy 95 tuổi .
+<strong> <a href="html_files/nguyen-thuc-hao.html" style="color:red; font-weight:bold;">[Bản đọc dạng HTML]</a></strong>
+<br/>​<strong>Nhớ về một người thầy thanh cao mà bình dị (<em>Thầy Nghệ</em>) </strong>
+<strong> <a href="html_files/nho-ve-mot-nguoi-thay-thanh-cao.html" style="color:red; font-weight:bold;">[Bản đọc dạng HTML]</a></strong>
+<br/></div>
 </section>
 </section></td> </tr>
 </tbody>
