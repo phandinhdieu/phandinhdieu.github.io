@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Khung mẫu đổi mới tư duy — Phan Đình Diệu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--surface:#0f152b;--card:#111936;--text:#e7ecff;--muted:#9aa3c0;--accent:#5b8cff;--line:#1d274c}
+    @media(prefers-color-scheme:light){:root{--bg:#f7f8fc;--surface:#fff;--card:#fff;--text:#0f1530;--muted:#55607a;--accent:#3957ff;--line:#e7e9f4}}
+
+    *{box-sizing:border-box;min-width:0}
+    html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+    html{font-size:16px;}
+    @media (min-width:768px){html{font-size:17px;}}
+    @media (min-width:1024px){html{font-size:18px;}}
+    @media (min-width:1440px){html{font-size:19px;}} 
+
+    body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.75;font-size:1rem;}
+
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1200px;margin:0 auto;padding:86px 20px 24px;}
+    .content{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.06);padding:28px}
+
+    header.page{padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:18px;text-align:center}
+    header.page h1{font-family:'Merriweather',serif;font-weight:800;font-size:1.875rem;margin:0 0 6px;line-height:1.3;text-transform:uppercase}
+    header.page p.author{margin:0;color:var(--muted);font-style:italic;font-size:.9375rem;text-align:right}
+
+    p{margin:10px 0;font-size:1rem}
+    .center{text-align:center}
+    .italic{font-style:italic}
+
+    .topbar{position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(8px);background:color-mix(in srgb, var(--surface), transparent 25%);border-bottom:1px solid var(--line)}
+    .topbar-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:10px}
+    .btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer;font-size:.9375rem}
+    .btn:active{transform:translateY(1px)}
+
+    @media(max-width:1024px){.topbar-inner{padding:10px 16px}}
+
+    @media print{
+      .topbar,.btn{display:none!important}
+      .wrap{padding:0!important}
+      body{background:#fff!important;color:#000!important}
+      .content{border:0!important;box-shadow:none!important}
+      a{color:inherit!important;text-decoration:none!important}
+      h1,p{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+      <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+      <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <main class="content">
+      <header class="page">
+        <h1>Một khung mẫu về đổi mới tư duy cho các vấn đề phát triển đất nước trong giai đoạn chuyển biến hiện nay</h1>
+        <p class="author"> <h2>Phan Đình Diệu — Hội Tin học Việt Nam, 2004</h2> </p>
+      </header>
+
+      <section>
+        <p>Từ năm 1986, với công cuộc đổi mới, đất nước ta đã bước vào một giai đoạn chuyển biến mới, mà nội dung chủ yếu trong gần 20 năm qua cho đến hiện nay là chuyển đổi từ một nền kinh tế được quản lý kế hoạch hoá tập trung, mang nặng tính “hành chính, quan liêu, bao cấp” sang một nền kinh tế nhiều thành phần, hoạt động theo cơ chế thị trường “định hướng xã hội chủ nghĩa, có sự quản lý của Nhà nước”. Rồi gần đây, trước sự cuốn hút của những chuyển biến trên toàn thế giới sang một kỷ nguyên mới của kinh tế thông tin và tri thức, của toàn cầu hoá, chúng ta cũng đã tự xác định là cần hội nhập vào xu thế chung đó, tức là phải tích cực phát triển nền kinh tế của chúng ta theo hướng tăng cường các yếu tố thông tin và tri thức để có đủ năng lực hội nhập một cách thành công vào sự chuyển biến chung đó của thế giới.</p>
+        <p>Vậy là, trong một thời gian không dài lắm, chúng ta phải thực hiện gần như đồng thời hai cuộc chuyển biến đều có tính cách mạng to lớn và sâu sắc. Và cũng như đối với mọi cuộc chuyển biến có tính cách mạng bất kỳ nào trong bất cứ lĩnh vực nào, yếu tố đầu tiên quyết định sự thành công là cần có một khung mẫu (paradigm) của đổi mới tư duy để hướng dẫn suy nghĩ và hành động của con người trong quá trình thực hiện cuộc chuyển biến đó. Một khung mẫu của tư duy không phải là một khuôn khổ cứng nhắc với những nguyên lý bất di bất dịch, mặc dù những khuôn mẫu như vậy trong hàng trăm năm trước đây đã từng tồn tại và được xem là có tác dụng phổ biến trong thời đại của xã hội công nghiệp và của khoa học theo nền nếp của tư duy cơ giới. Ngày nay, ta đang sống trong một thời đại mới của những biến chuyển và thay đổi thường xuyên, bản thân khoa học cũng đang trải qua nhiều biến đổi cách mạng, cần có khung mẫu tư duy mới; cho nên đi tìm một khung mẫu cho đổi mới tư duy trong các vấn đề phát triển không còn chỉ là tìm kiếm một số nguyên lý bất biến, mà là cần tìm hiểu thấu đáo những yếu tố làm nên thay đổi, tìm kiếm khả năng thích nghi và sáng tạo trong thay đổi; phải xem chấp nhận sự thay đổi như là một yếu tố cấu thành trong khung mẫu của đổi mới tư duy vậy.</p>
+        <p>Từ đầu công cuộc đổi mới, ta đã xem “đổi mới tư duy”, đặc biệt đổi mới tư duy về kinh tế, là yếu tố quyết định đầu tiên. Và thực tế, đổi mới tư duy về kinh tế và những chủ trương phát triển nền kinh tế hàng hoá với cơ chế thị trường đã đưa nền kinh tế nước ta thoát ra khỏi khủng hoảng và có những bước phát triển to lớn. Tuy nhiên, sau những bước đầu “đổi mới” tương đối thuận lợi đó, chúng ta đang đứng trước những vấn đề gay cấn hơn mà nếu không tiếp tục mạnh dạn “đổi mới tư duy” thì khó tiếp tục vươn xa hơn được. Đó là vấn đề “định hướng xã hội chủ nghĩa” mà cho đến nay ta chưa có một quan điểm thật rõ ràng. Nếu hiểu “định hướng xã hội chủ nghĩa” là “dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh” thì không mâu thuẫn gì với một nền kinh tế thị trường đầy đủ theo nghĩa là quyền tự do kinh doanh của công dân phải được tôn trọng và khuyến khích đầy đủ, Nhà nước không giữ cho mình một khu vực ưu tiên (và độc quyền) rộng lớn để làm vai trò “chủ đạo”; theo cơ chế đó thì mọi tiềm năng còn dồi dào cho phát triển kinh tế trong xã hội sẽ được phát huy, “dân giàu nước mạnh” chắc sẽ tiến tới nhanh chóng hơn, “công bằng dân chủ” chắc sẽ được cải thiện, và hy vọng sẽ tìm được con đường thực hiện thuận lợi hơn trong môi trường của một nền kinh tế thị trường lành mạnh và phát triển theo xu thế “dựa vào thông tin và tri thức” — những nguồn tài sản mà về bản chất có khả năng đạt được một cơ chế dân chủ và bình đẳng hơn. Còn nếu hiểu “định hướng xã hội chủ nghĩa” như một xã hội chủ nghĩa theo nghĩa thể chế một Đảng lãnh đạo độc quyền, một nền kinh tế được chỉ huy theo cơ chế kế hoạch hoá tập trung, có một khu vực quốc doanh và tập thể làm chủ đạo,... thì trước ta, gần như tất cả các nước “anh em” trước đây đã cố hết sức giữ lấy dưới danh nghĩa xây dựng một nền “kinh tế thị trường xã hội chủ nghĩa” nhưng rồi đã cảm nhận thất bại và từ bỏ, vì kinh tế thị trường và xã hội chủ nghĩa theo nghĩa đó là hai thứ không thể trộn lẫn được, và nếu cố tình trộn thì chỉ có tác dụng phá hoại mà thôi. Ở đây có vấn đề: người ta không trộn được, nhưng ta có thể trộn lẫn được thì sao? Tôi chưa có đủ hiểu biết để tin là có, nhưng tôi tin vào lời thành thực của ông Putin khi ông viết: “việc quản lý kinh tế bị hệ tư tưởng hoá đã khiến đất nước chúng ta thường xuyên lạc hậu so với các nước phát triển, dẫu cay đắng nhưng ta phải thừa nhận rằng trong gần 70 năm chúng ta đã đi theo ngõ cụt, cách xa xa lộ chính của văn minh” và “con đường đến thị trường và dân chủ tỏ ra không đơn giản cho tất cả các nước bước vào nó trong những năm 90”; và có thể suy nghĩ thế này chăng: ta đã đi được một chặng dài, thì hãy đi tiếp con đường “đến thị trường và dân chủ” là xa lộ chính của văn minh, rồi trên xa lộ đó, ta sẽ kiểm kê lại xem ta có những của báu gì từ trong hiện tại và truyền thống của ta để tính tiếp con đường đi cùng nhân loại đến một nền kinh tế và một xã hội thông tin và tri thức trong tương lai không xa. Ta không nhất thiết phải xem “định hướng xã hội chủ nghĩa” là cái phải bỏ đi, vì nếu nó không thích hợp như một thể chế thì nó vẫn còn giữ lại trong ta những hy vọng như một lý tưởng đẹp đẽ, một lý tưởng về dân chủ, bình đẳng và đoàn kết. Và phải chăng, phần lý tưởng đẹp đẽ đó loài người sẽ tìm được cách thực hiện dần trong môi trường của một nền kinh tế thị trường phát triển dựa vào nguồn lực đặc trưng cho tính người nhất là thông tin và tri thức, tức là những tài sản đặc hữu của chính trí tuệ con người?</p>
+        <p>Trong mấy năm gần đây, ở nước ta người ta cũng đã bắt đầu nói nhiều về kinh tế thông tin, kinh tế tri thức. Sớm quá hay muộn quá? Tôi nghĩ chẳng có gì là quá sớm, chỉ có điều là kinh tế tri thức chưa phải là một phát triển tự thân của kinh tế nước ta mà là một đặc điểm phát triển xuất phát từ sự chuyển biến của kinh tế thế giới, chủ yếu từ các nền kinh tế tiên tiến nhất trên thế giới; cho nên nếu không phải chỉ là nói để mà nói, mà nói để mà biết, biết để mà học, rồi học để mà làm, mà tìm cách hội nhập vào xu thế phát triển đã được gọi là “chung” đó thì ta phải cùng nhau học và hiểu một cách thấu đáo hơn. Tôi cũng muốn học, và từ mình mới chỉ học được đôi điều lẩm bẩm, xin tham gia thảo luận như một việc để được học hỏi thêm.</p>
+        <p>Trước hết, kinh tế thông tin (và tri thức) đã và chỉ có thể nảy sinh và phát triển từ những nền sản xuất công nghiệp tiên tiến ở trình độ cao, khoa học và công nghệ phát triển và được ứng dụng rộng rãi để tạo cho nền sản xuất ngày càng nhiều sản phẩm hàng hoá và dịch vụ đòi hỏi công nghệ cao, chứa hàm lượng thông tin và tri thức lớn; lực lượng lao động biết xử lý thông tin và sáng tạo tri thức ngày càng chiếm vị trí chủ đạo; và cùng với nền sản xuất đó là một cơ cấu thị trường ngày càng rộng mở, một mặt có khả năng khuyến khích mọi hoạt động tự do kinh doanh trong xã hội, mặt khác mở rộng không hạn chế các cơ hội cạnh tranh ra phạm vi toàn cầu. Các yếu tố quyết định thành công của việc xây dựng kinh tế tri thức trong từng quốc gia là các tài sản tri thức và nguồn vốn trí tuệ của quốc gia đó. Tài sản tri thức là kho dự trữ tri thức để từ đó tạo ra những lợi ích phục vụ cuộc sống con người, và theo tác giả M.H. Boisot, khác với các tài sản vật lý, thời gian sinh lợi của tài sản tri thức là có thể không có giới hạn; các tài sản tri thức phát huy tác dụng của mình thông qua các giải pháp công nghệ và việc tạo ra các năng lực tổ chức, các biện pháp kỹ thuật cho đến các tìm kiếm chiến lược. Còn T.A. Stewart thì định nghĩa “vốn trí tuệ” là những vật liệu trí tuệ bao gồm từ tri thức, thông tin, kinh nghiệm,... đến quyền sở hữu trí tuệ được sử dụng để tạo ra của cải. Hai thành phần quan trọng nhất của vốn trí tuệ là vốn xã hội (thể hiện trong cơ cấu, tổ chức của xã hội) và vốn con người. Các tài sản tri thức và vốn trí tuệ là yếu tố quyết định giúp chúng ta phát triển được một nền sản xuất làm ra nhiều sản phẩm hàng hoá và dịch vụ chứa nhiều hàm lượng thông tin và tri thức phong phú, đáp ứng được nhiều nhu cầu đa dạng và tinh tế của khách hàng, đồng thời giúp chúng ta kịp thời chuyển đổi cơ cấu và tổ chức, đổi mới các biện pháp kinh doanh, tăng năng lực cạnh tranh, tìm kiếm và giữ vững được các ưu thế cạnh tranh trong một môi trường kinh tế thế giới luôn luôn biến động và thay đổi.</p>
+        <p>Để có được các tài sản tri thức và nguồn vốn trí tuệ theo các tính chất nói trên tôi nghĩ ta cần phải đổi mới hơn nữa cách tư duy của chúng ta về các vấn đề giáo dục và phát triển khoa học – công nghệ của chúng ta. Từ lâu nay, ta bàn nhiều về các vấn đề đó, nhưng tôi vẫn có ấn tượng là khi bàn về giáo dục, ta chỉ nhấn mạnh về việc cải cách dạy – học trong hệ thống các nhà trường, chứ còn ít đề cập đến việc tổ chức cho mọi người trong xã hội được học tập, học những gì mình cần, học liên tục và học suốt đời. Cũng vậy, khi bàn về khoa học và công nghệ, ta mới chỉ quan tâm đến các Viện, các đại học, chứ chưa mấy ai nghĩ đến việc nguồn của cải tri thức và vốn trí tuệ không nhất thiết chỉ có thể rót ra từ các viện, các trường đó. Kinh tế tri thức, xã hội tri thức trong tương lai không phải chỉ do một tầng lớp chuyên gia ưu tú nào đó xây dựng nên (dù vai trò chủ đạo của lực lượng đó là rất đáng được đề cao và tôn trọng), mà phải là do toàn dân cùng góp sức xây dựng.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

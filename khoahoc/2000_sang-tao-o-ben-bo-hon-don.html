@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sáng tạo ở bên bờ hỗn độn — Phan Đình Diệu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--surface:#0f152b;--card:#111936;--text:#e7ecff;--muted:#9aa3c0;--accent:#5b8cff;--line:#1d274c}
+    @media(prefers-color-scheme:light){:root{--bg:#f7f8fc;--surface:#fff;--card:#fff;--text:#0f1530;--muted:#55607a;--accent:#3957ff;--line:#e7e9f4}}
+
+    /* Reset cơ bản */
+    *{box-sizing:border-box;min-width:0}
+    html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+    /* Kích thước chữ theo rem + breakpoint */
+    html{font-size:16px;}
+    @media (min-width:768px){html{font-size:17px;}}
+    @media (min-width:1024px){html{font-size:18px;}}
+    @media (min-width:1440px){html{font-size:19px;}}
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.75;
+      font-size:1rem;
+    }
+
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1200px;margin:0 auto;padding:86px 20px 24px;} /* chừa chỗ cho topbar fixed */
+    .content{
+      background:var(--surface);border:1px solid var(--line);border-radius:16px;
+      box-shadow:0 16px 40px rgba(0,0,0,.06);padding:28px
+    }
+
+    header.page{padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:18px;text-align:center}
+    header.page h1{
+      font-family:'Merriweather',serif;
+      font-weight:800;
+      font-size:1.875rem;
+      margin:0 0 6px;
+      line-height:1.3;
+      text-transform:uppercase
+    }
+    header.page p.author{
+      margin:0;color:var(--muted);font-style:italic;font-size:.9375rem;text-align:right
+    }
+
+    h2{
+      font-family:'Merriweather',serif;
+      font-size:1.5rem;
+      margin:26px 0 6px;
+      line-height:1.35
+    }
+    h3{
+      font-weight:700;
+      font-size:1.25rem;
+      margin:18px 0 8px
+    }
+    p{margin:10px 0;font-size:1rem}
+
+    .muted{color:var(--muted)}
+    .note{background:rgba(234,179,8,.12);border:1px solid rgba(234,179,8,.25);padding:12px;border-radius:12px}
+    .center{text-align:center}
+    .italic{font-style:italic}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:18px 0}
+
+    /* Topbar cố định */
+    .topbar{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:1000;
+      backdrop-filter:blur(8px);
+      background:color-mix(in srgb, var(--surface), transparent 25%);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:10px}
+    .btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer;font-size:.9375rem}
+    .btn:active{transform:translateY(1px)}
+
+    @media(max-width:1024px){
+      .topbar-inner{padding:10px 16px}
+    }
+
+    @media print{
+      .topbar,.btn{display:none!important}
+      .wrap{padding:0!important}
+      body{background:#fff!important;color:#000!important}
+      .content{border:0!important;box-shadow:none!important}
+      a{color:inherit!important;text-decoration:none!important}
+      h1,h2,h3,p{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="btn" href="../v259n-th417.html">Về Trang Phan Đình Diệu</a>
+      <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+      <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <main class="content">
+      <header class="page">
+        <h1>Sáng tạo ở bên bờ hỗn độn....</h1>
+        <p class="author"> <h2> Phan Đình Diệu </h2></p>
+      </header>
+
+      <section>
+        <p>Thế kỷ 20 đã đi qua, và với những gì mà thế kỷ vĩ đại đó để lại cho con người thì có lẽ còn cần có thêm nhiều thời gian nữa để ta có thể cảm nhận và thấu hiểu dần dần. Đối với tôi, điều lớn nhất mà tôi dần cảm nhận được (mới là cảm nhận, chứ chưa dám nói là thấu hiểu) là thế kỷ đó đã phát hiện cho chúng ta biết rằng thế giới mà chúng ta đang sống là một thế giới sáng tạo, và trong thế giới sáng tạo đó, con người đã sáng tạo ra những cuộc cách mạng về nhận thức, làm thay đổi hiểu biết của chúng ta về thiên nhiên, về xã hội, và về chính bản thân mình. Qua bao thế kỷ kể từ thời các trí tuệ vĩ đại như Newton, Descartes đặt nền móng cho nhận thức khoa học, con người đã quen nhìn thế giới như những bộ máy cơ giới vận động theo các qui luật tất định, và  nhiệm vụ của con người là phát hiện ngày càng nhiều, càng đầy đủ các qui luật như vậy để mà chế ngự, mà khai thác cái &quot;thế giới khách quan&quot; theo những mục tiêu do mình đặt ra. Chúng ta tưởng có thể nhìn sự vật khắp nơi như các hệ thống tất định, tuyến tính, có các trạng thái cân bằng để mà yên ổn tiến tới. Và trong bối cảnh đó, tư duy của chúng ta dần dần gắn bó với động lực học Newton, thuyết duy lý Descartes, toán học Leibnitz và lôgích Aristote. Tất cả những yếu tố đó tạo nên một nền tảng vững chắc cho nhận thức của con người, đủ sức giúp con người đạt đến nhiều đỉnh cao của sáng tạo, và cũng đã nhiều lúc đủ mạnh để cản đường con người vươn ra những chân trời mới lạ khác. Và rồi thế kỷ 20 đã đến, trí tuệ con người đã bừng nở với những cuộc cách mạng tự giải phóng, vượt qua mọi rào cản để khai phá những con đường mới của nhận thức, mang đến những cách nhìn mới lạ về thế giới mà ta đang sống. Ta quen biết dần với cách mà nhiều nhà khoa học xếp hàng các phát minh chủ yếu làm nên các cuộc cách mạng đó: lý thuyết tương đối, vật lý lượng tử từ buổi đầu thế kỷ, và rồi các lý thuyết về phức tạp, về hỗn độn,... họp thành cái gọi là &quot;các khoa học mới&quot; vào những thập niên cuối thế kỷ. Trước mắt ta và trong nhận thức của ta, thế giới không còn là một cái gì ở bên ngoài, &quot;khách quan&quot;, tất định, tuyến tính và có hành vi có thể tiên đoán được, để cho ta mặc sức chia chẻ mà quan sát, chế ngự và khai thác; cách nhìn mới cho ta hiểu rằng thế giới là một thực thể sống động, phức tạp, phức tạp không chỉ theo nghĩa tầm thường là không đơn giản, mà phức tạp còn là bao gồm rất nhiều những bộ phận tương tác với nhau theo những quan hệ phi tuyến làm cho cái toàn thể là không thể tách chia để quan sát riêng lẻ được, chứa nhiều yếu tố bất định và các trạng thái phi cân bằng là phổ biến, vận động của hệ thống có thể dẫn đến nhiều hành vi lạ lùng không dự đoán trước được, có trật tự có hỗn độn và có khả năng tự chuyển hóa từ trật tự sang hỗn độn hay ngược lại. Một mô hình được khoa học nghiên cứu trong nhiều năm gần đây là các hệ thống thích nghi phức tạp, và hành vi quan trọng nhất và cũng bí hiểm nhất của các hệ đó là khả năng tự tổ chức của chúng. Tự tổ chức là khả năng tự xác lập một trật tự mới từ những nguy cơ tàn phá của trạng thái hỗn độn, vô trật tự nẩy sinh từ trật tự cũ. Ta có thể nói đó là khả năng sáng tạo ở bên bờ hỗn độn, một khả năng phổ biến của mọi hệ thích nghi phức tạp mà ta gặp khắp nơi trong mọi lĩnh vực tự nhiên, sự sống, cho đến kinh tế, chính trị, xã hội. Tự tổ chức, tự sáng tạo trật tự mới ở bên bờ hỗn độn cũng cung cấp cho con người những cách hiểu mới về cách thức tiến hóa của giới tự nhiên, và qua đó sự tiến hóa của các loại hệ thống khác, kể từ khi học thuyết tiến hóa ra đời vào giữa thế kỷ 19. Và như vậy, thế giới xung quanh ta, của chúng ta, bao gồm cả chúng ta, không còn là một thế giới thụ động, mặc cho số phận chi phối, mà là một thế giới sáng tạo, không ngừng sáng tạo, sáng tạo ra cả chúng ta đã và đang tiến hóa thành những thực thể sáng tạo trong thế giới sáng tạo đó.</p>
+
+        <p>Vấn đề tổ chức và câu hỏi về việc các tổ chức được phát sinh và hình thành như thế nào đã được khoa học quan tâm từ rất lâu, nhưng chỉ mới được thực sự nghiên cứu từ giữa thế kỷ 20 với khả năng tự tổ chức của các hệ thống phức tạp, bước đầu với việc nghiên cứu quá trình hình thành tổ chức các dãy thiên hà, các hành tinh, rồi đến các hợp chất, các tế bào, các cơ thể sinh học và các xã hội. Thoạt đầu người ta cũng nghiên cứu theo quan điểm phân tích, bằng cách xem xét các thuộc tính vi mô, các luật chi phối quan hệ giữa các bộ phận, v.v... Rồi bước đột phá đã được thực hiện vào những năm 60,70 của thế kỷ 20, khi Lorenz, một nhà toán học và khí tượng, bằng cách dùng một mô hình toán học đã được đơn giản hóa của hiện tượng đối lưu của một chất lỏng bị đốt nóng và phương pháp mô phỏng bằng máy tính đã phát hiện ra hành vi hỗn độn của nghiệm của một hệ động lực phi tuyến. Từ đó, một lý thuyết mới, lý thuyết về hỗn độn, nghiên cứu một cách định tính những hành vi bất thường, phi tuần hoàn, của các hệ động lực phi tuyến, đã ra đời và phát triển nhanh chóng. Lý thuyết này đã cho ta nhiều hiểu biết mới về các kiểu hành vi của các hệ phi tuyến, có ổn định và có bất định, có trật tự có hỗn độn, và có những khả năng chuyển hóa giữa các trạng thái đối lập đó. Những thành tựu của lý thuyết hỗn độn, của các lý thuyết về phức tạp, lý thuyết về tự tổ chức ở trạng thái xa cân bằng, v.v... đã tạo cơ sở cho sự ra đời trong ít năm gần đây một lý thuyết chung nghiên cứu các mô hình phổ quát mang tên các hệ thống thích nghi phức tạp, có nhiều khả năng ứng dụng đối với các hệ thống trong tự nhiên, trong giới sinh vật và các hệ sinh thái, trong kinh tế, chính trị, xã hội,....</p>
+
+        <p>Các hệ thích nghi phức tạp nói chung là những hệ có nhiều mối tương tác bên trong cũng như với bên ngoài, phi tuyến, có nhiều vòng phản hồi, cả phản hồi âm và phản hồi dương,..., do đó có thể có nhiều dạng hành vi khác nhau như: 1) hành vi lặp lại ứng với các tập hút một điểm hay tuần hoàn; 2) hành vi đồng dạng hay theo chuẩn mực ứng với các tập hút hình xuyến; 3) hành vi dẫn tới &quot;hỗn độn&quot; hay không tiên đoán được ứng với các tập hút &quot;lạ&quot;, hỗn độn; và 4) hành vi trong trạng thái &quot;hỗn độn sâu&quot; hay khủng hoảng. Dạng hành vi thứ nhất là đặc trưng cho các hệ tuyến tính, nó là dạng ổn định, cân bằng, có thể tiên đoán được, và do đó có thể điều khiển được bằng kế hoạch định trước; dạng hành vi thứ hai dao động nhẹ quanh một chuẩn mực nhất định, có xu hướng giữ vững tính ổn định và do đó ít linh hoạt để có thể thích nghi với những đổi thay khi cần thiết; 	dạng hành vi thứ ba là khá phổ biến đối với các hệ phi tuyến, nó không còn ổn định, cân đối, có nhiều tính bất định và không thể tiên đoán được, dạng hành vi này thường gặp khi hệ ở trong trạng thái xa cân bằng, dễ chịu tác động của những rẽ nhánh liên tiếp; đó cũng là đặc điểm của các tập hút &quot;lạ&quot;, hỗn độn, những tập hút có dạng hình học là các fractal, nó là vô trật tự ở mức vi mô, nhưng ở mức vĩ mô vẫn có một khuôn khổ trật tự nào đó mà nó không vượt qua, dạng hành vi này cũng thường được gọi là ở bên bờ hỗn độn, nơi có nhiều khả năng đua tranh của những con đường khác nhau, nơi cạnh tranh gay gắt của những lựa chọn và do đó kích thích những năng lực sáng tạo; hành vi đó là không tiên đoán được, nó sẽ dẫn đến đâu là do những chọn lựa tức thời của năng lực thích nghi và tự tổ chức của hệ thống, nơi được dẫn đến không nhất thiết là một miền ổn định mà có thể lại là một trạng thái &quot;ở bên bờ hỗn độn&quot; mới, giống như con đường của tiến hóa và sáng tạo là không có điểm tận cùng; cuối cùng dạng hành vi thứ tư là khi hệ thống rơi sâu vào hỗn độn và khủng hoảng, khi chỉ còn ngẫu nhiên và hỗn loạn thống trị, không còn chỗ cho trật tự, khi mà trật tự cũ bị tan rã nhưng chưa kịp hình thành một trật tự mới để thay thế; tuy nhiên trong các hệ thích nghi, rơi vào dạng hành vi đó cũng có nghĩa là rơi vào một thời kỳ chuyển tiếp để cho mầm non của trật tự mới kịp chớm nở và phát sinh từ trong tan vỡ của trật tự cũ.</p>
+
+        <p>Hệ thống thích nghi phức tạp là mô hình do khoa học hiện đại đề nghị để nghiên cứu các hệ thống thực tế mà con người gặp phổ biến trong tự nhiên, trong thế giới của sự sống, trong các hoạt động kinh tế, xã hội, và cả trong các hoạt động trí tuệ của bản thân con người. Một vài điều rút ra trên đây từ lý thuyết của các hệ thống đó có thể giúp chúng ta kiểm nghiệm lại nhiều hiện tượng từng xẩy ra trong lịch sử, và có lẽ quan trọng hơn là giúp chúng ta một cách nhìn hướng tới tương lai. Cuộc sống hết sức sinh động và phong phú của thế kỷ 20 đã từng chứng kiến biết bao những sáng tạo to lớn trong mọi lĩnh vực của tri thức, những sáng tạo lịch sử trong đời sống chính trị, kinh tế, xã hội. Phải chăng khi nhìn lại bối cảnh của những sáng tạo đó ta đều có thể nhận thấy hình dáng của những tình huống ở bên bờ hỗn độn? Tình hình chính trị ở nhiều nước trên thế giới vào những thập niên cuối của thế kỷ 20, sự hình thành bước đầu của nền kinh tế tri thức toàn cầu hóa trong những năm gần đây,... có phải đã có nhiều đặc điểm của trạng thái ở bên bờ hỗn độn mà ta mô tả trong phần trên ? Và trong những trạng thái đó, phải chăng ta cũng đã được chứng kiến sự chuyển biến ngoạn mục của những công cuộc đổi mới kiên trì với nhiều sắc thái của tự do sáng tạo, cũng như sự đổ vỡ của những toan tính duy trì sự ổn định trì trệ của một trật tự cũ đã lỗi thời? Thế giới ngày nay đã không còn là một thế giới tất định, tuân theo các luật tuyến tính, mà là một thế giới đầy các tương tác phi tuyến, chịu nhiều tác động của các dòng phản hồi dương, luôn gây nên những bất định và bất ổn định, đầy những bất trắc và không thể tiên đoán được, cũng có thể nói là thường xuyên ở bên bờ hỗn độn. Đó là môi trường đòi hỏi có nhiều năng lực sáng tạo, thích nghi và đổi mới để tồn tại và phát triển, đồng thời cũng chính là môi trường thuận lợi cho sự nẩy sinh những sáng tạo, những sáng tạo ở bên bờ hỗn độn....</p>
+
+        <p class="center italic">P.Đ.D.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
