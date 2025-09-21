@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phan Đình Diệu - TƯ DUY CHIẾN LƯỢC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #0f152b;
+      --card: #111936;
+      --text: #e7ecff;
+      --muted: #9aa3c0;
+      --accent: #5b8cff;
+      --line: #1d274c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f1530;
+        --muted: #55607a;
+        --accent: #3957ff;
+        --line: #e7e9f4;
+      }
+    }
+    
+    * { box-sizing: border-box; }
+    
+    /* Kích thước chữ theo rem + breakpoint */
+    html{font-size:16px;}                 /* Mobile mặc định */
+    @media (min-width:768px){html{font-size:17px;}}   /* Tablet */
+    @media (min-width:1024px){html{font-size:18px;}}  /* Desktop */
+    @media (min-width:1440px){html{font-size:19px;}}  /* Màn lớn */
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.75;
+      font-size:1rem; /* đồng bộ với html */
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; }
+    nav.toc {
+      position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto;
+      padding: 18px; border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    nav.toc h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+    nav.toc ol { list-style: none; padding: 0 0 0 4px; margin: 0; }
+    nav.toc > ol > li > a { font-weight: 600; }
+    nav.toc li { margin: 6px 0; }
+    nav.toc a { color: var(--text); display: inline-block; padding: 6px 8px; border-radius: 8px; }
+    nav.toc a:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    nav.toc details { border: 1px solid var(--line); border-radius: 10px; padding: 6px 8px; margin: 8px 0; }
+    nav.toc details > summary { cursor: pointer; list-style: none; font-weight: 700; }
+    nav.toc details[open] { background: color-mix(in srgb, var(--accent), transparent 92%); }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.06); padding: 28px; }
+    header.page { padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px; text-align: center; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 30px; margin: 0 0 6px; line-height: 1.3; text-transform: uppercase; }
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; text-align: right; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 26px 0 6px; line-height: 1.35; }
+    h3 { font-weight: 700; margin: 18px 0 8px; }
+    p { margin: 10px 0; }
+    figure { margin: 18px 0; text-align: center; }
+    figure img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+    figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+              background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    .copy-anchor { margin-left: 8px; border: 1px dashed var(--line); border-radius: 8px; padding: 2px 6px; font-size: 12px; cursor: pointer; }
+    .copy-anchor:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+
+    /* Mobile layout */
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: 1fr; }
+      nav.toc { position: relative; height: auto; }
+      header.page h1 { font-size: 26px; }
+    }
+
+    /* Print cleanup */
+    @media print {
+      .topbar, nav.toc, .copy-anchor { display: none !important; }
+      .grid { display: block !important; }
+      main.content { border: 0 !important; box-shadow: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+      a { color: inherit !important; text-decoration: none !important; }
+      h1, h2, h3, p { break-inside: avoid; }
+      summary { display: none !important; }
+    }
+  </style>
+  <script>
+    function copyAnchor(btn) {
+      const h = btn.closest('h2, h3');
+      if (!h) return;
+      const anchor = h.querySelector('a[id]');
+      const id = anchor ? anchor.id : h.id;
+      if (!id) return;
+      const url = location.origin + location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        const prev = btn.textContent;
+        btn.textContent = 'Đã sao chép';
+        setTimeout(() => btn.textContent = 'Sao chép liên kết', 1200);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+        <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+        <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <nav aria-label="Mục lục" class="toc" id="toc">
+        <h2 id="mucluc">Mục lục <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+        <details open>
+          <summary><a href="#title">Tư duy chiến lược</a></summary>
+          <ol>
+            <li><a href="#intro">Mở đầu</a></li>
+            <li><a href="#i">I. Tư duy chiến lược</a>
+              <ol>
+                <li><a href="#i1">1. Tư duy chiến lược là gì?</a></li>
+                <li><a href="#i2">2. Kiến thức và năng lực trong tư duy chiến lược</a></li>
+              </ol>
+            </li>
+            <li><a href="#ii">II. Các khung mẫu nhận thức</a>
+              <ol>
+                <li><a href="#ii1">1. Nhận thức khoa học</a></li>
+                <li><a href="#ii2">2. Sự chuyển dịch khung mẫu trong thế kỷ 19–20</a></li>
+                <li><a href="#ii3">3. Nhận thức mới về thực tiễn đòi hỏi một tư duy mới</a></li>
+              </ol>
+            </li>
+            <li><a href="#iii">III. Tư duy chiến lược trong bối cảnh mới</a>
+              <ol>
+                <li><a href="#iii1">1. Khung mẫu mới của tư duy hệ thống</a></li>
+                <li><a href="#iii2">2. Tư duy lại tương lai?</a></li>
+                <li><a href="#iii3">3. Tư duy chiến lược trong bối cảnh mới</a></li>
+              </ol>
+            </li>
+            <li><a href="#iv">IV. Kết luận</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <main class="content">
+        <header class="page">
+          <a id="title"></a>
+          <h1>TƯ DUY CHIẾN LƯỢC</h1>
+          <p><h2>trong bối cảnh mới hiện nay</h2></p>
+          <p class="author">PHAN ĐÌNH DIỆU</p>
+        </header>
+
+
+        <div class="divider"></div>
+
+        <section id="i">
+          <h2><a id="i"></a>I. Tư duy chiến lược</h2>
+
+          <section id="i1">
+            <h3><a id="i1"></a>1. Tư duy chiến lược là gì?</h3>
+            <p>
+              Mỗi  tổ chức, đoàn thể, mỗi doanh nghiệp, mỗi nền kinh tế,..., cho đến mỗi quốc gia đều tồn tại và phát triển trong một môi trường nào đó, tương tác với các thực thể trong môi trường đó và với toàn thể môi trường nói chung. Khi ta nói đến tư duy chiến lược là nói đến một loại hoạt động trí tuệ của người lãnh đạo, hay bộ phận lãnh đạo (của một tổ chức, một doanh nghiệp, một quốc gia,..) về việc dự đoán xu thế phát triển tương lai của môi trường, đánh giá năng lực của tổ chức mình, rồi vạch ra những mục tiêu phát triển cho tổ chức và hoạch định những phương hướng  chiến lược nhằm đưa tổ chức của mình đạt đến những mục tiêu đó.
+            </p>
+            <p>
+              Như vậy, tư duy chiến lược chưa phải là kế hoạch chiến lược, nhiệm vụ của tư duy chiến lược mới là suy nghĩ về, chứ chưa phải là làm kế hoạch cụ thể cho một sự phát triển nào đó. Môi trường tự nhiên và xã hội ngày càng (được nhận thức là) rất phức tạp, trong một môi trường xã hội, ta khó lòng biết trước được động thái của mọi đối thủ và đối tác, thì việc làm kế hoạch chiến lược gần như là không thể, nhưng suy nghĩ, phỏng đoán và dự báo thì bao giờ cũng là có thể, và cần thiết. Và thông thường là chỉ sau khi có những suy nghĩ, phỏng đoán và dự báo như vậy, tức là sau “công đoạn” tư duy chiến lược, thì ta mới có những chỉ dẫn cần thiết cho việc hoạch định kế hoạch chiến lược, nếu quả thực một kế hoạch như vậy là có thể được vạch ra.
+            </p>
+            <p>
+              Một nhà lãnh đạo ở cấp tư duy chiến lược phải là một người có đủ kinh nghiệm, kiến thức và sự mẫn cảm trí tuệ để nhìn trước, đoán trước được tương lai, biết phán xét những yếu tố nào là quan trọng, có năng lực đương đầu với những điều phức tạp, bất định và không chắc chắn, biết linh hoạt và khôn khéo thích nghi với những tình huống mới lạ gặp phải.
+            </p>
+            <p>
+           Hình dung trước tương lai là bước đầu tiên quan trọng nhất của tư duy chiến lược, của người lãnh đạo chiến lược. Việc hình dung đó trước hết xẩy ra trong đầu óc của nhà lãnh đạo, rồi sau đó được truyền cho tổ chức, tạo nên sức mạnh trí tuệ của cả tổ chức để làm nên những đổi thay cần thiết.
+            </p>
+            <p></p>
+            Để có những năng lực ở tầm tư duy chiến lược như nói ở trên, người lãnh đạo trước hết phải có những kiến thức và kỹ năng vận dụng kiến thức (knowledge and skills), và ngoài ra, đặc biệt quan trọng là còn phải có năng lực nắm bắt viễn cảnh, một tầm nhìn và một “siêu nhận thức”. Ta sẽ xét kỹ hơn những điều này trong mục sau đây.  
+           </p>
+
+          </section>
+
+          <section id="i2">
+            <h3><a id="i2"></a>2. Kiến thức và năng lực trong tư duy chiến lược</h3>
+            <p>
+              Theo cách hiểu truyền thống, một người lãnh đạo ở tầm tư duy chiến lược trước hết phải là người có kiến thức sâu rộng về các lĩnh vực có liên quan, và một kỹ năng thành thạo trong việc vận dụng các kiến thức đó. Kiến thức và kỹ năng thường được xem là yếu tố quan trọng nhất đối với tư duy chiến lược, cũng như đối với các hoạt động làm kế hoạch và quản lý điều hành khác. Con người có được kiến thức và kỹ năng chủ yếu thông qua việc học, học ở trường lớp, học qua công việc, tự học,... Các kiến thức được học chủ yếu là các kiến thức về khoa học, kỹ thuật, về kinh tế, xã hội, về quản lý, kinh doanh,... Trong một thời gian dài dưới sự thống trị của tư duy cơ giới với tất định luận Laplace và với niềm tin vào triết học Locke “có những luật tự nhiên thống trị xã hội loài người tương tự như đã thống trị thế giới vật lý”, khoa học đã phát triển hàng loạt mô hình toán học tất định cho các hệ thống tự nhiên cũng như các hệ thống kinh tế xã hội, cùng các phương pháp giải các bài toán về quản lý, điều khiển trong các mô hình đó, và ta tin rằng bằng các phương pháp khoa học con người có thể tìm kiếm mô hình toán học cho các hệ thống mà mình quan tâm cũng như cách giải các bài toán dự đoán tương lai, điều khiển hệ thống đi đến mục tiêu cần đến. Và vì tin rằng mọi hệ thống đều tuân theo những luật tuyến tính tất định, nên tương lai là có thể dự báo được, mọi hệ thống luôn vân động đến một trạng thái cân bằng nào đó một cách ổn định. Và nếu như vậy, thì đối với các bài toán điều khiển và quản lý, dù là chiến lược hay chiến thuật, đều có thể tìm được mô hình và cách giải bằng các phương pháp khoa học. Kiến thức khoa học, do đó đã trong một thời gian dài, được xem là yếu tố quan trong nhất đối với các hoạt động tư duy chiến lược cũng như với các hoạt động quản lý và  làm kế hoạch nói chung.
+            </p>
+            <p>
+            Nhưng rồi, chuyển sang thế kỷ 20, đặc biệt là từ nửa sau của thế kỷ 20 trở đi, tư duy cơ giới mất dần địa vị thống trị độc tôn trong khoa học và trong nhận thức nói chung, con người hiểu ra rằng thiên nhiên này, thế giới này đa dạng hơn, bất định hơn, đổi thay và biến động nhiều hơn, nói chung là phức tạp hơn rất nhiều so với những gì mà các mô hình toán học tất định có thể mô tả. Và vì vậy, kiến thức khoa học dẫu vẫn là rất hữu ích và đắc dụng, nhưng chỉ với kiến thức khoa học không thôi, con người không đủ để hiểu nhiều lẽ biến hoá của trời đất và của cuộc sống xã hội. Ta trở về tìm kiếm lại trong truyền thống văn hoá của lịch sử nhiều năng lực nhận thức bằng cảm thụ tâm thức, bằng trí tuệ trực giác mà suốt nhiều thế kỷ đã bị coi nhẹ. Dần dà ta hiểu ra rằng có nhiều điều mà khoa học chưa cho ta biết một cách thấu đáo thì bằng cách nào đó, năng lực trực cảm tâm thức lại có thể mách bảo ta những hiểu biết không ngờ tới. Một cái nhìn sâu vào thực trạng hiện tại để phát hiện những thiếu sót cần được khắc phục, để hiểu thấu đáo hơn về chính sự hiểu biết của mình, một cái nhìn xa để nắm bắt được viễn cảnh tương lai, v.v..., là những cái mà tư duy chiến lược cần có, nhiều khi lại do chính các năng lực cảm thụ trực giác mang tới. Những năng lực này cũng liên quan tới một năng lực khác nữa mà có người gọi là <em>siêu nhận thức</em> (metacognition), tức là nhận thức về sự nhận thức của mình, tư duy về chính cái tư duy của mình. Chính năng lực siêu nhận thức này lại làm nẩy nở trong ta năng lực tư duy phê phán và tư duy sáng tạo, những kỹ năng rất cần có ở những nhà tư duy chiến lược trước những tình huống đổi thay nhanh chóng và phức tạp.
+            </p>
+            
+          </section>
+        </section>
+
+        <section id="ii">
+          <h2><a id="ii"></a>II. Các khung mẫu nhận thức</h2>
+
+          <section id="ii1">
+            <h3><a id="ii1"></a>1. Nhận thức khoa học</h3>
+            <p>
+            Sự phát triển tư duy của con người luôn gắn liền với quá trình phát triển nhận thức của con người. Từ xa xưa, trong các nền văn minh cổ đại của nhân loại, con người đã biết đến hai con đường của nhận thức: một là chứng luận dựa vào cảm thụ trực giác, và một là suy luận hợp lý của lý trí. Trong khi ở phương Đông, tuân theo chủ nghĩa thiên địa vạn vật nhất thể, loại phương pháp thứ nhất được phát triển là chủ yếu, thì ở nền văn minh cổ Hy lạp, với những Pitagore, Aristote,... loại phương pháp thứ hai đã có những phát triển khá mạnh. Nhưng rồi phải trải qua nhiều thăng trầm của lịch sử, mãi cho đến thế kỷ 17 gần đây, với những Galillé, Descartes, Newton,... chủ xướng việc nghiên cứu vũ trụ dựa vào các qui luật vận động và hấp dẫn của vật chât, bằng các phương trình toán học và bằng các dụng cụ thực nghiệm như kính viễn vọng, các phương pháp nhận thức dựa vào lý trí, vào sự suy luận hợp lý,... mới có sự phát triển vượt bậc và nhanh chóng chiếm được vị trí gần như độc tôn trong nhận thức, những phương pháp mà về sau này được gọi là các phương pháp khoa học. Khoa học hiện đại được phát triển từ thế kỷ 17 đến khoảng giữa thế kỷ 20, với sự thống trị của tư duy duy lý và chủ nghĩa thực chứng, có cơ sở nền tảng là những ý tưởng cơ bản sau đây:
+	<p>Có một thực tế tất định, không thay đổi và tuyệt đối. Vũ trụ là cố định, tiên đoán được, và vận động theo qui luật. Mơ hồ hay bất định chỉ là do thiếu thông tin hay thiếu một lý thuyết tốt để giải thích.
+	</p>
+    <p>Thực tế có thể được giải thích theo các qui luật của vật lý học Newton và các suy luận lôgich. Mọi phán đoán đều hoặc đúng hoặc sai, không có chỗ cho sự mập mờ, nghịch lý và đa nghĩa.
+	</p>
+	<p>Vũ trụ có thứ bậc, với các nguyên tử ở bậc thấp nhất, rồi từ đó xây dựng nên các bậc cao hơn của các phân tử, các tế bào, các cơ thể,... Các tổ chức xã hội cũng được cấu trúc theo cùng các bậc thang từ dưới lên hay từ trên xuống.
+	</p>
+	<p>
+  Vũ trụ được hợp thành từ các bộ phận riêng biệt, tách rời và thay đổi được cho nhau. Thực tế vật lý có thể được giải thích bằng các nguyên tử cá thể và các lực tác động lẫn nhau giữa chúng.
+	</p>
+  <p> Ý thức con người đứng ngoài thế giới vật lý. Ta biết được các bí mật của tự nhiên thông qua việc khảo sát khách quan các đối tượng của nó. Tự nhiên được nhận thức như là cái “khác” ta, được ta chinh phục và sử dụng.
+	</p>
+  <p>Nội dung của khoa học “hiện đại” được phổ biến rộng rãi từ các nước Âu Mỹ rồi sau đó lan rộng khắp thế giới cho đến gần suốt thế kỷ 20 đều chủ yếu là truyền thụ các kiến thức tuân theo các ý tưởng cơ bản nói trên. Các kiến thức của khoa học được phát triển cho các ngành vật lý, rồi đến thế kỷ 19 được ứng dụng cho các lĩnh vực của tự nhiên và sinh học, rồi tiếp đó mở rộng sang các lĩnh vực kinh tế và xã hội với niềm tin rằng “có những luật tự nhiên thống trị xã hội loài người tương tự như đã thống trị thế giới vật lý”. 
+	</p>
+  <p>Sự phát triển khoa học trong mấy thế kỷ vừa qua đã đạt được nhiều thành tựu rực rỡ, cung cấp cho loài người những kho tàng kiến thức khổng lồ, những công cụ nhận thức sắc bén, và đã là động lực mạnh mẽ cho sự phát triển nền văn minh công nghiệp của nhân loại.
+	</p>
+  <p>Tuy nhiên, từ cuối thế kỷ 19 rồi bước sang thế kỷ 20, sự phát triển khoa học với tư duy cơ giới tuân theo các nguyên lý như mô tả ở trên bắt đầu gặp phải những khó khăn, đòi hỏi cần có những điều chỉnh và bổ sung mới để tiếp tục được phát triển.
+	</p>
+          </section>
+
+          <section id="ii2">
+            <h3><a id="ii2"></a>2. Sự chuyển dịch khung mẫu trong thế kỷ 19–20</h3>
+            <p>Một trong những vấn đề cơ bản của lý thuyết về nhận thức khoa học là quan hệ giữa các tri thức khoa học và chân lý. Có phải mọi tri thức mà khoa học suy diễn ra bởi các phương pháp của mình đều đúng, đều là chân lý hay không? Dường như thực tiễn phát triển khoa học, đặc biệt các khoa học vật lý trong giai đoạn đầu, đều ủng hộ điều khẳng định đó. Nhưng để từ đó đi đến một khẳng định phổ quát <em>“mọi tri thức khoa học là chân lý”</em> để rồi xem mục đích khoa học là đi tìm chân lý thì không phải được ngay sự đồng tình của tất cả các nhà khoa học. Phương pháp khoa học phổ biến là suy luận duy lý, nhưng không phải tất cả là suy luận; ngoài suy luận còn có những nguyên lý, mệnh đề ban đầu mà tính đúng đắn của chúng là do qui nạp mà có. Không thể có một phép <em>“qui nạp hoàn toàn”</em> nào có thể minh chứng cho tính đúng của chúng. Dù có tuân theo yêu cầu của phép thực chứng lôgích, thì sự kiểm thử đúng đắn của một vài thực nghiệm cũng không đủ để công nhận tính chân lý phổ quát của một phán đoán khoa học.</p>
+
+<p>Vào giữa thế kỷ 20, Popper đề xuất một thuyết mới, tạm gọi là thuyết <em>“có thể sai”</em> (<em>falsification</em>), không nhằm để chứng tỏ một lý thuyết khoa học cụ thể nào là đúng, mà chỉ để chứng tỏ là nó có thể sai, nếu có thể tiến hành một thực nghiệm mà việc kiểm thử cho kết quả sai so với kết quả rút ra từ lý thuyết đó. Từ đó, Popper đề nghị xem quá trình phát triển của nhận thức không phải theo nguyên tắc suy luận diễn dịch, mà theo nguyên tắc <em>“thử và sai”</em>, <em>“giả thuyết và bác bỏ”</em>, một lý thuyết có thể được tiếp tục phát triển nếu chưa gặp phải một phép thử nào chứng tỏ nó sai, nếu gặp phải cái sai thì cần bác bỏ những giả thuyết dẫn đến cái sai và thay bằng giả thuyết mới. Tính đúng đắn của một kiến thức khoa học là có tính tương đối, và không nên xem mục đích của khoa học là đi tìm chân lý, mà chỉ nên xem mục đích của khoa học là <em>“tìm cách giải quyết vấn đề”</em> (<em>problem solving</em>), tìm những câu trả lời chấp nhận được cho những vấn đề mà con người gặp phải trong cuộc sống. Điều này cũng phù hợp với ý kiến của nhà bác học Pasteur đã phát biểu từ thế kỷ 19: Khoa học tiến lên bằng các câu trả lời cho một loạt các câu hỏi càng ngày càng tinh tế, chúng đạt càng ngày càng sâu sắc đến cốt tuỷ của các hiện tượng tự nhiên.</p>
+
+<p>Năm 1962, Thomas Kuhn cho xuất bản cuốn sách <em>Cấu trúc các cuộc cách mạng khoa học</em> (<em>Structure of Scientific Revolutions</em>), đưa ra khái niệm <em>“khung mẫu”</em> (<em>paradigm</em>) với tư cách là thế giới quan chung cho việc nghiên cứu của một cộng đồng khoa học, và xem tiến trình tiến bộ của khoa học là một tiến trình chuyển dịch các khung mẫu, không nhất thiết phải hướng đến một mục tiêu nào cả (tới chân lý chẳng hạn). Thuật ngữ khung mẫu mà ta dùng trong bài này là mượn theo nghĩa đó của Kuhn. Theo Laudan (1977) thì một khung mẫu như vậy có thể được hiểu là một truyền thống nghiên cứu, bao gồm một số lý thuyết đặc biệt cùng với một tập hợp các giả thiết có tính trừu tượng siêu hình được chia sẻ bởi những nhà khoa học tham gia vào truyền thống đó. Và cũng như Popper và Kuhn, Laudan đồng ý rằng mục tiêu của khoa học là <em>“giải quyết vấn đề”</em>, là cung cấp <em>“những câu trả lời chấp nhận được cho những câu hỏi mà ta quan tâm”</em>, cái <em>“đúng”</em> hay <em>“sai”</em> của một lý thuyết không nên đặt ra như một tiêu chuẩn để định giá. Từ những quan điểm đó, Laudan đi đến chủ nghĩa tương đối phê phán, xem rằng không có một <em>“phương pháp khoa học”</em> duy nhất, mà có nhiều mục tiêu khoa học khác nhau và nhiều phương pháp khác nhau để đạt các mục tiêu đó; do đó trong hoạt động khoa học có thể chấp nhận có nhiều chương trình nghiên cứu cạnh tranh nhau.</p>
+
+<p>Sau nhiều đề xuất có vẻ trái ngược nhau như vậy, triết học của khoa học có vẻ như quay về với <em>chủ nghĩa hiện thực khoa học</em> (<em>scientific realism</em>) với những Supper, Hunt, Siegel,... Trên cơ sở dung hoà các quan điểm hiện thực cổ điển, hiện thực <em>“có thể sai”</em>, hiện thức phê phán,..., chủ nghĩa hiện thực khoa học xem rằng có một thế giới tồn tại độc lập và có thể nhận thức được, tuy rằng mọi tri thức đều không chắc chắn, có thể sai, và đều cần được đánh giá một cách phê phán,...</p>
+
+<p>Qua những tranh luận và những chuyển dịch khung mẫu như lược thuật ở trên, ta thấy rằng vị trí độc quyền chân lý của nhận thức khoa học tưởng chừng đã được thiết lập vững vàng từ thế kỷ 19 trở về trước đã bị lung lay dữ dội trước những yêu cầu nhận thức mới về một thế giới thực, đa dạng, phức tạp, bất định, khác xa với cái thế giới đơn giản vận hành theo các nguyên tắc cơ giới mà ta đã tưởng tượng nên trước đó. Nhận thức mới đòi hỏi một khung mẫu tư duy mới, và con đường tìm kiếm đó đã được bắt đầu....</p>
+
+
+          </section>
+
+          <section id="ii3">
+            <h3><a id="ii3"></a>3. Nhận thức mới về thực tiễn đòi hỏi một tư duy mới</h3>
+       <p>Kể từ những thập niên đầu của thế kỷ 20, tư duy cơ giới đã càng ngày càng được chứng tỏ là một khuôn khổ quá chật hẹp cho việc phát sinh những ý tưởng sáng tạo ngay trong lĩnh vực nghiên cứu vật lý, địa hạt mà nó đã từng chiếm được địa vị độc tôn tưởng chừng như vĩnh cửu. Bước sang các địa hạt của sự sống, rồi của kinh tế và xã hội, thì việc tìm các qui luật tất định là khá khiên cưỡng, các mô hình toán học tuyến tính là những qui giản quá sơ lược, và dĩ nhiên theo con đường đó ta không còn đạt được những kết quả khả quan như đối với cơ học cổ điển. Yêu cầu có một cách nhìn mới đối với các đối tượng phức tạp và đa dạng vốn có trong tự nhiên cũng như trong đời sống kinh tế và xã hội đã nhanh chóng trở thành một yêu cầu chung của nhiều ngành khoa học.</p>
+
+<p>Đến giữa thế kỷ thứ 20, vào thập niên 1940, một loạt lý thuyết mới đã ra đời gần như đồng thời: lý thuyết tổng quát về hệ thống, khởi đầu bởi Bertalanffy, điều khiển học (<em>Cybernetics</em>) mà cha đẻ là Wiener, lý thuyết thông tin, bắt đầu từ Shannon, các lý thuyết về các hệ thống điều khiển, vận trù học,... Rồi gần đây, vào những thập niên cuối thế kỷ 20, tiếp tục ra đời các lý thuyết về hỗn độn (<em>Chaos theory</em>), lý thuyết về Phức tạp (<em>Complexity theory</em>) mà mô hình chủ yếu là các hệ thích nghi phức tạp (<em>complex adaptive systems</em>),... hình thành nên một khoa học mới về Phức tạp, được nhiều nhà khoa học xem là khoa học của thế kỷ mới, thế kỷ 21.</p>
+
+<p>Sự phát triển của các khoa học đó cùng với sự hình thành dần một cách suy nghĩ mới về việc nhận thức các đối tượng thực tế đã tạo dần nên những nét chung của một khung mẫu mới của tư duy, được gọi là <em>tư duy hệ thống</em> (<em>systems thinking</em>) mà những nét cơ bản là:</p>
+
+<p>Đối tượng của nhận thức là các hệ thống phức tạp, bao gồm nhiều thành phần tương tác với nhau qua nhiều mối quan hệ, làm cho các thuộc tính và hành vi của nó chỉ có thể được hiểu trong toàn thể, một hệ thống không phải chỉ là tổng gộp của các thành phần, mà thông qua các tương tác giữa các thành phần và giữa bản thân hệ thống với môi trường, nó có những thuộc tính và khả năng không thể hiểu được bằng cách suy ra từ các tính chất của các thành phần, những thuộc tính và khả năng đó được gọi là những <em>đặc tính hợp trội</em> (<em>emergent</em>) của hệ thống. Một hệ thống phức tạp thường không chỉ có các quan hệ tuyến tính mà còn có các quan hệ phi tuyến, tạo nên các hành vi không bình thường, và các dòng phản hồi dương dẫn đến những trạng thái mà ta gọi là <em>hỗn độn</em>, hành vi của hệ thống phụ thuộc nhạy cảm vào điều kiện ban đầu và không tiên đoán được, đồng thời khi đi tới các trạng thái ở <em>bên bờ hỗn độn</em> (<em>at the edge of chaos</em>) thì do qua các tương tác qua lại giữa các thành phần và của hệ thống với môi trường, hệ thống có khả năng thích nghi và học để chuyển đến một mức cấu trúc mới có tính trật tự cao hơn, ta gọi đó là <em>năng lực tự tổ chức</em> của hệ thống. Ngoài các tính chất cơ bản đó, nói chung các hệ thống phức tạp thường có các đặc điểm: là các hệ thống mở, có mục tiêu và thường là đa mục tiêu, là đa chiều hay có nhiều thứ nguyên, và là <em>phản trực cảm</em> với nghĩa là các hành động được thực hiện với dụng ý sản sinh một kết quả mong muốn trên thực tế lại có thể làm phát sinh những hệ quả ngược lại.</p>
+
+<p>Trên đây là sơ lược về một khung mẫu nhận thức mới đối với thực tiễn tự nhiên và cuộc sống hiện nay. Sống và hoạt động trong một thực tiễn được nhận thức như vậy, con người cần có cách nghĩ và cách xử sự khác với những cách thức mà ta đã quen thuộc trước đây. Tư duy nói chung, và tư duy chiến lược nói riêng, cũng cần có những đổi mới phù hợp với khung mẫu về nhận thức đó.</p>
+
+          </section>
+        </section>
+
+        <section id="iii">
+          <h2><a id="iii"></a>III. Tư duy chiến lược trong bối cảnh mới</h2>
+
+          <section id="iii1">
+            <h3><a id="iii1"></a>1. Khung mẫu mới của tư duy hệ thống</h3>
+          <p>Trên cơ sở nhận thức mới về đối tượng tự nhiên và xã hội như được lược thuật trong khung mẫu kể trên, ta cần có một tư duy mới thích hợp để điều chỉnh cách suy nghĩ và hoạt động của mình. Thiên nhiên và cuộc sống có những đối tượng cũ đòi hỏi những cách nhìn và cách nghĩ mới, nhưng cũng có rất nhiều những đối tượng đã qua nhiều biến động và phát triển mới (đặc biệt trong các lĩnh vực kinh tế, xã hội) lại càng đòi hỏi những cách nhìn và cách nghĩ mới khác với những cách suy nghĩ cũ của tư duy cơ giới. <em>Tư duy hệ thống</em> là tư duy về các hệ thống phức tạp. Phức tạp, trước hết là không thể qui giản về, hoặc phân tích thành những cái đơn giản. Phức tạp là trong cái toàn thể không thể tách chia được đó. Đặc điểm chủ yếu của tư duy hệ thống là ở cách nhìn toàn thể, và do cách nhìn toàn thể mà thấy được những <em>thuộc tính hợp trội</em> của hệ thống, những thuộc tính mà từng thành phần không thể có. Thí dụ một xã hội có thành phần là những con người, nhưng dân chủ, công bằng, bình đẳng là những thuộc tính của toàn xã hội, chứ không thể là thuộc tính của riêng từng con người nào. Từ cách nhìn toàn thể mà thấy được các mối tương tác giữa các thành phần trong nội bộ hệ thống, và kết hợp với quan điểm <em>hệ thống mở</em>, thấy được các tương tác qua lại, các mối liên hệ thuận và ngược giữa hệ thống với môi trường.</p>
+
+<p>Hiểu được các mối tương tác bên trong hệ thống để tìm cách điều hoà các quan hệ giữa các thành phần, nhưng các học thuyết về điều khiển đã cho ta biết rằng sự phát triển hay tiến hoá của một hệ thống thường phụ thuộc khá nhiều vào các <em>mối liên hệ ngược</em> giữa hệ thống và môi trường. Và như vậy, trong việc <em>“quản lý”</em> một hệ thống, điều hết sức quan trọng là phải hiểu được các mối tương tác liên hệ ngược với môi trường, và cần nhớ rằng trong môi trường có những yếu tố ta điều khiển được, nhưng có rất nhiều yếu tố mà ta không thể điều khiển được. Tài năng của người lãnh đạo hay quản lý là ở chỗ trên cơ sở những hiểu biết tích luỹ được mà điều khiển tốt những gì điều khiển được, gây ảnh hưởng đến những gì mà mình không điều khiển được, và cố cảm nhận những gì mà mình cũng không gây ảnh hưởng được.</p>
+
+<p>Trong các lý thuyết cổ điển về điều khiển, người ta thường xét các hệ thống có các <em>mối liên hệ ngược âm</em>, tức các mối liên hệ ngược tạo nên những tác động phản hồi làm giảm độ lệch giữa mục tiêu và quỹ đạo của hệ thống, làm cho hệ thống luôn có xu thế tiến đến một trạng thái cân bằng trong ổn định; tuy nhiên càng ngày người ta càng phát hiện ở nhiều hệ thống phức tạp của tự nhiên, của kinh tế và xã hội sự tồn tại của nhiều <em>mối liên hệ ngược dương</em>, tức các mối liên hệ ngược tạo nên những tác động phản hồi làm tăng độ lệch giữa quỹ đạo thực của hệ thống và một trạng thái <em>“cân bằng”</em> lý tưởng nào đó, làm cho hệ thống có xu thế đi đến trạng thái <em>xa cân bằng</em>, <em>hỗn độn</em> và không còn dự đoán được.</p>
+
+<p>Các hệ thống phức tạp thường cũng là những hệ thống có mục tiêu, thậm chí <em>đa mục tiêu</em>. Nếu là một thành phần trong một hệ thống như vậy, muốn đạt được mục tiêu của mình cũng cần biết mục tiêu của người, của các đối tác (và đối thủ cạnh tranh). Biết để cố gây ảnh hưởng đến những gì mà mình không điều khiển được. Mục tiêu của đối tác, nói dễ hiểu, là cái mà đối tác thích làm. Mà cái thích của con người thì không phải bao giờ cũng dễ hiểu. Có những cái thích hợp lẽ, ta có thể hiểu bằng những suy luận duy lý. Có những cái thích theo cảm hứng, lại có những cái thích theo thị hiếu phù hợp với một văn hoá nào đó, ta không thể dùng lý lẽ lôgích mà hiểu được. Không thể áp đặt cái thích của mình cho người; mà phải bằng trực cảm tế nhị và nghiên cứu công phu để hiểu được cái lẽ tại sao mà họ làm những việc họ làm, họ thích những cái họ thích, từ đó cảm nhận được lý do mục tiêu của các đối tác, rồi tuỳ đó mà lựa chọn các giải pháp thích nghi của mình.</p>
+
+<p><em>Thích nghi</em> là một khả năng rất quan trọng của các thành phần trong một hệ thống phức tạp, cũng là một khả năng quan trọng của bản thân các hệ thống phức tạp nói chung. Theo lý thuyết tiến hoá của Darwin, khái niệm thích nghi gắn liền với đấu tranh sinh tồn và chọn lọc tự nhiên trong quá trình tiến hóa của các loài sinh vật, nhưng ngày nay, người ta hiểu thích nghi với nghĩa tích cực hơn gắn liền với khả năng <em>học</em>, học để tồn tại và phát triển, để cùng tiến hoá và cùng đưa hệ thống tiến lên một mức cấu trúc có độ trật tự cao hơn. Thích nghi là yếu tố cơ bản làm nên tính chất <em>tự tổ chức</em> của các hệ thống phức tạp.</p>
+
+<p>Các hệ thống phức tạp thường có các quan hệ bên trong là các <em>quan hệ phi tuyến</em>, đó là những quan hệ không có sự phụ thuộc đều đặn giữa các thay đổi của nguyên nhân và của hệ quả. Chính do tính phi tuyến mà hệ thống có các <em>mối liên hệ ngược dương</em> như đã nói ở trên, hành vi của hệ thống có thể có những bất thường, phụ thuộc nhạy cảm vào sự đổi thay rất bé của các điều kiện ban đầu, từ ổn định chuyển sang bất ổn định, từ trật tự chuyển sang phi trật tự và hỗn độn. Mặt khác, khi một hệ thống đi vào những trạng thái <em>xa cân bằng</em>, tới <em>bên bờ hỗn độn</em> (<em>at the edge of chaos</em>) thì cũng là lúc mà qua tương tác các thành phần phát huy khả năng thích nghi và học của mình, tạo nên cho toàn hệ thống những <em>bước nhảy đột biến</em>, những <em>hợp trội</em> đến những trật tự mới có tính tổ chức cao hơn. Có khả năng, nhưng khả năng cụ thể nào là không tiên đoán được.</p>
+
+<p>Ở đây ta gặp một tình huống khác về chất so với các hệ thống tuyến tính, cân bằng và ổn định. Trong cân bằng và ổn định thì ta có thể tiên đoán và lập kế hoạch cho sự phát triển, còn ở đây, chỉ có thể <em>dự phóng</em> chứ không có thể tiên đoán chính xác và lập kế hoạch trước; thay vào đó ta phải chuẩn bị <em>ứng phó</em> với nhiều cái có thể và xử trí một cách linh hoạt, thích nghi với những diễn biến cụ thể, tức thời của tình hình. <em>Bước nhảy</em> đưa ta đến đâu là tuỳ ở sự mẫn cảm trong lựa chọn một cách sáng tạo và linh hoạt của những người tham gia. Thế giới đã không còn là tuyến tính, <em>tư duy phi tuyến</em> đòi hỏi ở con người phải luôn sẵn sàng đối phó với những điều chưa biết, chưa từng gặp, với những bất định và bất ổn định, và bằng năng lực thích nghi và sáng tạo mà tìm được từ trong những bất định, bất ổn định đó những hướng đi tới những trật tự mới.</p>
+
+<p><em>Tính đa chiều</em>, hay <em>đa thứ nguyên</em>, là một đặc điểm cốt yếu khác của tư duy hệ thống. Trong các hệ thống tự nhiên và xã hội của thế giới mà ta đang sống, luôn luôn tồn tại những thành phần và khuynh hướng đối lập nhau, những xu thế khác biệt nhau; có những khác biệt có tính đối kháng, nhưng phổ biến là những khác biệt không loại trừ nhau, chung sống và tương tác với nhau bằng đấu tranh và thoả hiệp, cạnh tranh và hợp tác, tạo nên cái phong phú chung của sự phát triển. Nhà điều khiển học Ackoff có nói: <em>“Từ những phần riêng rẽ không chấp nhận được vẫn có thể tạo nên một toàn thể chấp nhận được.”</em></p>
+
+<p>Tính đa chiều trong tư duy hệ thống có nghĩa là thừa nhận có nhiều cái khác nhau, nhiều cách nhìn, cách hiểu khác nhau về cùng một đối tượng, một vấn đề. Quan điểm đa chiều còn có nghĩa là một sự cố gắng phát hiện cái giống nhau trong những cái khác nhau, và cái khác nhau trong những cái giống nhau. Tìm cái giống nhau trong những cái khác nhau là hướng tới cái phổ biến, cái có tính qui luật; tìm cái khác nhau trong những cái giống nhau là hướng tới những phong cách riêng, sắc thái riêng của cảm thụ. Cả hai đều cần thiết và bổ sung cho nhau để sáng tạo nên những chất lượng phong phú mới của cuộc sống.</p>
+
+<p><em>Đa chiều</em> cũng là một cách nhìn nhiều mặt, nhiều cấp độ khi tìm hiểu các hệ thống. Một lý thuyết về một loại hệ thống nào đó bao giờ cũng phản ánh một cách hiểu nhất định về từng mặt và từng cấp độ khi xem xét nó. Vì vậy, nên xem mỗi lý thuyết đều có những giới hạn giải thích nhất định, và tránh việc áp đặt xem một lý thuyết cụ thể nào là chân lý tuyệt đối. Đặc biệt, đối với các hệ thống kinh tế và xã hội, nhiều lý thuyết trước đây được xây dựng theo các mô hình cơ giới hoặc tuân theo các ý thức hệ có sẵn đã không còn thích hợp với sự phát triển hiện đại, cũng cần được xem xét lại theo quan điểm đa chiều nói trên.</p>
+</section>
+
+          <section id="iii2">
+            <h3><a id="iii2"></a>2. Tư duy lại tương lai?</h3>
+        <p>Trong phần mở đầu bài tham luận này, ta đã có nói đối với <em>tư duy chiến lược</em> thì năng lực cần có đầu tiên là phải biết hình dung trước tương lai. Trong sách <em>Tư duy lại tương lai</em> (<em>Rethinking the Future</em>) xuất bản ở Anh năm 1997, mấy chục chuyên gia hàng đầu về nghiên cứu chiến lược kinh doanh ở Anh, Mỹ đã thảo luận về hàng loạt vấn đề cần được tư duy lại về tương lai, tập trung qua 3 chủ đề lớn: 1) <em>Con đường dừng ở đây</em>, tương lai không phải là sự tiếp tục của quá khứ, thế giới đã thay đổi và kiểu tư duy tuyến tính không còn thích hợp với một thế giới phi tuyến; 2) Thời đại mới đòi hỏi những cách tổ chức mới, người thắng cuộc trong thế kỷ 21 sẽ là những người có năng lực biến tổ chức của mình thành một cái gì đó linh hoạt như chiếc xe jeep, có khả năng phản ứng nhanh, chuyển hướng nhanh trong một miền đất đầy trắc trở và bất định; 3) <em>Rồi chúng ta sẽ đi đâu?</em> Ta cần có một tầm nhìn, một định hướng mục tiêu về tương lai, nhưng không phải bằng cách nhìn vào một bản đồ có sẵn. Không có bản đồ nào cho miền đất chưa khám phá; thay vào đó những người đi đầu sẽ nhìn về phía trước, sáng tạo những ý tưởng mới, phát hiện những chân trời mới, vạch đường để hấp dẫn mọi người cùng đi.</p>
+
+<p><em>Con đường dừng ở đây!</em> Không phải cứ bình tâm tiếp tục đi mãi con đường quen thuộc từ quá khứ là rồi sẽ đến tương lai. Cuộc đời đã khác trước, bao trắc trở, đổi thay, biến động ngẫu nhiên và thất thường đang chờ ta ở phía trước, tương lai chứa đầy bất định và rủi ro, vì cuộc sống là một hệ thống phức tạp và phi tuyến, xu thế đi tới không phải là một trạng thái cân bằng và ổn định, mà phần chắc cái đang chờ ta ở phía trước là một cái gì đó bất thường và hỗn độn. Trong nửa sau của thế kỷ 20, những chuyển biến thường xuyên trong liên tiếp những biến động thất thường, không tiên đoán được của đời sống kinh tế, chính trị và xã hội trên khắp thế giới đã chẳng đủ chứng minh cho những nhận định đó sao?</p>
+
+<p>Nền kinh tế thế giới, mà trước hết là ở các nước phát triển nhất, sau những thành công to lớn của giai đoạn phát triển của văn minh công nghiệp, từ những thập niên 70, 80 của thế kỷ trước đã chuyển mạnh sang kỷ nguyên mới của <em>kinh tế thông tin</em>, rồi <em>kinh tế tri thức</em>, <em>kinh tế mạng</em>,... Các hệ thống kinh tế mới này vận hành theo những qui luật mới như <em>luật tỷ suất lợi nhuận tăng dần</em> (<em>law of increasing returns</em>) tạo nên những quan hệ phi tuyến và những liên hệ phản hồi dương bên trong hệ thống, làm cho các hệ này có thể đi tới những trạng thái <em>xa cân bằng</em>, ở <em>bên bờ hỗn độn</em>. Và rồi tương lai của các hệ thống đó ra sao, hoặc đổ vỡ hoặc tiến đến một trật tự mới cao hơn, là tuỳ thuộc vào khả năng <em>học</em> và <em>thích nghi</em> của chúng trong những trạng thái <em>“ở bên bờ hỗn độn”</em> đó.</p>
+
+<p><em>Tư duy lại tương lai</em> rõ ràng là một yêu cầu hàng đầu của <em>tư duy chiến lược</em> trong bối cảnh của khung mẫu nhận thức mới về các đối tượng hoạt động của chúng ta. Tư duy lại tương lai không nhằm để biết rõ về tương lai hay lập kế hoạch cho tương lai, là điều gần như không thể, mà để có một cách nhìn, cách cảm nhận về những gì có thể đến trong tương lai, trước khi tiếp tục thực hiện những phần việc khác của tư duy chiến lược.</p>
+  </section>
+
+          <section id="iii3">
+            <h3><a id="iii3"></a>3. Tư duy chiến lược trong bối cảnh mới</h3>
+<p><em>Nhìn sâu để thấu hiểu hiện tại</em> và <em>nhìn xa để tiên kiến về tương lai</em> là hai phẩm chất quan trọng và cốt yếu nhất của tư duy chiến lược. Trong bối cảnh hiện nay, hiện tại thì dường như càng nhìn càng thấy ngổn ngang, hỗn độn; tương lai thì có vẻ mịt mờ, bất định; các mô hình tất định và tuyến tính quen thuộc về thế giới không còn giúp gì được cho những suy luận và phỏng đoán của ta; thế giới tự nhiên, các hệ thống kinh tế, chính trị và xã hội đều được nhận thức là những hệ thống <em>phức tạp</em>, <em>phi tuyến</em>, hiếm có những động thái đi đến cân bằng và ổn định, mà thông thường lại có xu thế đi đến những trạng thái <em>xa cân bằng</em> và <em>hỗn độn</em>, những <em>bất định</em> và <em>ngẫu nhiên</em> khó lường trước được.</p>
+
+<p>Trong vài ba chục năm qua, trong thế giới kinh doanh của những sản phẩm hàng hoá công nghệ cao như các mặt hàng điện tử và vi điện tử, các máy tính cá nhân và điện thoại di động, các mạng thông tin và truyền thông phủ rộng khắp toàn cầu, đã có biết bao những công ty đột ngột nổi lên rồi lại đột ngột chìm xuống, biết bao sản phẩm nhanh chóng chiếm lĩnh thị trường toàn cầu rồi cũng nhanh chóng biến mất để nhường vị trí cho sản phẩm khác cùng loại, v.v...</p>
+
+<p>Trong lĩnh vực chính trị xã hội, thì chắc chúng ta không bao giờ quên vào những năm đầu thập niên 1990, thế giới đã sững sờ chứng kiến những biến động hỗn độn trong hệ thống các nước xã hội chủ nghĩa cũ, rồi tiếp theo đó là những cách thức chuyển đổi đã diễn ra trong các nước đó để hướng tới một trật tự mới cho sự phát triển của mình. Trong tất cả những sự kiện đó, có phải các nhà tư duy chiến lược của chúng ta đã <em>thấu hiểu được hiện tại</em> và <em>tiên kiến được tương lai</em> để mà chủ động đối phó? Tôi e rằng ta khó mà cho một câu trả lời khẳng định.</p>
+
+<p>Cái <em>phức tạp</em>, <em>đa dạng</em> và <em>cực kỳ phong phú</em> của thiên nhiên và cuộc sống thì chẳng phải đến bây giờ mới có. Trải qua nhiều thế kỷ trước khi được con người nhận thức bằng khoa học, nó đã được con người cảm nhận qua trực giác thông qua những thể hiện của hội hoạ, thơ ca, âm nhạc, của nghệ thuật nói chung. Những thể hiện đó ta có thể gọi chung là <em>các mô hình</em>. Rồi đến khi khoa học được phát triển, những mô hình của trực cảm đó được thay thế bởi những <em>mô hình khoa học</em>, mà thông dụng là những <em>mô hình toán học</em> với những con số, những phương trình và bất phương trình, v.v...</p>
+
+<p>Tư duy trên những mô hình mà ta cho là chính xác đó, ta có niềm tin là ta đã có thể hiểu đầy đủ các hiện trạng, suy luận được cặn kẽ các chiều hướng của tương lai, để giúp con người có những giải pháp chiến thuật và kế hoạch chiến lược đúng đắn cho sự phát triển. Và rồi, việc phát hiện trở lại bản chất hỗn độn và phức tạp của thế giới đã buộc ta không thể lảng tránh cái thực tế phức tạp hiển nhiên đó, cũng như không thể bám mãi một cách duy nhất vào niềm tin <em>“khoa học”</em> với nếp tư duy cơ giới như trước đây.</p>
+
+<p>Tuy nhiên, con người chưa thể có cách nhận thức nào bằng việc tiếp xúc trực tiếp với các đối tượng thực tế, mà phải bằng cách nào đó thông qua <em>các mô hình</em>, là những hình dung về thực tế mà trí tưởng tượng của con người tạo ra. Khi các mô hình toán học là quá giản lược, thì ta lại phải vận dụng nhiều loại mô hình khác, cũ có, mới có, và cả những mô hình kết hợp cả cũ và mới. Mới như các loại <em>mô hình lôgich</em>, <em>mô hình thông tin</em>, <em>mô hình cybernetic</em>, <em>mô hình bằng đồ hoạ máy tính</em>, v.v…, và cũ là các loại <em>mô hình trực giác</em>, phục vụ cho việc nhận thức bằng trực giác như thị giác, thính giác, xúc giác,..., đặc biệt là các <em>mô hình hiển thị cho thị giác</em>, vì như ta biết, đôi mắt là giác quan chủ yếu nhất đối với khả năng trực cảm của con người.</p>
+
+<p><em>Mô hình hiển thị cho thị giác</em> là một loại mô hình được nhiều nhà nghiên cứu ưa thích, vì trên nền của một mô hình như vậy người ta có thể dễ dàng thêm bớt, bổ sung nhiều đường nét, hình ảnh về các mối quan hệ, các loại tác động, về các hướng đi mới được phát hiện hoặc được người ta mới tưởng tượng nên ngay trong tiến trình nghiên cứu.</p>
+
+<p>Nhà tư vấn chiến lược T.I. Sanders, tác giả cuốn sách <em>“Tư duy chiến lược và Khoa học mới”</em>, đã đề xuất hẳn một phương pháp cho tư duy chiến lược bằng cách xây dựng cho mỗi dự án một lược đồ gọi là <em>“cảnh quan tương lai”</em> (<em>future scape</em>), trong lược đồ đó người làm chiến lược cho dự án có thể tuỳ theo nhận thức của mình mà vẽ nên những nốt biểu hiện các sự kiện chính, các nhân tố tác động quan trọng, những vòng cung, những đường dẫn và mũi tên biểu thị cho các quan hệ tương tác, những liên hệ phản hồi, đánh dấu những vùng đặc biệt có thể là những <em>tập hút hỗn độn</em> và những <em>vùng hút tương ứng</em>, v.v….</p>
+
+<p>Nhà chiến lược sẽ tư duy trên một lược đồ như vậy, tuỳ ý thêm bớt, thay đổi các đường nét và hình vẽ theo những nhận thức mới của mình, cho đến khi cảm nhận được là qua lược đồ đó mình đã <em>thấu hiểu được hiện tại</em> và phần nào <em>nhìn trước được xu thế đến tương lai</em>. Tất nhiên, một lược đồ như vậy không có khả năng cho ta hiểu đầy đủ và chính xác hiện trạng của hệ thống cũng như nhìn được rõ một con đường đi đến tương lai của hệ thống, tất cả chỉ là giúp ta thêm khả năng cảm nhận mà thôi.</p>
+
+<p><em>Tư duy chiến lược</em>, trong bối cảnh của một thế giới <em>phức tạp</em>, đầy <em>hỗn độn</em> và <em>ngẫu nhiên</em>, <em>bất định</em> và <em>khó đoán trước</em> như hiện nay, chắc không hy vọng tìm được những phương pháp tất định và chính xác, nên con đường kết hợp các <em>kiến thức khoa học</em> và các <em>năng lực của trực cảm trí tuệ</em>, của <em>cảm nhận trực giác</em> là con đường thực tế nhất. Càng có thêm nhiều <em>kiến thức mới</em>, và càng rèn luyện thêm các <em>năng lực cảm nhận</em>, thì chúng ta sẽ có thêm <em>sức sáng tạo</em>, <em>đổi mới</em> để trau dồi khả năng tư duy chiến lược ngày càng sắc bén hơn.</p>
+          </section>
+        </section>
+
+        <section id="iv">
+          <h2><a id="iv"></a>IV. Kết luận</h2>
+          <p>
+            Tư duy chiến lược là một vấn đề trọng đại, công việc của các nhà lãnh đạo. Người viết bài này chưa hề có kinh nghiệm gì về tư duy chiến lược. Xin được xem bài viết này như là một giới thiệu sơ lược về một vài nhận thức mới đối với vấn đề trọng đại nói trên, mà cũng là vấn đề rất lý thú trong bối cảnh hiện nay, để mong được tham khảo. </p>
+          <p class="author" style="text-align:right;">P.Đ.D.</p>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>

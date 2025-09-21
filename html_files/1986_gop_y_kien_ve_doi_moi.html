@@ -29,12 +29,18 @@
       }
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
-      line-height: 1.75;
+    /* Kích thước chữ theo rem + breakpoint */
+    html{font-size:16px;}                 /* Mobile mặc định */
+    @media (min-width:768px){html{font-size:17px;}}   /* Tablet */
+    @media (min-width:1024px){html{font-size:18px;}}  /* Desktop */
+    @media (min-width:1440px){html{font-size:19px;}}  /* Màn lớn */
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.75;
+      font-size:1rem; /* đồng bộ với html */
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
