@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Năng lực sáng tạo — Phan Đình Diệu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--surface:#0f152b;--card:#111936;--text:#e7ecff;--muted:#9aa3c0;--accent:#5b8cff;--line:#1d274c}
+    @media(prefers-color-scheme:light){:root{--bg:#f7f8fc;--surface:#fff;--card:#fff;--text:#0f1530;--muted:#55607a;--accent:#3957ff;--line:#e7e9f4}}
+
+    *{box-sizing:border-box;min-width:0}
+    html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+
+    html{font-size:16px;}
+    @media (min-width:768px){html{font-size:17px;}}
+    @media (min-width:1024px){html{font-size:18px;}}
+    @media (min-width:1440px){html{font-size:19px;}} 
+
+    body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.75;font-size:1rem;}
+
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1200px;margin:0 auto;padding:86px 20px 24px;}
+    .content{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,.06);padding:28px}
+
+    header.page{padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:18px;text-align:center}
+    header.page h1{font-family:'Merriweather',serif;font-weight:800;font-size:1.875rem;margin:0 0 6px;line-height:1.3;text-transform:uppercase}
+    header.page p.author{margin:0;color:var(--muted);font-style:italic;font-size:.9375rem;text-align:right}
+
+    p{margin:10px 0;font-size:1rem}
+    .center{text-align:center}
+    .italic{font-style:italic}
+
+    .topbar{position:fixed;top:0;left:0;right:0;z-index:1000;backdrop-filter:blur(8px);background:color-mix(in srgb, var(--surface), transparent 25%);border-bottom:1px solid var(--line)}
+    .topbar-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:10px}
+    .btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer;font-size:.9375rem}
+    .btn:active{transform:translateY(1px)}
+
+    @media(max-width:1024px){.topbar-inner{padding:10px 16px}}
+
+    @media print{
+      .topbar,.btn{display:none!important}
+      .wrap{padding:0!important}
+      body{background:#fff!important;color:#000!important}
+      .content{border:0!important;box-shadow:none!important}
+      a{color:inherit!important;text-decoration:none!important}
+      h1,p{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="btn" href="../index.html">Về Trang Phan Đình Diệu</a>
+      <button class="btn" onclick="window.scrollTo({{top:0, behavior:'smooth'}})">Lên đầu trang</button>
+      <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <main class="content">
+      <header class="page">
+        <h1>Năng lực sáng tạo là vốn quý, nhưng làm sao để có?</h1>
+        <p class="author"><h2> Phan Đình Diệu</h2></p>
+      </header>
+
+      <section>
+        <p>Từ cách đây mấy năm, khi bắt đầu tìm hiểu về kinh tế tri thức, có một câu trong tài liệu Tri thức cho phát triển do Ngân hàng Thế giới xuất bản (có bản tiếng Việt, Nhà xuất bản Chính trị Quốc gia, 1998) đã gây cho tôi ấn tượng sâu sắc và đeo bám mãi vào suy nghĩ của tôi: “Việc san lấp những khoảng cách về tri thức sẽ không dễ dàng. Các nước đang phát triển đang theo đuổi một mục tiêu luôn chuyển động về phía trước vì các nước công nghiệp có thu nhập cao luôn luôn đẩy tri thức vượt xa khỏi giới hạn sẵn có. Thực ra, còn lớn hơn khoảng cách về tri thức là khoảng cách về năng lực sáng tạo tri thức. Những khác biệt trong một số thước đo quan trọng về việc sáng tạo tri thức giữa các nước giàu và nghèo còn lớn hơn nhiều so với sự khác biệt về thu nhập”. Và tài liệu đó dẫn số liệu: các nước có thu nhập cao (khoảng 16.000 đô la/đầu người) có chi phí cho R&D là 218 đô la, trong khi các nước nghèo (có thu nhập 320 đô la/đầu người) có chi phí cho R&D là 1 đô la, nghĩa là trong khi tỷ lệ chênh lệch giàu/nghèo khoảng 50 lần thì tỷ lệ chênh lệch về chi phí cho nghiên cứu và triển khai là 218 lần! Và đó là mới so sánh về chênh lệch chi phí, chứ chưa phải là so sánh chênh lệch về hiệu quả của những chi phí đó, tức là về những kết quả sáng tạo đạt được. Vậy thì, có khả năng nào cho những nước nghèo như nước ta, đến một tương lai nào đó tiến kịp các nước phát triển về năng lực sáng tạo tri thức hay không? Tôi không có đủ “lạc quan tếu” để trả lời ngay rằng có, và cũng không muốn “bi quan” để khẳng định chắc chắn rằng không, và rồi lan man muốn tìm hiểu kỹ hơn về những vấn đề tưởng chừng đã rõ, như các vấn đề: vậy thực chất năng lực sáng tạo là gì, ai có năng lực đó, và cần có những điều kiện gì để các năng lực đó có thể nảy nở và được phát huy, v.v... Một số ý kiến trình bày dưới đây xin được xem như là vài nhận thức bước đầu, mong đóng góp vào những cố gắng chung hướng tới một trả lời khẳng định cho câu hỏi kể trên.</p>
+        <p>Khó tìm được một định nghĩa rõ ràng nào cho khái niệm sáng tạo và năng lực sáng tạo. Các từ điển thường chỉ cho ta một vài hiểu biết khái quát và phiến diện về nội dung phong phú của các khái niệm đó. Ta biết hoạt động sáng tạo là một loại hoạt động tinh thần riêng có của con người, mà sản phẩm của nó thường là những phát minh hoặc phát hiện mới mẻ, độc đáo của tư duy và trí tưởng tượng. Có người nói “... là sáng tạo là nhìn cùng một việc như mọi người nhưng nghĩ về một điều nào đó khác”. Tính mới, tính độc đáo là những tính chất cốt yếu của kết quả sáng tạo; khả năng tư duy và trí tưởng tượng là những năng lực cần thiết cho sáng tạo; có nhà khoa học đã tổng kết thành công thức “thiên tài sáng tạo là bằng ý thức đổi mới, không lệ thuộc nếp cũ nhân với bình phương của trí tưởng tượng và khả năng trừu tượng hoá” (F. Balibar, nhà vật lý Pháp, khi nói về thiên tài của A. Einstein). Điều cốt lại trong một tiến trình sáng tạo là việc xuất hiện các ý tưởng (ideas) từ trong suy nghĩ và tưởng tượng của nhà nghiên cứu. Nhà khoa học nổi tiếng H. Poincaré từng nói “trong sáng tạo khoa học, ý tưởng chỉ là những ánh chớp, nhưng ánh chớp đó là tất cả”. Và ta hiểu, ánh chớp không xuất hiện trong trời yên biển lặng, ánh chớp sáng tạo cũng chỉ có thể loé lên một cách đột biến và tức thời như sự bùng phát của những tích tụ trí tuệ đến tột cùng. Mỗi chúng ta, dù là nhà văn nhà thơ, nhà soạn nhạc hay nhà mỹ thuật, là người làm toán hay vật lý, sinh học, nhà kinh tế hay quản lý, trong cuộc đời trải nghiệm sáng tạo của mình hẳn đã có lúc bất ngờ được hưởng hạnh phúc cảm nhận ánh hào quang xuất hiện những ánh chớp như vậy. Vâng, những ánh chớp ý tưởng; có ý tưởng, có nhiều ý tưởng là sẽ có kết quả sáng tạo; nhà nghiên cứu không thể đặt kế hoạch cho sự xuất hiện các ánh chớp mà chỉ có thể bằng lao động cần mẫn của mình tạo nên trạng thái tích tụ những “đám mây giông bão” trí tuệ để hy vọng một lúc bất thần nào đó xuất hiện các ánh chớp mà thôi.</p>
+        <p>Xưa nay, khi nói đến sáng tạo, thường ta chỉ xem đó là hoạt động riêng của một lớp người được gọi là “trí thức”, như các nhà khoa học, các nhà thơ nhà văn, các nghệ sĩ,... Và bây giờ, bỗng nhiên ta nghe nói đến “kinh tế tri thức”, đến năng lực sáng tạo như là yếu tố quyết định của khả năng cạnh tranh trong nền kinh tế đó. Và phải chăng khả năng cạnh tranh đó chỉ có thể tạo nên bởi các “nhà” trí thức? Sức cạnh tranh của một nền kinh tế phải được tạo nên trước hết từ những lực lượng trực tiếp tham gia vào các hoạt động sản xuất, kinh doanh của nền kinh tế; trong những lực lượng đó tất nhiên là có, nhưng không phải chỉ có, các nhà trí thức. Vậy thì, cái năng lực sáng tạo để làm nên sự giàu có và sức cạnh tranh của nền kinh tế mới phải là từ mọi thành phần của nền kinh tế đó, tức là từ mỗi người trong xã hội. Trong nền kinh tế mới, mỗi người đều tham gia sáng tạo, và mỗi người đều có năng lực sáng tạo, đó là điểm mới đầu tiên mà tôi nhận thức được trong quá trình đổi mới tư duy của mình. Nói mỗi người đều sáng tạo thì có vẻ khó tin, nhưng “đổi mới tư duy” ở đây đòi hỏi trước hết phải xác lập niềm tin đó: anh là người sáng tạo, tôi là người sáng tạo, mọi người đều sáng tạo; sáng tạo, có năng lực sáng tạo là thuộc tính tự nhiên của con người. Trong danh sách 10 chìa khoá hàng đầu để phát triển năng lực sáng tạo cá nhân do tổ chức Coachville đề xuất (xem http://www.topten.org/content/tt.AG74.htm), điều tin rằng mình là người sáng tạo được xem là chìa khoá quan trọng số một. Chín chìa khoá tiếp theo là: hãy mở rộng những điều mà mình quan tâm để có thêm nhiều nhận thức mới, kinh nghiệm mới; hãy thu thập thêm nhiều rung cảm, ấn tượng, nhiều thông tin mới chuẩn bị cho sáng tạo; hãy tìm kiếm các mối quan hệ liên kết, kể cả các mối liên hệ ít ngờ nhất; từ bỏ những thói quen thường ngăn cản ta đến với những điều mới; tạo cho mình một môi trường thoải mái theo sở thích; bố trí thời gian thuận tiện cho mọi hoạt động, có nghỉ ngơi thư giãn, có suy nghĩ, nhớ rằng có những quãng thời gian dài không nghĩ được gì, nhưng cũng có thể có những “năm phút” làm nên sự khác biệt; cần có đức kiên trì; mở rộng mọi giác quan để tiếp nhận mọi tri thức trực giác; và cuối cùng là biết quên đi nhiều điều mà mình đã biết để luôn có một trí tuệ nguyên lành với đôi mắt tươi sáng.</p>
+        <p>Tất nhiên sáng tạo trong những lĩnh vực khác nhau có thể có những đặc điểm khác nhau, được kích thích bởi những động lực khác nhau, và có những loại sản phẩm khác nhau. Sáng tạo của một công nhân có thể là một sáng kiến cải tiến kỹ thuật, đổi mới sản phẩm; của một doanh nhân có thể là một cải tiến về tiếp thị, một giải pháp mới về quản lý kinh doanh; của một giáo viên có thể là một đổi mới về phương pháp dạy, một cách gợi cảm trong việc học toán học hay văn chương; của một nhà khoa học có thể là một phát hiện những điều bị ẩn giấu hay một phát minh ra những tri thức chưa từng biết, v.v... Cái chung nhất của sáng tạo là tìm kiếm những cái mới, một tri thức mới hay một cách vận dụng mới của những tri thức đã có, một phương pháp mới hay một giải pháp mới cho một vấn đề tưởng rằng đã cũ, nói gọn lại là tìm những đóng góp mới để giải quyết các vấn đề mà con người gặp phải trong cuộc sống. Có những sáng tạo lớn làm nên những tên tuổi lẫy lừng, nhưng phải chăng đối với đại đa số con người bình thường chúng ta, phấn đấu trở thành người sáng tạo, chúng ta không hy vọng sẽ có tên tuổi được thế giới thừa nhận, mà chỉ mong được vui hưởng chút hạnh phúc thầm lặng của một sự thoả mãn tinh thần, của một đời sống có ý nghĩa mà thôi.</p>
+        <p>Sáng tạo là một loại lao động phức tạp và vất vả. Ta nhớ câu nói nổi tiếng của nhà phát minh Edison: “Trong mọi phát minh có 1% cảm hứng và 99% mồ hôi”. Vậy để con người có thể hăng say sáng tạo hẳn phải có những động lực mạnh mẽ. Ham hiểu biết, tìm kiếm cái hay cái đẹp đã từng là động lực thúc đẩy sự nghiệp sáng tạo của biết bao thế hệ các nhà bác học, văn nhân, nghệ sĩ. Rồi kinh tế thị trường xuất hiện cùng với chủ nghĩa tư bản, và thị trường với cơ chế cạnh tranh ngày càng khốc liệt dần trở thành nguồn động lực cho sáng tạo, sáng tạo trong sản xuất, trong phát triển công nghệ, trong quản lý kinh doanh,...  Và đến ngày nay, kinh tế thế giới đã phát triển đến giai đoạn của “kinh tế tri thức” toàn cầu hoá với một thị trường mở rộng ra phạm vi toàn thế giới, yếu tố “năng lực sáng tạo” trở thành chìa khoá chính cho mọi quốc gia đi vào tiến trình hội nhập, thì việc chăm lo tạo dựng và phát huy năng lực sáng tạo không còn là việc của từng cá nhân, mà trở thành vấn đề chiến lược của mỗi quốc gia.  Vài năm gần đây, người ta thường nói đến thuật ngữ quản trị tri thức (knowledge management), xem quản trị tri thức là một nhiệm vụ quan trọng của mọi tổ chức, mọi doanh nghiệp và mọi quốc gia. Mục tiêu của quản trị tri thức là phát triển nhanh vốn tri thức và năng lực sáng tạo tri thức, từ đó nâng cao hiệu quả sử dụng tri thức của tổ chức, doanh nghiệp và quốc gia. Những giải pháp để đạt được mục tiêu đó là hoàn thiện cơ chế thị trường và tăng cường vai trò tổ chức và điều tiết của Nhà nước. Thị trường là một động lực quan trọng, nó tạo nên những nhu cầu thúc đòi hỏi được đáp ứng bằng những sản phẩm của sáng tạo, và do đó thúc đẩy hoạt động sáng tạo, đặc biệt trong các lĩnh vực khoa học ứng dụng, công nghệ và quản lý. Nhưng đối với các lĩnh vực như khoa học cơ bản, thị trường không phải là tất cả; sản phẩm của sáng tạo khoa học không phải ngay lập tức trở thành hàng hoá và mang lại lợi nhuận; vả chăng, phần lớn tri thức của loài người có các thuộc tính của một thứ giá trị công cộng, nên lợi nhuận cá nhân thu được trong việc sáng tạo ra tri thức có thể là rất thấp, do đó để hỗ trợ và khuyến khích các năng lực sáng tạo trong các lĩnh vực này, vai trò của các cơ quan công, trước hết của Nhà nước, vẫn hết sức quan trọng. Chúng ta hiện đã có một hệ thống tổ chức gồm hàng trăm viện nghiên cứu, trường đại học, một lực lượng nghiên cứu khá lớn trong các cơ quan, doanh nghiệp,...; các cơ sở nghiên cứu dẫu cần được tạo điều kiện để có sự ổn định cần thiết cho việc tạo dựng nên những truyền thống bền vững đủ sức nảy nở những ý tưởng sáng tạo liên tiếp nối nhau không đứt đoạn, đồng thời cũng đủ linh hoạt để thích nghi với các yêu cầu của một môi trường hoạt động có nhiều đột biến, bất ngờ, một môi trường luôn đòi hỏi “re-everything” bằng liên tục đổi mới và sáng tạo.</p>
+        <p>Sáng tạo cho đến nay vẫn là năng lực riêng có của con người. Sáng tạo thường là việc riêng của từng bộ óc, từng con người. Nhưng sự tiếp xúc, va chạm, trao đổi giữa các bộ óc, giữa những con người khác nhau thường giúp cho các ý tưởng gặp gỡ, đối sánh, chọn lựa, ý tưởng làm nảy sinh ý tưởng,... cho nên sáng tạo cũng có thể được coi là kết quả của tập thể. Và với ý nghĩa tập thể này, trong sự phát triển khoa học công nghệ hiện nay, còn có thể kể thêm sự tham gia đắc lực của công nghệ thông tin và truyền thông trong việc cung cấp các kho thông tin và tri thức ngày càng phong phú và các phương tiện xử lý tri thức ngày càng tinh tế. Tất cả những điều đó tạo ra khả năng kết hợp một cách cộng năng sức mạnh của công nghệ tri thức hiện đại với trí tuệ sáng tạo riêng có của con người để làm nên năng lực sáng tạo chung của dân tộc. Năng lực sáng tạo là vấn đề hưng vong của quốc gia, đất nước; nó cũng là vấn đề thành bại của mọi tổ chức, doanh nghiệp; và cũng là vấn đề sống còn của mỗi cá nhân. Lợi ích chung và lợi ích riêng hoà hợp một cách hữu cơ trong cùng một nhiệm vụ là nâng cao năng lực sáng tạo chung đó. Ta hy vọng là với tiềm năng vốn có, với những nhận thức mới về cuộc sống mới và thế giới mới, với những hiểu biết mới về những yêu cầu đối với tri thức trong thời đại mới, chúng ta sẽ tạo dựng được một năng lực sáng tạo hùng hậu, đủ đưa đất nước ta tiến kịp thế giới, tiến cùng thế giới, trong thời đại mới.</p>
+        <p>P.Đ.D.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
