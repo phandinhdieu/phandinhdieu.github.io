@@ -32,8 +32,11 @@
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
 
-    .wrap{max-width:1200px;margin:0 auto;padding:20px}
-    .grid{display:grid;grid-template-columns:300px 1fr;gap:28px}
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 20px 20px; /* thêm padding-top ~ chiều cao topbar */
+}    .grid{display:grid;grid-template-columns:300px 1fr;gap:28px}
 
     nav.toc{
       position:sticky;top:20px;height:calc(100vh - 40px);overflow:auto;
@@ -87,7 +90,7 @@
     .italic{font-style:italic}
     .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:18px 0}
 
-    .topbar{position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);background:color-mix(in srgb, var(--surface), transparent 25%);border-bottom:1px solid var(--line)}
+    .topbar{position:fixed;top:0;z-index:10;backdrop-filter:blur(8px);background:color-mix(in srgb, var(--surface), transparent 25%);border-bottom:1px solid var(--line)}
     .topbar-inner{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:10px}
     .btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer;font-size:.9375rem}
     .btn:active{transform:translateY(1px)}
