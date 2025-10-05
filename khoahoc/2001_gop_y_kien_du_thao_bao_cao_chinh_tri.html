@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phan Đình Diệu - Góp ý kiến vào Dự thảo Báo cáo Chính trị (2001)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #0f152b;
+      --card: #111936;
+      --text: #e7ecff;
+      --muted: #9aa3c0;
+      --accent: #5b8cff;
+      --line: #1d274c;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fc;
+        --surface: #ffffff;
+        --card: #ffffff;
+        --text: #0f1530;
+        --muted: #55607a;
+        --accent: #3957ff;
+        --line: #e7e9f4;
+      }
+    }
+    * { box-sizing: border-box; }
+    html{font-size:16px;}
+    @media (min-width:768px){html{font-size:17px;}}
+    @media (min-width:1024px){html{font-size:18px;}}
+    @media (min-width:1440px){html{font-size:19px;}}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
+      line-height:1.75;
+      font-size:1rem;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; }
+    nav.toc {
+      position: sticky; top: 20px; height: calc(100vh - 40px); overflow: auto;
+      padding: 18px; border-radius: 16px; background: var(--surface);
+      border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    nav.toc h2 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 2px 0 12px; }
+    nav.toc ol { list-style: none; padding: 0 0 0 4px; margin: 0; }
+    nav.toc > ol > li > a { font-weight: 600; }
+    nav.toc li { margin: 6px 0; }
+    nav.toc a { color: var(--text); display: inline-block; padding: 6px 8px; border-radius: 8px; }
+    nav.toc a:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    nav.toc details { border: 1px solid var(--line); border-radius: 10px; padding: 6px 8px; margin: 8px 0; }
+    nav.toc details > summary { cursor: pointer; list-style: none; font-weight: 700; }
+    nav.toc details[open] { background: color-mix(in srgb, var(--accent), transparent 92%); }
+    .content { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 16px 40px rgba(0,0,0,.06); padding: 28px; }
+    header.page { padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 18px; text-align: center; }
+    header.page h1 { font-family: 'Merriweather', serif; font-weight: 800; font-size: 30px; margin: 0 0 6px; line-height: 1.3; text-transform: uppercase; }
+    header.page p.author { margin: 0; color: var(--muted); font-style: italic; font-size: 15px; text-align: right; }
+    h2 { font-family: 'Merriweather', serif; font-size: 24px; margin: 26px 0 6px; line-height: 1.35; display:flex; align-items:center; gap:8px; }
+    h3 { font-weight: 700; margin: 18px 0 8px; }
+    p { margin: 10px 0; }
+    .note { background: rgba(234,179,8,.12); border: 1px solid rgba(234,179,8,.25); padding: 12px; border-radius: 12px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); margin: 18px 0; }
+    .topbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);
+              background: color-mix(in srgb, var(--surface), transparent 25%); border-bottom: 1px solid var(--line); }
+    .topbar-inner { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+    .btn { border: 1px solid var(--line); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:active { transform: translateY(1px); }
+    .copy-anchor { margin-left: 8px; border: 1px dashed var(--line); border-radius: 8px; padding: 2px 6px; font-size: 12px; cursor: pointer; }
+    .copy-anchor:hover { background: color-mix(in srgb, var(--accent), transparent 90%); }
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: 1fr; }
+      nav.toc { position: relative; height: auto; }
+      header.page h1 { font-size: 26px; }
+    }
+    @media print {
+      .topbar, nav.toc, .copy-anchor { display: none !important; }
+      .grid { display: block !important; }
+      main.content { border: 0 !important; box-shadow: none !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+      a { color: inherit !important; text-decoration: none !important; }
+      h1, h2, h3, p { break-inside: avoid; }
+      summary { display: none !important; }
+    }
+  </style>
+  <script>
+    function copyAnchor(btn) {
+      const h = btn.closest('h2, h3');
+      if (!h) return;
+      const anchor = h.querySelector('a[id]');
+      const id = anchor ? anchor.id : h.id;
+      if (!id) return;
+      const url = location.origin + location.pathname + '#' + id;
+      navigator.clipboard.writeText(url).then(() => {
+        const prev = btn.textContent;
+        btn.textContent = 'Đã sao chép';
+        setTimeout(() => btn.textContent = 'Sao chép liên kết', 1200);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-inner">
+        <button class="btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">Lên đầu trang</button>
+        <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <nav aria-label="Mục lục" class="toc" id="toc">
+        <h2 id="mucluc">Mục lục <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+        <details open>
+          <summary><a href="#title">Góp ý kiến vào Dự thảo Báo cáo Chính trị</a></summary>
+          <ol>
+            <li><a href="#dancu">Dẫn nhập</a></li>
+            <li><a href="#i">I. Nhận định về những chuyển biến trong thế kỷ 20</a>
+              <ol>
+                <li><a href="#i1">1) Khoa học – công nghệ và cách mạng trong tư duy</a></li>
+                <li><a href="#i2">2) Các thử nghiệm mô hình kinh tế – xã hội trong TK20</a></li>
+                <li><a href="#i3">3) Toàn cầu hóa và hội nhập</a></li>
+              </ol>
+            </li>
+            <li><a href="#ii">II. Về công cuộc đổi mới của ta</a></li>
+            <li><a href="#iii">III. Con đường phát triển trong giai đoạn trước mắt</a></li>
+            <li><a href="#iv">IV. Về phát triển giáo dục và khoa học</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <main class="content">
+        <header class="page">
+          <a id="title"></a>
+          <h1>GÓP Ý KIẾN VÀO DỰ THẢO BÁO CÁO CHÍNH TRỊ<br/>chuẩn bị cho Đại hội IX Đảng CSVN</h1>
+          <p class="author"><em><h2> Phan Đình Diệu — Phát biểu tại Hội nghị Ủy ban Trung ương MTTQVN, tháng 2 năm 2001</h2></em></p>
+        </header>
+
+        <section id="dancu">
+          <p>Bản Dự thảo báo cáo đề cập toàn diện mọi vấn đề kinh tế, xã hội của đất nước với nội dung rất phong phú, tôi chỉ xin góp ý kiến về một vài vấn đề được nêu trong Đề cương thảo luận sau đây:</p>
+          <ul>
+            <li>Nhận định về những chuyển biến trong thế kỷ 20,</li>
+            <li>Về công cuộc đổi mới của nước ta từ 15 năm qua và hiện nay,</li>
+            <li>Con đường phát triển trong giai đoạn trước mắt,</li>
+            <li>Về phát triển giáo dục và khoa học.</li>
+          </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="i">
+          <h2><a id="i"></a>I. Nhận định về những chuyển biến trong thế kỷ 20 <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+          <p>Dự thảo đã khái quát những nét chính của thế kỷ 20 như là một thế kỷ phát triển rực rỡ của loài người, và đối với nước ta đó là một thế kỷ của những biến đổi to lớn và sâu sắc, đầy gian nan để có được thống nhất, độc lập và tự do cho Tổ quốc. Tôi chỉ xin bổ sung một vài đánh giá và nhận định sau đây:</p>
+
+          <h3 id="i1">1. Khoa học – công nghệ và cách mạng trong tư duy</h3>
+          <p>Đúng như Dự thảo viết, thế kỷ 20 là thế kỷ mà khoa học và công nghệ tiến nhanh chưa từng thấy. Và cần nhấn mạnh: trong sự phát triển mạnh mẽ của khoa học thế kỷ 20, cái có ý nghĩa sâu sắc và sẽ còn tác động lâu dài là nó đã tạo nên một cuộc cách mạng mới trong tư duy và nhận thức của con người; các thành tựu trong các khoa học về vật chất (với thuyết tương đối và vật lý lượng tử), về sự sống, về thông tin và điều khiển, về tổ chức và tự tổ chức của các hệ thống phức tạp,... là kết quả của những tư duy mới, đưa đến nhiều nhận thức hoàn toàn mới về bản chất của vật chất, của sự sống, và của các hệ thống kinh tế, xã hội,... Cuộc cách mạng trong tư duy và nhận thức đó đã cho ta thấy những hạn chế của kiểu tư duy duy vật cơ giới từng thống trị trong khoa học trước đây, và hình thành dần tư duy hệ thống với việc nhận thức sự vật trong mối tương tác của toàn thể, có thể xem đó là một bước tiến mới của tư duy biện chứng trong việc nhận thức cái phức tạp vốn có của tự nhiên và xã hội.</p>
+          <p>Đặc biệt, đối với các hệ thống kinh tế – xã hội phức tạp, nhiều phát triển mới của khoa học trên cách nhìn hệ thống đã giúp ta hiểu được phần nào thực chất của những biến chuyển liên tiếp, của những khủng hoảng, những rối loạn phi trật tự, và những chuyển hóa sang trật tự mới hết sức sôi động của đời sống kinh tế – xã hội thế giới trong thế kỷ qua, và cả sắp tới. Đổi mới tư duy về kinh tế – xã hội cần tiếp thu và vận dụng linh hoạt các thành tựu quan trọng của cách tư duy và nhận thức mới đó vào thực tiễn.</p>
+
+          <h3 id="i2">2. Các thử nghiệm mô hình kinh tế – xã hội trong thế kỷ 20</h3>
+          <p>Thế kỷ 20 đã chứng kiến những thử nghiệm khắc nghiệt trong thực tiễn phát triển đối với các hình thức tổ chức kinh tế – xã hội. Từ nền kinh tế công nghiệp sơ khai của thế kỷ 19, sang đầu thế kỷ 20, nền kinh tế công nghiệp phát triển sang giai đoạn điện khí hóa và cuộc cách mạng năng suất với việc tổ chức hợp lý các dây chuyền sản xuất, nền kinh tế thị trường phát triển mạnh đã tạo ra những phát triển mới của nền kinh tế và xã hội tư bản mà trước đó chưa được dự kiến hết. Chính trong môi trường đó mà phong trào mác-xít đã phân rẽ: một hướng xã hội dân chủ, và một hướng xã hội chủ nghĩa kiên trì cách mạng vô sản.</p>
+          <p>Các nền kinh tế công nghiệp phát triển theo hướng kinh tế thị trường (tư bản chủ nghĩa) tiếp tục phát triển, liên tục gặp khủng hoảng và khắc phục khủng hoảng, nhưng đã chứng tỏ có khả năng vượt qua khủng hoảng, tiếp thu nhanh các thành tựu khoa học mới và sáng tạo nhiều công nghệ mới, để đi đến cuối thế kỷ 20 với cách mạng thông tin, cách mạng quản lý, và đang tạo các tiền đề cho bước chuyển biến hiện nay sang một nền kinh tế dựa chủ yếu vào các nguồn tài nguyên thông tin và tri thức, kéo theo một sự mở rộng thị trường toàn cầu hóa. Trong quá trình phát triển này có sự tham gia tích cực, đôi khi là chủ đạo, của phong trào xã hội dân chủ.</p>
+          <p>Mặt khác, khuynh hướng xã hội chủ nghĩa mà ngày nay ta gọi là “theo chủ nghĩa Mác – Lênin” dùng bạo lực cách mạng đã đưa đến thành công của cách mạng vô sản ở Liên Xô rồi một số nước khác, thiết lập chế độ xã hội chủ nghĩa, phát triển nền kinh tế kế hoạch hóa tập trung, lấy sở hữu công cộng tư liệu sản xuất làm nền tảng, do một Đảng Cộng sản lãnh đạo; chế độ đó với kỷ luật của mình đã tạo được một sự phát triển mạnh mẽ công cuộc công nghiệp hóa (chủ yếu là cơ khí hóa và điện khí hóa) trong một giai đoạn đầu, nhưng khi nền kinh tế công nghiệp thế giới phát triển đến giai đoạn của cách mạng quản lý, cách mạng thông tin, của cải cách cơ cấu và của thị trường toàn cầu hóa nhanh chóng, thì hình thức tổ chức kinh tế của chế độ đó gặp phải những khó khăn không khắc phục nổi, không còn đáp ứng được các yêu cầu mới của sự phát triển, và cùng với nhiều lý do khác, đã sụp đổ ở ngưỡng cửa đi vào thời đại của kinh tế thông tin và tri thức trên toàn thế giới vào đầu thập niên 90.</p>
+          <p>Ta cần nhận thấy sự sụp đổ đó là do chế độ xã hội chủ nghĩa “theo mô hình Mác – Lênin” đã không còn thích hợp với những đòi hỏi phát triển của nền sản xuất hiện đại, nền kinh tế thị trường hiện đại; vì vậy sẽ là ảo tưởng nếu nghĩ rằng sự thất bại chỉ là tạm thời và rồi hình thức đó sẽ được phục hồi vào một ngày đẹp trời nào đó trong tương lai.</p>
+
+          <h3 id="i3">3. Toàn cầu hóa và hội nhập</h3>
+          <p>Toàn cầu hóa là xu thế phát triển của nền kinh tế công nghiệp thế giới ở giai đoạn chuyển sang kinh tế thông tin và tri thức, thực chất là của nền kinh tế (tư bản) thế giới. Nhu cầu toàn cầu hóa thị trường trước hết là nhu cầu của các nền kinh tế tư bản phát triển. Nhưng vì sự phát triển của các nền kinh tế đó đang lôi kéo sự phát triển chung của nhân loại, nên hội nhập vào xu thế toàn cầu hóa trở thành một điều không cưỡng được, và mỗi quốc gia phải chấp nhận nếu muốn phát triển.</p>
+          <p>Ta cũng đã chấp nhận hội nhập, dẫu biết mình còn là một nước nông nghiệp, mới bước đầu đi vào công nghiệp hóa. Hội nhập cho ta những cơ hội tiếp cận những thành tựu to lớn chung của nhân loại, nhưng cũng có vô vàn những thách thức vì phải chấp nhận cạnh tranh trong thế còn yếu của ta. Vì vậy, muốn hội nhập thành công thì ta phải thực hiện tích cực và nhất quán hơn những cải cách cần thiết để thích nghi với các yêu cầu phát triển chung của kinh tế thế giới, và trong sự thích nghi đó mà tìm kiếm những khả năng đẩy nhanh sự nghiệp công nghiệp hóa và hiện đại hóa, hoàn thiện các cơ chế thị trường, phát huy mọi năng lực thông tin và tri thức của đất nước, tiến dần lên trình độ chung của thế giới.</p>
+        </section>
+
+        <section id="ii">
+          <h2><a id="ii"></a>II. Về công cuộc đổi mới của ta <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+          <p>Từ 15 năm nay ta đã tiến hành sự nghiệp đổi mới. Nhờ kịp thời đổi mới mà ta đã có những chủ trương, chính sách đáp ứng đòi hỏi của cuộc sống đất nước, khắc phục được những khủng hoảng sâu sắc vào cuối thập niên 80, tạo điều kiện ổn định và phát triển dần nền kinh tế và xã hội nước ta. Những thành tựu mà công cuộc đổi mới đem lại trong vòng chưa đầy hai thập niên qua là rất to lớn: cuộc sống của mọi tầng lớp nhân dân được cải thiện, kinh tế thị trường phát triển đã kích thích bước đầu sự phát triển của mọi thành phần kinh tế, ta đã từng bước hội nhập vào nền kinh tế thế giới và tìm được ở đó nguồn hỗ trợ cho sự phát triển đất nước; Chính phủ liên tục có những chủ trương, chính sách theo hướng hoàn thiện các thể chế của kinh tế thị trường, dân chủ hóa xã hội, và tạo năng lực cần thiết cho việc hội nhập vào xu thế toàn cầu hóa.</p>
+          <p>Cần phải nói rằng những tiến bộ của công cuộc đổi mới đã chứng minh khả năng thích nghi của nước ta, của Đảng lãnh đạo, trước những chuyển biến của cuộc sống đất nước và cuộc sống thế giới, bằng cách từ bỏ dần các nguyên tắc xơ cứng của mô hình “chủ nghĩa xã hội” mà ta đã từng theo. Ta đã vì mục đích sống còn và giàu mạnh của đất nước mà có đủ dũng cảm từ bỏ dần trong thực tế những thể chế kế hoạch hóa tập trung có tính quan liêu, bao cấp, công hữu hóa tư liệu sản xuất và vị trí độc tôn của kinh tế quốc doanh, v.v..., vốn là cốt lõi của chủ nghĩa xã hội “theo mô hình Mác – Lênin”.</p>
+          <p>Chính vì vậy mà với mong muốn công cuộc đổi mới được tiếp tục mạnh mẽ hơn nữa, tôi rất băn khoăn khi đọc trong Dự thảo Báo cáo Chính trị nhiều lần đòi hỏi kiên trì mục tiêu xã hội chủ nghĩa trên nền tảng tư tưởng là chủ nghĩa Mác – Lênin, phát triển kinh tế thị trường định hướng xã hội chủ nghĩa, kiên định con đường đi lên chủ nghĩa xã hội, v.v... Vậy chủ nghĩa xã hội nói đây cần được hiểu theo nghĩa nào? Trong Dự thảo không có một nghĩa xác định cho khái niệm then chốt đó, ta có thể hiểu là có hai nghĩa khác nhau sau đây:</p>
+          <p><strong>1.</strong> Chủ nghĩa xã hội (theo đúng nghĩa của chủ nghĩa Mác – Lênin) là giai đoạn quá độ từ chủ nghĩa tư bản lên chủ nghĩa cộng sản, trong đó nền kinh tế được tổ chức theo hướng công hữu hóa tư liệu sản xuất với hai hình thức quốc doanh và hợp tác xã, phân phối theo kết quả lao động (và do đó không có thị trường), nền chính trị chuyên chính vô sản do một Đảng Cộng sản lãnh đạo.</p>
+          <p><strong>2.</strong> Chủ nghĩa xã hội là “dân giàu, nước mạnh, xã hội công bằng, dân chủ, văn minh”, hay nói theo ngôn ngữ của Chủ tịch Hồ Chí Minh là “hòa bình, thống nhất, độc lập, dân chủ và giàu mạnh”.</p>
+          <p>Trong Dự thảo báo cáo, thuật ngữ xã hội chủ nghĩa được dùng khi theo nghĩa này khi theo nghĩa kia. Nếu hiểu xã hội chủ nghĩa theo nghĩa thứ hai thì không còn gì phải bàn; một nền kinh tế thị trường, một nhà nước dân chủ pháp quyền hướng tới một xã hội công bằng, văn minh và một đất nước giàu mạnh, quả thực là điều mà dân tộc ta mong muốn. Còn nếu hiểu theo nghĩa thứ nhất thì sẽ là mâu thuẫn với những đổi mới mà ta đang thực hiện trong thực tiễn, và như trên đã phân tích, chế độ xã hội chủ nghĩa theo nghĩa đó đã hoàn toàn không còn khả năng thích nghi với cuộc sống của thế giới hiện đại, cũng không thích hợp với cuộc sống đổi mới năng động đang chín nở và phát triển ở nước ta. Phải chăng chính vì thế mà ta gặp trong Dự thảo không ít những mâu thuẫn và lúng túng trong cách giải thích và lập luận về nhiều khái niệm cơ bản như đấu tranh giai cấp, định hướng xã hội chủ nghĩa, tư tưởng Hồ Chí Minh, v.v...</p>
+          <p>Tôi thấy rằng đã đến lúc ta không nên lảng tránh những câu hỏi như: ta nói kiên trì, nhưng kiên trì cái gì, và không cần kiên trì cái gì? Cái mà ta cần kiên trì là sự giàu mạnh của đất nước, hạnh phúc của nhân dân, là thống nhất, độc lập, dân chủ. Còn chủ nghĩa này, chủ nghĩa nọ, cách tổ chức này nọ, cái gì thích hợp cho mục tiêu nói trên thì ta theo, cái gì không còn thích hợp thì ta bỏ. Mác là vĩ đại, Lênin là vĩ đại, nhưng trong học thuyết của các vị có nhiều điều không còn thích hợp với xã hội đầy biến động và đổi thay ngày nay, ta có ràng buộc gì mà phải trung thành tuyệt đối, mà bắt cả dân tộc phải tôn thờ như “nền tảng tư tưởng” thống trị của mình? Tôi nghĩ giả sử Mác và Lênin có sống lại, chắc các vị cũng ngạc nhiên thấy ở trong cái xã hội đã nhiều biến đổi này mà ở tận phương trời xa vẫn có những người “trung thành” với lý thuyết của họ!</p>
+          <p>Vì vậy, ta nên tự giải phóng khỏi những ràng buộc không ai bắt buộc đó, để cho đầu óc mình được trở lại là của chính mình, được tự do tiếp thu những giàu có và tươi mát của các tư tưởng mới, các cách tư duy mới, tự do suy nghĩ và sáng tạo, tìm con đường mới tổ chức xã hội ta thích hợp với nhu cầu phát triển trong thế giới hiện đại, và cũng từ đó mà khắc phục dần những khuyết điểm của cách tổ chức hiện nay đang làm nhức nhối cả xã hội và làm chậm con đường đi lên của đất nước.</p>
+        </section>
+
+        <section id="iii">
+          <h2><a id="iii"></a>III. Con đường phát triển trong giai đoạn trước mắt <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+          <p>Dự thảo xác định “Đường lối kinh tế của Đảng” là: đẩy mạnh công nghiệp hóa, hiện đại hóa, xây dựng nền kinh tế độc lập, tự chủ, đưa nước ta trở thành nước công nghiệp,..., chủ động hội nhập kinh tế quốc tế để phát triển nhanh, có hiệu quả và bền vững,..., thể chế kinh tế thị trường định hướng xã hội chủ nghĩa được hình thành về cơ bản,...</p>
+          <p>Đưa nước ta trở thành một nước công nghiệp, hội nhập thành công vào xu thế toàn cầu hóa của kinh tế thế giới,... quả là con đường đầy gian nan, vì điểm xuất phát hiện nay của ta vẫn còn là một nước nông nghiệp lạc hậu. Và hội nhập là hội nhập vào một nền kinh tế thị trường toàn cầu hóa hiện do các nước công nghiệp phát triển nhất và các công ty hùng mạnh siêu quốc gia chi phối, vận hành trong những quan hệ hợp tác và cạnh tranh phức tạp, ưu thế thuộc về những ai có nguồn lực thông tin và tri thức phong phú nhất. Nhưng chẳng thể khác, và để hội nhập thành công, như Thủ tướng Chính phủ nhiều lần phát biểu, ta phải kiên trì các chủ trương, chính sách nhằm phát huy mọi năng lực phát triển từ trong nội lực của đất nước để đáp ứng mọi đòi hỏi của một thị trường trong nước ngày càng mở rộng, và tạo thế cạnh tranh trong thị trường quốc tế.</p>
+          <p>Trải qua các giai đoạn phát triển lịch sử của mình, loài người đã từng biết đến những cách tạo ra của cải và sự giàu có khác nhau: Trong kinh tế nông nghiệp thì của cải được tạo ra từ chăn nuôi, trồng trọt; còn kinh tế công nghiệp thì đã trải qua nhiều cách làm giàu: (1) trong giai đoạn đầu, của cải được tạo ra chủ yếu bằng khai thác lao động và tài nguyên tự nhiên; (2) tiếp đó, bằng các sản phẩm được chế biến với các công nghệ chế tạo; (3) khi kinh tế thị trường phát triển thì một phần quan trọng trong sự giàu có được tạo ra từ khu vực dịch vụ (cho các hoạt động kinh tế như thương mại, ngân hàng, tài chính, cho đời sống, và mọi lĩnh vực khác); (4) và đến giai đoạn hiện nay, một phần ngày càng lớn (ở các nước phát triển nhất là trên 50%) của cải và sự giàu có được tạo ra từ các nguồn lực thông tin và tri thức. Trong các cách làm giàu đó thì hiện nay chủ yếu ta mới “mạnh” ở nông nghiệp và ở khai thác lao động và tài nguyên tự nhiên, tức là ở những cách làm giàu kém hiệu quả nhất trong nền kinh tế hiện đại.</p>
+          <p>Chuyển dịch mạnh cơ cấu kinh tế, cơ cấu lao động theo hướng công nghiệp hóa và hiện đại hóa, như nêu trong Dự thảo, để tạo ra những khả năng làm giàu theo những cách có hiệu quả hơn là hết sức cần thiết. Tuy nhiên, để tìm được những giải pháp đúng đắn cho sự cần thiết đó trong thế giới phức tạp và đầy biến động hiện nay là điều không dễ, và chắc không một ai, không một cơ quan nào có thể có đủ hiểu biết và kinh nghiệm để nghĩ thay cho toàn xã hội được. Vì vậy, trên cơ sở mục tiêu chung đó, cần mở rộng và hoàn thiện các thể chế thị trường để tạo môi trường tự do kinh doanh, tự do làm giàu cho mọi tài năng được tự do suy nghĩ, sáng tạo, đua tranh, từ đó mà hình thành năng lực làm giàu chung của đất nước.</p>
+        </section>
+
+        <section id="iv">
+          <h2><a id="iv"></a>IV. Về phát triển giáo dục và khoa học <button class="copy-anchor" type="button" onclick="copyAnchor(this)">Sao chép liên kết</button></h2>
+          <p>Giáo dục – đào tạo và khoa học – công nghệ là hai lĩnh vực chủ chốt tạo nên nguồn lực con người, nguồn lực tri thức cho sự phát triển của đất nước. Tôi chỉ xin góp hai ý kiến sau đây:</p>
+          <p><strong>1. Về giáo dục:</strong> Cải cách giáo dục đang được xem là vấn đề cấp thiết, được toàn xã hội quan tâm. Có rất nhiều vấn đề cần được đổi mới, nhưng có lẽ vấn đề then chốt nhất sẽ là cải cách nội dung giáo dục. Thế hệ tương lai cần biết gì, cần có những tri thức gì, và những năng lực gì trong hoạt động tri thức? Ta biết rằng nhiều tri thức hiện được dạy ở nhà trường đã lạc hậu, không phù hợp với những hiểu biết mới, hiện đại về thế giới vật chất, về cuộc sống và xã hội mà mình đang sống. Mà con người hiện đại thì cần có những hiểu biết hiện đại về tự nhiên, về đất nước, về kinh tế, về xã hội, về thế giới hiện đại mà anh ta đang sống. Và quan trọng hơn, cần có năng lực tự tìm kiếm tri thức, tư duy độc lập, óc sáng tạo theo những phương pháp tư duy mới, phù hợp với những hiểu biết mới về nhận thức. Nhưng, những nội dung đó cần được lựa chọn ra sao, được cấu trúc trong chương trình các cấp học thế nào, những gì có thể truyền thụ trong nhà trường và những gì cần được tìm kiếm tiếp tục trong cuộc đời,... là những vấn đề lớn trong cải cách nội dung giáo dục mà ta cần nghiên cứu một cách khoa học để có được những giải pháp thỏa đáng.</p>
+          <p><strong>2. Về khoa học:</strong> Hệ thống nghiên cứu khoa học của ta chưa được phát triển thích đáng để đáp ứng các đòi hỏi của nhu cầu phát triển đất nước; và hệ thống quản lý khoa học – công nghệ lại còn lạc hậu hơn, thiếu năng lực và tâm huyết, với một hệ thống các chương trình, các đề tài có nhiều nội dung không thích hợp với đòi hỏi của cuộc sống và được quản lý thiếu hiệu quả. Cải cách hệ thống quản lý và tăng cường các hoạt động nghiên cứu khoa học, công nghệ là hết sức cấp thiết; ở đây tôi chỉ lưu ý đến nhu cầu đặc biệt về việc hiện đại hóa các nội dung nghiên cứu trong các lĩnh vực khoa học tư duy và nhận thức, khoa học tổ chức và quản lý, khoa học kinh tế và xã hội. Đó là những lĩnh vực có nhiều cách tiếp cận mới, nhiều hiểu biết mới, do sự phát triển có tính cách mạng trong khoa học của thế kỷ 20 đã cho ta những cách nhìn mới, và cũng do các đối tượng như kinh tế, xã hội trong thế kỷ 20 đã liên tục có nhiều chuyển biến mới, các hoạt động của ta sẽ không có hiệu quả nếu ta không có được những cách nhìn và cách hiểu thích hợp. Những nghiên cứu nghiêm túc trong các lĩnh vực khoa học này chắc chắn sẽ cung cấp cơ sở lý luận hiện đại cho việc đổi mới Đảng, đổi mới ý thức của xã hội, là những điều cần thiết cho đổi mới và hiện đại hóa đất nước trong thế kỷ mới mà ta vừa bước vào với bao niềm hy vọng.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
