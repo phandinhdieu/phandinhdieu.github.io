@@ -144,24 +144,37 @@ body{
 @media(max-width:767px){
   #nav{
     position:fixed !important;
-    top:50px !important;
-    left:0 !important; right:0 !important;
-    width:100% !important;
-    height:auto !important;
-    max-height:calc(100vh - 50px);
-    overflow-y:auto;
+    top:0 !important; bottom:0 !important;
+    left:-84% !important; right:auto !important;
+    width:80% !important;
+    height:100% !important;
+    max-height:100% !important;
+    overflow-y:auto !important;
     background:#14213d !important;
-    padding:8px 0 16px !important;
-    box-shadow:0 8px 24px rgba(0,0,0,.3);
+    padding:60px 0 24px !important;
+    box-shadow:none !important;
+    transition:left .28s ease !important;
+    z-index:1000 !important;
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+  #nav.open{
+    left:0 !important;
+    box-shadow:6px 0 28px rgba(0,0,0,.55) !important;
   }
   #nav #navcontainer .wsite-menu-default li a{
-    font-size:16px !important;
-    padding:14px 24px !important;
-    border-bottom:1px solid rgba(255,255,255,.08);
+    font-size:17px !important;
+    padding:15px 24px !important;
+    border-bottom:1px solid rgba(255,255,255,.09);
     text-align:left !important;
   }
   #close-overlay.visible{
-    background:transparent !important;
+    position:fixed !important;
+    top:0 !important; left:0 !important; right:0 !important; bottom:0 !important;
+    background:rgba(0,0,0,.45) !important;
+    z-index:999 !important;
+    display:block !important;
   }
 }
 </style>
