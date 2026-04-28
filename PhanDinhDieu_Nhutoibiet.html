@@ -132,17 +132,23 @@ pre{background:#f3f0e8;padding:1rem;border-radius:6px;overflow-x:auto;font-size:
 
 /* ── Figures ── */
 .art-figure{
-  text-align:center;margin:1.8rem -0.5rem 1.5rem;
+  text-align:center;margin:1.8rem 0 1.5rem;
 }
 .art-figure img{
-  max-width:88%;border-radius:6px;
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  border-radius:6px;
   box-shadow:0 3px 18px rgba(0,0,0,0.13);
   border:1px solid #e8e0d0;
+  margin:0 auto;
 }
 .art-figure figcaption{
   font-size:0.83rem;color:#888;margin-top:0.6rem;
   font-style:italic;font-family:'Inter',sans-serif;
-  max-width:88%;margin-left:auto;margin-right:auto;
+  max-width:100%;margin-left:auto;margin-right:auto;
+  padding:0 0.5rem;
 }
 hr.page-break{border:none;border-top:1px dashed #ddd;margin:1.5rem 0}
 
@@ -170,9 +176,12 @@ sup a{color:#7a1520;text-decoration:none;font-size:0.75em}
 @media(max-width:600px){
   .cover h1{font-size:1.8rem}
   .cover-sub{font-size:1.1rem}
-  .chapter-header,.chapter-body{padding:1.5rem 1.3rem}
-  #toc{padding:1.5rem 1.3rem}
+  .chapter-header,.chapter-body{padding:1.5rem 1rem}
+  #toc{padding:1.5rem 1rem}
   .chapter-title{font-size:1.2rem}
+  .page{padding:0 0.75rem}
+  .art-figure{margin:1.2rem 0 1rem}
+  .art-figure img{border-radius:4px}
 }
 @media print{
   .chapter-top,.cover-note{display:none}
