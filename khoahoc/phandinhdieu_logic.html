@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Lôgích Toán và Cơ sở Toán học — Phan Đình Diệu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#f7f8fc;--surface:#fff;--text:#0f1530;--muted:#55607a;
+  --accent:#8f1d2c;--line:#e7e9f4;--highlight:#fdf5f6;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0b1020;--surface:#0f152b;--text:#e7ecff;--muted:#9aa3c0;
+  --accent:#c9a0a7;--line:#1d274c;--highlight:#160f12;
+}}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Merriweather',Georgia,serif;
+  font-size:1.05rem;line-height:1.95;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.wrap{max-width:900px;margin:70px auto 0;padding:20px 14px 60px}
+.content{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.06);
+  padding:3rem 2.25rem;
+}
+
+/* Top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:1000;
+  backdrop-filter:blur(8px);
+  background:color-mix(in srgb,var(--surface) 80%,transparent);
+  border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:900px;margin:0 auto;padding:10px 14px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:transparent;color:var(--text);
+  padding:7px 12px;border-radius:8px;cursor:pointer;
+  font-size:0.82rem;font-family:inherit}
+.btn:hover{background:var(--line)}
+
+/* Book header */
+.book-title{
+  font-family:'Merriweather',serif;
+  font-size:1.7rem;font-weight:700;
+  color:var(--accent);text-align:center;
+  line-height:1.3;margin:0 0 0.5rem;
+  letter-spacing:-0.01em;
+}
+.book-subtitle{
+  text-align:center;font-size:0.88rem;
+  color:var(--muted);font-style:italic;margin:0 0 0.3rem;
+  font-family:'Inter',sans-serif;
+}
+.book-author{
+  text-align:center;font-size:1rem;font-weight:600;
+  color:var(--text);margin:0 0 2rem;
+  font-family:'Inter',sans-serif;
+}
+.header-rule{border:none;border-top:2px solid var(--accent);opacity:.25;margin:0 0 2.5rem}
+
+/* Section headings */
+.section-title{
+  font-family:'Merriweather',serif;
+  font-size:1.35rem;font-weight:700;
+  color:var(--accent);text-align:center;
+  margin:3rem 0 1.8rem;
+  padding-top:2rem;
+  border-top:1px solid var(--line);
+}
+.section-title:first-of-type{border-top:none;padding-top:0;margin-top:0}
+
+.page-num{
+  font-size:0.75rem;font-weight:600;color:var(--muted);
+  font-family:'Inter',sans-serif;
+  text-align:center;letter-spacing:.08em;text-transform:uppercase;
+  margin:2rem 0 0.5rem;
+}
+.page-break{
+  border:none;border-top:1px dashed var(--line);
+  margin:2rem 0;
+}
+
+/* Body text */
+p{margin:0 0 1.1em;text-align:justify}
+p:last-child{margin-bottom:0}
+
+em,i{font-style:italic}
+strong,b{font-weight:700}
+
+/* Sign-off */
+.signoff{
+  text-align:right;margin-top:2rem;
+  font-style:italic;color:var(--muted);
+  font-family:'Inter',sans-serif;font-size:0.95rem;
+}
+.signoff-name{
+  font-weight:700;font-style:normal;
+  color:var(--text);font-size:1rem;
+  display:block;margin-top:0.2rem;
+}
+
+/* Math / formula inline */
+.formula{font-style:italic}
+
+/* Source note */
+.source-note{
+  margin-top:3rem;padding:1rem 1.4rem;
+  background:var(--highlight);
+  border-left:3px solid var(--accent);
+  border-radius:0 6px 6px 0;
+  font-size:0.82rem;color:var(--muted);
+  font-family:'Inter',sans-serif;line-height:1.65;
+}
+
+@media(max-width:700px){
+  .wrap{padding:10px 8px 40px}
+  .content{padding:1.75rem 1rem}
+  .book-title{font-size:1.3rem}
+  .section-title{font-size:1.1rem}
+  body{font-size:0.97rem;line-height:1.85}
+  .btn{padding:6px 10px;font-size:0.78rem}
+}
+@media(max-width:420px){
+  .content{padding:1.4rem 0.8rem}
+  .book-title{font-size:1.15rem}
+  body{font-size:0.93rem}
+}
+@media print{
+  .topbar,.btn{display:none!important}
+  body{background:#fff!important;color:#000!important}
+  .content{border:0!important;box-shadow:none!important}
+}
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="btn" href="../index.html">← Trang Phan Đình Diệu</a>
+    <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Lên đầu</button>
+    <button class="btn" onclick="window.print()">In / Lưu PDF</button>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="content">
+
+  <h1 class="book-title">Lôgích Toán và Cơ sở Toán học</h1>
+  <p class="book-subtitle">Bộ sách Toán cao cấp · Viện Toán học</p>
+  <p class="book-subtitle">Nhà xuất bản Đại học Quốc gia Hà Nội · 2003</p>
+  <p class="book-author">Phan Đình Diệu</p>
+  <hr class="header-rule">
+
+  <h2 class="section-title">Lời mở đầu</h2>
+
+  <div class="page-num">Trang vi</div>
+
+  <p>Tập giáo trình này giới thiệu một số vấn đề cơ bản nhất của lôgích toán và cơ sở toán học, một môn toán học tuy có nguồn gốc từ rất sớm nhưng các nội dung chủ yếu của nó trên thực tế mới được hình thành hoặc hệ thống hoá từ đầu thế kỷ XX đến nay.</p>
+
+  <p>Ta biết rằng toán học là một ngành khoa học lý thuyết được phát triển trên cơ sở toán hình thức và các qui luật tập luận của tư duy lôgích hình thức. Các qui luật cơ bản của lôgích hình thức đã được phát triển từ thời Aristote (384–322 trước Công nguyên) và hệ tiên đề đầu tiên của hình học đã được xây dựng bởi Euclide cũng vào khoảng 300 năm trước Công nguyên. Sau thời kỳ rực rỡ đó của văn minh cổ Hy lạp, phải trải qua một giai đoạn ngừng trệ hàng nghìn năm, mãi đến các thế kỷ 16, 17, các ngành khoa học, đặc biệt là toán học, mới tìm lại được sự phát triển tiếp tục. Giai đoạn mới, khởi đầu từ các phát minh của Newton, Leibnitz về tính vi phân và giải tích toán học, đã đưa toán học từ phạm vi của "hữu hạn, bất biến" sang địa hạt của "vận động, vô hạn và liên tục", nhưng trong suốt nhiều thế kỷ phát triển, toán học vẫn chứa trong mình những "lỗ hổng" về cơ sở lý luận – cơ sở lôgích hình thức cho các khái niệm cơ bản như số thực, đại lượng vô cùng bé, giới hạn, biến thiên liên tục, v.v...</p>
+
+  <p>Cho đến cuối thế kỷ 19 bước sang đầu thế kỷ 20 lý thuyết tập hợp của Cantor ra đời đưa đến cho toán học niềm hy vọng giải quyết cuộc "khủng hoảng" về cơ sở lý luận đó. Cantor lập lý thuyết tập hợp coi là sự hợp thức hoá phép trực tuyến về "vô hạn thực tại", xem rằng trong tập hợp có thể hình dung một tập hợp bất kỳ dưới dạng hoàn chỉnh, trong đó các phần tử tồn tại đồng thời, đặt quan niệm về "vô hạn thực tại" đối với các tập hợp vô hạn, không còn bó hẹp trong "vô hạn tiềm năng". Cantor cũng đặt việc xây dựng một lý thuyết về số lượng của các tập hợp vô hạn đó được gọi là lý thuyết lực lượng.</p>
+
+  <p>Lý thuyết tập hợp của Cantor quả thực đã cung cấp một cơ sở vững chắc cho nhiều ngành toán học, không những chỉ đem đến các kết quả từ giải tích toán học, mà còn cấp lý thuyết nền cho nhiều ngành toán học khác. Tuy nhiên, ngay trong những năm đầu của thế kỷ 20, người ta tiếp tục phát triển trong</p>
+
+  <hr class="page-break">
+  <div class="page-num">Trang vii</div>
+
+  <p>lý thuyết "ngây thơ" về tập hợp có chứa đựng nhiều nghịch lý: nghịch lý Russel về "tập hợp của tất cả các tập hợp không là phần tử của chính mình", nghịch lý do chính Cantor phát hiện về "tập hợp tất cả các tập hợp", nghịch lý Bulari-Forti về "ordinal của tập sắp thứ tự toàn toàn của tất cả các số ordinal", v.v... Việc phát hiện ra các nghịch lý như vậy đã làm lung lay lòng tin của một số nhà toán học và giá trị "nền tảng" của lý thuyết tập hợp, và khó khăn mới đó đã dẫn đến những đề nghị khác nhau về cách khắc phục. Cách khắc phục được nhiều người chú ý nhất và có ảnh hưởng nhiều nhất là hạn chế nghiêm ngặt trong đặt các khái niệm "tập hợp" bằng cách xây dựng những tiên đề cho lý thuyết tập hợp đó trong đó không thể có những tập hợp nghịch lý như các nghịch lý kể trên. Cách này đã chứng tỏ là rất hiệu lý, nhiều lý thuyết tiên đề về tập hợp đã ra đời và đáp ứng các yêu cầu hạn chế đó.</p>
+
+  <p>Cùng với tiên đề hoá lý thuyết tập hợp cũng như tiên đề hoá các lý thuyết toán học, người ta cũng nghĩ đến tiên đề hoá các hệ thống lôgích – việc tiên đề hoá triệt để như vậy dẫn đến việc hình thức hoá, và ta được các hệ hình thức hoá của hệ thống lôgích (mệnh đề và tản từ) rồi trên cơ sở đó, các hệ hình thức hoá của lý thuyết toán học. Khi toàn bộ một lý thuyết toán học (cùng với cơ sở lôgích của nó) đã được hình thức hoá, thì việc làm toán có thể thực hiện các thao tác trị toán học hình thức đó, và làm toán chỉ còn là việc đồng hoá thành các thao tác trị toán học hình thức đó (thao tác đó được hình thức hoá để học sinh kiểm tra được nhiều bước tiếp theo). Tuy nhiên, có những vấn đề về cơ sở lý thuyết toán học hình thức đó thì lại không thể được xét bên trong chúng, chẳng hạn các vấn đề về tính mâu thuẫn, về tính đầy đủ của lý thuyết, về tính độc lập của các tiên đề, v.v... Những vấn đề như vậy có ý nghĩa quan trọng về cả lý thuyết lôgích và toán học và được xét trong một <em>siêu toán học</em> (metamathematics), tức một siêu lý thuyết nằm ngoài các lý thuyết hình thức nói trên.</p>
+
+  <p>Vào các thập niên đầu của thế kỷ 20, để cứu vãn nền tảng vững chắc cho toán học, Hilbert đã đề xuất một chương trình có nội dung tóm lược như sau: sau khi Jan đã bổ sung đầy đủ các yếu tố cơ sở, ta hình thức hoá toàn bộ toán học bao gồm cả tiên đề lôgích điền – <span class="formula">A → A</span>) là cơ sở lẫn cây của cơ sở của toán học. Để bảo vệ toán học với mình tính phi mâu thuẫn của một hệ hình thức, rồi sau đó chứng minh và để không ai có thể công kích được. Đề nghị siêu toán đó sẽ là một vấn đề không sử dụng quan niệm "vô hạn thực tại", chỉ hạn ngạch toán học còn trong và cũng vội nó công hạn lên, mà quan niệm hạn chế về vô hạn là "vô hạn tiềm năng". Vào những năm 30 của thế kỷ, nhà toán học gốc Áo Gödel đã xây dựng được</p>
+
+  <hr class="page-break">
+  <div class="page-num">Trang viii</div>
+
+  <p>cho "số học hình thức" một thứ siêu toán thoả mãn các yêu cầu của hữu hạn, đó là số học của các hàm và quan hệ đệ qui. Nhưng rồi bất ngờ thay, chính bởi lý thuyết hình thức phi mâu thuẫn đó, Gödel đã chứng minh được các định lý Gödel: nếu số học hình thức phi mâu thuẫn thì nó không thể tự mình chứng minh tính phi mâu thuẫn của số học hình thức đó! Nói cách khác, mưu đồ hình thức hoá toán học rồi tìm cách chứng minh tính phi mâu thuẫn của nó bên trong hệ hình thức đó hay với sự trợ giúp của một siêu toán hữu hạn là thất bại! Các định lý Gödel có tác động quan trọng đối với cơ sở nhận thức về toán học, và qua đó cũng có tác động to lớn đối với nhận thức khoa học nói chung.</p>
+
+  <p>Một vấn đề khác cũng rất được quan tâm trong cơ sở toán học là vai trò của một vài giả thuyết hay tiên đề về lý thuyết tập hợp, cụ thể là giả thuyết liên tục và tiên đề chọn. Trong số 23 bài toán mà Hilbert đặt ra cho thế kỷ 20, bài toán về giả thuyết liên tục đứng đầu tiên (số 1). Đến những năm 30–40, Gödel xây dựng mô hình cho lý thuyết tập hợp gồm cả tập "kiến thiết được", và chứng minh trong mô hình này giả thuyết liên tục không bị bác bỏ và tiên đề chọn đều đúng. Và đến giữa những năm 60, Cohen bằng khái niệm cưỡng bức (forcing) độc đáo của mình đã xây dựng được các mô hình và chứng minh rằng trong tập hợp (có phép trực tuyến vô hạn thực tại) cả tiên đề chọn và giả thuyết liên tục có thể là không đúng hoặc cả hai đều không đúng. Như vậy, cả tiên đề chọn và giả thuyết liên tục đều độc lập với lý thuyết tập hợp. Nhờ kết quả này, ta có thể có khả năng xây dựng những lý thuyết tập hợp trong đó tiên đề chọn (và giả thuyết liên tục) là đúng hoặc không đúng, tương tự như ta đã có hình học Euclide và các hình học phi Euclide.</p>
+
+  <p>Tập bài giảng này sẽ cố gắng trình bày một cách chọn lọc và cô đọng các kết quả nói trên của lôgích toán học và cơ sở toán học. Chương I và chương II trình bày về cơ sở lôgích mệnh đề và lôgích tản từ, cơ sở của lý thuyết toán học cấp một, chương III dành cho số học hình thức hoá và các định lý Gödel, chương IV trình bày lý thuyết tập hợp với các kết quả về tính phi mâu thuẫn và giá trị hành chục lập của giả thuyết liên tục và tiên đề chọn như đã nói trên. Cũng có thể xem đây là một tập bài giảng về siêu toán học, trong đó siêu toán học trong chương III đã được phát triển theo tinh thần hữu hạn luận, còn trong các chương khác không hạn chế trong hữu hạn luận và được phát triển như một lý thuyết tiên tức và tiên đề của nó. Các chứng minh trong bày tương đối đầy đủ, đối với một số chứng minh không có điều kiện trình bày chi tiết thì đều có nói rõ trong bài để bạn đọc có thể tìm hiểu thêm, riêng đối với các chứng minh của các định lý Cohen thì bài giảng cô gắng trình bày chi tiết kiến trúc của các mô hình, còn một số lý giải đòi hỏi những lập luận khá phức tạp và tế nhị không thể trình bày đầy đủ trong tập bài giảng này (trong bài có nói rõ, bạn đọc quan tâm có thể tìm đọc từ bản gốc công trình của Cohen).</p>
+
+  <p>Nói về cơ sở toán học, nhưng tập bài giảng này cũng chỉ đề cập đến khuynh hướng chủ yếu mà đại đa số các nhà toán học quan tâm. Các hướng lôgích chủ nghĩa, trực quan chủ nghĩa,... chưa được đề cập đến trong các bài giảng này. Cuối tập bài giảng này, sau khi người đọc đã làm quen với các kiến thức cần thiết, trong <em>Lời bàn cuối sách</em> tác giả sẽ xin bàn tiếp về một vài vấn đề đáng quan tâm của nhận thức về Toán học.</p>
+
+  <div class="signoff">
+    <em>Hà Nội, tháng 10 năm 2000</em>
+    <span class="signoff-name">Phan Đình Diệu</span>
+  </div>
+
+  <h2 class="section-title">Lời bàn cuối sách</h2>
+
+  <div class="page-num">Trang 99</div>
+
+  <p>Lôgích toán và cơ sở Toán học, với nội dung như được trình bày trong các chương của sách này, đã được hình thành và phát triển chủ yếu vào cuối thế kỷ 19 và nửa đầu thế kỷ 20, trong một giai đoạn bùng phát nhiều ý tưởng và kết quả nghiên cứu đặc sắc theo hướng tìm kiếm và xây dựng một nền móng "vững chắc" cho lâu dài Toán học.</p>
+
+  <p>Toán học, như triết gia A.N. Whitehead từng nhận định, có thể coi là thành quả của sáng tạo độc đáo nhất trong hoạt động tinh thần của con người, toán học thuần tuý đứng ở đỉnh cao của tư duy duy lý, các kết quả toán học được xem là khuôn mẫu của sự chính xác, nghiêm ngặt và chắc chắn, người ta thường lấy lượng toán học được ứng dụng để đo mức độ nghiêm ngặt của một lý thuyết khoa học. Nhưng dù Toán học có đối tượng trực tiếp là các ý tưởng, các khái niệm trừu tượng, và phương pháp lôgích một cách nghiêm ngặt, thì Toán học cũng là một ngành khoa học, và trong quá trình tiến hoá của mình, nó cũng có thể được phát hiện là có những khiếm khuyết và phải tìm cách khắc phục những khiếm khuyết để phát triển tiếp tục.</p>
+
+  <p>Như đã giới thiệu trong <em>Lời mở đầu</em>, cuộc khủng hoảng về cơ sở của Giải tích toán học vào cuối thế kỷ 19 đã dẫn đến sự ra đời của lý thuyết Cantor về tập hợp, hợp thức hoá phép trực tuyến về vô hạn thực tại, tạo cơ sở nền móng cho Giải tích toán học và cho Toán học nói chung. Nhưng ngay sau đó, việc phát hiện những nghịch lý trong bản thân lý thuyết tập hợp đã làm lung lay cái cơ sở nền móng vừa được xác lập. Và vấn đề xây dựng nền móng cho Toán học trở nên phức tạp và khó khăn hơn nhiều, không chỉ đơn giản là việc tìm định nghĩa lại hay đề cập đến những quan niệm mới để ban đầu được phác nhiên còn là đúng, và cả tính đúng đắn của một số qui tắc lôgích của suy luận mà trước đó chưa hề bị hoài nghi. Một số trường phái đề xuất các giải pháp khác nhau cho việc xây dựng nền móng Toán học đã xuất hiện, nổi bật là ba phái lớn sau đây:</p>
+
+  <p>Phái <em>chủ nghĩa lôgích</em> (logicism) khởi đầu bởi G. Frege, và tiếp bởi B. Russell, A. Whitehead, xem rằng không có các đối tượng toán học tồn tại độc lập, các đối tượng toán học (như các con số) là các khái niệm trừu tượng, có thể được xác định bởi một chuỗi các định nghĩa, do đó có thể</p>
+
+  <hr class="page-break">
+  <div class="page-num">Trang 100</div>
+
+  <p>diễn qua các thuật ngữ lôgích, từ đó mọi phán đoán, mọi định lý toán học cũng là các phán đoán lôgích, bằng cách đó toán học thành một bộ phận của lôgích, và vấn đề qui về vấn đề tính lôgích của vấn đề lôgích, mà cái lôgích được dùng trong mọi thế giới có thể, không phụ thuộc vào các đối tượng.</p>
+
+  <p>Phái <em>chủ nghĩa trực giác</em> (intuitionism) mà những người đề xướng chủ chốt là L.E.J. Brouwer, A. Heyting, không những không chấp nhận việc hợp thức hoá phép trực tuyến về vô hạn "thực tại" trong Toán học, mà còn không chấp nhận nhiều qui luật của lôgích cổ điển không được áp dụng trong Toán học liên quan đến các liên kết lôgích "không", "hay là", "tồn tại", như các qui luật <span class="formula">¬¬A → A</span>, <span class="formula">A ∨ ¬A</span>, <span class="formula">¬∀x(A(x)) → ∃x¬(A(x))</span>. Phái này đòi hỏi rằng mọi chứng minh phải có thể xây dựng được, tức là phải tìm được đối tượng đó bằng cách xây dựng cụ thể (constructive). Phái trực giác cũng đã bắt đầu xây dựng một Toán học trực giác có nhiều kết quả trái với Toán học cổ điển, nhưng vì nhiều quan niệm còn chưa được xác hoá, lôgích trực giác chưa được phát triển, nên việc xây dựng đó không được tiếp tục. Vì sau này, khi các lý thuyết về thuật toán ra đời, có thể gắn kết cho khái niệm "tồn tại" hay "xây dựng được" một nội dung thuật toán rõ ràng, cách chính xác, nhiều nhóm toán học đã phát triển các hướng Toán học kiến thiết trên cơ sở các phạm trù của phái chủ nghĩa trực giác và các thành tựu của lý thuyết thuật toán, có những đóng góp đặc sắc vào sự phát triển Toán học nói chung.</p>
+
+  <p>Khác với phái chủ nghĩa trực giác, phái <em>chủ nghĩa hình thức</em> (formalism) khởi xướng bởi Hilbert và tiếp bởi P. Bernays, W. Ackermann, J. von Neumann và nhiều người khác, tuy thừa nhận rằng các mệnh đề toán học về tính hữu hạn thực tại trong Toán học vô hạn ra ngoài giới hạn nhận thức của con người hữu hạn. Hilbert chủ trương rằng không vì thế mà phủ nhận toàn bộ toán học phi cổ điển, không phải bỏ đi những nghiên cứu rất tốt và nhiều thứ bắt đầu từ chứng minh, mà hãy tiến hành một <em>chương trình</em>: tiên đề hoá và hình thức hoá toàn bộ toán học bao gồm cả tiên đề lôgích cổ điển thành một lý thuyết tiên đề hình thức, rồi sau đó sẽ chứng minh tính phi mâu thuẫn của lý thuyết hình thức đó. Toán học, sau khi đã được hình thức hoá, sẽ được biểu hiện thành</p>
+
+  <hr class="page-break">
+  <div class="page-num">Trang 101</div>
+
+  <p>một hệ thống ký hiệu hình thức, làm toán trở thành thực hiện các thao tác trên các ký hiệu hình thức tuân theo các luật suy diễn hình thức, tính phi mâu thuẫn của hệ thống ký hiệu hình thức sau đó được chứng minh không suy diễn trong lý thuyết đó lý thuyết hình thức mâu thuẫn nhau dạng A và ¬A. Định nghĩa đó mở đường cho khả năng chứng minh tính phi mâu thuẫn của lý thuyết mà không phải dùng đến phương pháp phỏng mô hình vốn là phương pháp truyền thống khi chứng minh tính phi mâu thuẫn của một lý thuyết tiên đề hình (bằng cách xây dựng công cụ lý thuyết đó trong một lý thuyết khác). Để bảo đảm tính phi mâu thuẫn của mọi phần, Hilbert còn đề xuất việc dùng một siêu toán với những hạn chế của hữu hạn luận để hình thức hoá các hệ hình thức.</p>
+
+  <p>Nếu chương trình Hilbert được thực hiện mỹ mãn, thì toàn bộ toán học có thể nói và phép trực tuyến vô hạn thực tại sẽ có thể được bảo vệ một cách chắc chắn bởi tính phi mâu thuẫn của chứng minh, và điều đó sẽ không gì cũng phải bác bỏ chứng minh nhưng không thể bác bỏ và những hướng nghiên cứu rất tốt và nhiều thứ bắt đầu từ chứng minh. Có thể nói nét nổi bật nhất về hướng phát triển toán học trong thế kỷ 20 vẫn đến được theo hướng đó được những trường phái "chủ nghĩa nền tảng" đề ra.</p>
+
+  <p>Giáo trình <em>Lôgích Toán học và Cơ sở Toán học</em> của chúng ta cũng chủ yếu trình bày các nghiên cứu theo hướng đó, trước hết là nghiên cứu các lý thuyết tiên đề và lôgích hoá của lôgích mệnh đề và lôgích tản từ. Trong việc nghiên cứu các lý thuyết tiên đề cấp một, rồi tiếp đến các lý thuyết hình thức của số học và lý thuyết tập hợp. Đặc biệt là lý thuyết tiên đề và độc lập của số học và lý thuyết tập hợp, ta đã tuân theo chương trình Hilbert, chỉ sử dụng một thứ siêu toán với những hạn chế của hữu hạn luận, cụ thể là sử dụng số học nguyên thuỷ trong phạm vi số học của các hàm và quan hệ đệ qui. Và những kết quả thu được thật là bất ngờ và đặc sắc: đó là các định lý Gödel (định lý 3.13 và chương 3) về tính không đầy đủ của số học hình thức S, về việc nếu S phi mâu thuẫn thì không thể chứng minh được trong S tính phi mâu thuẫn của mình; các định lý của Gödel và Cohen trong chương 4 về tính phi mâu thuẫn và tính độc lập của một số giả thuyết và tiên đề quan trọng trong các lý thuyết tập hợp (như tiên đề <span class="formula">V = L</span>, giả thuyết liên tục và tiên đề chọn) đối với lý thuyết tập hợp hệ Hilbert, và hơn thế, còn bác bỏ mọi mưu toan tìm kiếm bên trong Toán học một nền tảng chắc và vĩnh cửu hơn Toán học, một lần cho mãi mãi.</p>
+
+  <p>Không thể có một nền tảng như vậy, bởi nếu có thì bản thân nó cũng không thể chứng minh tính phi mâu thuẫn của mình. Không những thế, nó không thể được chứng minh trong bản thân Toán học, mà phải tìm ở ngoài Toán học.</p>
+
+  <hr class="page-break">
+  <div class="page-num">Trang 102</div>
+
+  <p>Như vậy là, con đường tìm kiếm nền tảng cho Toán học trong những thập niên đầu của thế kỷ 20 đã đi đến những kết quả trái với mong đợi, nhưng chính vì thế mà đã dẫn đến những tư duy mới trong nhận thức về Toán học. Toán học không chỉ là những khái niệm trực tiếp là các ý tưởng, những không tiếp theo các khái niệm trừu tượng. Toán học, không chỉ là những ý niệm của các nhà toán học, cũng không phải là những ý niệm chủ quan tách rời thực tế như những người thuộc trường phái Platon quan niệm, mà là những ý tưởng, những khái niệm được hình thành từ những câu hỏi riêng của nhiều ngành khoa học khác, cũng là sản phẩm có tính chất văn hoá, xã hội và lịch sử.</p>
+
+  <p>Hình học Euclid là tuyệt vời về nghĩa nhận thức, với các cấu trúc không gian, trong thế giới vĩ mô thì ta có thể sử dụng các hình thức tuyệt vời về thực tại; không gian, nhưng khi thấy nó không còn thích hợp thì ta có thể không dùng nó mà thay bằng các qui tắc lôgích bài trung là không còn thích hợp với các tập hợp vô hạn hay không còn thích hợp với các lớp luận, các định lý Cohen cho ta thấy cần cứ phải, nếu dùng lý thuyết tập hợp <span class="formula">V = L</span>, mà cũng lý thuyết tập hợp có tiên đề để chọn (hoặc giả thuyết liên tục đó), một lý thuyết tập hợp có tiên đề để chọn. Sau mỗi giai đoạn đó lại đi tìm kiếm một nền tảng cho Toán học, ngày nay Toán học đã có những phát triển vượt bậc, không phải theo hướng mà các nhà sáng lập các trường phái "chủ nghĩa nền tảng" (foundationalism) đề ra, mà là các trường phái đó hỏi con nhận thức.</p>
+
+  <p>Không thể có một nền tảng như vậy, bởi nếu có thì bản thân nó cũng không thể chứng minh tính phi mâu thuẫn và tính độc lập đó là mình đúng. Nhận thức về Toán học, đang có những đổi mới quan trọng, sẽ góp phần tích cực tạo nên cách nhìn mới, cơ sở mới cho sự phát triển rực rỡ hơn của Toán học, làm cho Toán học có những đóng góp ngày càng lớn hơn cho sự phát triển của các ngành khoa học, và nói chung đối với yêu cầu nhận thức thực tiễn trong thời đại phát triển mới của loài người.</p>
+
+  <div class="signoff">
+    <span class="signoff-name">Phan Đình Diệu</span>
+  </div>
+
+  <div class="source-note">
+    Nguồn: Tập bài giảng <em>Lôgích Toán và Cơ sở Toán học</em>, Phan Đình Diệu, Hà Nội, tháng 10 năm 2000.
+    Văn bản được nhận dạng từ ảnh chụp bản in gốc (8 trang: Lời mở đầu tr. vi–viii và Lời bàn cuối sách tr. 99–102).
+  </div>
+
+</div><!-- .content -->
+</div><!-- .wrap -->
+
+<script data-goatcounter="https://phandinhdieu.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Chương trình Quốc gia về CNTT – Kế hoạch Tổng thể đến năm 2000 (Bản viết tay 1995)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: #1e1e1e;
+  background: #f5f3ef;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+  border-bottom: 1px solid #ddd;
+  padding: 8px 20px;
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+}
+.btn {
+  border: 1px solid #ccc; background: transparent; color: #333;
+  padding: 6px 12px; border-radius: 8px; cursor: pointer;
+  font-size: 0.85rem; text-decoration: none; display: inline-block;
+}
+.btn:hover { background: #8f1d2c; color: #fff; border-color: #8f1d2c; }
+.page-main { max-width: 860px; margin: 70px auto 4rem; padding: 0 1.2rem; }
+.page-content {
+  background: #fff;
+  padding: 3.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+}
+.doc-header {
+  text-align: center;
+  border-bottom: 2px solid #8f1d2c;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.doc-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8f1d2c;
+  margin: 0 0 0.3rem;
+  line-height: 1.3;
+}
+.doc-header h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0.2rem 0;
+}
+.doc-header .doc-meta {
+  font-size: 0.88rem;
+  color: #888;
+  margin-top: 0.6rem;
+  font-style: italic;
+}
+.notice {
+  background: #fffbe6;
+  border: 1px solid #f0d060;
+  border-radius: 8px;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.88rem;
+  color: #5a4a00;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+.notice strong { color: #8f1d2c; }
+h2.phan {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  background: #8f1d2c;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  margin: 2.5rem 0 1.2rem;
+}
+h3.muc {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #8f1d2c;
+  border-bottom: 2px solid #f0dde0;
+  padding-bottom: 0.3rem;
+  margin: 2rem 0 0.8rem;
+}
+h4.submuc {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1.5rem 0 0.5rem;
+}
+p { margin: 0.6rem 0 0.8rem; }
+ul, ol { margin: 0.4rem 0 0.8rem; padding-left: 1.6rem; }
+li { margin: 0.25rem 0; }
+.page-num {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: #aaa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-right: 6px;
+  vertical-align: middle;
+  font-family: monospace;
+}
+.unclear { color: #888; font-style: italic; }
+del { text-decoration: line-through; color: #aaa; }
+.toc {
+  background: #faf7f5;
+  border: 1px solid #e8ddd8;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.toc h3 { margin: 0 0 0.8rem; font-size: 0.95rem; color: #8f1d2c; text-transform: uppercase; letter-spacing: 0.05em; }
+.toc ol { margin: 0; padding-left: 1.3rem; }
+.toc li { margin: 0.2rem 0; font-size: 0.92rem; }
+.toc a { color: #8f1d2c; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.pdf-section {
+  margin-top: 3rem;
+  border-top: 2px solid #f0dde0;
+  padding-top: 2rem;
+}
+.pdf-section h3 { font-size: 1rem; color: #555; margin-bottom: 0.8rem; }
+.pdf-embed { width: 100%; height: 80vh; border: 1px solid #ddd; border-radius: 8px; display: block; }
+@media(max-width: 640px) {
+  .page-content { padding: 2rem 1.2rem; }
+  h2.phan { font-size: 1rem; }
+  .pdf-embed { height: 60vh; }
+}
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="btn" href="../index.html">← Trang Phan Đình Diệu</a>
+  <a class="btn" href="../khoahoc-giaoduc.html">Khoa học &amp; Giáo dục</a>
+  <a class="btn" href="khoahoc_files/1995_(VT)ChuongtrinhQuocGiaCNTT.pdf" target="_blank">Bản gốc PDF</a>
+  <a class="btn" href="khoahoc_files/1995_ChuongtrinhQuocGiaCNTT.pdf" target="_blank">Bản đánh máy PDF</a>
+</div>
+
+<div class="page-main">
+<div class="page-content">
+
+  <div class="doc-header">
+    <h1>Chương trình Quốc gia về Công nghệ Thông tin</h1>
+    <h2>Kế hoạch Tổng thể đến năm 2000</h2>
+    <div class="doc-meta">Bản viết tay · Phan Đình Diệu · 1995 · Ban hành kèm theo Quyết định số 211/TTg ngày 7/4/1995</div>
+  </div>
+
+  <div class="notice">
+    <strong>Lưu ý:</strong> Đây là bản phiên âm từ tài liệu viết tay gốc 45 trang (1995). Chữ viết tay, mực nhạt và nét nghiêng ở nhiều trang khiến một số đoạn không thể đọc chính xác hoàn toàn. Những chỗ không rõ được ghi <span class="unclear">[?]</span> hoặc để trong ngoặc vuông. Chữ gạch bỏ trong bản gốc được giữ dưới dạng <del>gạch ngang</del>. Xem bản PDF gốc để đối chiếu.
+  </div>
+
+  <div class="toc">
+    <h3>Mục lục</h3>
+    <ol>
+      <li><a href="#phan-I">Phần I – Giới thiệu mở đầu</a></li>
+      <li><a href="#phan-II">Phần II – Xây dựng kết cấu hạ tầng Thông tin</a>
+        <ol>
+          <li><a href="#muc-2-1">2.1 Giáo dục và đào tạo về CNTT</a></li>
+          <li><a href="#muc-2-2">2.2 Nghiên cứu và triển khai CNTT</a></li>
+          <li><a href="#muc-2-3">2.3 Phát triển công nghiệp CNTT</a></li>
+          <li><a href="#muc-2-4">2.4 Xây dựng hạ tầng mạng truyền thông dữ liệu</a></li>
+          <li><a href="#muc-2-5">2.5 Chuẩn và hệ thống mở</a></li>
+        </ol>
+      </li>
+      <li><a href="#phan-III">Phần III – Đẩy mạnh ứng dụng CNTT trong nhà nước và xã hội</a>
+        <ol>
+          <li><a href="#muc-3-1">3.1 CNTT phục vụ quản lý nhà nước</a></li>
+          <li><a href="#muc-3-2">3.2 CNTT trong lĩnh vực an ninh và quốc phòng</a></li>
+          <li><a href="#muc-3-3">3.3 CNTT trong hoạt động kinh tế thương mại</a></li>
+          <li><a href="#muc-3-4">3.4 CNTT trong các ngành sản xuất công nghiệp</a></li>
+          <li><a href="#muc-3-5">3.5 Xây dựng kế hoạch phát triển và ứng dụng CNTT ở các ngành và địa phương</a></li>
+        </ol>
+      </li>
+      <li><a href="#phan-IV">Phần IV – Chính sách khuyến khích phát triển và ứng dụng CNTT</a>
+        <ol>
+          <li><a href="#muc-4-1">4.1 Chính sách về xây dựng kết cấu hạ tầng CNTT</a></li>
+          <li><a href="#muc-4-2">4.2 Chính sách khuyến khích đào tạo</a></li>
+          <li><a href="#muc-4-3">4.3 Chính sách về thiết lập hệ thống tin học hóa</a></li>
+          <li><a href="#muc-4-4">4.4 Chính sách chuyển giao công nghệ và hợp tác quốc tế</a></li>
+          <li><a href="#muc-4-5">4.5 Chính sách hỗ trợ và huy động vốn cho phát triển CNTT</a></li>
+          <li><a href="#muc-4-6">4.6 Chính sách bảo vệ sở hữu và quyền tác giả</a></li>
+        </ol>
+      </li>
+      <li><a href="#ban-goc">Bản gốc PDF</a></li>
+    </ol>
+  </div>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <h2 class="phan" id="phan-I">Phần I – Giới thiệu mở đầu</h2>
+
+  <h3 class="muc">1.1. Bối cảnh và mục đích</h3>
+
+  <p><span class="page-num">tr.1</span>Nghị quyết của Chính phủ số 49/CP ngày 4/8/1993 về phát triển Công nghệ Thông tin (CNTT) ở nước ta trong những năm 90 đã nêu khái quát tình hình CNTT của nước ta, khẳng định các quan điểm cơ bản và nội dung phát triển CNTT ở nước ta đến năm 2000 và đề ra các biện pháp để thực hiện <span class="unclear">[Nghị quyết đó]</span>. Bản kế hoạch tổng thể này trình bày một cách thống nhất tổng thể các nội dung công việc cần được triển khai từ nay đến năm 2000 để thực hiện Nghị quyết 49/CP nói trên.</p>
+
+  <h3 class="muc">1.2. Mục tiêu chung</h3>
+
+  <p>Mục tiêu chung của việc xây dựng và phát triển CNTT ở nước ta đến năm 2000, như đã được xác định trong Nghị quyết 49/CP là:</p>
+
+  <p>Xây dựng những nền móng bước đầu vững chắc cho một kết cấu hạ tầng về thông tin trong xã hội có khả năng đáp ứng các nhu cầu cơ bản về thông tin trong quản lý nhà nước và trong các hoạt động kinh tế – xã hội, đồng thời tích cực xây dựng ngành công nghiệp CNTT thành một trong những ngành công nghiệp mũi nhọn của đất nước, góp phần chuẩn bị cho nước ta có vị trí xứng đáng <span class="unclear">[trong hội nhập]</span> vào thế kỷ 21.</p>
+
+  <p>Mục tiêu chung đó được thể hiện bằng các mục tiêu cụ thể sau đây:</p>
+
+  <p><strong>a)</strong> Xây dựng hệ thống các máy tính và các phương tiện truyền thông được liên kết với nhau trong các mạng với những phần mềm đi kèm và các hệ thống tin và cơ sở dữ liệu có khả năng phục vụ các hoạt động quản lý Nhà nước và các hoạt động huyết mạch của nền kinh tế. Một số hệ thống tin trong nước <span class="unclear">[và quốc tế]</span>…</p>
+
+  <p><span class="page-num">tr.2</span><strong>b)</strong> Phát triển rộng rãi việc ứng dụng CNTT góp phần nâng cao năng suất, chất lượng và hiệu quả sản xuất, kinh doanh, hiện đại hóa quản lý nhà nước và các loại hình tổ chức đặc biệt trong các ngành sản xuất, dịch vụ quan trọng và an ninh, quốc phòng. Tăng cường ứng dụng CNTT trong các hoạt động điều tra cơ bản, thăm dò khảo sát tài nguyên thiên nhiên và môi trường, nghiên cứu khoa học và các hoạt động khác;</p>
+
+  <p><strong>c)</strong> Phổ cập "văn hóa thông tin" trong cộng đồng thông qua việc khuyến khích để cho việc sử dụng máy tính trở nên "văn hóa thông tin";</p>
+
+  <p><strong>d)</strong> Xây dựng cơ sở cho một ngành Công nghiệp CNTT, làm ra được các phần mềm và dịch vụ tin học có giá trị, cùng tham gia phát triển các "phần cứng", đồng thời đào tạo các chuyên gia phần cứng có thể thực hiện mọi yêu cầu thực tế, đào tạo và bồi dưỡng kiến thức về tin học cho hội nhập vào nền kinh tế toàn cầu.</p>
+
+  <h3 class="muc">1.3. Cơ quan chủ đạo thúc đẩy phát triển CNTT</h3>
+
+  <p><strong>a)</strong> CNTT, với tư cách là một lĩnh vực kết hợp Khoa học, kỹ thuật và phương tiện kỹ thuật hiện đại, nên có quan hệ mật thiết với khoa học kỹ thuật, và với mạng lưới thông tin quốc gia cũng như với cộng đồng quốc tế. Triển khai CNTT ở nước ta đến năm 2000 thực hiện Nghị quyết của Chính phủ sẽ giúp nước ta bắt kịp các nước trong khu vực về phát triển CNTT. Bởi vì thực tế CNTT chỉ có thể phát triển được nếu có đủ nguồn nhân lực cần thiết trong đó có cả nguồn nhân lực quản lý nhà nước.</p>
+
+  <p><strong>b)</strong> <span class="page-num">tr.2</span>Phát triển CNTT ở nước ta cho dù là trong các hoạt động quản lý nhà nước hay từ nay đến toàn bộ các cấu trúc kinh tế – xã hội, là nhằm đến mục đích từng bước nâng cao năng lực của CNTT phục vụ nhu cầu của Nhà nước và của nền kinh tế.</p>
+
+  <p><span class="page-num">tr.3</span><strong>c)</strong> CNTT đang phát triển nhanh chóng, đa dạng và tích hợp; ngày nay cần phát triển CNTT ở nước ta trên cơ sở quan điểm "hệ thống mở", tức là cần phải nâng cấp theo thời gian cùng với sự thay đổi theo thời gian và trào lưu của các kỹ thuật mới, thay đổi và chuyển dịch các thiết bị, phần mềm, mạng… Do vậy khi phát triển CNTT luôn luôn nhìn về phía trước hướng tới tương lai đồng thời với nhu cầu hiện tại.</p>
+
+  <h3 class="muc">1.4. Các nội dung và biện pháp chính</h3>
+
+  <p>Nghị quyết 49/CP cũng đã xác định các nội dung phát triển và sử dụng CNTT đến năm 2000 trong các lĩnh vực: CNTT phục vụ công tác quản lý Nhà nước; CNTT trong các hoạt động kinh tế – xã hội; CNTT và giáo dục, đào tạo; CNTT và nghiên cứu về CNTT; Xây dựng cơ sở hạ tầng máy tính. Nghị quyết cũng đề ra những mục tiêu và biện pháp chính để thúc đẩy phát triển CNTT.</p>
+
+  <p>Căn cứ vào những điều đã được xác định trong Nghị quyết 49/CP, bản kế hoạch này nhằm thực hiện một cách cụ thể các nội dung và biện pháp chủ yếu để thúc đẩy phát triển CNTT.</p>
+
+  <p><strong>Phần II</strong> trình bày các nội dung và biện pháp "Xây dựng kết cấu hạ tầng Thông tin", bao gồm: Giáo dục, nghiên cứu và triển khai, phát triển Công nghiệp CNTT, xây dựng và phát triển hạ tầng mạng truyền thông dữ liệu quốc gia, các nội dung và biện pháp xây dựng chuẩn và thực hiện quan điểm "hệ thống mở".</p>
+
+  <p><span class="page-num">tr.4</span><strong>Phần III</strong> trình bày các nội dung và biện pháp "Đẩy mạnh ứng dụng CNTT trong các lĩnh vực hoạt động của nhà nước và xã hội", bao gồm: CNTT trong hệ thống quản lý nhà nước, trong các khu vực hoạt động kinh tế, trong an ninh – quốc phòng, trong khu vực sản xuất công nghiệp, trong các lĩnh vực hoạt động xã hội. Phần này cũng trình bày một số đề án trọng tâm về ứng dụng CNTT, đồng thời các biện pháp thúc đẩy việc xây dựng và triển khai các đề án ứng dụng CNTT trong các ngành, các địa phương.</p>
+
+  <p><strong>Phần IV</strong> trình bày hệ thống các chính sách nhằm khuyến khích và thúc đẩy phát triển và ứng dụng CNTT trong mọi thành phần kinh tế của xã hội.</p>
+
+
+  <!-- ══════════════════════════════════════════════ -->
+  <h2 class="phan" id="phan-II">Phần II – Xây dựng kết cấu hạ tầng Thông tin</h2>
+
+  <p><span class="page-num">tr.5</span>Trong bản kế hoạch tổng thể này, quan điểm kết cấu hạ tầng thông tin là toàn bộ các yêu cầu tối thiểu trong các lĩnh vực của CNTT mà đòi hỏi tất cả các tổ chức kinh tế, kỹ thuật trong mọi lĩnh vực của đất nước cũng cần được bảo đảm và phát triển trong từng lĩnh vực và toàn bộ nền kinh tế – xã hội. Vì quan điểm đó, dù CNTT đang phát triển và nâng cao điều kiện kết cấu hạ tầng thông tin là nhiệm vụ của Nhà nước, của mọi tổ chức kinh tế, kỹ thuật thì cũng cần có đủ nguồn lực của Nhà nước để thực hiện.</p>
+
+  <p>Phần này trình bày nội dung và biện pháp chính của kế hoạch xây dựng kết cấu hạ tầng Thông tin, gồm các mục:</p>
+  <ul>
+    <li>2.1 Giáo dục và đào tạo về CNTT</li>
+    <li>2.2 Nghiên cứu và triển khai CNTT</li>
+    <li>2.3 Phát triển công nghiệp CNTT</li>
+    <li>2.4 Xây dựng và phát triển hạ tầng mạng truyền thông dữ liệu</li>
+    <li>2.5 Chuẩn và hệ thống mở</li>
+  </ul>
+
+  <h3 class="muc" id="muc-2-1">2.1. Giáo dục và đào tạo về CNTT</h3>
+
+  <h4 class="submuc">a. Tình hình hiện nay</h4>
+
+  <p>Nghị quyết 49/CP đã ước tính hiện có khoảng <span class="unclear">[số lượng chuyên viên]</span> về CNTT ở nước ta, đồng thời cũng đề ra nhiệm vụ "phải huy nhiều nhân lực và trí tuệ của đất nước". <span class="page-num">tr.6</span>Những ý này hướng thực tế cho chúng ta thấy rằng nhiệm vụ trọng tâm nhất của Nghị quyết 49/CP là "đào tạo nhanh chóng" đủ chuyên viên về CNTT, giáo dục phổ cập về CNTT trong trường đại học, phổ biến kiến thức CNTT rộng rãi ra xã hội, thực hiện bằng mọi cách đào tạo CNTT thấm sâu ngay từ đầu, đặc biệt là những loại cần thiết nhất.</p>
+
+  <p>Để tham khảo, theo thống kê hiện nay ở Mỹ có 679.000 chuyên viên lập trình, 765.000 chuyên viên phân tích viên; ở Singapore có 15.000 chuyên viên CNTT; Hồng Kông có khoảng 30.000 chuyên viên CNTT.</p>
+
+  <h4 class="submuc">b. Cơ cấu nhân lực để phát triển CNTT</h4>
+
+  <p>Để ngành chuyên nghiệp về CNTT có sự phát triển, CNTT ở nước ta trong những năm tới cần có các loại chuyên viên sau đây:</p>
+  <ul>
+    <li>Chuyên viên phần mềm kỹ thuật</li>
+    <li>Chuyên viên lập trình</li>
+    <li>Giảng viên và nghiên cứu viên về CNTT, chuyên gia biên soạn tài liệu</li>
+    <li>Kỹ sư lắp đặt, sản xuất các thiết bị máy tính</li>
+    <li>Kỹ sư hệ thống, lắp đặt, khai thác các hệ thống phần mềm</li>
+    <li>Kỹ sư mạng máy tính và truyền thông</li>
+    <li>Chuyên viên phân tích kinh tế đối với các hệ thống tin</li>
+  </ul>
+
+  <h4 class="submuc">c. Các biện pháp về giáo dục và đào tạo về CNTT</h4>
+
+  <p><span class="page-num">tr.7–8</span>Để đi đến những kết quả cụ thể về đào tạo CNTT cần một cách phát triển tốt điều kiện cơ bản để đào tạo chuyên viên kỹ thuật CNTT và chuyên viên các loại. Tiếp theo là sự nâng cao cần áp dụng và ứng dụng tin học. Cơ bản này tiếp thực hiện phải hướng ra cách tạo ra mọi kế hoạch tốt trong phổ biến về CNTT, tự lập triển khai toàn bộ các khung đào tạo, cụ thể nhất vào trình độ giáo dục học <span class="unclear">[?]</span>.</p>
+
+  <h4 class="submuc">d. Ứng dụng CNTT góp phần đào tạo (triển khai và hỗ trợ bằng máy tính)</h4>
+
+  <p><span class="page-num">tr.9</span>Ngày nay máy tính trở nên có khả năng góp phần đào tạo, giáo dục. Việc dùng máy tính để hỗ trợ trong các lĩnh vực đào tạo này, tuy không thể thực hiện một cách toàn bộ, nhưng nó rõ ràng hỗ trợ toàn bộ những giáo viên và bổ trợ những phần nhất định.</p>
+
+  <p>Yếu tố quan trọng của việc ứng dụng CNTT góp phần đào tạo là có kế hoạch giáo dục, đào tạo tổ chức phần mềm mà từ đó có khả năng về CNTT này sẽ có chỗ đứng quan trọng trong nền kinh tế cũng như trong đời sống xã hội. Tiếp đó để đặt ra mục tiêu đào tạo và phát triển của các phần nhân dạy học cùng với các phương tiện truyền thông cho cả lớp học và phổ biến rộng rãi trong cả nước.</p>
+
+  <h3 class="muc" id="muc-2-2">2.2. Nghiên cứu và triển khai CNTT</h3>
+
+  <h4 class="submuc">a. Thực trạng và vai trò</h4>
+
+  <p><span class="page-num">tr.10</span>Tạo nhiều nước công nghệ phát triển, cần thúc đẩy nghiên cứu và triển khai CNTT. Cần nâng cao nghiên cứu cơ sở khoa học, cần xuất kết quả tình công nghệ phát triển của đất nước, phải trao đổi với thế giới. Nghị quyết 49/CP đề ra những biện pháp thực tế hướng cho chúng ta thấy rằng nhiệm vụ phát triển CNTT lĩnh vực nghiên cứu là hết sức cần thiết, tham gia và triển khai công việc CNTT trong mọi lĩnh vực của đất nước.</p>
+
+  <p>Mạng Internet đã được xây dựng từ những năm 70 và sau đó mở rộng nhanh chóng, ngày nay mang quốc gia nối trao thẻ thế giới với hàng chục triệu người dùng, với hàng triệu trường đại học, cơ quan nghiên cứu, và đã mở rộng ra cả các cơ quan chính phủ, cả tổ chức kinh doanh. Internet đang trở thành một "xa lộ thông tin" cung cấp không khắn lượng không hạn chế thẻ tin cho người dùng toàn thế giới, một phương tiện tra cứu và tìm hiểu thiết thực và hiệu quả. Mạng VERDNET được xây dựng và được kết nối với Internet, trao thông tin giữa các tổ chức tin học, trường đại học, nghiên cứu cứu và triển khai CNTT tại thế giới và nước ta, giúp phần này cao chất lượng và hiệu quả của việc ứng dụng CNTT trong nước.</p>
+
+  <p>Mạng VERDNET sẽ được xây dựng ngay từ nhiều năm đầu tiên, cần bắt đầu ngay từ giai đoạn 1 tới năm 1994 (với việc mở đường truyền điền kiện hữu tuyến) và các máy modem.</p>
+
+  <p>Kết quả đang dụng mạng VERDNET <span class="unclear">[và]</span> chỉ giải điền vào mạng truyền thông dữ liệu chung và cổ tỉnh hệ thống cổ nghiên cứu và triển khai cổ sở bộ cổ bộ thể tham gia và hòa nhập với Internet quốc tế.</p>
+
+  <h4 class="submuc">b. Xác định mục tiêu cho các tổ nghiên cứu và triển khai về CNTT</h4>
+
+  <p><span class="page-num">tr.11</span>Phát triển CNTT ở nước ta để tốt phải điều tiên phải chú "giữ" bằng tiêu cơ sở tập thu cổ nhiều bản kiến thức và công nghệ mới ở thế giới và trong mỗi liệt trường hợp phát giới phổ biến nhiều hơn nữa điều kiện tốt để triển khai và triển khai CNTT ở nước ta – như Nghị quyết 49/CP đề xác định – là nhiều tập thu đến cái còn Thức hiểu đặt và hiểu về cái xu thế phát triển của CNTT trên thế giới đến:</p>
+  <ul>
+    <li>Lựa chọn chiến cổ sở hướng chuyển giao công nghệ thích hợp trong xây dựng bắt đầu hạ tầng và cổ công nghệ thông tin ở nước ta;</li>
+    <li>Nghiên cứu thiết kế và chế tạo cổ cổ sản phẩm cho CNTT, tức bắt đầu từ chuyển dụng đơn giản sau phải dần chuyển sang các sản phẩm và dịch vụ CNTT;</li>
+    <li>Nghiên cứu triển khai ứng dụng quan trọng thực tế CNTT trong các hoạt động kinh tế – xã hội;</li>
+    <li>Tham gia các công việc bổ trợ lần giúp tổ chức thiết kế hệ thống, phát triển phần mềm và hướng dẫn;</li>
+    <li>Tham gia vào các cổ nghề chuyên viên phần mềm trong nước.</li>
+  </ul>
+
+  <h4 class="submuc">c. Tổ chức nghiên cứu và triển khai về CNTT</h4>
+
+  <p><span class="page-num">tr.12</span>Để thực hiện các mục tiêu nêu trên, cần có một số đầu mối về xem xét lại tình quan, phương hướng dụng hoạt động tốt cổ thể cổ sở nghiên cứu chủ cổ tổ chức hệ thống, cụ thể là:</p>
+  <ul>
+    <li>Xây dựng Viện CNTT thuộc Trung tâm Khoa học và Công nghệ Quốc gia (Bộ Khoa học – Công nghệ nghiên cứu ứng dụng CNTT) thành những công trình hoàn chỉnh tốt nhất về tổ chức nghiên cứu và triển khai;</li>
+    <li>Tập thể cán bộ giảng viên CNTT tại các Trường Đại học để cũng với cán bộ làm những bộ bổ quan nghiên cứu về CNTT và triển khai ứng dụng, phối hợp hướng dẫn và đào tạo cổ cao cấp về CNTT;</li>
+    <li>Bằng cổ thể thuộc bổ hỏi cổ cho các hỗ trợ phần cứng từ hệ thống phòng thí nghiệm nghiên cứu, phối hợp với nhân viên ở ngoài của nhiều tổ chức.</li>
+  </ul>
+
+  <h4 class="submuc">d. Mạng trường tin học cho giáo dục, nghiên cứu và triển khai</h4>
+
+  <p>Ba vào trao đổi thông tin trong thẻ tin giữa phần 3.4. Rừng hệ thống về giáo dục, nghiên cứu và triển khai, mỗi theo đồng thống nhất chúng, kỹ thi quan các đổi tổ với cùng nhiều lần hoạt động, nội đối các nghiên cứu… tổng phần vụ quốc gia tổ chức, ngày cổ ngành bổ toàn quốc.</p>
+
+  <h3 class="muc" id="muc-2-3">2.3. Phát triển công nghiệp CNTT</h3>
+
+  <h4 class="submuc">a. Tình trạng và vai trò</h4>
+
+  <p><span class="page-num">tr.13</span>Công nghiệp CNTT là nguồn cơ sở sản xuất ra các sản phẩm và dịch vụ liên quan đến CNTT, nhằm đáp ứng nhu cầu của thị trường có dùng CNTT trong mọi nơi hoạt động kinh tế và xã hội. Sản phẩm cổ công nghiệp CNTT thường được chia ra cổ sản phẩm phải cứu và cổ phần phần mềm và dịch vụ. Công nghiệp CNTT cổ đổi trong quốc tế rất cao, phát triển và tiến bộ nhanh chóng, cạnh tranh quyết liệt. Nếu ta cổ thể "bắt" cổ vào công nghiệp CNTT thì cần thẳng thắn nhìn những nước và lượng hệ thống CNTT ta cần lấy phải gì phải đối, và mang lại lợi thế để thế toàn thẩm hàng nhiều đặt ra những nước nhiều hơn những hướng và lượng có thể.</p>
+
+  <p>Trong khoảng thời gian này, đặt mục tiêu phát triển các công ty trong nước có năng lực cung cấp phần mềm và dịch vụ, nâng dần lên đến có cả phần cứng cho nước ta. Đây là một hướng quan trọng cần thiết để xây dựng nền công nghiệp CNTT trong nước.</p>
+
+  <h4 class="submuc">b. Công nghiệp phần mềm và dịch vụ</h4>
+
+  <p><span class="page-num">tr.14</span>Cổ sản phẩm phần mềm hướng đến cổ loại: phần mềm hệ thống (nhỏ hơn lớn) cổ cổ hệ thống điều hành, cài triển khai, cổ cài nhiều phần mềm ứng dụng được phát triển theo nhu cầu từng hàng.</p>
+
+  <p>Các sản phẩm phần mềm hoàn chỉnh, ngày cũng nổi nổi cổ sản xuất, nhiều đây cũng nhiều nhất là khi hàng dạng quốc tế. Dịch vụ chuyển nhập về CNTT theo giải nhiệm, tư vấn hệ thống, lắp đặt, bảo hành, đào tạo người sử dụng, v.v.</p>
+
+  <p><span class="page-num">tr.15</span>Trong thời gian tới, nhu cầu thẻ khách hàng trong việc triển khai này rất cổ dự án ứng dụng CNTT trong quản lý nhà nước và cổ hơn thẻ hoạt động tất cả lắp đặt bộ và để các cổ vào điều kiện tốt toàn quốc và mọi chuyên ngành, cổ tiêu chuẩn thẻ trường mới cao cổ nhất là những bước thứ tự từng đó lần mạng nước ngoài.</p>
+
+  <p>Dịch vụ chuyển nhập về CNTT theo giải nhiệm lên hệ thống. Công nghiệp phần mềm và dịch vụ trong giai đoạn tới cần đặt mục tiêu cụ thể sau đây:</p>
+  <ul>
+    <li>Xây dựng mới một cổng nghệp phần mềm cổ này phát triển cổ sản phẩm đáp ứng cổ nhu ứng dụng CNTT của đất nước;</li>
+    <li>Phát triển cổ sản phần mềm Việt ngữ bảng nhiều hàng cổ đứt thi Việt Nam;</li>
+    <li>Cung cổ nhiều bộ và kỹ năng dịch vụ chuyển nhập cổ tổ chức ứng dụng CNTT, với cổ nhiều nơi: tích hợp hệ thống, lắp đặt, bảo hành, đào tạo người sử dụng;</li>
+    <li>Đào tạo và phát triển một đội ngũ làm phần mềm trong nước cổ kỹ năng và hình nghiệm.</li>
+  </ul>
+
+  <h4 class="submuc">c. Các biện pháp thực hiện</h4>
+
+  <p><span class="page-num">tr.16</span>Cổ Viện nghiên cứu và triển khai, cán bộ tại những trường Đại học và cổ các công ty Tin học trong nước ngoài được đào tạo, phối hợp với các cơ sở đào tạo, các Trường Đại học và cổ các công ty nước ngoài để triển khai công nghiệp phần mềm và dịch vụ tin học trong nước. Cần khuyến khích việc mở rộng, tập trung và liên kết các cổ phần vụ cổng ty Tin học trong nước, liên kết với các nhà đầu tư nước ngoài thực hiện.</p>
+
+  <p>Trong kế hoạch triển khai mới, cần tăng cường hợp tác với các cơ quan đào tạo như Institut Francophone d'Informatique (IFI), và các công ty Pháp – Việt, Canada, Bỉ, với các chuyên gia từ IBM, DEC, Compaq v.v.</p>
+
+  <h3 class="muc" id="muc-2-4">2.4. Xây dựng hạ tầng mạng truyền thông dữ liệu</h3>
+
+  <h4 class="submuc">a. Thực trạng và những vấn đề về truyền thông dữ liệu</h4>
+
+  <p><span class="page-num">tr.17</span>Truyền thông dữ liệu ở Việt Nam vẫn đang hình thành. Trong mỗi năm gần đây, người đã có được một số bảng, làm bảo có các điều kịp thể phát triển lên mạng dữ liệu nhiều. Nhu cầu các mạng bảng điều hành phát triển cùng có hạn chế nhất lớn nhất. Có nhiều vật thể bảng dữ liệu truyền và phát hiện trong nhiều hạn chế.</p>
+
+  <p>Chương trình quốc gia về CNTT đặt hàng tâm vào việc thúc đẩy nhanh chóng CNTT trong việc thể quản lý nhà nước và trong các địa điểm đây liên đồng nhiều thể không đủ nhà chung. Trên cổ sở thực tiêu hiệu này, Chương trình CNTT đặt vào hàng tiếp thúc đẩy hàng qua các đoạn truyền thông dữ liệu tất cả các mục thể lắp đặt mới/modem.</p>
+
+  <p>Mạng VIETPAC X.25 đang được cấp những điều kiện triển khai. Chương trình CNTT đặt mục tiêu vào việc thúc đẩy nhanh chóng CNTT trong các hệ thống quản lý nhà nước và trong cả tổng hoạt nước.</p>
+
+  <h4 class="submuc">b. Một số hệ thống truyền thông dữ liệu của nước ta</h4>
+
+  <p><span class="page-num">tr.18–19</span>Mạng truyền thông dữ liệu là cổ nhiều đây làm từng thể cho các chỉ hệ thống bảng quản lý hành chính, hệ thống y tế, và hướng làm được trong hệ thống nhiều Tổng công ty bảo hành. Về những lý theo có thể là mạng có nhiều cơ cấu truyền thông dữ liệu cho các nơi có bảng thể.</p>
+
+  <p>Các mạng truyền thông dữ liệu bao gồm: Thành phố Hà Nội, Thành phố Hồ Chí Minh và một số thành phố khác kết nối với nhau, nhiều hàng đây đó mạng cổ nhiều cổ điều đây gần tổng thể mạng X.25 – là đó theo mô hình tầng khuôn PSPN.</p>
+
+  <p>Một cổ hình như vậy cổ thể bộ lý để mạng lý nhiều nhà nhà truyền thông dữ liệu quản lý nhà nước và cổ xây dựng, nhiều nhiều từ điều cổ thể bổ điều mạng tốt điều mạng nhiều nhiều điều từng thể.</p>
+
+  <p>Nếu bảng thể nếu cổ thể có được mạng thể truyền thông, nước (nếu thể điều đến, người thể tại mỗi nhà cổ thể phục vụ nhiều cổ quan nhà nước và nhân nhiều đó). Cổ hệ thống lý đây để chuyển cổ nhiều nếu dạng thể và cổ cho phục vụ nhiều tổng nhiều.</p>
+
+  <p>Trong thể tường vấn đề CNTT đặt mục tiêu vào việc thúc đẩy nhanh chóng CNTT trong cổ bảng quản lý nhà nước và trong cả tổng hoạt nước, Chương trình CNTT đặt hàng tiếp thúc đẩy hàng qua đoạn các mục truyền thông dữ liệu đến tất cả các địa điểm ứng dụng CNTT trong cả tổng kinh tế – xã hội.</p>
+
+  <p>Các loại mạng và dịch vụ cần được xây dựng và phát triển bao gồm:</p>
+  <ul>
+    <li>mạng điện thoại chuyển mạch công cộng (PSTN),</li>
+    <li>mạng chuyển mạch gói công cộng (PPSN),</li>
+    <li>mạng đa dịch vụ kỹ thuật số (ISDN),</li>
+    <li>dịch vụ dải băng thông rộng.</li>
+  </ul>
+
+  <h4 class="submuc">c. Mạng quản lý nhà nước</h4>
+
+  <p><span class="page-num">tr.20–21</span>Xây dựng mạng truyền thông dữ liệu cho quản lý nhà nước theo cổ nhiều chỉ điều cơ cấu toàn quốc địa phương – bảng thể nhiều điều lần địa phương, nhiều hơn và đó thể điều phổ biến cổ nhiều cổ quan nhà nước. Mạng này cần đảm bảo chuyển tải cổ hơn nhiều bảng cán lý hơn, bảng cộng cổ nhiều cổ đường đường truyền thông nhiều nếu tổng lên, theo và điện tử.</p>
+
+  <h3 class="muc" id="muc-2-5">2.5. Chuẩn và hệ thống mở</h3>
+
+  <h4 class="submuc">a. Quan điểm "hệ thống mở"</h4>
+
+  <p><span class="page-num">tr.21–22</span>Nghị quyết 49/CP về phát triển CNTT đặt cổ cái chủ chú điều ra từng đó bổ cổ cổ bổ nhiều nước bổ đó nhiều đặt yêu cầu "phát triển CNTT" là một quan điểm điều chú mọi đơn vị, cơ quan, ngành nghề. Mọi hệ thống mở (về CNTT) – bảng nhất X/Open xổ điều – là "một nền tảng thương mại không phụ thuộc nhiều cổng" – bao cổ cổ phần tổng nhiều điều trong thể. Theo điều nhập này theo ISO/IEC: "một nền tảng hệ thống mở là một tập hợp cổ cổng cái giao diện, dịch vụ và các nhiều mất cổ không nhiều tổng" đây được nhận và được cổ thể nhiều bổ hơn nữa, đây được thuận hơn nữa thể nhận như các cơ quan chức năng cổ chấp nhận.</p>
+
+  <p>Vì vậy, việc lựa chọn và quy định các chuẩn và hệ thống mở là một phần quyết định trong việc phát triển CNTT ở nước ta. Thiếu chính sách nhất quán, các công ty triển khai phải tự mình chọn những giải pháp chuyển giao theo điều kiện thị trường. Chính sách này cần đứng đầu trong CNTT để giải quyết.</p>
+
+  <h4 class="submuc">b. Bộ khung các chuẩn cho môi trường hệ thống mở</h4>
+
+  <p><span class="page-num">tr.22–23</span>Nhà nước và từ tháng mười năm 10, nhiều đó lấy chọn và thứ tự các chuẩn lựa điều trước với cổ yêu cầu nội "bán tổng nhiều" hơn là nhiều hàng ngày nhập "tự do chuẩn". Bộ khung các chuẩn cho môi trường hệ thống mở trong phát triển và ứng dụng CNTT ở nước ta cổ thể bao gồm các phần thi sau đây:</p>
+  <ul>
+    <li>Dịch vụ hệ điều hành</li>
+    <li>Giao diện người/máy tính</li>
+    <li>Giao diện Việt Nam (xử lý tiếng Việt, bảng mã chữ Việt, …)</li>
+    <li>Dịch vụ quản trị cơ sở dữ liệu</li>
+    <li>Dịch vụ đào tạo, truyền thông dữ liệu</li>
+    <li>Mạng máy tính</li>
+    <li>Dịch vụ đồ họa</li>
+  </ul>
+
+  <p>Thực tiễu quan điểm hệ thống mở, phát triển CNTT ở đó phải xây xét và thu theo một bộ các chuẩn và nội chuẩn – cổ chuẩn này cần chọn lựa phối hợp các phổ biến nhất của CNTT tiêu thế giới, từng bước để tăng cổ sở xây dựng và thực tiếp hệ thống. Thực tiểu quan điểm hệ thống mở, việc phát triển CNTT ở đó phải xây dựng và tuân theo một bộ các chuẩn và nội chuẩn – cổ chuẩn này cần chọn lựa phổ biến nhất của CNTT thế giới, từng bước chú ý đến cả nhu cầu nhà kể phổ bộ nhân và quyền và tự chuyển chuyên cổ chuyên.</p>
+
+
+  <!-- ══════════════════════════════════════════════ -->
+  <h2 class="phan" id="phan-III">Phần III – Đẩy mạnh ứng dụng CNTT trong nhà nước và xã hội</h2>
+
+  <p><span class="page-num">tr.24</span>Xây dựng thực cổ bảng thể nhiều có hơn nữa trong quản lý nhà nước và trong các hoạt động kinh tế – xã hội. Xây dựng ứng dụng CNTT trước nhất cho nước ta và nhiều hơn nữa chủ lớn mà CNTT ở nước ta. Hiện nay cần trình bày thúc đẩy việc ứng dụng CNTT ở nước ta theo các mục:</p>
+  <ul>
+    <li>3.1 CNTT phục vụ quản lý nhà nước</li>
+    <li>3.2 CNTT trong lĩnh vực an ninh và quốc phòng</li>
+    <li>3.3 CNTT trong hoạt động Kinh tế thương mại</li>
+    <li>3.4 CNTT trong các ngành sản xuất công nghiệp</li>
+    <li>3.5 Xây dựng kế hoạch phát triển và ứng dụng CNTT ở các ngành, các địa phương</li>
+  </ul>
+
+  <h3 class="muc" id="muc-3-1">3.1. Công nghệ thông tin phục vụ Quản lý nhà nước</h3>
+
+  <h4 class="submuc">a. Thực trạng và nhu cầu</h4>
+
+  <p>Quản lý nhà nước luôn luôn là lĩnh vực ưu tiên trong hoạt động triển khai và ứng dụng CNTT. Điều này quốc gia cổ nhiều và ứng dụng bảng lĩnh vực và cổ khả năng truy trình phát triển. Để thiếu đó, trong quản lý nhà nước tất cả hiện nay mà chưa có đủ công tác hoạt động tất cả nội dung thiếu nhất bảng. <span class="page-num">tr.25</span>Thực hiện Nghị quyết 49/CP của Chính phủ, Chương trình quốc gia về CNTT cần phải lắp đặt nhiều việc ứng dụng, hoàn thiện cho các cơ quan tổ chức trong mọi lĩnh vực quản lý nhà nước.</p>
+
+  <p>Vì vậy cần sử dụng CNTT phục vụ các lĩnh vực quản lý hành chính quốc gia và giải pháp tốt nhất là:</p>
+  <ul>
+    <li>Hệ thống quản lý hành chính quốc gia</li>
+    <li>Hệ thống quản lý tài chính (tài khoá – ngân sách) của nhà nước</li>
+    <li>Hệ thống hỗ trợ điều hành quản lý cho nhà nước</li>
+  </ul>
+
+  <h4 class="submuc">b. Hệ thống quản lý hành chính quốc gia</h4>
+
+  <p><span class="page-num">tr.26</span>Ứng dụng CNTT để xây dựng hệ thống quản lý hành chính quốc gia và giải pháp theo cổ phương pháp:</p>
+  <ul>
+    <li>Nhất lập cổ một mạng thẻ tin địa thẻ liên nước các cổ quan nhà nước, và cổ nhiều điều bổ tiêu, máy tính nhiều vào điều, thẻ lộ điều, điều thẻ theo, vào thêm nhiều cổ vào điền thẻ nhiều vào điều lên thẻ, theo gia điều thẻ đến cổ cán bộ nhiều cổ đến;</li>
+    <li>Tăng cường phần tổ hành chính không nhiều nước ta hàng nhân khách, trong cổ sử dụng CNTT của nước ta trong những năm tới;</li>
+    <li>Thiết lập hệ thống PSPMS (Hệ thống quản lý tổng thể nhà nước) do Ban Chỉ đạo phát triển chủ trì, phối hợp với Bộ Tài chính, Ngân hàng Nhà nước và các cơ quan liên quan để triển khai thực hiện.</li>
+  </ul>
+
+  <p><span class="page-num">tr.27–28</span>Về những vấn đề về mô hình nhiều, Ngân hàng Nhà nước về bổ chủ nhiều tổ đặt cổ các từ bao bảng thẻ điều điều, bổ bảng điều vào thẻ bổ từng theo thẻ bảo từng thẻ. Nếu nhiều những cổ không bổ nhiều thêm, nhiều điều nếu nhiều dần tốt lên đó thẻ nhiều vào thể điều lắp trên cổ nhiều đường hàng thẻ cổ nhiều tốt.</p>
+
+  <p>Để hoàn thiện cổ của thẻ điều thứ, Tổ hoàn toàn thẻ của thẻ điều cổ nhiều theo điều (ví nhiều hơn các điều phương thẻ nhiều cổ nhà nhiều thẻ cổ thể nhiều, hướng dẫn cổ bổ nhiều nhiều tất cả các điều thể cổ quan nhà nước và cổ kinh tế).</p>
+
+  <h4 class="submuc">c. Hệ thống thống kê Nhà nước</h4>
+
+  <p><span class="page-num">tr.28–29</span>Hệ thống thống tin thống kê Nhà nước – là hệ thống thống tin bổ thể hai nhiều cổ mới quốc gia, cung cấp nhiều thông tin cần thiết để điều hành và quản lý tổng thể nước, như: kinh tế, văn hoá, giáo dục, v.v. Thông tin về phần hệ thẻ và cổ những tài nguyên nhiều nước nước như: tài nguyên thiên nhiên, dân số, lực lượng lao động… và kế hoạch điều cổ bổ thẻ truyền nhiều và nhiều thẻ nhiều và điều thẻ nhiều cổ. Cổ bổ thẻ thẻ tin nhiều điều hướng cổ bổ nhiều điều thẻ phần tài nhiều nguyên nước ta phải nhiều cổ nhiều bổ nước tài nhiều điều cổ bổ nhiều cổ nhiều thẻ.</p>
+
+  <h4 class="submuc">d. Mạng truyền thông dữ liệu quản lý nhà nước</h4>
+
+  <p>Để có được đầy đủ các hệ thống tin học hoạt phục vụ quản lý nhà nước điều cổ phần vụ quốc gia, các bộ, ngành, và địa phương, phải có mạng truyền thông dữ liệu quản lý nhà nước. (Xem thêm mục 2.4, mục e)</p>
+
+  <p>Chủ phận vào nhiều cổ quan quản lý nhà nước hơn nữa cổ làm hoạt đâu những bổ và đó phải triển của nước, cung cấp đủ điều kiện cho mọi hoạt động nhiều bổ bộ và bổ, nhiều nước và phải cổ bổ thể đến thống mọi cổ quan hành chính cổ thể.</p>
+
+  <h3 class="muc" id="muc-3-2">3.2. Công nghệ thông tin trong lĩnh vực an ninh và quốc phòng</h3>
+
+  <p><span class="page-num">tr.30</span>Quốc phòng và an ninh bao giờ cũng là những lĩnh vực cần được sử dụng những thành tựu mới nhất của Khoa học và Công nghệ. Tin học ở nước ta, ngay từ những ngày đầu phát triển, tuy còn rất nhiều hạn chế về khả năng, nhiều cũng đã được ứng dụng trong một số mặt hoạt động của ngành an ninh và quốc phòng.</p>
+
+  <p>Phạm vi của những vấn đề ứng dụng CNTT trong các lĩnh vực này rất rộng rãi, từ các vấn đề chuyên về quản lý, về các kỹ thuật, đến những vấn đề đặc thù có tính chất nghiệp vụ.</p>
+
+  <p>Thực hiện Nghị quyết 49/CP của Chính phủ, các ngành an ninh và quốc phòng đã để xuất các đề án tiếp tục đẩy mạnh việc ứng dụng CNTT trong ngành mình. Các đề án này sẽ được tiếp tục hoàn thiện về mặt Khoa học và Công nghệ, và cần được nhà nước quan tâm đầu tư để triển khai thực hiện.</p>
+
+  <h3 class="muc" id="muc-3-3">3.3. Công nghệ thông tin trong hoạt động Kinh tế thương mại</h3>
+
+  <h4 class="submuc">a. Nhu cầu thông tin của Kinh tế thương mại</h4>
+
+  <p><span class="page-num">tr.31</span>Mạng thẻ tin nhiều quản thẻ tiêu thị thực nhiều. Đầy nhiều các hoạt động thúc thẻ tiêu đẩy nhiều và nước ta. Cùng với Ngân hàng nhà nước, cổ ngân hàng thương mại đó là tổ chức cổ nhiều mặt thế nhiều cổ cần thiết nhất hệ thống tin học cho hoạt động tổng thể thương mại và kinh tế của nước ta. Trung tâm Tín học cổ Bộ Thương mại thứ để phát triển cổ hệ thống thẻ tin thương mại, cung cấp nhiều thẻ tin thẻ thương mại và nhiều quốc tế.</p>
+
+  <p>Để hỗ trợ thông tin cổ của thương mại trên toàn cầu, ta cần phối hợp khuyến khích nhiều nhất hệ thống tin học hoạt thẻ quản thương mại, tiếp chống nhất phải giải pháp, cung cấp cổ dịch vụ cho cổ bộ thương mại và kinh doanh nhiều.</p>
+
+  <h4 class="submuc">b. Hữu đổi hệ thống Ngân hàng</h4>
+
+  <p><span class="page-num">tr.32</span>Ngân hàng thẻ nhiều cổ nhiều cổ quan hàng thẻ nhiều cần đổi từ thẻ hàng nhiều điều nhiều đổi lần điều cổ nhà. Thẻ tin nhiều đổi lần nhân cổ bổ thẻ nhiều thẻ hoạt động thanh toán, điều chuyển nhập thẻ và các hoạt động tài chính – ngân hàng khác.</p>
+
+  <p>Để hỗ trợ thông tin của bộ thương mại trên nền Thẻ tương hỗ, ta cần phối hợp khuyến khích nhiều nhất hệ thống tin học hoạt quản lý hành chính quốc gia, tiếp chống nhất phải giải pháp bộ hành chính quốc gia điều, tiếp bộ thứ nhất phải giải pháp bộ thứ nhất tiếp bộ thứ nhất điều chuyên nhiều lần bổ.</p>
+
+  <h4 class="submuc">c. Mạng thương mại điện tử (VINANET)</h4>
+
+  <p><span class="page-num">tr.33</span>Một phần quan trọng về thẻ tin thương mại là xuất nhập khẩu. Để hỗ trợ thông tin của cổ hệ thống thương mại điện tử thế giới, ta cần phối hợp khuyến khích phát triển thẻ tin thương mại, tiếp chống nhất phải giải pháp. Bộ Thương mại thứ để phát triển cổ hệ thống thẻ tin thương mại với mạng VINANET, cung cấp nhiều thẻ tin thương mại và hội nhập với các mạng thương mại điện tử quốc tế, theo bộ Thương mại CN VN, và các phần mềm ứng dụng thẻ tin hoạt động và kinh doanh với cổ nhân (Thẻ tin CN VN, bổ Cổng nghiệp thương mại và ứng dụng cổng nghệ) Hoạt đổng lắp đặt cổ nghiên cứu và triển khai công nghiệp CNTT trong nước.</p>
+
+  <p>Nhất cần sử dụng VINANET cổ Bộ thương mại và có hoạt động ứng dụng CNTT ở Thẻ thương mại và Công nghiệp, cổ phổ liệp cổ nhiều quan hệ nhiều bổ hoạt động đổ thương mại nhiều (Thẻ tin nhiều quốc tế và quan tâm hỗ trợ triển khai nhiều), tổ cổ nhiều nhiều điều cổ thể nhiều hơn nữa thẻ tổng mới nhóm (nếu nhiều nội dung điều này cổ thể) và khuyến khích khu vực tư nhân cổ thể bổ thẻ nhiều tổng nước hoài.</p>
+
+  <h3 class="muc" id="muc-3-4">3.4. Công nghệ tin trong hệ thống các ngành sản xuất công nghiệp</h3>
+
+  <h4 class="submuc">a. CNTT và những công cụ hỗ trợ sản xuất</h4>
+
+  <p><span class="page-num">tr.34</span>CNTT và những công cụ CAD/CAM hỗ trợ đổi hội hơn nữa sản xuất. Công nghiệp hội và tiêu đổi hội nhiều nước sản xuất nước ta tất cổ thẻ nhiều điều cổ nhất thẻ hỗ. Đặt được đổi điều CNTT và những nhiều điều cổ thẻ CAD/CAM và các loại công nghệ hỗ trợ đổi hội, cổ nhiều điều cổ thẻ mỗi nhiều thẻ:</p>
+  <ul>
+    <li>Hỗ trợ họa hình bổ bộ cổ các quá trình sản xuất, chế biến, hệ thống là bộ cổ bổ bổ thẻ thẻ chú trợ tự giúp cổ nhiều mạng (CAD), máy tính điều khiển sản xuất (CAM), và đổi nhiều đây cổng cổ nhiều thẻ bộ chỉ đây giai đoạn này, v.v.;</li>
+    <li>Cổ những đổi này cổ hơn nữa, tổ từ nước liên bổ cổ nhiều phần thẻ cổng nghệ đổ đây không "nhiều nội" cổ, các loại sản phẩm thẻ cổ nhiều nước trong nước phải nhiều điều;</li>
+    <li>Bổ cổ nhiều hướng, nhiều cổ bổ thẻ từng nhiều tổng cổ nhiều nước đây trước cổ cổ nhiều điều bổ bổ nhiều nước nhiều bổ nhiều thẻ điều ứng dụng.</li>
+  </ul>
+
+  <h4 class="submuc">b. Một số những đề án nhiều thẻ</h4>
+
+  <p><span class="page-num">tr.35</span>Thực gia điều thẻ cổ công nghiệp hội và triển khai, cổ nhiều sản xuất nhiều điều cổ thẻ nhiều điều cổ nhiều. Cổ bổ thẻ nhiều bổ nhiều, nhiều cổ bổ thẻ nhiều đây cổ nhiều lắp nhiều cổ nhiều. Công nghiệp phần mềm và dịch vụ trong giai đoạn tới cần đặt mục tiêu cụ thể. Mọi mạng thẻ bổ nhiều từng thẻ giải cổ thẻ từng cổ nhiều điều cổ bổ thẻ nhiều tổng thẻ.</p>
+
+  <h4 class="submuc">c. Chính sách và biện pháp</h4>
+
+  <p>Đổi nhiều sản xuất nhiều điều cổ thẻ nhiều điều cổ thẻ hơn nữa, cổ đây những điều này thẻ nhà cần chính sách thúc đẩy rõ ràng. Những kiến thức về CNTT cần phải kết hợp chặt chẽ với tổng quát về hệ thống kỹ thuật công nghệ điều hành sản xuất – chẳng những dừng ở mức nhu cầu thực tế chưa phải cổ nhiều thẻ bổ cần thiết. Bổ cổ nhiều hướng, nhiều cổ bổ thẻ từng nhiều tổng cổ nhiều nhiều cổ nhiều điều bổ bổ nhiều nước nhiều bổ nhiều thẻ điều ứng dụng.</p>
+
+  <h3 class="muc" id="muc-3-5">3.5. Xây dựng kế hoạch phát triển và ứng dụng CNTT ở các ngành và địa phương</h3>
+
+  <h4 class="submuc">a. Yêu cầu</h4>
+
+  <p><span class="page-num">tr.36</span>Nghị quyết 49/CP của Chính phủ đặt yêu cầu về phát triển CNTT trong các cổ ngành và địa phương. Thành phố Hồ Chí Minh là đầu hội tất cổ nước về mặt kinh tế – xã hội, mà nay CNTT được ứng dụng và phát triển nhiều mặt nhất, nổi cao lên và nhiều hơn nữa, mãi mãi là nơi có mức CNTT dẫn đầu so với các địa phương tất cả, cả đây trong cổ đó. Hà Nội, người cũng là đầu hội tất cổ thể đương nhiên đây là nơi CNTT phát triển và ứng dụng nhiều.</p>
+
+  <p>Trong những năm tới, cần đặt cổ thể mỗi này để nhiều điều và cổ bổ các ngành và địa phương đạt cổ những gì về xây dựng kết cấu hạ tầng và ứng dụng CNTT cho từng mục tiêu cụ thể theo Nghị quyết 49/CP.</p>
+
+  <h4 class="submuc">b. Nội dung kế hoạch phát triển và ứng dụng CNTT ở các ngành và địa phương</h4>
+
+  <p><span class="page-num">tr.36–37</span>Phần II có nhiều cổ hàng thẻ đây thể kết quốc gia hoạch dải tối để tốt nhất hơn đó. Phần từ nhiều điều cổ thẻ mỗi này để nhiều điều, thẻ kết nước, nhiều cổ thẻ và nhiều thẻ bổ cổ xây dựng tổng hợp kế hoạch từng thẻ.</p>
+
+  <p>Các ngành và địa phương cần xây dựng kế hoạch phát triển và ứng dụng CNTT của mình. Phần II cổ nhiều cổ hàng thẻ đây thể kết thẻ quốc gia có thể hoạch dải tối để tốt nhất:</p>
+  <ul>
+    <li>Việc xây dựng kế hoạch cổ đề án ứng dụng CNTT, đã bắt có ở mạng truyền thông dữ liệu, theo cái thể đã theo cái lần cổ nhiều hướng theo cái chuẩn chung và cái chính lên hệ thống mở đề ra toàn bộ hệ thống kế cả nước;</li>
+    <li>Cổ đề án ứng dụng CNTT phải quản lý hành chính quốc gia, quan lý kinh tế (kế hoạch, tài chính, ngân sách) và cổ nhân sự nhà nước;</li>
+    <li>Cổng nghệ thẻ tin trong cổ cả lĩnh vực văn hoá, xã hội, y tế và cổ nhiều thẻ điều thẻ bổ thẻ thẻ nhiều, v.v. – tổ thẻ thẻ cổ quan hệ nhiều nước và những thẻ thiếu bảo đảm nhà nước thẻ hướng tới nhiều nước nhiều tổ chức thẻ hướng vào thẻ bổ những nhiều điều cổ hơn nữa thể thiếu nhà nước và từng ngành.</li>
+  </ul>
+
+  <p>CNTT cũng phải nâng cao chất lượng cổ của cổ quan hệ cổ bổ và cổ bổ truyền thông thẻ thiếu cổ thẻ nhiều điều kiện cổ bổ bổ điều thẻ bổ thẻ nhiều. Chương trình quốc gia về CNTT cũng cổ phải chú ý chú điều số lần cổ thẻ nếu bổ thẻ đổi điều đòi hỏi về thiếu điều cổ nhiều cổ chuyển giao nước ngoài, chắc cổ thẻ nhiều điều thẻ nhiều hơn nữa, trước nhất cổ hướng điều thẻ điều thẻ bổ thẻ nhà bổ nhiều thẻ hướng và thẻ bổ thẻ từng "xã hội thông tin".</p>
+
+
+  <!-- ══════════════════════════════════════════════ -->
+  <h2 class="phan" id="phan-IV">Phần IV – Chính sách khuyến khích phát triển và ứng dụng CNTT</h2>
+
+  <p><span class="page-num">tr.38</span>Với thực điều Nghị quyết 49/CP của Chính phủ đặt câu hướng dẫn mạng nhu cầu nhiều mà đến những thiếu thẻ và điều cổ thẻ nhiều điều thẻ, từ cái thứ ngày mới liệu chính sách dụng đổi này và xác định được mọi chính sách tiêu quan điều công nghệ thẻ lần nhiều tỷ phần tới cổ khả tăng nghiên cứu và triển khai.</p>
+
+  <p>Đổi hội đây về liên hàng bổ nếu mỗi thẻ mỗi và điều mỗi thẻ bổ thẻ nhiều, cần xác định và ban hành một số chính sách cơ bản sau đây:</p>
+  <ul>
+    <li>Các chính sách và biện pháp đổi với việc xây dựng kết cấu hạ tầng CNTT,</li>
+    <li>Cổ chính sách khuyến khích đào tạo đổi hướng điều chú nhiều nhanh,</li>
+    <li>Cổ chính sách và biện pháp phát triển phần mềm ứng dụng và khuyến khích ứng dụng CNTT,</li>
+    <li>Cổ chính sách về đổi hội nước nguyên và chuyển giao công nghệ,</li>
+    <li>Cổ chính sách về bảo vệ bảo hộ sở hữu và quyền tác giả CNTT.</li>
+  </ul>
+
+  <h3 class="muc" id="muc-4-1">4.1. Các chính sách và biện pháp đổi với việc xây dựng kết cấu hạ tầng của CNTT</h3>
+
+  <p><span class="page-num">tr.39</span>Trong những nhiều cổ điều thẻ đến nhiều cổ sử dụng CNTT trong nhiều nước ta điều những chương trình đoạn nào ổn đổi, cần có một số chính sách thực hiện về:</p>
+
+  <p><strong>a.</strong> Chính sách về chuẩn và hệ thống mở trong việc xây dựng kết cấu hạ tầng của CNTT. Nội dung của phần này về trình bày theo những bảo thẻ, phần mềm, hệ thống, tổ hợp theo chuẩn X/Open và ISO/IEC đã phát triển trong phần 2.5 ở Phần II, cần phải triển khai thực hiện trong mọi dự án ứng dụng CNTT.</p>
+
+  <p><strong>b.</strong> Chính sách về mua sắm các sản phẩm và dịch vụ CNTT và cổ dự án. Đầu đến đến thiết hoàn tổng cổ nhiều cổ nhân hơn nữa thẻ qua cái nhiều thẻ điều, và cổ thẻ nhiều hơn nữa thẻ tổng mới nhóm điều này cổ thẻ, nhà nước đặt điều kiện ưu tiên mua sắm thiết bị và phần mềm đã được chuẩn hóa và tương thích hệ thống mở.</p>
+
+  <p><strong>c.</strong> Chính sách về phát triển mạng và thẻ truyền dữ liệu. Nhu cầu về việc ứng dụng CNTT thẻ điều nhiều cổ thẻ nhiều hơn người thẻ điều đổi với mọi người dùng dịch vụ nhiều hơn, đòi hỏi những chính sách mạng truyền thông dữ liệu quốc gia phải được đẩy mạnh và mở rộng nhanh chóng.</p>
+
+  <p><strong>d.</strong> Chính sách về phát triển công nghiệp CNTT trong nước. Đổi hội này từ nhiều điều cổ thẻ nhiều thẻ bộ từng nhiều ứng dụng vào nước CNTT trong tổ nguyên nhiều và nhiều điều cổ nước, cần những chính sách khuyến khích và hỗ trợ doanh nghiệp trong nước sản xuất, kinh doanh phần mềm và dịch vụ tin học.</p>
+
+  <h3 class="muc" id="muc-4-2">4.2. Chính sách khuyến khích đào tạo</h3>
+
+  <p><span class="page-num">tr.40</span>Trên cổ sở thực hiện các Đại phép luật, đường cổng hệ cổ giáo dục, đào tạo về CNTT nhiều triển bày ở phần 2.1, cần thêm một số chính sách nhân khuyến khích, cụ thể là:</p>
+
+  <p><strong>a.</strong> Trợ cấp đào tạo nghề nghiệp cho các cổ nhân và cổng ty về CNTT trong nước,</p>
+
+  <p><strong>b.</strong> Trợ cấp triển khai để đào tạo nguồn, kiến hướng luyện của cổ trường đại học và viện nhà nước,</p>
+
+  <p><strong>c.</strong> Cho cổng nhiều pháp tổng bảng nghiệp về CNTT cổ nhiều thẻ triển khai bảo điều nhiều ở Thẻ Việt Nam hoặc Mỹ, để đào tạo nhân kỹ sĩ, cổ nhiều viên viên đổi đến nguồn và thẻ đổi; nhiều nhiều đến VERDNET đổi hướng đến từ bảo nhiều đến điều lần cộng đổi,</p>
+
+  <p><strong>d.</strong> Cổ chương trình trao đổi cổng nhiều thẻ thẻ bổ nhiều hơn điều nhiều đổi nhiều với cổng ty đổi quốc tế điều Không; cổ thẻ cổng ty quốc gia chứng đào tạo kỹ năng cho người Việt Nam thêm phổ điều.</p>
+
+  <h3 class="muc" id="muc-4-3">4.3. Chính sách về thiết lập hệ thống tin học hóa</h3>
+
+  <p><span class="page-num">tr.41</span><strong>a.</strong> Tin nghĩ thẻ tin và chuẩn hóa các hệ thống phát sinh. Trong mỗi thực hiện cổ điều thẻ sử dụng CNTT, nội dung quan trọng nhất là xây dựng các hệ thống hệ thống thông tin trên cơ sở các chuẩn và hệ thống mở, đảm bảo tương thích và khả năng kết nối giữa các hệ thống.</p>
+
+  <p><strong>b.</strong> Bảo đổi thẻ tin và bảo vệ thẻ tin khóa nội nhà nước. Nhà nước cổ thẻ hệ hóa, phối hợp với thẻ nhiều cổ nhiều cổ nhiều điều cổ điều cổ nhiều, tổ chức thực hiện các biện pháp bảo vệ thông tin trong các hệ thống tin học nhà nước.</p>
+
+  <p><strong>c.</strong> Kế hoạch hành chính quốc gia hỗ trợ thẻ điều. Điều với dụng chủ nhiều trong thẻ tin thẻ nhiều, tổ chức nhiều vào từng thứ nhiều cho nhiều thẻ lần nhiều điều. Về quyền lợi nhiều thẻ lần cuối đến cổ đến cổ thẻ nhiều VERDNET từng phổ thẻ phổ nhiều lần phổ nhiều, cần có những chính sách kết hợp với nhau để thực hiện thống nhất hệ thống tin học hóa quốc gia.</p>
+
+  <h3 class="muc" id="muc-4-4">4.4. Chính sách chuyển giao công nghệ và hợp tác quốc tế</h3>
+
+  <p><span class="page-num">tr.42</span><strong>a.</strong> Về việc xây dựng chính sách và kế hoạch, biện pháp chuyển giao công nghệ và hội nhập quốc tế về CNTT: Chương trình quốc gia về CNTT phải hợp với cổ những Bộ, quan đồng thực hãng thực hiện Nghị quyết 49/CP. Bộ Khoa học, Công nghệ và Môi trường, phối hợp với Bộ Giáo dục và Đào tạo, và thẻ nhiều điều cổ nhân cổ phần nhiều thẻ nhiều, lập kế hoạch từ nhiều điều triển khai và đào tạo.</p>
+
+  <p>Việt Nam sẽ bắt đầu những bước cụ thể để chuyển giao công nghệ CNTT cho nhiều đề án triển khai.</p>
+
+  <p><strong>b.</strong> Về triển thực hiện khả năng sử dụng nguồn nhân lực giỏi hướng đến chuyển giao. Thực hiện Nghị quyết 49/CP, Bộ Khoa học Công nghệ và Môi trường, phổ hợp với Bộ Giáo dục và Đào tạo và các cơ quan liên quan, huy động người Việt Nam ở nước ngoài tham gia triển khai.</p>
+
+  <p>Khuyến khích nhiều người những cổ nhiều đổi hướng khuyến khích hội thẻ tự nhiều hơn lần nhiều thẻ điều cổ người Việt Nam ở nước ngoài và nhiều điều lần giúp phổ biến CNTT vào nước ta.</p>
+
+  <p><span class="page-num">tr.43</span>Bộ Tài chính phải hợp với cổ thẻ bộ bổ làm nhiều điều cổ nhiều thẻ nhiều điều cổ thẻ, Ngân hàng nhà nước, Bộ Khoa học và Công nghệ, thẻ nhiều thẻ điều bổ cổ quan hành chính sách, điều thẻ đổng điều nhiều cổ thẻ cổ thẻ nhiều cổ thẻ điều cổ phát triển cổ và nhiều.</p>
+
+  <h3 class="muc" id="muc-4-5">4.5. Chính sách hỗ trợ và huy động vốn cho phát triển CNTT</h3>
+
+  <p><span class="page-num">tr.43–44</span>Cổ thể hoạch Thực hiện những quả định điều ra đổng Nghị quyết 49/CP của Chính phủ, cần huy động và khuyến khích nhiều thẻ người và cổ những thẻ chủ nhiều và xây dựng và phát triển CNTT. Trong giai đoạn này, Nhà nước cần bộ điều nhiều người được đặt những nhiệm vụ cụ thể, có đủ đào tạo và năng lực để hướng triển khai các đề án CNTT và đảm bảo những đề án nhiều mặt.</p>
+
+  <p><strong>a.</strong> Nhà nước cần đổi ra và những nhiệm vụ cụ thể hơn cổ thẻ nhiều được tự hoạch nhà nhiều và quản lý nhà nước, trong giai đoạn phát triển;</p>
+
+  <p><strong>b.</strong> Nhà nước thể có "chuẩn mực" doanh nghiệp đó và thẻ đó nhiều nước đổi xây dựng kết cấu hạ tầng của CNTT, như hệ thống máy tính và mạng. Nhà nước đặt nhiều điều kiện để ứng dụng những công nghệ CNTT hiện đại đảm bảo chất lượng;</p>
+
+  <p><strong>c.</strong> Khuyến khích phát triển phần mềm, cổ thẻ nhiều hơn đổi thẻ mạng dụng CNTT và cổ điều các loại hình kinh doanh, nhiều dịch vụ.</p>
+
+  <h3 class="muc" id="muc-4-6">4.6. Chính sách bảo vệ sở hữu và quyền tác giả</h3>
+
+  <p><span class="page-num">tr.44</span>Bảo vệ sở hữu và quyền tác giả trong lĩnh vực tin học, cổ cả thẻ nhiều pháp hơn, cũng như nhiều cổ điều phổ biến thông tin. Đây là điều kiện cần thiết để thu hút đầu tư nước ngoài và phát triển công nghiệp phần mềm trong nước.</p>
+
+  <p>Việt Nam, thẻ cổ cổ số nhiều bổ các Pháp luật bảo vệ quyền tác giả, một trong các tổng nguồn đó nhiều từ nhiều về từ cổng nhiều thẻ nhiều của Pháp luật Bản quyền CNTT ở nước ta. Nghị quyết 49/CP cũng nêu rõ về cổ chính sách bảo vệ sở hữu và quyền tác giả trong ứng dụng CNTT. Bộ Khoa học, Công nghệ và Môi trường phối hợp với các Bộ liên quan, đã ban hành Luật bảo vệ quyền tác giả vào ngày 10/6/1992, và Tham gia Công ước Berne vào ngày 30/11/1994.</p>
+
+  <p><span class="page-num">tr.45</span>CNTT cần được đề cập đến, như:</p>
+
+  <ul>
+    <li>Các tác phẩm nước ngoài được bảo vệ. Việt Nam thừa nhận việc bảo vệ các tác phẩm của các tác giả thuộc các nước thành viên Công ước Berne như là bảo vệ tác phẩm của các tác giả Việt Nam.</li>
+    <li>Công nhận quyền kinh tế của tác giả mà tác phẩm của họ được sử dụng. Các quyền kinh tế này bao gồm được quyền về điều dịch, sắp xếp phần mềm từ một ngôn ngữ máy tính này sang mọi ngôn ngữ máy tính khác, về tải bản, …</li>
+    <li>Tất cả các tác phẩm xuất xứ từ các nước thành viên Công ước Berne chưa hết thời hạn bảo hộ ở nước xuất xứ thì sẽ được bảo hộ ở tất cả các nước thành viên khác.</li>
+    <li>Phần mềm máy tính phải được coi như tác phẩm văn học hay nghệ thuật và phải được bảo vệ trong thời hạn ít nhất là 50 năm.</li>
+    <li>Việc bảo vệ quyền tác giả được mở rộng ra tại các nước thành viên mà không cần đòi hỏi bất cứ một thủ tục hình thức nào.</li>
+  </ul>
+
+  <p>Vì quyền lợi cơ bản và lâu dài đối với các phát triển công nghệ nói chung, và nói riêng đối với CNTT, ta cần sớm có Luật bảo vệ quyền tác giả, và khi có Luật, cần phổ biến, giáo dục ý thức tôn trọng Luật – đó cũng là một tiêu chuẩn văn minh, làm cho ta có được điều kiện thuận lợi trong chuyển giao công nghệ và hội nhập với thế giới.</p>
+
+
+  <!-- ══════════════════════════════════════════════ -->
+  <div class="pdf-section" id="ban-goc">
+    <h3>Bản gốc – Tài liệu viết tay (45 trang)</h3>
+    <p style="font-size:0.88rem;color:#888;margin-bottom:0.8rem;">Nếu trình duyệt không hiển thị PDF, hãy <a href="khoahoc_files/1995_(VT)ChuongtrinhQuocGiaCNTT.pdf" target="_blank">tải về tại đây</a>.</p>
+    <embed
+      class="pdf-embed"
+      src="khoahoc_files/1995_(VT)ChuongtrinhQuocGiaCNTT.pdf"
+      type="application/pdf"
+      title="Chương trình Quốc gia CNTT – Bản viết tay 1995">
+  </div>
+
+</div><!-- .page-content -->
+</div><!-- .page-main -->
+
+<script data-goatcounter="https://phandinhdieu.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
