@@ -41,12 +41,40 @@ body{
   font-style:italic;font-family:'Inter',sans-serif;
 }
 .chapter-body{padding:2.2rem 2.5rem 2rem}
+
+/* Section divider between entries */
+.entry{
+  border-top:1px solid #e8e3d8;
+  padding-top:2rem;
+  margin-top:2rem;
+}
+.entry:first-child{border-top:none;padding-top:0;margin-top:0}
+.entry-author{
+  font-family:'Inter',sans-serif;
+  font-size:1rem;font-weight:700;
+  color:#001433;
+  margin:0 0 1rem;
+}
+
+/* Poem */
+.poem{
+  font-style:italic;
+  line-height:2.1;
+  margin:1rem 0 0.5rem 1.5rem;
+  color:#333;
+}
+.poem p{margin:0}
+
 blockquote{
-  border-left:3px solid #c0a87a;margin:1.5rem 0 1.5rem 0;
+  border-left:3px solid #c0a87a;margin:1.5rem 0;
   padding:0.8rem 1.5rem;background:#faf8f3;color:#444;
   font-style:italic;border-radius:0 6px 6px 0;
 }
 blockquote p{margin:0.4em 0}
+.email-header{
+  font-family:'Inter',sans-serif;font-size:0.82rem;
+  color:#888;margin-bottom:0.5rem;font-style:normal;
+}
 
 /* Figures */
 .art-figure{text-align:center;margin:1.8rem 0 1.5rem}
@@ -69,7 +97,6 @@ blockquote p{margin:0.4em 0}
 }
 .footnotes li{margin-bottom:0.4em}
 sup a{color:#7a1520;text-decoration:none;font-size:0.75em}
-pre{background:#f3f0e8;padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.88rem}
 
 /* Nav */
 .art-nav{
@@ -101,7 +128,6 @@ pre{background:#f3f0e8;padding:1rem;border-radius:6px;overflow-x:auto;font-size:
   .chapter-header,.chapter-body{padding:1.5rem 1rem}
   .chapter-title{font-size:1.2rem}
   .page{padding:0 0.75rem}
-  .art-figure{margin:1.2rem 0 1rem}
   .art-nav{flex-wrap:wrap;gap:0.8rem}
   .art-nav-prev,.art-nav-next{flex:1 1 100%}
   .art-nav-home{flex:1 1 100%}
@@ -118,25 +144,84 @@ pre{background:#f3f0e8;padding:1rem;border-radius:6px;overflow-x:auto;font-size:
 
 <section class="chapter" style="margin-top:1.5rem">
   <div class="chapter-header">
-
     <h2 class="chapter-title">Những chia sẻ ngắn</h2>
-    
-  
   </div>
   <div class="chapter-body">
 
-    <h3>Lê Tự Quốc Thắng</h3>
-BaiViet/LeTuQuocThang.tex
-<h3>Hoàng Tô</h3>
-BaiViet/HoangTo.tex
-<h3>Phạm Thị Thật</h3>
-BaiViet/PhamThiThat.tex
-<h3>Phan Xuân Dương</h3>
-BaiViet/PhanXuanDuong.tex
-<h3>Stein Tønnesson and David Marr</h3>
-BaiViet/SteinTonnenson.tex
-    
-  
+    <!-- 1. Lê Tự Quốc Thắng -->
+    <div class="entry">
+      <p class="entry-author">Lê Tự Quốc Thắng</p>
+      <p>GS Phan Đình Diệu làm tiến sĩ với ông Andrei A. Markov, một nhà toán học nổi tiếng có đóng góp quan trọng trong nhiều ngành, đặc biệt là constructive mathematics, logic, tô pô... Ông này là con của ông khác cũng tên là Andrei A. Markov, được biết đến với Markov stochastic process, và là người thay thế Chebyshev trong viện hàn lâm khoa học Nga.</p>
+      <p>Các công trình của luận án tiến sĩ và tiến sĩ bậc 2 (Doktor Nauk) của GS Phan Đình Diệu là về constructive mathematics, được tập hợp trong bài báo dài, thực chất là một cuốn sách (hơn 200 trang):</p>
+      <blockquote>
+        <p>Фан Динь Зиеу, <em>Некоторые вопросы конструктивного функционального анализа</em>, Труды МИАН СССР, 1970, том 114, 3–224.</p>
+      </blockquote>
+      <p>Bản dịch sang tiếng Anh: <a href="https://bookstore.ams.org/steklo-114/">https://bookstore.ams.org/steklo-114/</a></p>
+      <p>Trước đó các công trình này được công bố trong 6 bài báo ngắn hơn đăng tại tạp chí rất nổi tiếng ở Nga lúc đó là <em>Doklady Akademii Nauk</em>. Được đăng một bài trong <em>Doklady</em> là rất khó, là mơ ước của nhiều nhà khoa học Nga. Thế mà bác Diệu làm luôn một lèo 6 bài!</p>
+    </div>
+
+    <!-- 2. Hoàng Tô -->
+    <div class="entry">
+      <p class="entry-author">Hoàng Tô</p>
+      <p>Năm 1995, dưới sự hướng dẫn của GS Phan Đình Diệu, nhóm tiền thân Tinh Vân do anh Quan Son phụ trách đã hoàn thành thư viện mã hóa dựa trên thuật toán khóa công khai Elgamal-256 và đối xứng DES-56. Khách hàng đầu tiên chính là Trương Đình Anh, tích hợp cho giải pháp ngân hàng của FPT thời đó. GS luôn ủng hộ và tạo mọi điều kiện để nhóm phát huy tốt nhất, kể cả giai đoạn ở Ban chỉ đạo CTQG về CNTT (IT2000), hay khi đã tách ra thành lập công ty. Có thể nói thiếu sự hỗ trợ của GS những ngày đầu sẽ không có Tinh Vân hôm nay.</p>
+      <p>Những đóng góp của GS cả trong chuyên môn lẫn những phản biện xã hội sâu sắc sau này chắc chắn sẽ còn được hậu thế nhắc tới nhiều.</p>
+      <p>Xin vĩnh biệt GS, mong ông yên nghỉ và an giấc ngàn thu!</p>
+    </div>
+
+    <!-- 3. Stein Tønnesson and David Marr -->
+    <div class="entry">
+      <p class="entry-author">Stein Tønnesson và David Marr</p>
+
+      <blockquote>
+        <p class="email-header">From: Stein Tønnesson &lt;stein@prio.org&gt; — 2018-05-15</p>
+        <p>Dear Nguyen Dien,</p>
+        <p>Thank you so much for sending me this sad news, and for attaching a Vietnamese translation of my interview from 1993. I sent the manuscript to him at the time so he could read and correct any misunderstandings before publication, which indeed he did. So the interview does loyally represent his views at the time. Yet the interview caused quite a stir as it was translated from English into Vietnamese and being circulated widely in Vietnam. It got him into real trouble and also had a negative impact on my subsequent research trip to Vietnam, as attacks on the interview were published in Saigon Giai Phong and elsewhere. Afterwards I could not enter Vietnam for some time, and I was told that it would have negative consequences for Phan Dinh Dieu if I took contact with him again. As years passed, I suppose I could have safely reestablished contact with him, but regretfully never did.</p>
+        <p>If you should be present on Friday 18 May or know anyone who will be there, please convey my condolences to the family.</p>
+        <p>Yours gratefully,<br>Stein Tønnesson</p>
+      </blockquote>
+
+      <blockquote>
+        <p class="email-header">From: David Marr &lt;phanmarr@gmail.com&gt;</p>
+        <p>Dear Anh Giao,</p>
+        <p>Like Stein, I remember my meetings with Anh Dieu in 1992 and 1993 very favourably. He insisted I come to his house, even though we both knew that his every move was being watched. I quoted Anh Dieu in several subsequent articles, and we corresponded into 1994 and beyond. He features in a manuscript that Rob Hurle and I have composed, titled <em>"The Internet Comes to Vietnam"</em>, which is still looking for a publisher.</p>
+        <p>Please convey my sincere condolences to Anh Dieu's family.</p>
+        <p>Cordially,<br>David</p>
+      </blockquote>
+
+      <p>Bài phỏng vấn của Stein Tønnesson với Phan Đình Diệu có thể đọc tại:</p>
+      <ul>
+        <li>Bản gốc: <a href="https://www.dropbox.com/s/5r6wrnk2lxp5xgf/1993_04_Nordic_Newsletter.pdf?dl=0">1993_04_Nordic_Newsletter.pdf</a></li>
+        <li>Bản dịch: xem bài <a href="HieuMinh_Stein.html">GS Phan Đình Diệu bàn về dân chủ cùng Stein Tønnesson</a></li>
+      </ul>
+    </div>
+
+    <!-- 4. Phạm Thị Thật -->
+    <div class="entry">
+      <p class="entry-author">Phạm Thị Thật</p>
+      <p><strong>Vĩnh biệt bác Phan Đình Diệu</strong></p>
+      <div class="poem">
+        <p>Vốn cuộc đời như gió thoảng nhanh</p>
+        <p>Lòng đau dạ xót cũng thôi đành</p>
+        <p>Trọng người chính trực không màng lợi</p>
+        <p>Quý bậc hiền tài chẳng vị danh</p>
+        <p>Tri thức trau dồi mong nước mạnh</p>
+        <p>Đức nhân gìn giữ ước con thành</p>
+        <p>Trần gian giã biệt còn in dấu</p>
+        <p>Thân quyến lưu tình mãi diệu xanh.</p>
+      </div>
+      <p><em>(17/5/2018)</em></p>
+    </div>
+
+    <!-- 5. Phan Xuân Dương -->
+    <div class="entry">
+      <p class="entry-author">Phan Xuân Dương</p>
+      <p>Cháu chào bác,</p>
+      <p>Tối qua Hiệu gửi tin nhắn cho cháu, nhưng sáng nay cháu mới đọc. Tối qua, lần đầu tiên cháu đốt bếp củi ở nhà cháu ở Melbourne, ngọn lửa đẹp lắm, than hồng và ấm áp. Bọn trẻ con nhà cháu thích lắm. Nhớ lại ngày xưa có lần nấu bánh chưng sau nhà Đội Cấn với chị Quỳnh, bao nhiêu năm rồi.</p>
+      <p>Sáng nay, Melbourne nhiều sương. Phía trường cháu dạy học cũng gần núi, nên có lẽ sương nhiều và dày hơn. Tiết trời đã vào cuối thu. Trời không mưa tầm tã như mùa đông, cảnh vật có đượm buồn, nhưng không thê lương, giống như cảm giác của cháu lúc này.</p>
+      <p>Mỗi người nhìn thấy bác ở các góc khác nhau, một nhà Toán học, một trí thức lớn, một con người dám nói trong những hoàn cảnh không dễ dàng. Với riêng cháu, bác là con người của gia đình, của quê hương Hà Tĩnh, là người chặt gà Tết cho bác Hương, là người làm thơ viết văn và say mê sách.</p>
+      <p>Cháu chào tạm biệt bác, để bác lại đi tiếp một chặng đường mới trong cuộc hành trình, cháu nghĩ thế, vì có ai biết được đâu là tận cùng.</p>
+    </div>
+
   </div>
 </section>
 
