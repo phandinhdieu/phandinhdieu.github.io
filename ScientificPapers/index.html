@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Các bài báo khoa học — Phan Đình Diệu</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --accent: #00d8cb;
+  --accent-dark: #009e96;
+  --text: #2c2c2c;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg: #f0f2f5;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --radius: 14px;
+  --max-w: min(900px, calc(100vw - 40px));
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.site-header a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.site-header a:hover { color: var(--accent-dark); }
+.site-header .sep { color: var(--border); }
+
+/* ── Page hero ── */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.hero .label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hero h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.4rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ── Main content ── */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 0 4rem;
+}
+
+/* ── Phase heading ── */
+.phase {
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.phase h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1a1a1a;
+}
+.phase .years {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ── Paper card ── */
+.paper-list { display: flex; flex-direction: column; gap: 10px; }
+
+.paper {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.paper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.11);
+}
+.paper-year {
+  flex-shrink: 0;
+  width: 42px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  padding-top: 3px;
+  text-align: right;
+}
+.paper-body { flex: 1; }
+.paper-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.paper-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.paper-title a:hover { color: var(--accent-dark); text-decoration: underline; }
+.paper-meta {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.paper-meta em { font-style: italic; }
+.paper-tag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 9px;
+  background: #f0fdfc;
+  border: 1px solid #b2f0ec;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* ── Footer ── */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  background: #fff;
+  margin-top: 2rem;
+}
+.site-footer a { color: var(--accent-dark); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html">Phan Đình Diệu</a>
+  <span class="sep">›</span>
+  <a href="#">Các bài báo khoa học</a>
+</header>
+
+<div class="hero">
+  <div class="label">Tư liệu khoa học</div>
+  <h1>Các bài báo khoa học của Phan Đình Diệu</h1>
+  <p>Tổng hợp các công trình nghiên cứu đã thu thập được, từ các bài báo toán học thời kỳ nghiên cứu sinh tại Liên Xô đến các bài viết về tin học và công nghệ thông tin tại Việt Nam.</p>
+</div>
+
+<main>
+
+  <!-- ═══════════════════════════════════════════
+       GIAI ĐOẠN 1 — TOÁN HỌC KIẾN TẠO (1965–1974)
+  ════════════════════════════════════════════ -->
+  <div class="phase">
+    <h2>Toán học kiến tạo &amp; Giải tích hàm</h2>
+    <span class="years">1965 – 1974</span>
+  </div>
+  <div class="paper-list">
+
+    <div class="paper">
+      <div class="paper-year">1965</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1965_Dokl_Constructive locally convex linear topological spaces.pdf">
+            Constructive locally convex linear topological spaces
+          </a>
+        </div>
+        <div class="paper-meta"><em>Doklady Akademii Nauk SSSR</em>, 1965</div>
+        <span class="paper-tag">Doklady</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1965</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1965_Dokl_The metrizability, normability and multinormability of constructive locally convex spaces.pdf">
+            The metrizability, normability and multinormability of constructive locally convex spaces
+          </a>
+        </div>
+        <div class="paper-meta"><em>Doklady Akademii Nauk SSSR</em>, 1965</div>
+        <span class="paper-tag">Doklady</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1966</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1966_Dokl_On conjugates to constructive locally convex spaces.pdf">
+            On conjugates to constructive locally convex spaces
+          </a>
+        </div>
+        <div class="paper-meta"><em>Doklady Akademii Nauk SSSR</em>, 1966</div>
+        <span class="paper-tag">Doklady</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1967</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1967_Dokl. Akad. Nauk .pdf">
+            Bài báo trên Doklady Akademii Nauk
+          </a>
+        </div>
+        <div class="paper-meta"><em>Doklady Akademii Nauk SSSR</em>, 1967</div>
+        <span class="paper-tag">Doklady</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1967</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1967_Dokl_Constructive generalized functions.pdf">
+            Constructive generalized functions
+          </a>
+        </div>
+        <div class="paper-meta"><em>Doklady Akademii Nauk SSSR</em>, 1967</div>
+        <span class="paper-tag">Doklady</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1967</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1967_Trudy Mat. Inst. Steklov.pdf">
+            Bài báo trên Trudy Mat. Inst. Steklov
+          </a>
+        </div>
+        <div class="paper-meta"><em>Trudy Matematicheskogo Instituta Steklova</em>, 1967</div>
+        <span class="paper-tag">Steklov</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1967</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1967_Trudy Mat. Inst. Steklov_A language of constructive mathematics involving systems of sets.pdf">
+            A language of constructive mathematics involving systems of sets
+          </a>
+        </div>
+        <div class="paper-meta"><em>Trudy Matematicheskogo Instituta Steklova</em>, 1967</div>
+        <span class="paper-tag">Steklov</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1967</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1967_Trudy Mat. Inst. Steklov_On closed and open sets in constructive topological spaces.pdf">
+            On closed and open sets in constructive topological spaces
+          </a>
+        </div>
+        <div class="paper-meta"><em>Trudy Matematicheskogo Instituta Steklova</em>, 1967</div>
+        <span class="paper-tag">Steklov</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1968</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1968_Dokl.pdf">
+            Bài báo trên Doklady Akademii Nauk
+          </a>
+        </div>
+        <div class="paper-meta"><em>Doklady Akademii Nauk SSSR</em>, 1968</div>
+        <span class="paper-tag">Doklady</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1974</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1974_AMS_Some Questions In Constructive Functional Analysis (proceedings Of The Steklov Institute Of Mathematics).pdf">
+            Some Questions in Constructive Functional Analysis
+          </a>
+        </div>
+        <div class="paper-meta">
+          <em>Proceedings of the Steklov Institute of Mathematics</em> — American Mathematical Society (AMS), 1974
+          <br/>Bản dịch tiếng Anh bởi J. M.: <a href="1974_AMS_Some Questions In Constructive Functional Analysis -- by Fan Dinʼ-Zien (Phan Dình diêu) [Translated by J_ M_ -- Proceedings of the Steklov Institute.pdf">xem bản dịch</a>
+        </div>
+        <span class="paper-tag">AMS · Steklov</span>
+      </div>
+    </div>
+
+  </div><!-- /paper-list -->
+
+
+  <!-- ═══════════════════════════════════════════
+       GIAI ĐOẠN 2 — LÝ THUYẾT ÔTÔMAT & ĐỘ PHỨC TẠP (1971–1986)
+  ════════════════════════════════════════════ -->
+  <div class="phase">
+    <h2>Lý thuyết ôtômat &amp; Độ phức tạp tính toán</h2>
+    <span class="years">1971 – 1986</span>
+  </div>
+  <div class="paper-list">
+
+    <div class="paper">
+      <div class="paper-year">1971</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1971_FINITE_PROBABILISTIC_AUTOMATA.pdf">
+            Finite Probabilistic Automata
+          </a>
+        </div>
+        <div class="paper-meta">1971</div>
+        <span class="paper-tag">Ôtômat</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1977</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1977_Kibernetika_CRITERIA OF REPRESENTABILITY OF LANGUAGES IN PROBABILISTIC AUTOMATA.pdf">
+            Criteria of representability of languages in probabilistic automata
+          </a>
+        </div>
+        <div class="paper-meta"><em>Kibernetika</em>, 1977</div>
+        <span class="paper-tag">Kibernetika · Ôtômat</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1977</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1977_RAIRO_Asymptotical estimation of some characteristics of finite -- Phan Dinh Diêu, -- RAIRO_ Informatique théorique, #2, 11, pages 157-174, 1977 -- EDP -- 10_1051-ita-1977110201571 -- 3f6844a13de43d5b8d3e8a2edf6e2556 -- Anna's Archive.pdf">
+            Asymptotical estimation of some characteristics of finite automata
+          </a>
+        </div>
+        <div class="paper-meta">
+          <em>RAIRO Informatique théorique</em>, vol. 11, n° 2, pp. 157–174, 1977 — EDP Sciences<br/>
+          DOI: 10.1051/ita/1977110201571
+        </div>
+        <span class="paper-tag">RAIRO · Ôtômat</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1985</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1985_Controllability of a class of discrete bilinear systems.pdf">
+            Controllability of a class of discrete bilinear systems
+          </a>
+        </div>
+        <div class="paper-meta">1985</div>
+        <span class="paper-tag">Điều khiển học</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1986</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1986_Average polynomial time complexity of some NP-complete problems.pdf">
+            Average polynomial time complexity of some NP-complete problems
+          </a>
+        </div>
+        <div class="paper-meta">1986</div>
+        <span class="paper-tag">Độ phức tạp · NP</span>
+      </div>
+    </div>
+
+  </div><!-- /paper-list -->
+
+
+  <!-- ═══════════════════════════════════════════
+       GIAI ĐOẠN 3 — TIN HỌC VIỆT NAM (1985–1996)
+  ════════════════════════════════════════════ -->
+  <div class="phase">
+    <h2>Tin học &amp; Công nghệ thông tin Việt Nam</h2>
+    <span class="years">1985 – 1996</span>
+  </div>
+  <div class="paper-list">
+
+    <div class="paper">
+      <div class="paper-year">1985</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1985_KyThuatViXuLy_ViTinHOcPhanDinhDieu.pdf">
+            Kỹ thuật vi xử lý và Tin học
+          </a>
+        </div>
+        <div class="paper-meta">Phan Đình Diệu, 1985</div>
+        <span class="paper-tag">Tiếng Việt</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1994</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1994_PDD_TranDinhQue.pdf">
+            Bài báo cùng Trần Đình Quế
+          </a>
+        </div>
+        <div class="paper-meta">Phan Đình Diệu &amp; Trần Đình Quế, 1994</div>
+        <span class="paper-tag">Hợp tác</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1995</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1995_Vietnams IT -2000 Program_ The Challenges Ahead.pdf">
+            Vietnam's IT-2000 Program: The Challenges Ahead
+          </a>
+        </div>
+        <div class="paper-meta">Phan Đình Diệu, 1995</div>
+        <span class="paper-tag">Chính sách CNTT</span>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="paper-year">1996</div>
+      <div class="paper-body">
+        <div class="paper-title">
+          <a href="1996_Vietnam- information technology for the transition -- Do, J_; Phan Dinh Dieu; Goodman, S_E_ -- Computer, #3, 29, pages 88-94, IEEE.pdf">
+            Vietnam: information technology for the transition
+          </a>
+        </div>
+        <div class="paper-meta">
+          Do, J.; Phan Đình Diệu; Goodman, S. E.<br/>
+          <em>IEEE Computer</em>, vol. 29, n° 3, pp. 88–94, 1996
+        </div>
+        <span class="paper-tag">IEEE Computer</span>
+      </div>
+    </div>
+
+  </div><!-- /paper-list -->
+
+</main>
+
+<footer class="site-footer">
+  <a href="../index.html">← Trang chủ Phan Đình Diệu</a>
+</footer>
+
+</body>
+</html>
