@@ -1,0 +1,505 @@
+\documentclass[11pt, a4paper, reqno, oneside]{book}
+\usepackage{amsmath,amsxtra,amssymb,latexsym, amscd,amsthm}
+\usepackage{indentfirst}
+\usepackage{color}
+%\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage[mathscr]{eucal}
+\usepackage{amsfonts}
+\usepackage{graphics}
+%\input setbmp
+\usepackage[unicode]{hyperref}
+%\usepackage{titledot}
+%\titlename{Chương}
+%+ Can le van ban
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\textwidth}{6.in}
+%\setlength{\topmargin}{-0.5in}
+%\setlength{\textheight}{9.25in}
+%\renewcommand{\baselinestretch}{1.5}
+
+%+ Dinh nghia mot so ky hieu toan hoc.
+\def\i{\imath}
+\def\B{\mathscr B}
+\def\one{\mathbf 1}
+\def\C{\mathbf {C}}
+\def\R{{\mathbb R}}
+\def\LL{{\mathbb L}}
+\newcommand\abs[1]{|#1|}
+\newcommand\set[1]{\{#1\}}
+\newcommand\norm[1]{||#1||}
+\DeclareMathOperator{\vrai}{vrai}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\ho}{o}
+\DeclareMathOperator{\const}{const}
+\newcommand{\eoproof}{\hfill $\square$}
+\newcommand{\spro}[1]{\left<#1\right>}
+\newcommand{\argmin}{\arg\min}
+
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\newtheorem{lemma}{\bf Lemma}[chapter]
+\newtheorem{theorem}{\bf Theorem}[chapter]
+\newtheorem{proposition}{\bf Mệnh đề}[section]
+\newtheorem{corollary}{\bf Hệ quả}[section]
+\newtheorem{definition}{\bf Định nghĩa}[section]
+\newtheorem{remark}{\bf Chú ý}[section]
+
+\renewcommand{\baselinestretch}{1.22} 
+\usepackage[paperwidth=14.5cm,paperheight=20.5cm]{geometry}  
+\usepackage{amsmath,amsxtra,amssymb,latexsym, amscd,amsfonts,enumerate,ifthen,stmaryrd,amsthm,amstext}
+\usepackage[mathscr]{eucal}
+\usepackage{graphics, graphpap,extsizes}
+\usepackage[pdftex]{graphicx}
+\usepackage{xspace}
+\usepackage{array, tabularx, longtable}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\usepackage{indentfirst}
+\usepackage[utf8x]{inputenc} 
+%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam} % cần thiết để hiện chữ tiếng Việt
+\usepackage{hyperref}
+\usepackage{eso-pic,wrapfig}
+\usepackage[strict]{chngpage}
+\usepackage{fancybox}
+% màu cho nền sách
+\usepackage{color}
+\usepackage{pagecolor}
+\usepackage{wallpaper,mdframed}
+\usepackage{tcolorbox}
+\usepackage{adjustbox}
+\usepackage{xhfill}
+\usepackage{epigraph}
+%\usepackage{xhfill}
+%\usepackage{calc}
+\renewcommand{\rmdefault}{bch} 
+\usepackage{subcaption}
+%\usepackage{wrapfig}
+\usepackage{eso-pic,wrapfig}
+\usepackage{capt-of}
+
+ 
+ 
+% footnote đánh số theo từng trang 
+\usepackage{perpage} 
+\MakePerPage{footnote}
+
+
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt} % no line in header area
+
+%\fancyfoot{} % clear all footer fields
+
+
+\voffset =0in 
+\hoffset =0in
+\setlength{\evensidemargin}{-1.2cm}  %Lề trái tính từ điểm cách mép giấy 2.54cm
+\setlength{\oddsidemargin}{-0.8cm}     %Lề phải tính từ điểm cách mép giấy 2.54cm
+\setlength{\textwidth}{11.3 cm}            %Độ rộng khối chữ trong trang
+\setlength{\topmargin}{-1.5cm}          %Lề trên tính từ điểm cách mép giấy 2.54cm
+\setlength{\headheight}{0cm}             %Chieu cao cua Headerline
+\setlength{\headsep}{1cm}                %Khoang cach tu  Headerline tới khối chữ 
+\setlength{\textheight}{16.5cm}             %Chiều cao khối chữ trong trang
+
+\setlength{\baselineskip}{18truept}
+\parskip 3pt
+\abovedisplayskip =6pt plus 6pt minus 9pt
+\abovedisplayshortskip =0pt plus 6pt minus 9pt
+\belowdisplayskip =\abovedisplayskip
+\belowdisplayshortskip =\abovedisplayshortskip
+\def\NoBlackBoxes{\overfullrule=0pt }
+\NoBlackBoxes
+
+%    \textfloatsep = 10pt plus 2pt minus 4pt
+%    \floatsep = 2pt plus 2pt minus 2pt
+%    \intextsep = 2pt plus 2pt minus 2pt
+%    \parsep=0pt plus 1pt
+%\topsep=0pt plus 2pt minus 4pt
+%\partopsep=0pt plus 1pt minus 1pt
+
+% Cho phan muc luc
+\setlength{\hfuzz}{2pt}
+%============================
+\makeatletter
+\renewcommand{\l@chapter}{\@dottedtocline{1}{0.5cm}{0.8cm}}
+\renewcommand{\l@section}{\@dottedtocline{2}{0.7cm}{0.8cm}}
+\makeatother
+
+
+
+\makeindex
+
+\renewcommand{\contentsname}{\textcolor{C1}{Mục lục}}
+
+\begin{document}
+
+
+\section*{Về một chính sách Tin học}
+
+\begin{center}
+    \begin{figure}[htp]
+    \begin{center}
+     \includegraphics[scale=.5]{30_NamVienCNTT}
+    \end{center}
+    \end{figure}
+\end{center}
+
+Bản báo cáo này gồm các phần sau đây:
+
+\begin{itemize}
+\item[ ]Phần I. Ngành tin học trong cuộc CMKHKT hiện nay và yêu cầu cấp thiết của một chính sách.
+\begin{itemize}
+\item[I.] Tin học trong CMKHKT hiện nay
+\item[II.] Tin học đối với chúng ta và yêu cầu của một chính sách.
+\end{itemize}
+\item[ ]Phần II. Mục tiêu và nội dung của việc xây dựng và phát triển ngành tin học.
+\begin{itemize}
+\item[I.] Mục tiêu
+\item[II.] Ứng dụng tin học, hay từng bước tin học hóa nền kinh tế xã hội của ta
+\item[III.] Xây dựng công nghiệp tin học
+\end{itemize}
+\item[ ]Phần III. Các chính sách và biện pháp chủ yếu
+\begin{itemize}
+\item[I.] Con người. Đào tạo và nghiên cứu tin học
+\item[II.] Vốn đầu tư và trang bị kỹ thuật
+\item[III.] Quan hệ quốc tế và vấn đề tiếp thu tiến bộ KHKT
+\item[IV.] Về tổ chức và quản lý.
+\end{itemize}
+\end{itemize}
+
+Bản báo cáo này được viết trên cơ sở tiếp thu các ý kiến thảo luận trong Hội đồng khoa học ngành Tin học của UBKHKTNN, cũng như các bản sơ thảo về chính sách phát triển tin học do Viện KHVN và UBKHKTNN chuẩn bị trước đây, do Tổng cục Điện tử và ký thuật tin học đề xuất gần đây.
+
+\begin{center}
+\textbf{\underline{ PHẦN THỨ NHẤT}}
+\end{center}
+
+Ngành Tin học trong cuộc cách mạng Khoa học Kỹ thuật hiện nay và yêu cầu cấp thiết của một chính sách Tin học
+
+\textbf{I.	\underline {Tin học trong cách mạng KHKT hiện nay.}}
+
+
+1.	Đối tượng của Tin học là thông tin và các quá trình xử lý thông tin tự động bằng máy tính điện tử. Những tiến bộ cực kỳ nhanh chóng và sự thâm nhập sâu rộng của Tin học trong mọi lĩnh vực của sản xuất và kinh tế - xã hội là một đặc điểm nổi bật của cuộc cách mạng KHKT hiện nay, là một tiến bộ KHKT mũi nhọn của thời đại, Tin học cung cấp các phương pháp và công cụ cực kỳ mạnh mẽ giúp con người khai thác và xử lý thông tin, do để được ứng dụng có hiệu quả trong các lĩnh vực nghiên cứu khoa học kỹ thuật, điều khiển tự động các quá trình công nghệ, trong điều tra cơ bản, trong thông tin liên lạc, v.v. Và đặc biệt quan trọng là việc ứng dụng tin học trong lĩnh vực tổ chức và quản lý: quản lý sản xuất, quản lý kinh tế và xã hội,… Vì thông tin tồn tại và vận động trong hầu hết mọi lĩnh vực hoạt động của con người và xã hội, nên tin học đang có xu hướng thâm nhập sâu rộng vào tất cả các lĩnh vực hoạt động để tạo nên những biến đổi sâu sắc về chất lượng và hiệu quả của các hoạt động đó. Mặt khác, việc sản xuất các máy tính điện tử và các sản phẩm tin học đã hình thành nên một ngành công nghiệp tin học trên thế giới; trong một số nước rất phát triển, ngành công nghiệp này đang vươn lên vị trí của một trong những ngành công nghiệp hàng đầu. Lao động trong khu vực thông tin không ngừng tăng lên, và tỷ trọng thu nhập xã hội do khu vực này mang lại cũng ngày càng lớn, cùng với việc điện tử hóa, công việc “tin học hóa” đang mang lại những biến đổi sâu sắc trong cơ cấu sản phầm và cơ cấu giá trị của nền kinh tế xã hội, và vì vậy là một yếu tố cách mạng đối với nền sản xuất về kinh tế trong giai đoạn hiện nay của cuộc cách mạng khoa học – kỹ thuật.
+
+
+2.	 Về mặt khoa học kỹ thuật, trong giai đoạn hiện nay và 10-15 năm tới, tin học được phát triển theo các phương hướng chủ yếu sau đây:
+
+
+2.1.	 Máy tính điện tử không ngừng được nâng cao về hiệu quả và chất lượng. Về chất lượng xử lý, từ chỗ là công cụ tính toán và xử lý thông tin, máy tính điện tử sẽ tiến lên , nó có khả năng tích lũy trí thức, xử lý trí thức và thực hiện chức năng “trí tuệ nhân tạo’. Về năng lực xử lý, hiện đã có các máy tính điện tử với tốc độ hàng trăm triệu phép tính một giây, trong một số năm tới sẽ có những máy tính điện tử với tốc độ xử lý hàng tỷ, hàng chục tỷ phép tính một giây, những máy tính này sẽ có kiến trúc phi cổ điển, có khả năng xử lý song song (trong một máy có thể có hàng vạn đến hàng triệu bộ xử lý làm việc đồng thời). Khả năng máy tiếp nhận thông tin trực tiếp từ ngôn ngữ tự nhiên, bằng tiếng nói, hình sẽ dần dần trở thành hiện thực. Mặc dù trong một số năm tới, các “siêu máy tinh” với những khả năng như vậy chưa phải được sử dụng phổ biến, nhưng những quan điểm hiện đại về chất lượng và kiến trúc mới của máy tính là rất đáng được quan tâm.
+
+
+2.2.	Sự ra đời và tiến bộ nhanh chóng của kỹ thuật vi xử lý mở ra một giai đoạn mới có tính chất cách mạng trong tin học. Sau một thời ký thử thách, ngày nay các máy vi tính trên cơ sở kỹ thuật vi xử lý đã chiếm lĩnh một vị trí chắc chắn và ngày càng vững vàng trong việc ứng dụng tin học vào mọi lĩnh vực hoạt động của xã hội. Với tiến bộ nhanh chóng của kỹ thuật vi điện tử, các máy vi tính ngày càng có khả năng lớn, vượt khỏi phạm vi của “máy tính cá nhân” và trở thành máy tính chuyên nghiệp. Các máy vi tính với giá mua vài ba ngàn đô la, với khả năng tính toán khá mạnh (tốc độ có thể đến triệu phép tính/giây, bộ nhớ trong 1-2 megabytes, phần mềm phong phú,…) là công cụ hấp dẫn đối với mọi cơ sở sản xuất, kinh doanh, dịch vụ, v.v… Hằng năm, trên thị trường thế giới có thêm khoảng 5 triệu máy vi tính. Ngoài máy vi tính, cũng cần chú ý là kỹ thuật vi xử lý có thể được ứng dụng một cách mềm dẻo, đa dạng trong nhiều lĩnh vực kỹ thuật và sản xuất. Kỹ thuật vi xử lý và máy vi tính, với khả năng thâm nhập sâu rộng của mình, là công cụ vô cùng đắc lực cho việc tin học hóa xã hội hiện nay và tương lai.
+
+
+2.3.	Kết hợp với những tiến bộ to lớn cả kỹ thuật thông tin liên lạc, người ta đã xây dựng các mạng máy vi tính điện tử với khả năng thực hiện các hệ thống lưu trữ, truyền đưa và xử lý thông tin ở mọi quy mô khác nhau, từ mức xí nghiệp, ngành cho đến quy mô quốc gia và quốc tế - Điều đó làm cho khả năng và hiệu quả của việc khai thác và sử dụng các nguồn thông tin trong mọi hoạt động của xã hội tăng kên nhanh chóng làm tiền đề cho những đổi thay to lớn trong việc tổ chức các hoạt động kinh tế và xã hội.
+
+
+3.	Ta chú ý một số đặc điểm sau đây trong sự phát triển hiện nay của Tin học:
+
+
+3.1	Trong khi việc ứng dụng Tin học có phạm vi ngày càng rộng rãi đối với mọi quốc gia, thì ngành công nghiệp sản xuất các linh kiện và thiết bị tin học lại là một ngành mũi nhọn, đòi hỏi đầu tư lớn và một cơ sở công nghiệp hiện đại, nên thực tế đang tập trung trong tay một số ít nước phát triển nhất. Thí dụ đối với các linh kiện cao cấp như các mạch vi xử lý, các mạch nhớ dung lượng lớn, thì gần như toàn bộ được sản xuất ở Mỹ, một phần ở Nhật (không kể ở các nước XHCN). Ngay cả những nước như CHLB Đức cũng phải nhập khoảng 80\% linh kiện cho công nghiệp Tin học của mình. Trong số 50 hãng sản xuất máy tính lớn nhát của thế giới tư bản, thì hơn 40 hãng lẻ của Mỹ, riêng hãng có chỉ số kinh doanh về KTĐT bùng một nửa chỉ số kinh doanh về KTĐT của thế giới.
+
+
+3.2	Trong khi tiến bộ kỹ thuật làm cho phần cứng đạt được tốc độ tăng năng suất cao, thì tốc độ tăng năng suất phần mềm đạt được còn khá thấp. Trong việc ứng dụng tin học, chi phí cho phần mềm chiều một tỷ lệ ngày càng cao so với phần cứng (đối với các nước phát triển hiện nay là khoảng 85\% - 15\%). Cơ cấu phần mềm lại rất đa dạng, có những phần mềm cơ bản mà chỉ các hãng sản xuất máy tính hoặc một số ít cơ sở nghiên cứu liên quan làm ra, nhưng có một phạm vi mênh mông của phần mềm ứng dụng mà bất kỳ ai nghiên cứu và ứng dụng tin học có khả năng cũng đều cần và có thể làm được. Vì sản phẩm phần mềm chiếm một tỷ lệ giá trị lớn, và vốn đầu tư để tạo cơ sở vật chất – kỹ thuật cho nó không đòi hỏi nhiều như sản xuất phần cứng, nên nhiều nước xem đây là một chỗ có thể cứ để xác định phương hướng phát triển tin học của mình. 
+
+
+3.3. Tin học được xem là ngành sản mũi nhọn chiếm vị trí hàng đầu trong chính sách Khoa học – Kỹ thuật và phát triển Kinh tế của các nước tư bản phát triển. Các nước xã hội chủ nghĩa trong khối SEV cũng đã xác định Tin học là một trong năm hướng ưu tiên phát triển và hợp tác. Nhiều nước trong thế giới thứ ba cũng đã xác định chính sách tin học của mình.
+
+
+ Trong vùng Đông Á, ngoài Nhật Bản, sự phát triển nhanh chóng và hiệu quả của một số nước “công nghiệp mới” đang được lưu ý. Nam Triều Tiên và Đài Loan đang vươn lên thành những nước sản xuất và xuất khẩu của linh kiện điện tử cao cấp (như các mạch nhớ) và máy vi tính cùng thiết bị ngoại vi. Công nghiệp phần mềm được xem là chiến lược phát triển của Singapore, v.v….
+ 
+ 
+\textbf{II. \underline{Tin học đối với chúng ta và yêu cầu của một chính sách.}}
+
+
+1.	Ở nước ta, việc sử dụng máy tính điện tử được bắt đầu từ cuối những năm 60. Việc sử dụng KTĐT trong gia đoạn trước 1975 đã thúc đẩy bước đầu việc xây dựng ngành Tin học và việc nghiên cứu, ứng dụng Tin học trong nhiều ngành xây dựng, giao thông vận tải, lâm nghiệp, khí tượng thủy văn, thủy lợi, v.v… Trước năm 1975, ở miền Nam, ngoài mục đích quân sự, máy tính điện tử cũng đã được ứng dụng có nền nếp và hiệu quả trong các hoạt động thống kê, hạch toán và quản lý xí nghiệp. Sau khi giải phóng miền Nam, ta tiếp thu được hơn 20 máy tính điện tử loại IBM 360 (từ model 20 đến 50), và nhiều máy vẫn tiếp tục làm việc đến nay tuy có nhiều khó khăn.
+
+
+Trong các năm 1975 và 1976, Hội đồng Chính phủ đã hai lần ra các nghị quyết 173(1975) và 245 CP (1976) về việc tăng cường quản lý và sử dụng MTĐT trong quản lý kinh tế và tăng cường quản lý và sử dụng MTĐT trong cả nước, và do đó đã lập các viện nghiên cứu về kinh tế về khoa học tính toán và điều khiển. Từ năm 1975 đến đầu những năm 1980, tuy Nhà nước đã có các nghị quyết như vậy, nhưng do có nhiều biến động và khó khăn về tình hình chung, nên chưa có các biện pháp tích cực để thực hiện đầy đủ các nghị quyết đó. Các vấn đề ứng dụng Tin học có được tăng lên ít nhiều, nhưng chưa có những đóng góp đáng kể trong các lĩnh vực quan trọng của sản xuất và quản lý kinh tế. Do không có đầu tư thêm về trang bị MTĐT, nên ở khu vực phía bắc, việc nghiên cứu và ứng dụng có nhiều hạn chế. Ở khu vực phía Nam, bên cạnh một số cơ sở duy trì và phát triển được việc sử dụng các MTĐT vốn có, nhiều cơ sở khác do những thay đổi về cấu và tổ chức chưa sử dụng tốt các MTĐT. Bên cạnh đó, do tác động của những tiến bộ to lớn của kỹ thuật tin học trên thế giới, mốt số cơ sở nghiên cứu đã bước đầu đào tạo cán bộ, tiến hành nghiên cứu và ứng dụng các tiến bộ kỹ thuật mới, đặc biệt là kỹ thuật vi xử lý và vi tin học.
+
+
+ Từ năm 1983 lại đây, sự thâm nhập của các máy vi tính theo nhiều đường khác nhau, cộng thêm việc nhập máy theo các chương trình viện trợ đã tạo ra những nét mới trong việc trang bị MTĐT trong cả nước. Chúng ta có thêm một số mát tính mini như NINI6, 1-6, và khoảng trên dưới 100 máy vi tính các kiểu Apple-II, IBM-FC, v.v… Điều này đã thúc đẩy việc ứng dụng Tin học trong sản xuất và kinh tế ở một giai đoạn mới, và rõ ràng đặt ra nhiều vấn đề cần được xem xét và giải quyết. Về mặt tổ chức, việc thành lập Tổng cục điện tử và kỹ thuật tin học vào năm 1984 là một bước tiến quan trọng trong việc xây dựng và phát triển ngành điện tử và tin học ở nước ta.
+ 
+ 
+2.	Thực tiễn nghiên cứu và ứng dụng Tin học trong thời gian vừa qua, tuy chưa nhiều, cũng có thể cho chúng ta rút ra vài nhận định về những kết quả và khả năng, cũng như về những thiếu sót và khó khăn mà chúng ta cần tính đến trong sự phát triển Tin học sắp tới.
+
+
+2.1.	 Một trong những yếu tố quan trọng là cán bộ KHKT của ta có khả năng tiếp thu những tiến bộ KHKT hiện đại đặc biệt trong lĩnh vực tin học. Trong mấy năm qua, tuy chưa nhiều, nhưng ta cũng đã tạo được một số tập thể cán bộ, kỹ sư tiếp thu, làm chủ và vận dụng được các trí thức hiện đại về kỹ thuật vi xử lý và vi tin học, về phần mềm .v.v. Trong công tác ứng dụng vào các ngành, đã có một số tập thể có kinh nghiệm trong một số lĩnh vực như thủy lợi, điện lực, lâm nghiệp, xây dựng, quản lý, v.v…
+
+
+Nhu cầu tiềm năng của việc ứng dụng thì rất lớn. Nhưng hình thành được các nhu cầu có thể đáp ứng một cách hiện thực và có hiệu quả trong từng giai đoạn là điều rất quan trọng. Qua thực tiễn ứng dụng vừa qua, ta đã có khả năng hình thành được các nhu cầu hiện thực như vậy và trong chừng mực nhất định, có chuẩn bị những điều kiện để đáp ứng các nhu cầu đó.
+
+
+2.2.	 Trong mấy năm qua, sự chậm trễ của ta trong việc đào tạo cán bộ tin học là một thiếu sót quan trọng, làm cho hiện nay, khi đứng trước nhu cầu phát triển và ứng dụng tin học một cách rộng rãi thì ta không có đủ cán bộ có hiểu biết để triển khai thực hiện. Ta đã có một số tổ chức về tin học nhưng các mặt công tác nghiên cứu, đào tạo, sản xuất, ứng dụng và dịch vụ chưa được phối hợp một cách có hiệu quả để phát huy đầy đủ lực lượng tin học chung của chúng ta. Tình trạng phân tán, thiếu sự hợp tác và trao đổi trí thức, kinh nghiệm với nhau là không có lợi cho sự phát triển nhanh việc ứng dụng Tin học của ta. Hiện nay, tuy số máy tính chưa nhiều, nhưng do thiếu cán bộ và do tình trạng phân tán cục bộ nói trên, nên các phương tiện hiện có chưa được sử dụng hợp lý, nhiều khi còn lãng phí.
+
+
+3.	Xây dựng và phát triển tin học để đáp ứng các nhu cầu phát triển của sản xuất, kinh tế và các mặt hoạt động xã hội khác là một đòi hỏi khách quan, không thể lảng tránh được. Đã đến lúc chúng ta phải thật sự tích cực và chủ động nắm lấy việc xây dựng và phát triển ngành KHKT mũi nhọn này phù hợp với hoàn cảnh và khả năng của ta để đưa nó phục vụ đắc lực cho sự phát triển kinh tế xã hội của nước ta. Ta phải xác định rõ cái ta muốn đạt được. Không chỉ ta làm được và có thể nỗ lực để làm được, và cả những cách thức tận dụng sự nỗ lực để nhằm đạt được một cách tốt nhất mục tiêu của chúng ta.
+
+
+Nói cách khác, ta phải xác định một chính sách xây dựng ngành Tin học, và xem việc thực hiện chính sách đó là một trong những nhiệm vụ Kinh tế và KHKT quan trọng trong giai đoạn sắp tới của chúng ta.
+
+\newpage
+
+\begin{center}
+\textbf{PHẦN THỨ HAI}
+\end{center}
+
+
+\begin{center}
+MỤC TIÊU VÀ NỘI DUNG QUA VIỆC XÂY DỰNG VÀ PHÁT TRIỂN MẠNG TIN HỌC
+\end{center}
+
+
+\textbf{I. \underline{	Mục tiêu}}
+
+
+1) Cũng như đối với bất cứ một kế hoạch ứng dụng tiến bộ KHKT nào hay bất cứ sự phát triển một trình kinh tế - kỹ thuật nào khác, việc xây dựng và phát triển Tin học cũng nhằm mục đích cuối cùng là tạo ra càng nhiều càng tốt giá trị tăng thêm trong nền kinh tế - xã hội. Tin học tạo ra giá trị bằng cách nào? Vai trò của Tin học là thực hiện các quá trình khai thác và xử lý thông tin trong các hoạt động kinh tế - xã hội. Máy tính điện tử và các thiết bị tin học cho ta cái khả năng to lớn để xử lý thông tin, còn thực hiện các quá trình xử lý thông tin thì phải thông qua việc ứng dụng vào các ngành kinh tế và sản xuất cụ thể. Như vậy, phần giá trị mà Tin học đóng góp vào tổng sản phẩm xã hội gồm hai phần chủ yếu một phần chức trong các máy tính điện tử và các thiết bị khác là sản phẩm của công nghiệp tin học, và một phần tạo ra thì trong việc ứng dụng tin học vào các hoạt động sản xuất, kinh tế và xã hội.
+
+
+ Mục tiêu tổng thể về giá trị phải được thể hiện bằng những mục tiêu cụ thể đối với hai phần nói trên.
+ 
+ 
+2) Như vậy, về lâu dài, mục tiêu chung của việc xây dựng và phát triển ngành Tin học của nước ta là:
+
+
+ Ứng dụng rộng rãi Tin học vào mọi ngành hoạt động của xã hội, hay là Tin học hóa xã hội.
+ 
+ 
+ Xây dựng một ngành công nghiệp tin học, sản xuất được các sản phẩm tin học có giá trị, phục vụ việc ứng dụng tin học và xuất khẩu.
+ 
+ 
+ Việc xác định các chỉ tiêu cụ thể và các nội dung để cho một kế hoạch 15-20 năm đòi hỏi phải được nghiên cứu tiếp tục. Ở đây, trên cơ sở phân tích các nhu cầu cấp thiết nhất của việc ứng dụng tin học và các khả năng mà ta có thể huy động trong thời gian tới, sẽ nêu ra một số nội dung và chỉ tiêu cụ thể về hai mục tiêu nói trên cho kế hoạch 1986-1990.
+ 
+ 
+3) Trong kế hoạch năm năm 1986-1990, cần thực hiện được một bước chuyển lớn trong việc xây dựng và phát triển tin học, làm cho tiến bộ khoa học kỹ thuật về tin học thật sự thâm nhập vào đời sống kinh tế xã hội của đất nước. Muốn vậy, tin học phải được ứng dụng vào những khâu cốt yếu nhất của hệ thống kinh tế - xã hội, phải trở thành công cụ đắc lực giúp chúng ta khai thác tốt các nguồn thông tin chủ yếu. Đồng thời, trong 5 năm tới cũng phải tạo được những cơ sở bước đầu để xây dựng và định hướng cho một nền công nghiệp tin học của ta trong tương lai. Cụ thể hơn, là:
+
+
+ 3.1. Đối với ứng dụng tin học, mục tiêu chủ yếu là tin học hóa bước đầu công tác quản lý, cả ở cấp trung ương và cơ sở. Xây dựng được cơ sở ban đầu cho các hệ thống thông tin cơ bản về tình hình kinh tế - xã hội của đất nước, phục vụ công tác lãnh đạo và quản lý ở Trung ương và các ngành. Ở cấp cơ sở sản xuất, kinh doanh vì dịch vụ, hoàn thiện việc thí điểm ứng dụng vì tin học và triển khai ứng dụng ở các cơ sở quan trọng. Ngoài ra, phải sử dụng MTĐT để tổ chức được các hệ thông tin trong điều tra cơ bản, các hệ lưu trữ, hệ thông tin khoa học – kỹ thuật, v.v… Đồng thời, cần chú ý việc ứng dụng tin học trong công tác nghiên cứu khoa học – kỹ thuật.
+ 
+ 
+ 3.2. Đối với việc xây dựng công nghiệp tin học: Trong bước đầu, cần xây dựng một vài xí nghiệp chuyên sản xuất và lắp ráp các thiết bị tin học, như máy vi tính, các thiết bị phụ cận, các thiết bị tin học chuyên dụng trong truyền thông, trong điều khiển, v.v… Tổ chức tốt việc bảo hành và sản xuất các sản phẩm phần mềm phục vụ nhu cầu ứng dụng. Trên cơ sở đó, từng bước định hình các phương hướng ưu tiên cho việc phát triển công nghiệp tin học của ta trong những giai đoạn sau.
+ 
+ 
+\textbf{II.	\underline{  Ứng dụng tin học, hay từng bước tin học hóa nền kinh tế - xã hội nước ta.}}
+
+ Tin học hóa kinh tế và xã hội nước ta là một công việc to lớn và lâu dài, đòi hỏi được thực hiện dần trong nhiều kế hoạch năm năm. Trong kế hoạch 1986-1990, ta chỉ việc tập trung việc ứng dụng vào những lĩnh vực mà nhu cầu khai thác và sử dụng nên nguồn thông tin là cấp thiết nhất.
+ 
+ 
+1.	Xây dựng cơ sở bước đầu của các hệ thống thông tin và hoạt động kinh tế - xã hội để phục vụ công tác lãnh đạo và quản lý của Nhà nước. Quản lý là lĩnh vực ứng dụng quan trọng nhất của tin học. Và quản lý ở cấp trung ương là khâu có ý nghĩa quyết định nhất. Trong mấy năm qua, ta đã có một số nghiên cứu có tính chất chuẩn bị. Đã đến lúc cần tích cực nghiên cứu thiết kế và từng bước thực hiện một mạng lưới của hệ thống thông tin cơ bản về tình hình kinh tế - xã hội, về những biến động của tình hình đó để phục vụ cho việc ra quyết định của các cơ quan lãnh đạo và quản lý của Nhà nước và của một số ngành quan trọng – Trong 5 năm tới, cần nghiên cứu đề xuất các đề án tổng thể, đồng thời thực hiện bước đầu một số hệ thống về những thông tin cơ bản nhất tại cơ quan lãnh đạo của “Nhà nước và của ngành thống kê, kế hoạch, vật tư, tài chính, ngân hàng, ngoại thương, giao thông vận tải, v.v…
+
+
+Việc ứng dụng này là hết sức quan trọng, đòi hỏi được sự xuất khẩu quan tâm chỉ đạo của các cơ quan lãnh đạo. Nhà nước, đặc biệt vì bản thân sự ứng dụng này là một biện pháp quan trọng trong công tác cải tiến quản lý của chúng ta.
+
+
+2.	Ứng dụng trong cải tiến quản lý ở các xí nghiệp cơ quan kinh doanh và dịch vụ. Hiện nay, với sự phát triển nhanh chóng của máy vi tính và vi điện tử, ta đã có khả năng thực tế về ứng dụng tin học dần từng bước trong bước cải tiến quản lý cơ sở. Cần nghiên cứu hoàn thiện và chuẩn hóa việc xây dựng các hệ thống thông tin thống kê – hoạch toán ở các loại hình xí nghiệp, cơ sở kinh doanh, dịch vụ và triển khai việc thực hiện bằng máy tính các hệ thống đó.
+
+
+Việc nghiên cứu xây dựng các hệ thống thông tin – quản lý ở cấp tỉnh, cấp huyện cũng cần được tiến hành thí điểm.
+
+
+ Trong 5 năm tới, trang bị cho việc thực hiện ứng dụng tin học ở cơ sở chủ yếu là bằng máy vi tính, một số trường hợp có điều kiện có thể tính đến máy mini. Vốn đầu tư trang bị cho các ứng dụng này chủ yếu phải do các cơ sở sản xuất và kinh doanh tự trang trải.
+ 
+ 
+3.	Các hệ thông tin điều tra cơ bản và các hệ thông tin khác: Ta đã và đang tiếp tục tiến hành nhiều chương trình rộng lớn và điều tra cơ bản và quy hoạch các vùng kinh tế như đồng bằng sông Cửu Long., Tây Nguyên, đồng bằng sông Hồng, vùng thềm lục địa, v.v… Đồng thời, nhiều công tác điều tra khác về địa chất, lâm nghiệp, khí tượng thủy văn, v.v… vẫn được tiến hành thường xuyên. Một số ngành đã có nề nếp tổ chức thông tin điều tra cả bằng MTĐT. Nhưng nói chung, đối với đa số các chương trình điều tra, thông tin chưa được tổ chức một cách “Tin học hóa”, do đó chưa được lưu trữ, sắp xếp, tổng hợp, tìm kiếm và sử dụng một cách có hiệu quả. Cần đưa nội dung xây dựng các hệ thống thông tin điều tra bằng MTĐT vào các chương trình điều tra cơ bản.
+
+
+Đối với hệ thống lưu trữ, các thư viện, hệ thống thông tin khoa học – kỹ thuật cũng cần được tổ chức bằng các phương tiện của Tin học, trong 5 năm tới cố gắng thực hiện đối với một số hệ quan trọng nhất ở Trung ương.
+
+
+4.	Ứng dụng Tin học trong nghiên cứu khoa học và kỹ thuật. Ứng dụng tin học là một biện pháp để nâng cao trình độ, chất lượng và hiệu quả của công tác nghiên cứu khoa học, từ các khoa học tự nhiên đến các khoa học xã hội. Đặc biệt cần chú trọng việc ứng dụng tin học cùng các phương pháp toán học trong ngành kinh tế học, xã hội học, Y học, nông nghiệp, v.v… Tiếp tục đẩy mạnh việc ứng dụng Tin học trong các ngành kỹ thuật như xây dựng, giao thông vận tải, bưu điện, năng lượng, cơ khí, v.v…
+
+
+Đẩy mạnh việc ứng dụng tin học trong các ngành khoa học và kỹ thuật nói trên sẽ một mặt tạo cho các ngành khoa học, kỹ thuật đó khả năng lớn hơn trong việc phục vụ thực tiễn. Mặt khác, thông qua đó bản thân tin học thâm nhập nhanh hơn vào các lĩnh vực của thực tiễn.
+
+
+ Đồng thời, đẩy mạnh việc nghiên cứu các bài toán làm quyết định trong quản lý cơ sở như lập kế hoạch, tính toán các định mức kinh tế - xã hội, lập lịch biểu sản xuất, tính toán phương án kinh doanh, dịch vụ ,v.v…
+
+\newpage
+
+
+\textbf{III.	 \underline{ Xây dựng công nghiệp Tin học}}
+
+1)	Công nghiệp Tin học là một ngành công nghiệp mũi nhọn của thế giới nói chung. Bổn phận của ngành công nghiệp này gồm có các máy tính điện tử, các thiết bị xử lý thông tin khác, và các sản phẩm phần mềm. Hiện nay, ta chưa có công nghiệp tin học. Vì vậy, trong 5 năm tới, đối với chúng ta, việc xây dựng công nghiệp tin học sẽ ở trong những bước đầu của những thử thách về tìm kiếm. Tin học là một hiện tượng thế giới, sản phẩm tin học có khả năng thâm nhập nhanh chóng vào một nước, nhất là ở khu vực của chúng ta, nên không thể đóng cửa để xây dựng một ngành công nghiệp tin học thuần túy quốc gia của mình. Phân tích kỹ các điều kiện lợi hại về quan hệ quốc tế, tính toán kỹ các khả năng của ta để xác định phương hướng đúng cho việc xây dựng công nghiệp tin học một cách có hiệu quả kinh tế là công việc hết sức quan trọng, cần tiến hành thận trọng. Trên cơ sở phân tích đó, ta phải xác định được các loại \underline{ sản phẩm} mà ta sản xuất, và \underline{ thị trường} tiêu thụ các sản phẩm đó. Về biện pháp, cần xác định được tức thì biện pháp có tính chất chiến lược về nguồn vốn, về con người (đặc biệt là cán bộ KHKT lành nghề) và về công nghệ. Đối với tất cả những yếu tố này, hiện nay còn phải tiếp tục xác định. Dưới đây xin trình bày một số nội dung tối thiểu dựa vào những yếu tố khả năng trong điều kiện hiện nay.
+
+
+2)	Trong năm năm tới, công nghiệp tin học của ta có thể được bước đầu xây dựng với các sản phẩm chủ yếu sau đây:
+
+
+-	Các máy vi tính 8 bit và 16/32 bit được lắp ráp với các linh kiện chủ yếu nhập ngoại, theo các thiết kế và yêu cầu sử dụng của ta.
+
+
+-	Các thiết bị chuyên dụng trên cơ sở kỹ thuật vi xử lý, như các thiết bị truyền và xử lý tin, thiết bị chuẩn bị số liệu, thiết bị ngoại vi sử dụng chữ Việt, v.v…
+
+
+-	Sản phẩm phần mềm: các phần mềm được cải tiến và thích nghi với yêu cầu sử dụng ở Việt Nam, các phần mềm mới đáp ứng yêu cầu của thị trường – Phấn đấu để tiến lên có những sản phẩm phần mềm độc đáo, có trình độ cao.
+
+
+Trong 5 năm tới, thị trường chủ yếu là trong nước, nói cách khác, với một số sản phẩm thuộc các loại nói trên, công nghiệp tin học cung cấp một phần thiết bị về phần mềm cho nhu cầu ứng dụng trong nước. Nếu thiết lập được các mối quan hệ quốc tế để sản xuất các thiết bị cũng như phần mềm theo hình thức “gia công”, thì có thể tính đến khả năng xuất khẩu.
+
+
+Nội dung kể trên là ở mức tối thiểu, ta hoàn toàn có thể thực hiện được chỉ cần một khoản đầu tư không lớn và một số biện pháp tổ chức cần thiết.
+
+
+3)	Trong khi thực hiện nội dung tối thiểu đó, cần tranh thủ khả năng hợp tác với các nước XHCN và quan hệ quốc tế với các nước khác để phát triển các cơ sở khác của công nghiệp tin học theo các hình thức.
+
+
+- Các xí nghiệp tin học sản xuất một số sản phẩm được phân công trong sự hợp tác, với sự giúp đỡ về công nghiệp của bạn.
+
+
+- Các cơ sở gia công lắp ráp các thiết bị tin học, hoặc sản phẩm mềm theo đặt hàng.
+
+
+4)	Cùng với việc sản xuất bước đầu các sản phẩm tin học, theo các nội dung kể trên, cần đặc biệt quan tâm đến việc tổ chức các bảo hành và sửa chữa nâng cao độ tin cậy kĩ thuật của hệ thống các máy tính điện tử và các thiết bị tin học mà ta có trong thời gian tới.
+
+
+5)	Trên cơ sở thực hiện xây dựng bước đầu, ta sẽ tích cực chuẩn bị cán bộ khoa học và kỹ thuật, tạo thêm các tiền đề cần thiết, để xây dựng trong những kế hoạch tếp theo một nền công nghiệp tin học vững chắc, có vị trí trong nền kinh tế của ta và có được những sản phẩm có giá trị cho ứng dụng trong nước rẻ cho sản xuất.
+
+
+\begin{center}
+\underline{ PHẦN THỨ BA}
+\end{center}
+ 
+
+\begin{center}
+CÁC CHÍNH SÁCH VÀ BIỆN PHÁP CHỦ YẾU
+\end{center}
+
+\textbf{I. \underline{ Con người. Đào tạo và nghiên cứu tin học }}
+
+
+1) Đối với sự phát triển Tin học, kể cả ứng dụng tin học cũng như xây dựng công nghiệp tin học, khả năng trí tuệ của con người đóng vai trò quyết định. Chúng ta có tiềm năng to lớn về con người để tạo ra khả năng này, nhưng chưa được quan tâm khai thác và đào tạo, bồi dưỡng. Tình hình chậm tiến trong việc ứng dụng tin học hiện nay có một nguyên nhân quan trọng là thiếu cán bộ có khả năng đề xuất, tổ chức và thực hiện các ứng dụng đó. Nghị quyết 249-CP của HĐCP từ năm 1976 đã nói rõ cần phải tăng cường đào tạo cán bộ về khoa học tính toán, nhưng cho đến nay chưa có một trường Đại học nào có một khoa chính thức đào tạo loại cán bộ này. Nhu cầu về cán bộ đối với việc ứng dụng tin học và phát triển tin học tương lai nhất định càng ngày càng tăng, ta cần đặc biệt chú ý tăng cường đào tạo cán bộ, bồi dưỡng những cán bộ có khả năng tiếp thu và làm chủ được các công nghệ tiên tiến, và có năng lực sáng tạo những sản phẩm tin học có giá trị. 
+
+
+2) Cơ cấu đội ngũ cán bộ tin học về đại thể, có thể bao gồm các loại sau đây:
+
+
+a) cán bộ nghiên cứu tin học, bao gồm các cán bộ nghiên cứu thiết kế các thiết bị và các hệ thống tin học, phát triển phần mềm..v..v.. Trong số này bao gồm cả cán bộ giảng dạy tin học.
+
+
+b) Kỹ sư, kỹ thuật viên, công nhân kĩ thuật, thực hiện các nhiệm vụ bảo hành, sửa chữa thiết bị trong các trung tâm tính toán hoặc trung tâm dịch vụ tin học, và làm nhiệm vụ sản xuất trong các xí nghiệp tin học.
+
+
+c) Cán bộ tin học ứng dụng, bao gồm các cán bộ tin học hướng hoạt động của mình vào một ngành ứng dụng nhất định hoặc cán bộ các ngành kinh tế, kỹ thuật có kiến thức tin học để ứng dụng vào công tác của ngành mình.
+
+
+Để đào tạo các loại cán bộ đó, cần xúc tiến ngay một số biện pháp đào tạo sau đây
+
+
+-	Ở các trường Đại học Bách khoa (trước hết ở hà Nội và thành phố Hồ Chí Minh) các khoa Tin học hoàn chỉnh bao gồm cả kỹ thuật và phần mềm mở ở các trường Đại học Tổng hợp các khoa Tin học, chủ yếu về phần mềm
+
+
+-	Tăng cường chương trình đào tạo về tin học các trường đại học kinh tế, kế hoạch, các trường đại học Kỹ thuật khác 
+
+
+-	Giảng dạy tin học ở các trường đại học sư phạm và nghiên cứu việc giảng dạy Tin học ở trường Trung học. Tăng cường công tác phổ biến tin học
+
+
+-	Ngoài các biện pháp đó, cần tranh thủ tối đa các khả năng hợp tác và quan hệ quốc tế để đào tạo ngoài nước các cán bộ nghiên cứu tin học, tiếp thu công nghệ tiên tiến về tin học.
+
+
+3) Công tác nghiên cứu tin học trong những năm tới có mục đích là tiếp thu và làm chủ các tiến bộ KHKT hiện đại về tin học để ứng dụng một cách có hiệu quả tin học vào thực tiễn nước ta đồng thời trên cơ sở tiếp thu các thành tựu KHKT đó, phát huy các khả năng sáng tạo để tạo ra các sản phẩm tin học mới, đặc biệt về các sản phẩm phần mềm
+Hướng chủ yếu là nghiên cứu ứng dụng, đối với nghiên cứu này, cần tạo được sự hợp tác chặt chẽ giữa các cơ quan nghiên cứu tin học và các ngành kinh tế, kỹ thuật và sự phối hợp lực lượng giữa các các cơ quan nghiên cứu, giảng dạy và ứng dụng tin học với nhau.
+
+
+Cần dành một lực lượng cần thiết cho một số hướng nghiên cứu hiện đại như về các hệ thống vi xử lý, về ngôn ngữ và thuật toán theo kiến trúc mới, về trí tuệ nhân tạo, v..v..
+
+
+Để công tác nghiên cứu có thể tạo ra các kết quả có giá trị và trình độ cao, đi trước một bước đối với sản xuất và ứng dụng , thì cần có đầu tư thỏa đáng để một vài cơ sở nghiên cứu chính có được thiết bị hiện đại có đủ nguồn sách báo và thông tin KHKT kịp thời.
+
+
+\textbf{II. \underline{ Vốn đầu tư và trang bị kĩ thuật}}
+
+
+1)	Để thực hiện các nội dung ứng dụng và phát triển tin học như trình bày trong phần II, cần phải có đầu tư vốn và giải quyết vấn đề trang bị kỹ thuật. Kinh nghiệm cho thấy nếu được chuẩn bị và tính toán kỹ lưỡng, nếu có đội ngũ cán bộ có năng lực thì việc đầu tư vốn cho tin học là chắc chắn mang lại hiệu quả kinh tế. Nhất là trong điều kiện hiện nay, kỹ thuật tin học phát triển mạnh, giá cả các thiết bị tin học, đặc biệt là máy vi tính, không ngừng giảm xuống do đó việc trang bị đỡ khó khăn hơn và có thể thích hợp với khả năng của ta.
+
+
+Hiệu quả đầu tư vốn vào các lĩnh vực ứng dụng tin học sẽ được thể hiện thông qua việc nâng cao năng suất và chất lượng của các ngành được ứng dụng. Đầu tư vốn cho việc xây dựng một vài cơ sở bước đầu của công nghiệp tin học là hết sức cần thiết, và với những phương án sản xuất thích hợp, vốn có thể được thu hồi trong một thời gian tương đối ngắn so với nhiều ngành công nghiệp khác.
+
+
+2)	Trong kế hoach 1986-1990, đề nghị có đầu tư vốn cho ngành tin học với cơ cấu đầu tư như sau:
+
+
+-	Nhà nước trung ương đầu tư cho việc xây dựng một số cơ sở bước đầu của công nghiệp tin học và công ty dịch vụ Tin học, việc đầu tư này có thể một phần dưới hình thức cho vay vốn. Ngoài ra, nhà nước đầu tư thiết bị tương đối hiện đại cho một viện nghiên cứu tập trung, trang bị đào tạo và mua sắm máy tính thực hiện các đề tài ứng dụng vào quản lí cấp trung ương.
+
+
+Ước tính toàn bộ các khoản đầu tư này trong 5 năm là khoảng 5 triệu đô la/rúp.
+
+
+-	Một số ngành kinh tế, các cơ sở kinh doanh, dịch vụ, các xí nghiệp và các địa phương tự lo liệu việc đầu tư trang bị (chủ yếu là máy vi tính) cho việc thực hiện các kế hoach ứng dụng tin học của mình.
+
+
+-	Cố gắng tranh thủ các nguồn vốn khác từ nước ngoài như : đầu tư xây dựng các cơ sở gia công lắp ráp, lập các công ty (hoặc chi nhánh công ty) sản xuất phần mềm và các nguồn vốn để trang bị máy tính từ các chương trình viện trợ quốc tế.
+
+
+3)	Về trang bị kỹ thuật, chủ yếu là máy tính điện tử cần lựa chọn những phương án trang bị nào cho bảo đảm tính hiệu quả, thiết thực, tin cậy, tiết kiệm và phù hợp với khả năng tiến hóa nhanh chóng của kỹ thuật tin học hiện nay. Phải vậy, cần xác định những chuẩn chung cho máy tính và thiết bị được nhập hoặc sản xuất, lắp ráp trong nước, xác định các nguồn nhập vừa linh hoạt, tiết kiệm, vừa ổn định, tin cậy. Đặc biệt chú ý việc bảo đảm các khả năng vận hành và sửa chữa đối với các máy tính và thiết bị được sử dụng.
+
+
+Việc trang bị phổ biến cho các cơ sở ứng dụng rộng rãi không nhất thiết phải đòi hỏi thật hiện đại, nhưng đối với một vài cơ sở nghiên cứu và thiết kế chủ chốt, phải cố gắng có được các thiết bị càng hiện đại càng tốt
+Trong 5 năm tới, ưu tiên trang bị các máy vi tính, và một số máy mini hoặc supermino cho việc xây dựng các hệ thông tin quản lí và thông tin điều tra của Trung ương và cac ngành. Đối với các máy mini hoặc trên mini cần nghiên cứu nhập từ nguồn các nước XHCN (chẳng hạn của CHDC Đức) để đảm bảo sự ổn định, đối với máy vi tính, tranh thủ mọi khả năng có được máy rẻ và tốt.
+
+
+Với tính chất thiết bị như vậy, cac máy tính sẽ được trang bị trực tiếp cho các cơ quan sử dụng, bảo đảm tính linh hoạt và thuận lợi của ứng dụng. Có thể xây dựng một trung tâm tính toàn chung có cả máy tính lớn ( thuộc Tổng cục DT và KTTH) để phục vụ việc phát triển và các nhu cầu tính toán khác.
+
+
+Việc tận dụng khả năng tính toán của các cơ sở có máy tính sẽ được thông qua các hợp đồng dịch vụ, trực tiếp hoặc với sự trung gian của Công ty dịch vụ việc trao đổi thông tin giữa các cơ sở liên quan sẽ được thực hiện bằng các biện pháp kỹ thuật và tổ chức.
+
+
+\textbf{III. \underline{ Quan hệ quốc tế và vấn đề tiếp thu tiến bộ KHKT}}
+
+
+1)	Tin học là một ngành khoa học kỹ thuật hiện đại đang phát triển nhanh chóng với những tiến bộ rất to lớn. Chúng ta không thể xây dựng và phát triển ngành này, nếu không mở rộng được một cách có hiệu quả các quan hệ hợp tác quốc tế. Đồng thời, Tin học cũng là một mũi nhọn có tính chất chiến lược của nhiều nước, đặc biệt là các nước phát triển, do đó các quan hệ trong lĩnh vực này cũng khá tế nhị đối với chúng ta cũng có những khó khăn và hạn chế nhất định.
+Đối với các nước XHCN, ta tìm là một thành viên trong HĐTKKT , khả năng hợp tác là toàn diện. Tuy nhiên, trong thời gian vừa qua, sự tham gia của ta về Tin học mới chỉ có tính chất hình thức. Sự hợp tác với các nước anh em như với Bun ga ri mới chỉ là ở mức độ thăm dò.
+
+
+Đối với các nước tư bản phát triển, trong quan hệ với ta, tin hộ là một trong những lĩnh vực cần sự cấm vận (embargo). Do đó, quan hệ chính thức là có khó khăn. Tuy nhiên, khả năng quan hệ cục bộ với cấp cơ sở, công ty hoặc một vài tổ chức KHKT là vẫn có.
+
+
+Có một lực lượng đông đảo người Việt nam làm ở nước ngoài về Tin học, có khả năng, kinh nghiệm mà ta cần có biện pháp tốt hơn để tranh thủ sự giúp đỡ.
+
+
+2)	Mở rộng quan hệ quốc tế trong lĩnh vực tin học, đối vớ chúng ta trươc hết là để tạo điều kiện tiếp thu các tiến bộ KHKT hiện đại trên thế giới, và tiếp theo là cố gắng thiết lập các quan hệ kinh tế-kỹ thuật để phát triển ngành công nghiệp tin học của ta.
+
+
+Trên cơ sở tình hình nói trên, trong thời gian tới cần tiến hành một số biện pháp sau đây:
+
+
+a)	Đối với các nước KHCN: nhà nước ta tham gia vào Ủy ban liên chính phủ về kỹ thuật tính toán (MPKVP) của khối SEV và giao cho tổng cục DT và KTTH tổ chức thực hiện việc hợp tác này. Bằng sự hợp tác này, ta có thể tiếp thu các tiền bộ KHKT về tin học của các nước xã hội chủ nghĩa và tham gia sự phân công hợp tác trong khối SEV để xây dựng một số cơ sở công nghiệp tin học của mình, cùng với việc tham gia vào MPKVP , tăng cường sự hợp tác hai bên với các nước KHCN khác như Bungari, Tiệp, Khắc... bằng những hình thức hợp tác sản xuất, gia công sản phẩm theo thiết kế bạn, làm phần mềm theo đặt hàng..v...v
+
+
+b)	Tranh thủ những quan hệ quốc tế khác với các nước tư bản (thông qua sự hợp tác chinh và phi chính thức, với các công du, các tổ chức khoa học kỹ thuật) như Pháp, Nhật..... và với các nước trong vùng Đông nam Á để tranh thủ tiếp thu một số tiến bộ kỹ thuật mới. Xem xét khả năng hợp tác có tính chất kinh tế hơn như gia công thiết bị và phần mềm.
+
+
+c)	Cần có chính sách và biện pháp thỏa đáng để tranh thủ sự đóng góp của Việt Kiều về Tin học, đây là một lực lượng lớn có thể đóng vai trò quan trọng trong việc chuyển giao kỹ thuật, đồng thời cũng có thể tính đến việc tranh thủ đầu tư vốn với các hình thức hợp tác kinh doanh, sản xuất và dịch vụ.
+
+
+\textbf{IV.  \underline{ Về tổ chức và quản lý }}
+
+
+1)	Với việc thành lập Tổng cục Điện tử và kỹ thuật tin học, về mặt tổ chức nhà nước, chúng ta đã có một cơ quan có một cơ quan có chức năng tổ chức và thực hiện việc phát triển kỹ thuật tin học, đặc biệt là việc xây dựng công nghiệp tin học và tổ chức của dịch vụ trang bị tin học. Và khung tổ chức hiện nay trong hệ thống cơ quan nhà nước của chúng ta đã có tương đối đầy đủ. Vấn đề cốt yếu là cần tăng cường các cơ quan đó về năng lực quản lý và chuyên môn nghiệp vụ và tổ chức được \underline{ sự hợp tác thật sự} giữa tất cả các cơ quan nghiên cứu, ứng dụng tin học để phát huy được đầy đủ khả năng của đội ngũ cán bộ tin học. Tin học hiện đang phát triển manh ngay cả ở nước ta hiện nay, để đáp ứng nhu cầu ngày càng lớn, nhiều cơ sở nghiên cứu, ứng dụng tin học đang cố gắng mở rộng phạm vi hoạt động của mình. Về mặt quản lí, phương châm của chúng ta phải là tăng cường sự chỉ đạo và quản lý thống nhất về những phương hướng chủ yếu và trên cơ sở đó phát huy mọi hình thức thích hợp để phát triển những việc ứng dụng tin học.
+
+
+2)	Để củng cố và tăng cường sức mạnh của các cơ quan tin học hiện nay, đề nghị thực hiện một số biện pháp:
+
+
+-	Tổ chức sớm một xí nghiệp chuyên sản xuất thiết bị và sản phẩm tin học thuộc Tổng cục DT và KTTH ( hoặc 2 xí nghiệp mọc ở Hà Nội , 1 ở TP Hồ Chí Minh)
+
+
+-	Tăng cường Công ty máy tính để đảm nhận các đặc vụ chủ yếu về trang bị máy tính mới, thống nhất tổ chức việc bảo hành và sửa chữa máy tính.
+
+
+-	Trên cơ sở các tổ chức nghiên cứu hiện nay, Tổng cục ĐT và KTTH và Viện khoa học Việt Nam lập Viện Tin học là Viện nghiên cứu phải thuộc, có nhiệm vụ tiếp thu kỹ thuật mới, thiết kế mẫu cho sản xuất, nghiên cứu đưa ra các sản phẩm mới về phần cứng và phần mềm, v.v… (Viện này có thể được thành lập trên cơ sở một bộ phận lớn của Viện KHTĐK hiện nay).
+
+
+-	Các tổ chức về đào tạo đã được trình bày ở mục I nói trên. Ở các tổ chức kinh tế và sản xuất, tùy theo yêu cầu ứng dụng mà lập các phòng Tin học.
+
+
+3) Trong kế hoạch 1986-1990 có một chương trình tiến bộ KHKT trọng điểm của nhà nước để phối hợp tất cả các lực lượng Tin học thực hiện một cách tích cực các nhiệm vụ chủ chốt về ứng dụng Tin học và chuẩn bị cho công nghiệp Tin học như trình bày trong phần II.
+%\vspace*{1cm}
+\begin{flushright}
+Người soạn thảo: Phan Đình Diệu
+\end{flushright}
+
+\end{document}

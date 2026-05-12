@@ -1,0 +1,338 @@
+\documentclass[11pt,twoside]{extreport}  
+
+\usepackage[utf8x]{vietnam} % cần thiết để hiện chữ tiếng Việt
+
+\usepackage[vietnamese,english,russian]{babel}
+\usepackage[utf8x]{inputenc}
+
+\renewcommand{\baselinestretch}{1.22} 
+\usepackage[paperwidth=14.5cm,paperheight=20.5cm]{geometry}  
+\usepackage{amsmath,amsxtra,amssymb,latexsym, amscd,amsfonts,enumerate,ifthen,stmaryrd,amsthm,amstext}
+\usepackage[mathscr]{eucal}
+\usepackage{graphics, graphpap,extsizes}
+\usepackage[pdftex]{graphicx}
+\usepackage{xspace}
+\usepackage{array, tabularx, longtable}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\usepackage{indentfirst}
+
+%\usepackage[vietnamese,english,spanish,russian]{babel}
+%\usepackage[utf8x]{inputenc}
+%\usepackage[utf8]{inputenc}
+
+%\usepackage[utf8]{vietnam} % cần thiết để hiện chữ tiếng Việt
+%\usepackage{hyperref}
+\usepackage{eso-pic,wrapfig}
+\usepackage[strict]{chngpage}
+\usepackage{fancybox}
+% màu cho nền sách
+\usepackage{color}
+\usepackage{pagecolor}
+\usepackage{wallpaper,mdframed}
+\usepackage{tcolorbox}
+\usepackage{adjustbox}
+\usepackage{xhfill}
+\usepackage{epigraph}
+%\usepackage{xhfill}
+%\usepackage{calc}
+\renewcommand{\rmdefault}{bch} 
+\usepackage{subcaption}
+%\usepackage{wrapfig}
+\usepackage{eso-pic,wrapfig}
+\usepackage{capt-of}
+
+ \usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+% footnote đánh số theo từng trang 
+\usepackage{perpage} 
+\MakePerPage{footnote}
+
+% \usepackage[vietnamese,english,russian]{babel}
+% \selectlanguage{vietnamese}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt} % no line in header area
+
+%\fancyfoot{} % clear all footer fields
+
+
+\voffset =0in 
+\hoffset =0in
+\setlength{\evensidemargin}{-1.2cm}  %Lề trái tính từ điểm cách mép giấy 2.54cm
+\setlength{\oddsidemargin}{-0.8cm}     %Lề phải tính từ điểm cách mép giấy 2.54cm
+\setlength{\textwidth}{11.3 cm}            %Độ rộng khối chữ trong trang
+\setlength{\topmargin}{-1.5cm}          %Lề trên tính từ điểm cách mép giấy 2.54cm
+\setlength{\headheight}{0cm}             %Chieu cao cua Headerline
+\setlength{\headsep}{1cm}                %Khoang cach tu  Headerline tới khối chữ 
+\setlength{\textheight}{16.5cm}             %Chiều cao khối chữ trong trang
+
+\setlength{\baselineskip}{18truept}
+\parskip 3pt
+\abovedisplayskip =6pt plus 6pt minus 9pt
+\abovedisplayshortskip =0pt plus 6pt minus 9pt
+\belowdisplayskip =\abovedisplayskip
+\belowdisplayshortskip =\abovedisplayshortskip
+\def\NoBlackBoxes{\overfullrule=0pt }
+\NoBlackBoxes
+
+%    \textfloatsep = 10pt plus 2pt minus 4pt
+%    \floatsep = 2pt plus 2pt minus 2pt
+%    \intextsep = 2pt plus 2pt minus 2pt
+%    \parsep=0pt plus 1pt
+%\topsep=0pt plus 2pt minus 4pt
+%\partopsep=0pt plus 1pt minus 1pt
+
+% Cho phan muc luc
+\setlength{\hfuzz}{2pt}
+%============================
+\makeatletter
+\renewcommand{\l@chapter}{\@dottedtocline{1}{0.5cm}{0.8cm}}
+\renewcommand{\l@section}{\@dottedtocline{2}{0.7cm}{0.8cm}}
+\makeatother
+
+
+
+\makeindex
+
+\renewcommand{\contentsname}{\textcolor{C1}{Mục lục}}
+
+
+
+%\usepackage[utf8x]{inputenc}
+%\usepackage[utf8]{inputenc}
+
+\begin{document}
+%this is english and {\selectlanguage{spanish} español } and {\selectlanguage{vietnamese} tiếng Việt} {\selectlanguage{russian} русский язык}.
+
+
+\selectlanguage{vietnamese}
+
+\newcommand{\xfill}[2][1ex]{{%
+  \dimen0=#2\advance\dimen0 by #1
+  \leaders\hrule height \dimen0 depth -#1\hfill%
+}}
+\pagenumbering{arabic}
+
+
+%\pagestyle{fancy}
+%\fancyhead{}
+%\fancyhead[LE,RO]{\thepage}
+%\fancyfoot{}
+%\fancyfoot[CO]{\thepage}
+%\fancyfoot[CE]{\thepage}
+
+\definecolor{C1}{rgb}{0,0.2,0.5}
+\definecolor{C2}{rgb}{0.6,0,0.2}
+\definecolor{C3}{rgb}{0.2,0.4,0.6}
+\definecolor{P1}{rgb}{1,0.97,0.93}
+\definecolor{MyGray}{rgb}{0.8,0.8,0.8}
+\definecolor{Vcolor}{rgb}{0.3,0.1,0.0}
+\definecolor{Ecolor}{rgb}{0.2,0.3,0.4}
+
+
+%\ThisCenterWallPaper{1.02}{Lila_Cover}
+
+\vspace*{0.1cm}
+%\centerline{\textcolor{C2}{\bf {\LARGE Những Người Bạn }}} 
+
+\vspace*{1.5cm}
+
+\textcolor{C1}{\fontsize{32}{45}{\textbf{Phan Đình Diệu }}}\\ 
+
+
+\hspace*{2cm}\textcolor{C1}{\fontsize{32}{45}\selectfont \textit{\textbf{như tôi biết...  }}} 
+
+% \thispagestyle{empty}
+
+% \vspace{1cm}
+
+% \centerline{\textcolor{C2}{\large \bf DATA}}
+
+% \vspace{1.5cm}
+
+
+\vfill
+
+\vspace{1cm}
+
+\centerline{\textcolor{C2}{\Large DATA}}
+\thispagestyle{empty}
+
+
+
+\newpage
+\begin{figure}
+\centering
+\includegraphics[scale=1]{Photos/phandinhdieu1}
+\caption{Giáo sư Phan Đình Diệu}
+\end{figure}
+\begin{center}
+Các bạn quan tâm có thể đọc:\\
+\vspace{0.5cm}
+Tuyển tập một số bài viết của GS. Phan Đình Diệu trên trang:\\
+\vspace{1cm}
+\centerline{\textcolor{C2}{\bf {\LARGE \href{http://www.phandinhdieu.net/accueil.html}{Nghĩ Suy Cùng Đất Nước}}}} 
+ \vspace{1cm}
+\url{http://www.phandinhdieu.net/accueil.html}
+\end{center}
+
+\newpage
+
+
+%\fancyhead{}
+%\thispagestyle{plain}
+\begin{scriptsize}
+%\textcolor{C1}{
+\tableofcontents 
+%}
+\end{scriptsize}
+
+
+%\part{Nghĩ Suy Cùng Đất Nước}
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+
+
+\chapter{Viết về Anh, Giáo sư Phan Đình Diệu (Hà Huy Khoái)}
+\input{BaiViet/HaHuyKhoai.tex}
+
+\chapter{Phan Đình Diệu đã sống một cuộc đời rất đàng hoàng (Nguyên Ngọc)}
+\input{BaiViet/NguyenNgoc.tex}
+
+\chapter{Anh Diệu (Hồ Tú Bảo)}
+\input{BaiViet/HoTuBao.tex}
+
+\chapter{GS Phan Đình Diệu: Tâm và Tầm của Trí Thức Việt (Hiệu Minh)}
+\input{BaiViet/GiangCongThe.tex}
+
+\chapter{Giáo sư Phan Đình Diệu: Khí phách và Trí tuệ (Trương Huy San)}
+\input{BaiViet/TruongHuySan.tex}
+
+\chapter{Nhớ một Phan Đình Diệu cương trực (Hà Sĩ Phu)}
+\input{BaiViet/HaSiPhu.tex}
+
+\chapter{Phan Đình Diệu: Nhìn xa để hiểu gần (Nguyễn Duy)}
+\input{BaiViet/NguyenDuy.tex}
+
+
+\chapter{Giờ rất hiếm những tiếng nói như Phan Đình Diệu (Ngô Bảo Châu)}
+\input{BaiViet/NgoBaoChau.tex}
+
+
+\chapter{Nhớ và ghi vội đôi điều về anh Phan Đình Diệu (Nguyễn Hoàng)}
+\input{BaiViet/NguyenHoang.tex}
+
+\chapter{Giáo sư Phan Đình Diệu như tôi biết (Lê Học Lãnh Vân)}
+\input{BaiViet/LeHocLanhVan.tex}
+
+\chapter{Phản biện của người chính trực (Nguyễn Hữu Việt Hưng)}
+\input{BaiViet/NguyenHuuVietHung.tex}
+
+ 
+\chapter{Giáo sư Phan Đình Diệu, tài năng và tâm huyết (Quốc Chấn)}
+\input{BaiViet/LeQuocChan.tex}
+
+
+\chapter{Vĩnh biệt Phan Đình Diệu (Trương Quang Đệ )}
+\input{BaiViet/TruongQuangDe.tex}
+
+
+\chapter{Nỗi bất mãn thánh thiện (Nguyễn Thanh Giang)}
+\input{BaiViet/NguyenThanhGiang.tex}
+
+
+\chapter{GS Phan Đình Diệu - Một tài năng, một nhân cách, như tôi đã biết  (Boristo Nguyễn)}
+\input{BaiViet/BoristoNguyen.tex}
+
+
+
+\chapter{Giáo sư Phan Đình Diệu: Nhà khoa học luôn trăn trở với sự nghiệp đại đoàn kết toàn dân tộc (Nguyên Lê)}
+\input{BaiViet/NguyenLe.tex}
+
+\chapter{Thăm anh Diệu ở Hà Nội (Vũ Duy Mẫn)}
+\input{BaiViet/VuDuyMan.tex}
+
+\chapter{Thương tiếc một bậc trí nhân (Nguyễn Chí Công )}
+\input{BaiViet/NguyenChiCong.tex}
+
+
+\chapter{Vĩnh biệt Giáo Sư Phan Đình Diệu (Đào Kiến Quốc)}
+\input{BaiViet/DaoKienQuoc.tex}
+
+\chapter{Vĩnh biệt người anh cả ngành Công Nghệ Thông Tin (Nguyễn Công Hoá)}
+\input{BaiViet/NguyenCongHoa.tex}
+
+
+\chapter{Vài kỷ niệm với Giáo sư Phan Đình Diệu  (Hiệu Minh)}
+\input{BaiViet/HieuMinh.tex}
+
+
+
+\chapter{GS Phan Đình Diệu: Nhà toán học Việt Nam đầu tiên đi du học ở Liên Xô (cũ)! (Trần Văn Nhung)}
+\input{BaiViet/TranVanNhung.tex}
+
+\chapter{GS Diệu và những tiên tri chính trị chính xác (Nguyễn Đăng Hưng)}
+\input{BaiViet/NguyenDangHung.tex}
+
+\chapter{Vô cùng thương tiếc GS Phan Đình Diệu (Trần Văn Kinh)}
+\input{BaiViet/TranVanKinh.tex}
+
+
+\chapter{GS Phan Đình Diệu: Một khối nghĩ suy đã đi xa...  (Chu Hảo)}
+\input{BaiViet/ChuHao.tex}
+
+\chapter{Theo dòng ký ức (Nguyễn Quý Dy )}
+\input{BaiViet/NguyenQuyDy.tex}
+
+
+\chapter{Góp ý kiến về dự thảo Hiến pháp của Phan Đình Diệu (Cùng Viết Hiến Pháp)}
+\input{BaiViet/CungVietHienPhap.tex}
+
+
+\chapter{Giáo sư Phan Đình Diệu ``là kẻ sĩ chân chính, cương trực'' (BBC)}
+\input{BaiViet/BBC.tex}
+
+\chapter{Vĩnh biệt Giáo sư Phan Đình Diệu người Anh cả của Hội Tin học Việt Nam  (Hội Tin Học)}
+\input{BaiViet/HoiTinHoc.tex}
+
+\chapter{Các bài trên báo}
+\input{BaiViet/BaoChi.tex}
+
+
+\chapter{Số đặc biệt Phan Đình Diệu (báo Diễn Đàn)}
+\input{BaiViet/Diendan.tex}
+
+
+\chapter{Những chia sẻ ngắn }
+\input{BaiViet/ChiaSeNgan.tex}
+
+\chapter{GS Phan Đình Diệu bàn về dân chủ cùng Stein Tønnesson (Blog Hiệu Minh)}
+\input{BaiViet/HieuMinh_Stein.tex}
+
+
+\chapter{Sensing an Opening: Vietnam’s Outspoken Ones (The TIME - 1998)}
+\input{BaiViet/TheTIME.tex}
+
+\chapter{Mon Dieu!  (Far Easrten Economic Review 08/1993)}
+\input{BaiViet/FarEasternEconomy.tex}
+
+
+\chapter{Bài thơ theo suốt cuộc đời tôi (Phan Thị Hà Dương)}
+\input{BaiViet/PhanHaDuong.tex}
+
+\chapter{Giọt nước đó sẽ không tan đi (Phan Dương Hiệu)}
+\input{BaiViet/PhanDuongHieu.tex}
+
+\chapter{Điếu văn truy điệu Giáo sư Phan Đình Diệu (Nguyễn Hữu Đức)}
+\input{BaiViet/DieuVan.tex}
+
+\chapter{Lời cảm ơn và Lời với bố }
+\input{BaiViet/LoiCamOn.tex}
+
+%\annexe{Một số bài viết }
+
+\end{document}

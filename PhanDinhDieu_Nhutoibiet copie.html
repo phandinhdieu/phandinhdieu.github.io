@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phan Đình Diệu – như tôi biết…</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Lora',Georgia,serif;
+  font-size:1.08rem;
+  line-height:1.92;
+  color:#1a1a1a;
+  background:#f5f2ec;
+  margin:0;
+  padding:0 0 6rem;
+}
+
+/* ── Cover ── */
+.cover{
+  background:linear-gradient(160deg,#001433 0%,#002a66 60%,#7a1520 100%);
+  color:#fff;
+  text-align:center;
+  padding:5rem 2rem 4rem;
+  position:relative;
+  overflow:hidden;
+}
+.cover::after{
+  content:'';position:absolute;inset:0;
+  background:url('PhanDinhDieu_Nhutoibiet/Photos/phandinhdieu1.jpg') center/cover no-repeat;
+  opacity:0.12;z-index:0;
+}
+.cover-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.cover-photo{
+  width:170px;height:170px;border-radius:50%;
+  object-fit:cover;border:4px solid rgba(255,255,255,0.35);
+  margin:0 auto 1.8rem;display:block;
+  box-shadow:0 8px 40px rgba(0,0,0,0.5);
+}
+.cover h1{
+  font-size:2.6rem;font-weight:700;letter-spacing:-0.01em;
+  margin:0 0 0.3rem;line-height:1.2;
+}
+.cover-sub{
+  font-size:1.5rem;font-style:italic;font-weight:400;
+  color:rgba(255,255,255,0.82);margin:0 0 2rem;
+}
+.cover-note{
+  font-size:0.88rem;color:rgba(255,255,255,0.55);
+  font-family:'Inter',sans-serif;letter-spacing:0.08em;text-transform:uppercase;
+}
+
+/* ── Page wrapper ── */
+.page{max-width:800px;margin:0 auto;padding:0 1.25rem}
+
+/* ── TOC ── */
+#toc{
+  background:#fff;border-radius:10px;
+  padding:2.5rem 2.5rem 2rem;
+  margin:3rem auto 0;max-width:800px;
+  box-shadow:0 2px 24px rgba(0,0,0,0.07);
+}
+.toc-title{
+  font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;
+  color:#aaa;text-transform:uppercase;letter-spacing:0.12em;
+  margin:0 0 1.2rem;
+}
+#toc ol{
+  list-style:none;padding:0;margin:0;
+  columns:1;
+}
+#toc li{margin-bottom:0.4rem;line-height:1.45}
+#toc a{
+  color:#001433;text-decoration:none;font-size:0.95rem;
+  font-family:'Inter',sans-serif;font-weight:500;
+  display:flex;align-items:baseline;gap:0.4em;
+  transition:color 0.15s;
+}
+#toc a:hover{color:#7a1520}
+.toc-num{color:#aaa;font-size:0.8rem;flex-shrink:0;font-weight:400}
+.toc-author{color:#999;font-size:0.82rem;font-weight:400}
+
+/* ── Chapter ── */
+.chapter{
+  background:#fff;border-radius:10px;
+  margin:2.5rem auto;max-width:800px;
+  box-shadow:0 2px 20px rgba(0,0,0,0.06);
+  overflow:hidden;
+}
+.chapter-header{
+  background:linear-gradient(135deg,#001433,#002a66);
+  color:#fff;padding:2rem 2.5rem 1.6rem;
+}
+.chapter-num{
+  font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;
+  color:rgba(255,255,255,0.5);letter-spacing:0.12em;text-transform:uppercase;
+  display:block;margin-bottom:0.5rem;
+}
+.chapter-title{
+  font-size:1.45rem;font-weight:700;line-height:1.3;
+  margin:0 0 0.5rem;color:#fff;
+}
+.ch-author{
+  margin:0;font-size:0.92rem;color:rgba(255,255,255,0.65);
+  font-style:italic;font-family:'Inter',sans-serif;
+}
+.chapter-body{padding:2.2rem 2.5rem 2rem}
+.chapter-body p{margin:0 0 1.1em;text-align:justify}
+.chapter-body blockquote{
+  border-left:3px solid #c8a86b;
+  margin:1.4rem 0;padding:0.7rem 1.3rem;
+  background:#faf7f2;color:#444;
+  font-style:italic;border-radius:0 6px 6px 0;
+}
+.chapter-body ul,.chapter-body ol{padding-left:1.8em;margin:0.8em 0}
+.chapter-body li{margin-bottom:0.3em}
+.chapter-body h3{
+  font-size:1.1rem;font-weight:700;color:#001433;
+  margin:1.8rem 0 0.6rem;border-bottom:1px solid #e8e0d0;padding-bottom:0.3rem;
+}
+.chapter-body h4{font-size:1rem;font-weight:600;color:#333;margin:1.2rem 0 0.4rem}
+.tex-center{text-align:center;margin:1rem 0}
+.verse{
+  font-style:italic;margin:1.2rem 0 1.2rem 2rem;
+  white-space:pre-wrap;line-height:1.7;
+}
+pre{background:#f3f0e8;padding:1rem;border-radius:6px;overflow-x:auto;font-size:0.88rem}
+
+/* ── Figures ── */
+.art-figure{
+  text-align:center;margin:1.8rem 0 1.5rem;
+}
+.art-figure img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  border-radius:6px;
+  box-shadow:0 3px 18px rgba(0,0,0,0.13);
+  border:1px solid #e8e0d0;
+  margin:0 auto;
+}
+.art-figure figcaption{
+  font-size:0.83rem;color:#888;margin-top:0.6rem;
+  font-style:italic;font-family:'Inter',sans-serif;
+  max-width:100%;margin-left:auto;margin-right:auto;
+  padding:0 0.5rem;
+}
+hr.page-break{border:none;border-top:1px dashed #ddd;margin:1.5rem 0}
+
+/* ── Back to top ── */
+.chapter-top{
+  text-align:center;padding:0.8rem;
+  border-top:1px solid #f0ece3;
+}
+.chapter-top a{
+  font-family:'Inter',sans-serif;font-size:0.8rem;
+  color:#aaa;text-decoration:none;
+}
+.chapter-top a:hover{color:#001433}
+
+/* ── Footnotes ── */
+.footnotes{
+  font-size:0.82rem;font-family:'Inter',sans-serif;
+  color:#666;border-top:1px solid #eee;
+  margin-top:2rem;padding-top:1rem;padding-left:1.5em;
+}
+.footnotes li{margin-bottom:0.4em}
+sup a{color:#7a1520;text-decoration:none;font-size:0.75em}
+
+/* ── Mobile ── */
+@media(max-width:600px){
+  .cover h1{font-size:1.8rem}
+  .cover-sub{font-size:1.1rem}
+  .chapter-header,.chapter-body{padding:1.5rem 1rem}
+  #toc{padding:1.5rem 1rem}
+  .chapter-title{font-size:1.2rem}
+  .page{padding:0 0.75rem}
+  .art-figure{margin:1.2rem 0 1rem}
+  .art-figure img{border-radius:4px}
+}
+@media print{
+  .chapter-top,.cover-note{display:none}
+  .chapter{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div style="background:#001433;padding:10px 20px;text-align:left">
+  <a href="index.html" style="color:rgba(255,255,255,0.75);font-family:'Inter',sans-serif;font-size:0.85rem;text-decoration:none;letter-spacing:0.04em;">
+    ← Về trang Phan Đình Diệu
+  </a>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-inner">
+    <img class="cover-photo" src="PhanDinhDieu_Nhutoibiet/Photos/phandinhdieu1.jpg" alt="Giáo sư Phan Đình Diệu">
+    <h1>Phan Đình Diệu</h1>
+    <p class="cover-sub" style="font-family:'Playfair Display',Georgia,serif;font-size:2.3rem;font-weight:700;font-style:italic;letter-spacing:0.01em;text-align:right;padding-right:2rem;">như tôi biết…</p>
+    <p class="cover-note">Tuyển tập các bài viết về Phan Đình Diệu</p>
+  </div>
+</div>
+
+<!-- TOC -->
+<div id="toc" class="page">
+  <p class="toc-title">Mục lục</p>
+  <ol>
+<li><a href="PhanDinhDieu_Nhutoibiet/HaHuyKhoai.html"><span class="toc-num">1.</span> Viết về Anh, Giáo sư Phan Đình Diệu <span class='toc-author'>— Hà Huy Khoái</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenNgoc.html"><span class="toc-num">2.</span> Phan Đình Diệu đã sống một cuộc đời rất đàng hoàng <span class='toc-author'>— Nguyên Ngọc</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/HoTuBao.html"><span class="toc-num">3.</span> Anh Diệu <span class='toc-author'>— Hồ Tú Bảo</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/GiangCongThe.html"><span class="toc-num">4.</span> GS Phan Đình Diệu: Tâm và Tầm của Trí Thức Việt <span class='toc-author'>— Hiệu Minh</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/TruongHuySan.html"><span class="toc-num">5.</span> Giáo sư Phan Đình Diệu: Khí phách và Trí tuệ <span class='toc-author'>— Trương Huy San</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/HaSiPhu.html"><span class="toc-num">6.</span> Nhớ một Phan Đình Diệu cương trực <span class='toc-author'>— Hà Sĩ Phu</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenDuy.html"><span class="toc-num">7.</span> Phan Đình Diệu: Nhìn xa để hiểu gần <span class='toc-author'>— Nguyễn Duy</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NgoBaoChau.html"><span class="toc-num">8.</span> Giờ rất hiếm những tiếng nói như Phan Đình Diệu <span class='toc-author'>— Ngô Bảo Châu</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/LeTuQuocThang.html"><span class="toc-num">9.</span> GS Phan Đình Diệu và những công trình toán học tại Moskva <span class='toc-author'>— Lê Tự Quốc Thắng</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenHoang.html"><span class="toc-num">10.</span> Nhớ và ghi vội đôi điều về anh Phan Đình Diệu <span class='toc-author'>— Nguyễn Hoàng</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/LeHocLanhVan.html"><span class="toc-num">11.</span> Giáo sư Phan Đình Diệu như tôi biết <span class='toc-author'>— Lê Học Lãnh Vân</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenHuuVietHung.html"><span class="toc-num">12.</span> Phản biện của người chính trực <span class='toc-author'>— Nguyễn Hữu Việt Hưng</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/LeQuocChan.html"><span class="toc-num">13.</span> Giáo sư Phan Đình Diệu, tài năng và tâm huyết <span class='toc-author'>— Quốc Chấn</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/TruongQuangDe.html"><span class="toc-num">14.</span> Vĩnh biệt Phan Đình Diệu <span class='toc-author'>— Trương Quang Đệ</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenThanhGiang.html"><span class="toc-num">15.</span> Nỗi bất mãn thánh thiện <span class='toc-author'>— Nguyễn Thanh Giang</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/BoristoNguyen.html"><span class="toc-num">16.</span> GS Phan Đình Diệu – Một tài năng, một nhân cách, như tôi đã biết <span class='toc-author'>— Boristo Nguyễn</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenLe.html"><span class="toc-num">17.</span> Giáo sư Phan Đình Diệu: Nhà khoa học luôn trăn trở với sự nghiệp đại đoàn kết toàn dân tộc <span class='toc-author'>— Nguyên Lê</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenXuanTho.html"><span class="toc-num">18.</span> Nhớ anh Phan Đình Diệu <span class='toc-author'>— Nguyễn Xuân Thọ</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/VuDuyMan.html"><span class="toc-num">19.</span> Thăm anh Diệu ở Hà Nội <span class='toc-author'>— Vũ Duy Mẫn</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenChiCong.html"><span class="toc-num">20.</span> Thương tiếc một bậc trí nhân <span class='toc-author'>— Nguyễn Chí Công</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/DaoKienQuoc.html"><span class="toc-num">21.</span> Vĩnh biệt Giáo Sư Phan Đình Diệu <span class='toc-author'>— Đào Kiến Quốc</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenCongHoa.html"><span class="toc-num">22.</span> Vĩnh biệt người anh cả ngành Công Nghệ Thông Tin <span class='toc-author'>— Nguyễn Công Hoá</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/HieuMinh.html"><span class="toc-num">23.</span> Vài kỷ niệm với Giáo sư Phan Đình Diệu <span class='toc-author'>— Hiệu Minh</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/TranVanNhung.html"><span class="toc-num">24.</span> GS Phan Đình Diệu: Nhà toán học Việt Nam đầu tiên đi du học ở Liên Xô (cũ)! <span class='toc-author'>— Trần Văn Nhung</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenDangHung.html"><span class="toc-num">25.</span> GS Diệu và những tiên tri chính trị chính xác <span class='toc-author'>— Nguyễn Đăng Hưng</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/TranVanKinh.html"><span class="toc-num">26.</span> Vô cùng thương tiếc GS Phan Đình Diệu <span class='toc-author'>— Trần Văn Kinh</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/ChuHao.html"><span class="toc-num">27.</span> GS Phan Đình Diệu: Một khối nghĩ suy đã đi xa… <span class='toc-author'>— Chu Hảo</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/NguyenQuyDy.html"><span class="toc-num">28.</span> Theo dòng ký ức <span class='toc-author'>— Nguyễn Quý Dy</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/CungVietHienPhap.html"><span class="toc-num">29.</span> Góp ý kiến về dự thảo Hiến pháp của Phan Đình Diệu <span class='toc-author'>— Cùng Viết Hiến Pháp</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/BBC.html"><span class="toc-num">30.</span> Giáo sư Phan Đình Diệu «là kẻ sĩ chân chính, cương trực» <span class='toc-author'>— BBC</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/HoiTinHoc.html"><span class="toc-num">31.</span> Vĩnh biệt Giáo sư Phan Đình Diệu người Anh cả của Hội Tin học Việt Nam <span class='toc-author'>— Hội Tin Học Việt Nam</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/BaoChi.html"><span class="toc-num">32.</span> Các bài trên báo</a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/Diendan.html"><span class="toc-num">33.</span> Số đặc biệt Phan Đình Diệu (báo Diễn Đàn)</a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/ChiaSeNgan.html"><span class="toc-num">34.</span> Những chia sẻ ngắn</a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/HieuMinh_Stein.html"><span class="toc-num">35.</span> GS Phan Đình Diệu bàn về dân chủ cùng Stein Tønnesson <span class='toc-author'>— Blog Hiệu Minh</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/TheTIME.html"><span class="toc-num">36.</span> Sensing an Opening: Vietnam's Outspoken Ones <span class='toc-author'>— The TIME – 1998</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/FarEasternEconomy.html"><span class="toc-num">37.</span> Mon Dieu! (Far Eastern Economic Review, 08/1993)</a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/PhanHaDuong.html"><span class="toc-num">38.</span> Bài thơ theo suốt cuộc đời tôi <span class='toc-author'>— Phan Thị Hà Dương</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/PhanDuongHieu.html"><span class="toc-num">39.</span> Giọt nước đó sẽ không tan đi <span class='toc-author'>— Phan Dương Hiệu</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/DieuVan.html"><span class="toc-num">40.</span> Điếu văn truy điệu Giáo sư Phan Đình Diệu <span class='toc-author'>— Nguyễn Hữu Đức</span></a></li>
+<li><a href="PhanDinhDieu_Nhutoibiet/LoiCamOn.html"><span class="toc-num">41.</span> Lời cảm ơn và Lời với bố</a></li>
+  </ol>
+</div>
+
+<!-- CHAPTERS -->
+<div class="page">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<script data-goatcounter="https://phandinhdieu.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

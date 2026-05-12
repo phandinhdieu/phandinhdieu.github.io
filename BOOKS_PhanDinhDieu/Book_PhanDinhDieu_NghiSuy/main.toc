@@ -1,0 +1,65 @@
+\contentsline {chapter}{Điếu văn truy điệu Giáo sư Phan Đình Diệu}{5}{chapter*.2}%
+\contentsline {chapter}{Lời cảm ơn và Lời với bố}{9}{chapter*.3}%
+\contentsline {paragraph}{Lời với bố. }{9}{chapter*.3}%
+\contentsline {part}{I\hspace {1em}Nghĩ Suy Cùng Đất Nước}{15}{part.1}%
+\contentsline {chapter}{\numberline {1}Tham luận tại Quốc Hội 12/1978: Đưa khoa học kỹ thuật phục vụ tích cực và có hiệu quả hơn công tác cải tiến quản lý}{17}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Khoa học hệ thống và một số ý kiến về vấn đề cải tiến quản lý kinh tế hiện nay (1981)}{21}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Hai bài trên những số cuối của Báo Tổ Quốc năm 1988}{41}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Số báo cuối của Báo SGGP năm 1989 : Dân Chủ Và Việc Phát Huy Nguồn Của Cải Trí Tuệ Của Dân Tộc (08/1989)}{59}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Câu Lạc Bộ Khoa Học Và Xã Hội (03/1990)}{65}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Ổn Định và Phát Triển Trong Tình Hình Hiện Nay Của Đất Nước (04/1990)}{67}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Báo Tạp Chí Cộng Sản : Khoa Học Thông Tin Và Vài Nhận Thức Về Các Vấn Đề Tổ Chức Và Quản Lý Kinh Tế (1990 - Đề tài do Viện Triết Học chủ trì)}{73}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Báo Tuổi Trẻ : Trước Những Sự Kiện Mới : Nhận Thức Và Suy Nghĩ (1990)}{79}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Chương trình hành động Nhằm Khắc Phục Khủng Hoảng Và Tạo Điều Kiện Lành Mạnh Cho Sự Phát Triển Đất Nước}{83}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Kiến Nghị Về Một Chương Trình Cấp Bách Nhằm Khắc Phục Khủng Hoảng Và Tạo Điều Kiện Lành Mạnh Cho Sự Phát Triển Đất Nước (01/1991)}{101}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Thư gửi Đỗ Mười 25/02/1991}{101}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Kiến Nghị}{102}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Thư gửi Đỗ Mười 10/08/1991}{112}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Bản tiếng Anh}{113}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Góp Ý Kiến Về Dự Thảo Hiến Pháp (1992)}{117}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Một thời kỳ lịch sử mới: Vì sự nghiệp dân giàu nước mạnh (03/1993)}{123}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Một Cách Tiếp Cận Khoa Học Về Dân Chủ Và Cơ Chế Thực Hiện Dân Chủ (1993)}{131}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Góp Vài Ý Kiến Về Công Tác Mặt Trận Trong Giai Đoạn Mới (1994)}{147}{chapter.14}%
+\contentsline {chapter}{\numberline {15}Về Yêu Cầu Tiếp Tục Đổi Mới Trong Giai Đoạn Hiện Nay (1997)}{151}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Kinh Tế Tri Thức Và Con Đường Hội Nhập Của Chúng Ta (1998?))}{157}{chapter.16}%
+\contentsline {chapter}{\numberline {17}Về Con Đường Xây Dựng Nền Kinh Tế Tri Thức Ở Nước Ta (1999?))}{179}{chapter.17}%
+\contentsline {chapter}{\numberline {18}Góp Ý Kiến Vào Dự Thảo Báo Cáo Chính Trị chuẩn bị cho Đại Hội IX Đảng CSVN (2001))}{187}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Góp Ý Kiến Về Đổi Mới Tư Duy Nhằm Tiến Đến ``Dân Giàu Nước Mạnh, Xã Hội Công Bằng Dân Chủ, VĂn Minh'' (2004) }{193}{chapter.19}%
+\contentsline {chapter}{\numberline {20}Vấn đề đoàn kết dân tộc dưới cách nhìn mới của khoa học (MTTQVN, 2005)}{197}{chapter.20}%
+\contentsline {chapter}{\numberline {21}Một Lộ Trình Cho Dân Chủ Hóa - yêu cầu phát triển đất nước trong giai đoạn hiện nay (MTTQVN, 2006)}{201}{chapter.21}%
+\contentsline {chapter}{\numberline {22}Hy vọng có Đổi Mới từ bước khởi đầu - HIỆP THƯƠNG LỰA CHỌN NGƯỜI ỨNG CỬ ĐBQH (2007)}{205}{chapter.22}%
+\contentsline {part}{II\hspace {1em}Một Số Bài Trên Báo Nước Ngoài }{207}{part.2}%
+\contentsline {chapter}{\numberline {23}Báo TIME 1998}{209}{chapter.23}%
+\contentsline {chapter}{\numberline {24}Ứng Dụng Toán Học Và Dân Chủ. Bài Phỏng Vấn Trên Báo Nordic Newsletter Tháng 4 Năm 1993}{215}{chapter.24}%
+\contentsline {chapter}{\numberline {25}Báo Far Easrten Economic Review 02/1993}{223}{chapter.25}%
+\contentsline {chapter}{\numberline {26}Báo Far Easrten Economic Review 08/1993}{229}{chapter.26}%
+\contentsline {chapter}{\numberline {27}Báo Far Easrten Economic Review 12/1993}{233}{chapter.27}%
+\contentsline {chapter}{\numberline {28}Un Jeune Scientifique}{239}{chapter.28}%
+\contentsline {part}{III\hspace {1em}Khoa Học và Giáo Dục }{241}{part.3}%
+\contentsline {section}{\numberline {28.1}BOOK on AMS}{243}{section.28.1}%
+\contentsline {section}{\numberline {28.2}Về một chính sách Tin học}{244}{section.28.2}%
+\contentsline {section}{\numberline {28.3}VỀ VIỆC PHÁT TRIỂN TIN HỌC TRONG CHIẾN LƯỢC KHOA HỌC KỸ THUẬT}{256}{section.28.3}%
+\contentsline {section}{\numberline {28.4}ĐỔI MỚI – HOẠT ĐỘNG KHOA HỌC VÀ SỰ PHÁT TRIỂN CÔNG NGHỆ THÔNG TIN Ở VIỆT NAM}{258}{section.28.4}%
+\contentsline {section}{\numberline {28.5}Cảm Thụ Và Suy Tư,1982}{269}{section.28.5}%
+\contentsline {part}{IV\hspace {1em}Văn - Thơ}{275}{part.4}%
+\contentsline {chapter}{\numberline {29}Nhớ về một người thầy thanh cao mà bình dị (Thầy Nghệ)}{277}{chapter.29}%
+\contentsline {chapter}{\numberline {30}Một Bài Học Khó (Tạ Quang Bửu)}{279}{chapter.30}%
+\contentsline {chapter}{\numberline {31}Trần Đại Nghĩa}{283}{chapter.31}%
+\contentsline {chapter}{\numberline {32}Niềm ngưỡng mộ thầy Thiêm và tình yêu toán học (Lê Văn Thiêm)}{285}{chapter.32}%
+\contentsline {chapter}{\numberline {33}Một Tấm Lòng Bao Dung Nhân Hậu (về Phạm Văn Đồng)}{289}{chapter.33}%
+\contentsline {chapter}{\numberline {34}Niềm Kính Yêu Đối Với Người Thầy Mẫu Mực (Nguyễn Thức Hào)}{293}{chapter.34}%
+\contentsline {chapter}{\numberline {35}Thơ}{297}{chapter.35}%
+\contentsline {part}{V\hspace {1em}Thấy Trên Mạng}{309}{part.5}%
+\contentsline {section}{\numberline {35.1}1993/03 (Diễn đàn số 35) Một thời kỳ lịch sử mới: Vì sự nghiệp dân giàu nước mạnh (MTTQVN)}{311}{section.35.1}%
+\contentsline {section}{\numberline {35.2}1993/12 (Diễn đàn số 25) Dân chủ và cơ chế thực hiện dân chủ}{317}{section.35.2}%
+\contentsline {section}{\numberline {35.3}Trao đổi Lê Quang Vịnh - Phan Đình Diệu}{321}{section.35.3}%
+\contentsline {section}{\numberline {35.4}2006/02 : MỘT LỘ TRÌNH CHO DÂN CHỦ HOÁ yêu cầu phát triển đất nước trong giai đoạn hiện nay (MTTQVN)}{334}{section.35.4}%
+\contentsline {section}{\numberline {35.5}2007/04 (Tia Sáng): Một nền học của ta và cho ta}{336}{section.35.5}%
+\contentsline {section}{\numberline {35.6}(2006?) Một số suy nghĩ về con đường tiếp tục đổi mới của đất nước ta}{338}{section.35.6}%
+\contentsline {section}{\numberline {35.7}(2007?)Sáng tạo ở bên bờ hỗn độn..}{344}{section.35.7}%
+\contentsline {section}{\numberline {35.8}Giáo sư Phan Đình Diệu “Một thứ toán kỳ lạ: Tổng các số dương bằng một số âm”?}{346}{section.35.8}%
+\contentsline {section}{\numberline {35.9}Vietnam. Mon DIEU!}{349}{section.35.9}%
+\contentsline {section}{\numberline {35.10}2005/11: Góp vài suy nghĩ để cùng tư duy tiếp tục về đổi mới (và vài điều bàn thêm)}{349}{section.35.10}%
+\contentsline {section}{\numberline {35.11}1993- Diễn Đàn - Phỏng vấn Phan Đình Diệu Ứng dụng toán học và dân chủ Stein TØNNESSON}{360}{section.35.11}%
+\contentsline {section}{\numberline {35.12}Nỗi Bất Mãn Thánh Thiện}{364}{section.35.12}%
+\contentsline {section}{\numberline {35.13}Một số bài trên blog Hiệu Minh }{371}{section.35.13}%

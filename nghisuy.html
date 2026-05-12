@@ -128,6 +128,26 @@ body{
   border-radius:999px; transition:background .15s;
 }
 .back-to-toc a:hover{ background:rgba(143,29,44,.14) !important; }
+
+/* Article pull-quotes */
+.art-quotes {
+  margin: 14px 0 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.art-quote {
+  border-left: 3px solid var(--accent);
+  padding: 9px 14px 9px 16px;
+  background: linear-gradient(135deg, rgba(143,29,44,.055), rgba(201,119,70,.035));
+  border-radius: 0 10px 10px 0;
+  font-size: .905em;
+  line-height: 1.7;
+  color: #2d3748;
+  font-style: italic;
+}
+.art-quote em { font-style: normal; }
+
 @media(max-width:767px){
   #logo #wsite-title{ font-size:13px !important; letter-spacing:0 !important;
     white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:calc(100vw - 60px); }
@@ -214,7 +234,7 @@ body{
   <ul>
     <li><a href="#s1">Quốc hội 1976–1981</a></li>
     <li><a href="#s2">Giai đoạn Đổi Mới 1986–1991</a></li>
-    <li><a href="#s3">Kiến nghị 91 &amp; Hiến pháp 92</a></li>
+    <li><a href="#s3">Kiến nghị 1991 &amp; Hiến pháp 1992</a></li>
     <li><a href="#s4">Báo quốc tế những năm 90</a></li>
     <li><a href="#s5">Cuối những năm 90</a></li>
     <li><a href="#s6">Sau năm 2000</a></li>
@@ -231,15 +251,35 @@ body{
       <li><a class="link-pdf" href="https://www.dropbox.com/s/gn37lt9l1xlbvaf/1978_VanKienQuocHoi_12_78%28NB%29.pdf?dl=0" target="_blank">PDF đen trắng (1 Mb)</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/nrcvsw5scp94oh9/1978_VanKienQuocHoi12_78.pdf?dl=0" target="_blank">PDF bản gốc (17 Mb)</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Đối tượng kinh tế - xã hội là cực kỳ phức tạp, khi ta không đủ khả năng để khống chế, để điều khiển cái phức tạp đó, thì không có cách gì khác hơn là áp đặt lên nó những biện pháp chủ quan và sơ lược. Và <em>dùng cái sơ lược để khống chế cái phức tạp thì không những không thể khống chế được, mà cuối cùng có thể bị cuốn vào tình trạng hỗn loạn</em> là xu thế tự phát của cái phức tạp không được khống chế."</div>
+        <div class="art-quote">"Quản lý là một nghệ thuật, nhưng ngày nay, <em>quản lý không chỉ là nghệ thuật mà còn là khoa học và kỹ thuật.</em> Ta hết sức tôn trọng tính nghệ thuật của quản lý... nhưng phải chăng ta cũng cần tôn trọng cái mà ta đã và sẽ nhận thức được dưới dạng quy luật, tức là tính khoa học."</div>
+      </div>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Tham luận tại Quốc Hội 12/1980 — Góp thêm ý kiến về vấn đề cải tiến tổ chức và quản lý kinh tế</div>
+    <ul class="art-links">
+      <li><a class="link-html" href="html_files/1980_tham_luan_quoc_hoi.html">Bản đọc HTML</a></li>
+      <li><a class="link-pdf" href="html_files/16_VanKienQuocHoi_12_80.pdf">PDF bản gốc</a></li>
+    </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Mức độ dân chủ, theo một nghĩa nào đó, phụ thuộc vào mức độ bình đẳng về quyền sở hữu thông tin trong xã hội. <em>Ở đâu có sự chiếm đoạt cá nhân cái quyền sở hữu ấy, thì ở đó không có dân chủ.</em>"</div>
+<div class="art-quote">"Trì trệ và bất biến không bao giờ là dấu hiệu của ổn định và vững bền. Sự vững bền thật sự là <em>sự vững bền của một sức mạnh năng động có khả năng luôn luôn tự thay đổi, tự phát triển và tự hoàn thiện mình.</em>"</div>
+      </div>
   </li>
   <li class="art-item">
     <div class="art-title">Khoa học hệ thống và một số ý kiến về vấn đề cải tiến quản lý kinh tế hiện nay (1981)</div>
-    <div class="art-desc">Báo cáo theo yêu cầu của Thủ tướng Phạm Văn Đồng. Phân tích khoa học hệ thống về những khiếm khuyết sâu xa của nền kinh tế thời bao cấp.</div>
     <ul class="art-links">
       <li><a class="link-html" href="html_files/1981-khoa-hoc-he-thong.html">Bản đọc HTML</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/ec68i3sls34sgrw/1981_khoahochethong.pdf?dl=0" target="_blank">PDF bản đánh máy (479 kB)</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/qw6mbj05o228co3/1981_KhoaHocHeThong%28bangoc%29.pdf?dl=0" target="_blank">PDF bản gốc (350 Mb)</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Một hệ thống vẫn giữ một vỏ ngoài thống nhất nhưng bị đục rỗng và hỗn loạn ở bên trong tạo nên cái dối trá, cái không thật trong kinh tế và từ đó, cả trong các lĩnh vực khác của xã hội. Sự điều khiển tập trung không có hiệu lực và xu thế tự giải thoát (bằng mọi mánh lới) ra ngoài sự điều khiển đó là <em>cơ sở vật chất của sự dối trá</em>: từ sự dối trá trong làm ăn đến sự dối trá trong đời sống luân lý của xã hội. Sự sa sút về đạo lý này đang là một cản trở hết sức to lớn cho quá trình khôi phục trật tự của xã hội."</div>
+        <div class="art-quote">"Ta muốn nắm bắt tất cả, nhưng <em>vì muốn nắm cả những cái không thể nắm, nên kết quả là ngay những cái có thể nắm được cũng tuột khỏi tay ta.</em>"</div>
+        <div class="art-quote">"Sự quản lý tập trung không có hiệu lực và xu thế tự giải thoát ra ngoài sự điều khiển đó là cơ sở vật chất của sự dối trá: từ sự dối trá trong làm ăn đến sự dối trá trong đời sống luân lý của xã hội."</div>
+        <div class="art-quote">"Nhà nước cần quan tâm nhiều hơn và có chính sách cụ thể xây dựng và phát triển ngành xử lý thông tin của nước ta. Đây không phải chỉ là một ngành khoa học, mà đã là một ngành kỹ thuật, và cũng là một ngành kinh tế. Không phải chỉ ở các nước phát triển, mà cả ở nhiều nước đang phát triển, ngành này đã được đưa vào hàng các ngành được ưu tiên phát triển. <em>Thông tin là tài nguyên quý giá của quốc gia.</em> Cần phát triển ngành xử lý thông tin để có khả năng khai thác và sử dụng nguồn tài nguyên đó."</div>
+      </div>
   </li>
 </ol>
 <div class="back-to-toc"><a href="#toc">↑ Mục lục</a></div>
@@ -249,20 +289,29 @@ body{
 <h2>Giai đoạn "Đổi Mới" 1986–1991</h2>
 <ol class="art-list">
   <li class="art-item">
-    <div class="art-title">Góp Ý Kiến Về Đổi Mới (08/1986)</div>
+    <div class="art-title">Góp Ý Kiến Về Đổi Mới (08/1986) — Báo Tổ Quốc số cuối (10/1988)</div>
     <div class="art-desc">Phát biểu tại Hội Nghị UBTU Mặt Trận Tổ quốc VN. Đăng nguyên văn trên số cuối của báo Tổ Quốc — đánh dấu chấm hết cho sự tồn tại của Đảng Dân Chủ và Đảng Xã Hội.</div>
     <ul class="art-links">
       <li><a class="link-html" href="html_files/1986_gop_y_kien_ve_doi_moi.html">Bản đọc HTML</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/266389i3zxb6r60/1988_GopYKienVeDoiMoi_ToQuoc_10_88.pdf?dl=0" target="_blank">PDF (Báo Tổ Quốc)</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/dh0kdv8dvu2chf3/1988_ToQuoc_bia_so_cuoi.pdf?dl=0" target="_blank">PDF bìa Tổ Quốc số cuối</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Dân chủ là quyền của dân, đồng thời cũng là nguồn vô tận tạo nên sự phong phú và giàu có của xã hội. Vì vậy, <em>dân chủ là một yêu cầu cấp thiết, một nội dung cơ bản của đổi mới.</em>"</div>
+        <div class="art-quote">"Xã hội ta chưa phải là xã hội chủ nghĩa. Cưỡng bức những kiểu xã hội chủ nghĩa một cách 'ý chí luận' cho nó như vừa qua thì không làm cho nó gần tới chủ nghĩa xã hội, mà thực tế đẩy nó ra xa hơn."</div>
+        <div class="art-quote">"Mọi người Việt Nam, dù ở góc trời nào, miễn là có nguyện vọng, đều có thể tìm được một chỗ đứng bình đẳng trên đất nước Việt Nam này để lao động và cống hiến cho sự phồn vinh của đất nước bằng mọi cách thích hợp với hoàn cảnh và khả năng của mình."</div>
+      </div>
   </li>
   <li class="art-item">
-    <div class="art-title">Vài Nhận Thức Về Thời Đại Ngày Nay (1988)</div>
+    <div class="art-title">Vài Nhận Thức Về Thời Đại Ngày Nay (1988) — Báo Tổ Quốc số gần cuối (09/1988)</div>
     <ul class="art-links">
       <li><a class="link-html" href="html_files/1988_vai_nhan_thuc.html">Bản đọc HTML</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/c941cwojzcpwcv6/1988_VaiNhanThucVeThoiDaiNgayNay_ToQuoc_88.pdf?dl=0" target="_blank">PDF (Báo Tổ Quốc 89)</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Thành phần công nhân, đại diện cho chân tay và điều khiển các máy móc cơ khí, không còn đóng vai trò tiên tiến trong nền sản xuất xã hội nữa. <em>Đại diện tiên tiến nhất của nền sản xuất hiện đại là lao động trí tuệ.</em>"</div>
+        <div class="art-quote">"Ta không sợ phát triển sản xuất với một nền sản xuất hàng hóa đầy đủ là làm mất chủ nghĩa xã hội, bởi vì chủ nghĩa xã hội là cái ta đã có đâu mà sợ mất. Có mất chăng là mất đi những thứ mang nhãn hiệu chủ nghĩa xã hội dối trá, để xây dựng dần cơ sở giúp có cho một chủ nghĩa xã hội thật sự trong tương lai."</div>
+      </div>
   </li>
   <li class="art-item">
     <div class="art-title">Dân Chủ Và Việc Phát Huy Nguồn Của Cải Trí Tuệ Của Dân Tộc — Báo SGGP (08/1989)</div>
@@ -271,11 +320,23 @@ body{
       <li><a class="link-html" href="html_files/1989_DanChu_Va_NguonTriTue.html">Bản đọc HTML</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/ils3gixs57bz8v9/1989_DanChuVaViecPhatHuy_08_89.pdf?dl=0" target="_blank">PDF</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote" style="font-size:1em; border-left-width:5px;">"Dân chủ mang chân lý vào quyền lực, còn chuyên chế đem quyền lực ngự trị lên chân lý."</div>
+        <div class="art-quote">"Dân chủ không mâu thuẫn với quyền lực tập trung; mà thực tế, một nền dân chủ với tự do tư tưởng, tự do ngôn luận là một nguồn cung cấp sự giàu có trí tuệ cho quyền lực."</div>
+        <div class="art-quote">"Ta muốn có một xã hội dân chủ không phải để được tự do cãi vã nhau, đả kích nhau, mà là để được hưởng niềm ấm áp xem đất nước này là của mình, được cùng góp phần làm giàu cho đất nước. Một nền dân chủ thực sự là để bảo đảm cho đất nước có được khả năng chắt lọc và hấp thụ mọi tinh hoa của dân tộc; có thay thế mà không phủ định, có lựa chọn mà không loại bỏ."</div>
+      </div>
   </li>
   <li class="art-item">
     <div class="art-title">Câu Lạc Bộ Khoa Học Và Xã Hội (03/1990) — Thành lập CLB tại 53 Nguyễn Du</div>
     <ul class="art-links">
       <li><a class="link-pdf" href="https://www.dropbox.com/s/7ipe0n9jtwisqna/1990_ThanhLapCLBKH%26KT.pdf?dl=0" target="_blank">PDF</a></li>
+    </ul>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Vấn Đề Dân Chủ Trong Sự Nghiệp Đổi Mới (01/1990)</div>
+    <div class="art-desc">Bài viết đầu năm 1990 — trực tiếp đặt vấn đề dân chủ như điều kiện thiết yếu của đổi mới, trước cả những sự kiện chấn động của mùa thu 1990.</div>
+    <ul class="art-links">
+      <li><a class="link-pdf" href="https://drive.google.com/file/d/1aqvKEQZESCSChOZx4fBXuMpBL-ilqS_Q/view?usp=sharing" target="_blank">PDF (Google Drive)</a></li>
     </ul>
   </li>
   <li class="art-item">
@@ -291,12 +352,20 @@ body{
       <li><a class="link-pdf" href="https://www.dropbox.com/s/bi2fpcjcox9nbev/1990_TruocNhungSuKienMoi%28danhmay%29.pdf?dl=0" target="_blank">PDF bản đánh máy</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/epeqdyztrqxiq46/1990_TruocNhungSuKienMoi.pdf?dl=0" target="_blank">PDF bản gốc</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Cái đang mất đi, cái đang được đòi hỏi phải mất đi, chỉ là những khuyết tật và sai lầm trong một mô hình đã lỗi thời của chủ nghĩa xã hội."</div>
+        <div class="art-quote">"Đã đến lúc không nên né tránh nữa câu hỏi: phải chăng trong gần một thế kỷ qua, chỉ có ở các nước xã hội chủ nghĩa mới phát triển được những gì mang tính chất xã hội chủ nghĩa, còn ở phía bên kia mọi thứ đều chỉ nhằm biện hộ, cứu vãn sự tồn tại của chủ nghĩa tư bản?"</div>
+      </div>
   </li>
   <li class="art-item">
     <div class="art-title">Ổn Định và Phát Triển Trong Tình Hình Hiện Nay Của Đất Nước (04/1990)</div>
     <ul class="art-links">
       <li><a class="link-html" href="html_files/1990_on_dinh_phat_trien.html">Bản đọc HTML</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"<em>Ổn định là điều kiện cho sự phát triển, chứ tự nó không phải là mục tiêu.</em> Vì ổn định để tạo điều kiện cho sự phát triển, nên phải là ổn định trong phát triển, một sự ổn định động, chứ không phải ổn định tĩnh, ổn định của nguyên trạng, trì trệ và bất biến."</div>
+        <div class="art-quote">"Mô hình chủ nghĩa xã hội với chế độ sở hữu công cộng về tư liệu sản xuất, với một nền kinh tế quản lý tập trung theo kế hoạch nhà nước đã chứng tỏ là không có hiệu quả; chính chúng ta từ mấy năm nay đang thay đổi cả những yếu tố cơ bản đó, <em>vậy nói kiên trì chủ nghĩa xã hội thì là chủ nghĩa xã hội nào?</em>"</div>
+      </div>
   </li>
   <li class="art-item">
     <div class="art-title">Thư gửi TBT Nguyễn Văn Linh về "Hộp Đen" và bài đăng trên báo Văn Nghệ (1988)</div>
@@ -304,12 +373,19 @@ body{
       <li><a class="link-pdf" href="https://www.dropbox.com/s/5esuwg9r4ir46ha/1988_Thu%20gui%20Nguyen%20Van%20Linh%20ve%20Hop%20Den.pdf?dl=0" target="_blank">PDF thư viết tay</a></li>
     </ul>
   </li>
+  <li class="art-item">
+    <div class="art-title">Dàn bài trao đổi với Thủ tướng Phạm Văn Đồng (khoảng 1986–1991)</div>
+    <div class="art-desc">Ghi chú chuẩn bị cho cuộc đối thoại trực tiếp với cựu Thủ tướng — tài liệu độc đáo phản ánh quan hệ và tư duy chính trị thời kỳ đổi mới.</div>
+    <ul class="art-links">
+      <li><a class="link-pdf" href="https://drive.google.com/file/d/1fM0HkPDBQ7rKM4xLKBMZf6wHMoQrAkjY/view?usp=sharing" target="_blank">PDF (Google Drive)</a></li>
+    </ul>
+  </li>
 </ol>
 <div class="back-to-toc"><a href="#toc">↑ Mục lục</a></div>
 </section>
 
 <section class="entry" id="s3">
-<h2>Kiến nghị 91 &amp; Góp ý Hiến pháp 92</h2>
+<h2>Kiến nghị 1991 &amp; Góp ý Hiến pháp 1992</h2>
 <ol class="art-list">
   <li class="art-item">
     <div class="art-title">Kiến Nghị Về Một Chương Trình Cấp Bách Nhằm Khắc Phục Khủng Hoảng Và Tạo Điều Kiện Lành Mạnh Cho Sự Phát Triển Đất Nước (01/1991)</div>
@@ -320,6 +396,22 @@ body{
       <li><a class="link-pdf" href="https://www.dropbox.com/s/q9ns9bnnrxe7kjs/1991_3_KienNghi_Phu_luc_TinhToan_Chuong_trinh_hanh_dong_nham_khac_phuc_khung_hoang.pdf?dl=0" target="_blank">PDF phụ lục 2</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/wa3nhgokr6d476e/1991_4_KienNghi_Eng_PetitionForAnUrgentProgram_91.pdf?dl=0" target="_blank">English version (PDF)</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Sau khi thống nhất, <em>một mô hình chủ nghĩa xã hội đã được vội vã áp đặt lên toàn đất nước.</em> Tác dụng đầu tiên là đã đặt vào thế đối địch một bộ phận to lớn những năng lực thật sự có thể góp phần làm giàu đất nước và gạt bỏ khả năng hòa giải và hòa hợp dân tộc."</div>
+        <div class="art-quote">"Sự quản lý độc quyền nhưng bất lực làm tê liệt một phần lớn những năng lực thật sự của đất nước, đồng thời tạo ra sự hỗn loạn và dối trá trong mọi mặt hoạt động kinh tế và xã hội."</div>
+        <div class="art-quote">"<em>một kiểu mô hình hợp lý có khả năng vươn tới các mơ ước về giàu có và công bằng là: một nền kinh tế thị trường có sự điều tiết vĩ mô của Nhà nước cùng với một nền chính trị dân chủ, đoàn kết và hòa hợp dân tộc.</em> Đó là xu thế chung của thời đại, là mục tiêu phấn đấu của nhiều dân tộc."</div>
+        <div class="art-quote">"Xã hội tạo điều kiện cho mọi công dân có khả năng sở hữu tư nhân, chứ không phải tước đoạt mọi sở hữu tư nhân để hòa vào một thứ «sở hữu toàn dân» <em>luôn có nguy cơ biến thành sở hữu riêng vô trách nhiệm của một số kẻ đặc quyền.</em>"</div>
+        <div class="art-quote">"Trong nông nghiệp, cần thừa nhận quyền sở hữu ruộng đất của nông dân (người cày có ruộng) và để người nông dân tự chọn hình thức sản xuất gia đình hay hợp tác."</div>
+        <div class="art-quote">"Cần phải nhìn nhận một thực tế là <em>không thể có dân chủ thật sự trong một chế độ có quy định trước sự độc quyền lãnh đạo của một Đảng.</em>"</div>
+        <div class="art-quote">"Quốc hội là cơ quan quyền lực cao nhất (thực sự chứ không phải hình thức)... <em>Điều mấu chốt ở đây là Quốc hội phải được bầu ra bằng bầu cử thật sự tự do và công bằng, không một đảng phái chính trị nào được quy định trước là có quyền tuyệt đối đứng trên Nhà nước và lãnh đạo Nhà nước.</em>"</div>
+      </div>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Thư gửi Tổng Bí thư Đỗ Mười (08/1991)</div>
+    <div class="art-desc">Thư trực tiếp gửi Tổng Bí thư sau khi đệ trình Kiến nghị tháng 2/1991 — tài liệu chính trị quan trọng, phản ánh thái độ và lập trường trước những áp lực thời kỳ đó.</div>
+    <ul class="art-links">
+      <li><span style="color:var(--muted);font-size:.91em;">(PDF chưa có online)</span></li>
+    </ul>
   </li>
   <li class="art-item">
     <div class="art-title">Góp Ý Kiến Về Dự Thảo Hiến Pháp (1992)</div>
@@ -328,6 +420,13 @@ body{
       <li><a class="link-pdf" href="https://www.dropbox.com/s/btpgsswfrp8je89/1992_GopYKienVeDuThaoHienPhap%281992%29.pdf?dl=0" target="_blank">PDF bản góp ý</a></li>
       <li><a class="link-ext" href="https://hienphap.wordpress.com/2013/02/24/gop-y-kien-ve-du-thao-hien-phap-phan-dinh-dieu-1992/" target="_blank">Trang Cùng Viết Hiến Pháp</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"<em>Tham nhũng về thực chất là việc biến một cách phi pháp quyền lực thành hàng hóa.</em> Trong một nền kinh tế không có hàng hóa thì người ta không thể dùng quyền để bán đi được. Nhưng một nền kinh tế thị trường vẫn mà vẫn giữ độc quyền thì quyền cũng là một thứ hàng hóa. Cho nên không thể kết hợp những yếu tố không thể dung hòa được của hai thể chế để hy vọng tạo ra một hình thái tích cực được."</div>
+        <div class="art-quote">"Quyền tự do ngôn luận và tự do báo chí không chỉ nằm trong phạm vi quyền con người, mà đây là quyền của nhân dân góp phần vào công việc của cộng đồng. <em>Trong hệ điều khiển của xã hội, không có nó thì xã hội bị tê liệt và sự thao túng của quyền lực là điều không thể tránh khỏi.</em>"</div>
+        <div class="art-quote">"Chúng ta cũng không nên bắt cả dân tộc ta phải đội lên đầu bất kỳ một chủ nghĩa nào, bất kỳ một cá nhân nào. <em>Dân tộc phải trên hết.</em>"</div>
+        <div class="art-quote">"Đảng lãnh đạo là phải đứng trong dân tộc, nằm trong dân tộc, cùng với dân tộc để tranh quyền lãnh đạo, <em>chứ không phải tự đặt mình đứng trên dân tộc, đứng ngoài dân tộc, đứng trên Nhà nước để tự áp đặt quyền lãnh đạo của mình.</em>"</div>
+        <div class="art-quote">"Tôi không chống lại sự lãnh đạo của đảng. Tôi mong muốn có một đảng với tư cách là một lực lượng chính trị có tổ chức và có kinh nghiệm, <em>có trí tuệ và có năng lực tập họp, giành được sự tín nhiệm của nhân dân và lãnh đạo đất nước trong một thể chế dân chủ.</em>"</div>
+      </div>
   </li>
 </ol>
 <div class="back-to-toc"><a href="#toc">↑ Mục lục</a></div>
@@ -343,6 +442,11 @@ body{
       <li><a class="link-pdf" href="https://www.dropbox.com/s/5r6wrnk2lxp5xgf/1993_04_Nordic_Newsletter.pdf?dl=0" target="_blank">PDF bản gốc</a></li>
       <li><a class="link-ext" href="https://hieuminh.org/2012/02/04/gs-pddieu-ban-ve-dan-chu/" target="_blank">Bản dịch tiếng Việt (Blog Hiệu Minh)</a></li>
     </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Tôi không phải là chính khách và tôi không có tham vọng chính trị. Song, với tư cách một nhà khoa học và một công dân yêu nước, tôi muốn tham gia việc nước. <em>Dân chủ là tham gia việc nước.</em>"</div>
+        <div class="art-quote">"Đảng cộng sản Việt Nam có hai mặt, mặt cộng sản và mặt yêu nước. Nó nên giữ mặt thứ nhì và bỏ mặt thứ nhất, nó có thể tự biến đổi thành một lực lượng yêu nước chân chính."</div>
+        <div class="art-quote">"Điều cốt yếu không phải là có nhiều đảng, không phải là có một chế độ đa đảng, mà là <em>có sự chọn lựa thật sự.</em> Muốn chọn lựa thật sự, hai đảng có thể cũng đủ, với điều kiện là hai đảng ấy thực sự khác nhau."</div>
+      </div>
   </li>
   <li class="art-item">
     <div class="art-title">Far Eastern Economic Review 02/1993 — <em>Vietnamese Dissident and Mathematician</em></div>
@@ -394,10 +498,29 @@ body{
     </ul>
   </li>
   <li class="art-item">
-    <div class="art-title">Về Yêu Cầu Tiếp Tục Đổi Mới Trong Giai Đoạn Hiện Nay (1997)</div>
+    <div class="art-title">Đoàn Kết Dân Tộc (11/1995)</div>
+    <div class="art-desc">Bài viết về đoàn kết dân tộc năm 1995 — phiên bản sớm hơn bài cùng chủ đề năm 2005.</div>
+    <ul class="art-links">
+      <li><a class="link-pdf" href="https://drive.google.com/file/d/17_zT0Hl5PzX6huW7SFs5KiCZMbp7s645/view?usp=sharing" target="_blank">PDF (Google Drive)</a></li>
+    </ul>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Về Yêu Cầu Tiếp Tục Đổi Mới Trong Giai Đoạn Hiện Nay (12/1997)</div>
     <ul class="art-links">
       <li><a class="link-html" href="html_files/1997_ve_yeu_cau_tiep_tuc_doi_moi.html">Bản đọc HTML</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/uzdbl6sdhhekp9b/1997_VeYeuCauTiepTucDoiMoi_12_97.pdf?dl=0" target="_blank">PDF</a></li>
+    </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Cần phải thẳng thắn mà thừa nhận rằng đất nước ta không thể giàu lên được, đời sống nhân dân lao động của ta không thể khấm khá lên được bằng đấu tranh giai cấp, bằng chuyên chính vô sản, bằng kinh tế nhà nước, và bằng những lời lẽ mị dân được đâu."</div>
+        <div class="art-quote">"Đã đến lúc không thể vin vào lý do trung thành để áp đặt một ý thức hệ lỗi thời cho xã hội, không thể dựa vào những hào quang dĩ vãng của một thế hệ đi trước để khẳng định vị trí độc tôn cho một lớp người tự xưng là kế thừa trong hiện tại, không thể buộc mọi người chấp nhận có con đường được lựa chọn một lần cho mãi mãi."</div>
+        <div class="art-quote">"Đảng triệt để đổi mới là đổi mới về mục tiêu, về cơ sở lý luận và tư tưởng, về phương thức tổ chức, và đặc biệt về cách xác định vị trí của mình trong dân tộc... <em>cái cần quan tâm và giữ vững là có tiếp tục giữ vai trò lực lượng tiên phong của dân tộc trong bước chuyển biến lịch sử quan trọng này hay không.</em>"</div>
+      </div>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Công Nghệ Thông Tin Và Người Lãnh Đạo (09/1997)</div>
+    <div class="art-desc">Bàn về vai trò tư duy hệ thống và CNTT đối với người lãnh đạo trong kỷ nguyên thông tin.</div>
+    <ul class="art-links">
+      <li><a class="link-pdf" href="https://drive.google.com/file/d/1r45uhR4XPmxkrEOTu-SIM-PFjf41Q1tN/view?usp=sharing" target="_blank">PDF (Google Drive)</a></li>
     </ul>
   </li>
   <li class="art-item">
@@ -411,6 +534,20 @@ body{
     <ul class="art-links">
       <li><a class="link-pdf" href="https://www.dropbox.com/s/nvbiisqo14hrvd9/1999%3F_VeConDuongXayDungKinhTeTriTruc.pdf?dl=0" target="_blank">PDF</a></li>
       <li><a class="link-pdf" href="https://www.dropbox.com/s/fwqzj9a5oorwin2/1999%3F_VeConDuongXayDungKTTriThuc_01%28danhmay%29.pdf?dl=0" target="_blank">PDF bản đánh máy</a></li>
+    </ul>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Mặt Trận Và Việc Phát Huy Nguồn Tài Nguyên Trí Thức (08/1999)</div>
+    <div class="art-desc">Bài viết cho Mặt trận Tổ quốc về vai trò của trí thức như nguồn tài nguyên quan trọng của đất nước.</div>
+    <ul class="art-links">
+      <li><a class="link-pdf" href="https://drive.google.com/file/d/1kkwUqsDgFqv92Ti1xsh09oFNsNn4j7l6/view?usp=sharing" target="_blank">PDF (Google Drive)</a></li>
+    </ul>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Trí Thức Là Gì? (1999)</div>
+    <div class="art-desc">Bài lý luận về khái niệm trí thức — vai trò xã hội, điều kiện hình thành, và trách nhiệm của tầng lớp trí thức đối với đất nước.</div>
+    <ul class="art-links">
+      <li><a class="link-pdf" href="https://drive.google.com/file/d/186bhrr9mNxuCfBjOFjiCBtcReP-S-8CK/view?usp=sharing" target="_blank">PDF (Google Drive)</a></li>
     </ul>
   </li>
 </ol>
@@ -430,6 +567,17 @@ body{
     <div class="art-title">Tư duy hệ thống và đổi mới tư duy (2002)</div>
     <ul class="art-links">
       <li><a class="link-html" href="html_files/2002_tu_duy_he_thong_doi_moi_tu_duy.html">Bản đọc HTML</a></li>
+    </ul>
+      <div class="art-quotes">
+        <div class="art-quote">"Nói đổi mới tư duy không có nghĩa là từ bỏ hoàn toàn một tư duy cũ nào đó và thay thế hoàn toàn bằng một tư duy mới đối lập nào đó."</div>
+        <div class="art-quote">"Một xã hội là một hệ thống rất phức tạp, mọi cách hiểu qui giản dẫn đến những biện pháp qui giản đều khó tránh khỏi thất bại. Đổi mới tư duy để có một cách nhìn, một cách hiểu, một cách suy nghĩ, và từ đó có những quyết định thích hợp, là yêu cầu không riêng của một tầng lớp nào, mà trở thành yêu cầu chung của xã hội."</div>
+      </div>
+  </li>
+  <li class="art-item">
+    <div class="art-title">Vài Suy Nghĩ Về Vấn Đề Đổi Mới Phương Pháp Dạy Học (2003)</div>
+    <div class="art-desc">Những suy nghĩ về đổi mới phương pháp giáo dục — đặt trong bối cảnh chuyển đổi sang xã hội tri thức.</div>
+    <ul class="art-links">
+      <li><a class="link-pdf" href="https://drive.google.com/file/d/1NJfdM6zHtcHdAKjfIGYrKOZYk8PGkBwL/view?usp=sharing" target="_blank">PDF (Google Drive)</a></li>
     </ul>
   </li>
   <li class="art-item">
