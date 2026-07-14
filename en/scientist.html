@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Scientist - Phan Đình Diệu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Phan Đình Diệu the scientist: constructive mathematics and logic in Moscow, automata and complexity theory, cryptography, and the founding of computer science and the National IT Program in Vietnam."/>
+<link rel="stylesheet" type="text/css" href="../files/main_style.css?1507882591" title="wsite-theme-css" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,700,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+<style>
+:root {
+  --accent: #00d8cb;
+  --text: #2c2c2c;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --radius: 16px;
+  --max-w: min(1000px, calc(100vw - 44px));
+}
+html { scroll-behavior: smooth; }
+#site-wrap { padding-top: 110px; }
+body { -webkit-font-smoothing: antialiased; background: #f0f2f5 !important; }
+#logo #wsite-title { font-size: 32px !important; letter-spacing: 4px; }
+.w-navlist .wsite-menu-default li a { font-size: 18px !important; padding: 16px 28px !important; }
+
+#content-wrap,
+.wsite-section-content .container,
+.wsite-section-elements { max-width: var(--max-w); margin: 0 auto; padding: 0 16px; box-sizing: border-box; }
+
+.lang-switch { position: absolute; top: 50%; right: 22px; transform: translateY(-50%); z-index: 5;
+  font-family: 'Raleway', sans-serif; font-size: 14px; letter-spacing: 0.06em; }
+.lang-switch a { color: #fff; text-decoration: none; opacity: 0.6; padding: 0 4px; }
+.lang-switch a.active { opacity: 1; font-weight: 700; border-bottom: 2px solid var(--accent); }
+.lang-switch a:hover { opacity: 1; }
+
+/* Page */
+.page { background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding: 40px 48px 48px; margin: 0 auto 3rem; }
+.page-head { text-align:center; margin: 0.5rem auto 2.4rem; max-width:780px; }
+.page-head .kicker { display:inline-block; font-family:'Raleway',sans-serif; text-transform:uppercase;
+  letter-spacing:0.2em; font-size:0.78em; color:var(--accent); font-weight:700; margin-bottom:1rem; }
+.page-head .kicker::after { content:""; display:block; width:34px; height:2px; background:var(--accent);
+  margin:0.7rem auto 0; opacity:0.6; }
+.page-head h1 { font-family:'Raleway',sans-serif; font-size:clamp(26px,2.4vw+10px,36px); font-weight:700;
+  color:#1a1a1a; line-height:1.3; letter-spacing:0.005em; margin:0 auto 1rem; max-width:16em; }
+.page-head p { color:var(--muted); font-size:1.05em; max-width:600px; margin:0 auto; line-height:1.75; }
+
+.lead { font-size:1.12em; line-height:1.85; color:#2a2a2a; }
+.lead strong { color:#111; }
+
+h2.sec { font-family:'Raleway',sans-serif; font-size:1.5rem; color:#111; font-weight:700;
+  margin:2.6rem 0 0.4rem; padding-bottom:0.4rem; border-bottom:2px solid var(--accent); }
+h2.sec .yr { color:var(--muted); font-weight:400; font-size:0.72em; margin-left:0.5rem; }
+.sec-note { color:#444; line-height:1.8; margin:0.6rem 0 1rem; }
+
+blockquote.q { border-left:4px solid var(--accent); background:#f6fbfb; border-radius:10px;
+  padding:1.1rem 1.6rem; font-style:italic; font-size:1.06em; line-height:1.7; color:#2a2a2a; margin:1.4rem 0; }
+blockquote.q footer { font-style:normal; font-size:0.8em; color:var(--muted); margin-top:0.7rem;
+  text-transform:uppercase; letter-spacing:0.06em; }
+
+/* paper list */
+.papers { list-style:none; padding:0; margin:0.8rem 0 0; }
+.papers li { padding:0.7rem 0; border-bottom:1px solid var(--border); line-height:1.55; }
+.papers li:last-child { border-bottom:none; }
+.papers .ttl { color:#111; font-weight:600; }
+.papers .meta { color:var(--muted); font-size:0.9em; }
+.papers a.pdf { display:inline-block; margin-left:0.5rem; font-size:0.72em; font-weight:700;
+  text-transform:uppercase; letter-spacing:0.05em; color:#0f766e; text-decoration:none;
+  border:1px solid #0f766e; border-radius:20px; padding:2px 10px; white-space:nowrap; }
+.papers a.pdf:hover { background:#0f766e; color:#fff; }
+
+/* Featured book */
+.book-feature { display:flex; gap:28px; align-items:flex-start; background:#fff;
+  border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow); padding:26px 28px; margin:1.2rem 0 0.4rem; }
+.book-feature img { width:190px; flex-shrink:0; height:auto; border-radius:6px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.18); border:1px solid var(--border); }
+.book-feature .bf-body { flex:1; }
+.book-feature .bf-tag { font-family:'Raleway',sans-serif; text-transform:uppercase; letter-spacing:0.12em;
+  font-size:0.72em; font-weight:700; color:var(--accent); }
+.book-feature h3 { font-family:'Raleway',sans-serif; font-size:1.35rem; color:#111; margin:0.3rem 0 0.2rem; line-height:1.25; }
+.book-feature .bf-cite { color:var(--muted); font-size:0.92em; margin:0 0 0.9rem; }
+.book-feature p { line-height:1.75; color:#333; margin:0 0 1rem; }
+.book-feature a.official { display:inline-block; background:var(--accent); color:#000; font-weight:700;
+  font-size:0.82em; text-transform:uppercase; letter-spacing:0.06em; padding:9px 18px; border-radius:24px;
+  text-decoration:none; transition:background 0.18s; }
+.book-feature a.official:hover { background:#00c4b8; }
+@media(max-width:640px){ .book-feature { flex-direction:column; align-items:center; text-align:center; }
+  .book-feature img { width:170px; } .book-feature .bf-tag,.book-feature .bf-cite { text-align:center; } }
+
+/* official-source link on list items */
+.papers a.src { display:inline-block; margin-left:0.5rem; font-size:0.7em; font-weight:700;
+  text-transform:uppercase; letter-spacing:0.04em; color:#0f766e; text-decoration:none;
+  border:1px solid #0f766e; border-radius:20px; padding:2px 10px; white-space:nowrap; }
+.papers a.src:hover { background:#0f766e; color:#fff; }
+.papers .archival { color:#9098a3; font-size:0.82em; font-style:italic; margin-left:0.4rem; }
+
+.highlight { background:linear-gradient(135deg,#f0fbfa,#eef6ff); border:1px solid #cfeeeb;
+  border-radius:14px; padding:1.4rem 1.6rem; margin:1.4rem 0; }
+.highlight h3 { margin:0 0 0.5rem; font-family:'Raleway',sans-serif; color:#0f766e; font-size:1.15rem; }
+.highlight p { margin:0.5rem 0; line-height:1.75; color:#333; }
+
+.backlink { display:inline-block; margin-top:1.5rem; color:#0f766e; text-decoration:none; font-weight:600; }
+.backlink:hover { text-decoration:underline; }
+
+@media(max-width:767px){
+  #logo #wsite-title{ font-size:16px !important; letter-spacing:0 !important; white-space:nowrap;
+    overflow:hidden; text-overflow:ellipsis; max-width:calc(100vw - 120px); }
+  #site-wrap{ padding-top:52px !important; }
+  #main-wrap{ margin-top:0 !important; }
+  .wsite-section, .wsite-section-content{ padding:0 !important; }
+  .page{ padding:24px 20px 30px; }
+  .lang-switch{ right:12px; font-size:13px; }
+  #nav{ position:fixed !important; top:0 !important; bottom:0 !important; left:-84% !important; right:auto !important;
+    width:80% !important; height:100% !important; max-height:100% !important; overflow-y:auto !important;
+    background:#14213d !important; padding:60px 0 24px !important; box-shadow:none !important;
+    transition:left .28s ease !important; z-index:1000 !important; display:block !important; opacity:1 !important; visibility:visible !important; }
+  #nav.open{ left:0 !important; box-shadow:6px 0 28px rgba(0,0,0,.55) !important; }
+  #nav #navcontainer .wsite-menu-default li a{ font-size:17px !important; padding:15px 24px !important;
+    border-bottom:1px solid rgba(255,255,255,.09); text-align:left !important; }
+  #close-overlay.visible{ position:fixed !important; top:0 !important; left:0 !important; right:0 !important; bottom:0 !important;
+    background:rgba(0,0,0,.45) !important; z-index:999 !important; display:block !important; }
+}
+</style>
+</head>
+
+<body class="no-header-page wsite-theme-light"><div id="site-wrap">
+
+<div id="search" class="overlay"><h2>Search the site...</h2></div>
+
+<div id="header-wrap">
+  <div class="container">
+    <div class="spacer">
+      <div id="nav-open" class="w-navpane-trigger hamburger" data-target="#nav"><span></span></div>
+    </div>
+    <div class="spacer hidden-sm"></div>
+    <div id="logo"><span class="wsite-logo">
+      <a href="index.html"><span id="wsite-title">Phan Đình Diệu</span></a>
+    </span></div>
+    <div class="spacer"></div>
+    <div class="spacer hidden-sm"></div>
+    <div class="lang-switch">
+      <a href="../khoahoc-giaoduc.html">VI</a><a href="scientist.html" class="active">EN</a>
+    </div>
+  </div>
+  <div class="w-navlist nav"><ul class="wsite-menu-default">
+    <li class="wsite-menu-item-wrap"><a href="index.html" class="wsite-menu-item">Home</a></li>
+    <li id="active" class="wsite-menu-item-wrap"><a href="scientist.html" class="wsite-menu-item">The Scientist</a></li>
+    <li class="wsite-menu-item-wrap"><a href="citizen.html" class="wsite-menu-item">The Citizen</a></li>
+    <li class="wsite-menu-item-wrap"><a href="remembered.html" class="wsite-menu-item">Remembered</a></li>
+  </ul></div>
+</div>
+
+<div id="close-overlay" class="w-navpane-close" data-target="#nav"><span class="container"></span></div>
+
+<div id="nav" class="overlay w-navpane w-navpane-fullscreen">
+  <div id="navcontainer" class="nav"><ul class="wsite-menu-default">
+    <li class="wsite-menu-item-wrap"><a href="index.html" class="wsite-menu-item">Home</a></li>
+    <li id="active" class="wsite-menu-item-wrap"><a href="scientist.html" class="wsite-menu-item">The Scientist</a></li>
+    <li class="wsite-menu-item-wrap"><a href="citizen.html" class="wsite-menu-item">The Citizen</a></li>
+    <li class="wsite-menu-item-wrap"><a href="remembered.html" class="wsite-menu-item">Remembered</a></li>
+    <li class="wsite-menu-item-wrap"><a href="../khoahoc-giaoduc.html" class="wsite-menu-item">Tiếng Việt →</a></li>
+  </ul></div>
+  <div></div>
+</div>
+
+<div id="content-wrap">
+<div id="main-wrap">
+<div id="wsite-content" class="wsite-elements wsite-not-footer">
+<div class="wsite-section-wrap">
+<div class="wsite-section wsite-body-section wsite-background-2 wsite-custom-background">
+<div class="wsite-section-content">
+<div class="container">
+<div class="wsite-section-elements">
+
+<div class="page">
+
+  <div class="page-head">
+    <div class="kicker">The Scientist</div>
+    <h1>From Constructive Mathematics to the Foundations of Computing in Vietnam</h1>
+  </div>
+
+  <p class="lead">
+    Phan Đình Diệu (1936–2018) belonged to the first generation of Vietnamese scientists sent abroad
+    during wartime. At <strong>Lomonosov Moscow State University</strong> and the <strong>Steklov Institute
+    of Mathematics</strong>, he worked in the circle of <strong>Andrei A. Markov Jr.</strong>, the founder
+    of the Russian school of constructive mathematics, earning his doctorate and, later, the higher
+    Doctor of Science degree. His early papers - on constructive functional analysis and topology - 
+    appeared in <em>Doklady Akademii Nauk</em> and the <em>Proceedings of the Steklov Institute</em>,
+    and were translated into English by the American Mathematical Society.
+  </p>
+
+  <h2 class="sec">Constructive mathematics &amp; logic <span class="yr">Moscow, 1965–1974</span></h2>
+  <p class="sec-note">
+    His foundational work asked what parts of analysis and topology survive when every object must be
+    explicitly <em>constructed</em> by an algorithm - a question at the heart of the constructivist program
+    of Markov and Kolmogorov, and a natural bridge to the theory of computation that would define his later career.
+  </p>
+
+  <div class="book-feature">
+    <img src="img/ams-steklov-114.png" alt="Cover: Some Questions in Constructive Functional Analysis, Proceedings of the Steklov Institute of Mathematics No. 114, by Phan Đình Diệu, American Mathematical Society, 1974"/>
+    <div class="bf-body">
+      <div class="bf-tag">His doctoral work, published in English by the AMS</div>
+      <h3>Some Questions in Constructive Functional Analysis</h3>
+      <p class="bf-cite">Proceedings of the Steklov Institute of Mathematics, No. 114 (1970).
+        American Mathematical Society, Providence, Rhode Island, 1974. 228 pp.</p>
+      <p>
+        The doctoral research he carried out at the Steklov Institute, gathered into a single monograph
+        and translated cover-to-cover by the American Mathematical Society - a young Vietnamese
+        mathematician's name on the spine of one of the world's most respected mathematical series.
+      </p>
+      <a class="official" href="https://books.google.com/books?id=dfAB9E0WqyUC" target="_blank" rel="noopener">View the book record on Google Books →</a>
+    </div>
+  </div>
+
+  <p class="sec-note" style="margin-top:1.2rem;">The underlying original papers appeared in the Soviet journals:</p>
+  <ul class="papers">
+    <li>
+      <span class="ttl">Constructive locally convex linear topological spaces</span>
+      <span class="meta"> - Doklady Akademii Nauk SSSR, 1965.</span>
+      <span class="archival">Russian original</span>
+    </li>
+    <li>
+      <span class="ttl">A language of constructive mathematics involving systems of sets</span>
+      <span class="meta"> - Trudy Mat. Inst. Steklov, 1967.</span>
+      <span class="archival">Russian original</span>
+    </li>
+    <li>
+      <span class="ttl">On closed and open sets in constructive topological spaces</span>
+      <span class="meta"> - Trudy Mat. Inst. Steklov, 1967.</span>
+      <span class="archival">Russian original</span>
+    </li>
+  </ul>
+
+  <h2 class="sec">Automata, languages &amp; complexity <span class="yr">1971–1986</span></h2>
+  <p class="sec-note">
+    Back in Hanoi, he turned to the theory of computation - probabilistic automata, formal languages,
+    and the average-case complexity of hard problems - laying the intellectual groundwork for computer
+    science as an academic field in Vietnam. He also wrote the country's early textbooks on
+    computational complexity and cryptography.
+  </p>
+  <ul class="papers">
+    <li>
+      <span class="ttl">Asymptotical estimation of some characteristics of finite graphs</span>
+      <span class="meta"> - RAIRO Informatique théorique, vol. 11, no. 2, pp. 157–174, 1977.</span>
+      <a class="src" href="https://www.numdam.org/item/ITA_1977__11_2_157_0/" target="_blank" rel="noopener">Numdam - open access</a>
+    </li>
+    <li>
+      <span class="ttl">Criteria of representability of languages in probabilistic automata</span>
+      <span class="meta"> - Kibernetika (Kiev), 1977.</span>
+      <span class="archival">journal archive</span>
+    </li>
+    <li>
+      <span class="ttl">Finite probabilistic automata</span>
+      <span class="meta"> - 1971.</span>
+      <span class="archival">journal archive</span>
+    </li>
+    <li>
+      <span class="ttl">Average polynomial time complexity of some NP-complete problems</span>
+      <span class="meta"> - Proc. of a conference on Optimization, Lecture Notes, 1986.</span>
+      <span class="archival">journal archive</span>
+    </li>
+  </ul>
+
+  <h2 class="sec" style="color:#8f1d2c;">Building a National Program on IT <span class="yr">1976–1997</span></h2>
+  <p class="sec-note">
+    Phan Đình Diệu was the first director of the Institute of Computer Science and Cybernetics
+    (today the <strong>Institute of Information Technology</strong> of the Vietnam Academy of Science and
+    Technology), founding chairman of the <strong>Vietnam Informatics Association</strong>, and a deputy
+    head of the steering committee for the <strong>National IT Program, Phase I (1993–1997)</strong>.
+  </p>
+
+  <div class="highlight">
+    <h3>The blueprint - and the word that was left out</h3>
+    <p>
+      Diệu drafted, by hand, Vietnam's <strong>National IT Program to the year 2000</strong>. Nearly every
+      point of the official plan signed by Prime Minister Võ Văn Kiệt in 1995 was taken, almost verbatim,
+      from his manuscript.
+    </p>
+    <p>
+      One point, however, did not make it in. On pages 12–13 of the handwritten draft, he argued for the
+      necessity of connecting Vietnam to the <strong>Internet</strong> - in the early 1990s, still too new
+      and too sensitive an idea to accept. Vietnam would only go online in 1997. He had made the case for it
+      quietly, years before the country was ready to listen.
+    </p>
+    <p style="margin:1.1rem 0 0.4rem;">
+      <a href="ban-viet-tay-cntt.html" style="display:inline-block; background:var(--accent); color:#000; font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.06em; padding:9px 18px; border-radius:24px; text-decoration:none; margin:0 6px 8px 0;">Read the handwritten draft - facsimile &amp; translation →</a>
+      <a href="chuong-trinh-cntt-2000.html" style="display:inline-block; background:#e6faf8; color:#0f766e; border:1px solid #9ee3dc; font-weight:700; font-size:0.82em; text-transform:uppercase; letter-spacing:0.06em; padding:8px 17px; border-radius:24px; text-decoration:none; margin:0 6px 8px 0;">The signed official plan - bilingual →</a>
+    </p>
+    <p style="margin:0.6rem 0 0; font-size:0.9em; color:#4b5563;">
+      Original scans:
+      <a href="../khoahoc/khoahoc_files/1995_%28VT%29ChuongtrinhQuocGiaCNTT.pdf" style="color:#0f766e;">the author's handwritten draft (45 pp, PDF)</a> ·
+      <a href="../khoahoc/khoahoc_files/1995_ChuongtrinhQuocGiaCNTT.pdf" style="color:#0f766e;">the signed official plan (PDF)</a>
+    </p>
+  </div>
+
+  <ul class="papers">
+    <li>
+      <span class="ttl">Vietnam's IT-2000 Program: The Challenges Ahead</span>
+      <span class="meta"> - Phan Dinh Dieu &amp; Nguyen Le - Proc. Pacific Asia Conference on Information Systems (PACIS), 1995.</span>
+      <a class="src" href="https://aisel.aisnet.org/pacis1995/65/" target="_blank" rel="noopener">AIS eLibrary - open access</a>
+    </li>
+    <li>
+      <span class="ttl">Vietnam: Information Technology for the Transition</span>
+      <span class="meta"> - Do, J.; Phan Dinh Dieu; Goodman, S. E. - IEEE Computer, vol. 29, no. 3, pp. 88–94, 1996.</span>
+      <a class="src" href="https://ieeexplore.ieee.org/document/485897/" target="_blank" rel="noopener">IEEE Xplore · doi:10.1109/2.485897</a>
+    </li>
+  </ul>
+
+  <blockquote class="q">
+    “Management is an art. But today, management is no longer art alone - it is also science and technology.”
+    <footer> - Address to the National Assembly, December 1978</footer>
+  </blockquote>
+
+  <p class="sec-note" style="margin-top:2rem;">
+    The full scientific archive - dozens of papers in Russian, English and Vietnamese, plus his books on
+    computational complexity and cryptography - is available on the
+    <a href="../khoahoc-giaoduc.html" style="color:#0f766e;">Vietnamese “Science &amp; Education” pages</a>.
+  </p>
+
+  <a class="backlink" href="index.html">← Back to home</a>
+
+</div><!-- /.page -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>Weebly = window.Weebly || {}; Weebly.jQuery = jQuery;</script>
+<script type="text/javascript" src="../files/theme/plugins.js"></script>
+<script type="text/javascript" src="../files/theme/mobile.js"></script>
+<script type="text/javascript" src="../files/theme/custom.js"></script>
+<script data-goatcounter="https://phandinhdieu.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
